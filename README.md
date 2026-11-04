@@ -22,3 +22,6 @@ This repository is split into subfolders inside the **game** folder such as:
 + CodeAI
 
 >This is because some people host games on different services and they handle redirects differently, like Google Scripts requiring the redirects to go through the **code.gs** file, and codehs allowing href, so pick a folder that matches the services you use and take the files from there.
+
+If you would like to request an update or suggest features, please email me at davis148d@gmail.com. 
+>Note: I get a **lot** of emails, so I might not see your email the first time. If that happens, please resend the email. 
