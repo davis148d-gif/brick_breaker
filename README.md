@@ -11,3 +11,10 @@ Aim and shoot a string of balls at bricks to progress and stay alive, purchase u
 # What's coming in v5.0
 + Permanent Upgrades
 + Improved physics
+
+# Other Notices
+This repository is split into subfolders inside the **game** folder such as: 
++ Google Scripts
++ CodeHS
+
+This is because some people host games on different services and they handle redirects differently, like Google Scripts requiring the redirects to go through the **code.gs** file, and codehs allowing href, so pick a folder that matches the services you use and take the files from there.
