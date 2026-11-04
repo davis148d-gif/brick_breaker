@@ -1,21 +1,21 @@
 # Brick Breaker 
-Aim and shoot a string of balls at bricks to progress and stay alive, purchase upgrades, and set records.
+Aim and shoot a string of balls at bricks to progress and stay alive, purchase upgrades, and set records. Choose different versions from the original Legacy version to the latest v4.0 with upgrades, record tracking, and JSON save backups.
 
-# What's in v4.0
+## What's in v4.0
 + Temporary Buffs Shop
 + In-game currency (Coins)
 + Top Scores Tracker
 + Save Backups
 + Save states (so you can reload and continue)
 
-# What's coming in v5.0
+## What's coming in v5.0
 + Permanent Upgrades
 + Improved physics
 
-# Links
+## Links
 + [Google Script](https://script.google.com/macros/s/AKfycbxn3E-qUfbpUW-M4Ju9I_YAfZIcRE_WgEx0jjuNX_TGk7L_4BwXPeF3Ij98XHly5gX54g/exec)
 
-# Other Notices
+## Other Notices
 This repository is split into subfolders inside the **game** folder such as: 
 + Google Scripts
 + CodeHS
