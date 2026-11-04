@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brick Breaker v3</title>
+  <title>Brick Breaker v4</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
 
@@ -20,7 +19,7 @@
     }
 
     .main-container {
-      max-width: 1200px;
+      max-width: 1250px;
       margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
@@ -41,8 +40,6 @@
       display: block;
       background-color: #ffffff;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      max-width: 100%;
-      height: auto;
     }
 
     .controls-row {
@@ -58,7 +55,7 @@
       font-size: 0.95em;
       font-weight: 600;
       font-family: 'Poppins', sans-serif;
-      padding: 10px 18px;
+      padding: 10px 16px;
       background-color: #222;
       color: #fff;
       border: none;
@@ -67,7 +64,6 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      user-select: none;
     }
 
     button:hover, label.btn-label:hover {
@@ -77,6 +73,13 @@
 
     button:active, label.btn-label:active {
       transform: translateY(0);
+    }
+
+    button:disabled, label.btn-label.disabled {
+      background-color: #cbd5e0 !important;
+      color: #718096 !important;
+      cursor: not-allowed !important;
+      transform: none !important;
     }
 
     button.btn-secondary, label.btn-secondary {
@@ -92,24 +95,95 @@
     }
 
     .sidebar {
-      width: 380px;
-      background: #ffffff;
-      border: 2px solid #171717;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      width: 400px;
       display: flex;
       flex-direction: column;
+      gap: 16px;
       height: 880px;
     }
 
-    .sidebar h2 {
-      margin: 0 0 12px 0;
-      font-size: 1.4em;
+    .panel {
+      background: #ffffff;
+      border: 2px solid #171717;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .panel h2 {
+      margin: 0 0 10px 0;
+      font-size: 1.25em;
       font-weight: 700;
       text-align: center;
       border-bottom: 2px solid #edf2f7;
-      padding-bottom: 8px;
+      padding-bottom: 6px;
+    }
+
+    .shop-coins-display {
+      text-align: center;
+      font-size: 1.1em;
+      font-weight: 700;
+      color: #d69e2e;
+      margin-bottom: 12px;
+      background: #fefcbf;
+      padding: 6px;
+      border-radius: 6px;
+      border: 1px solid #f6e05e;
+    }
+
+    .buff-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .buff-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #f7fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+
+    .buff-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .buff-title {
+      font-weight: 700;
+      font-size: 0.95em;
+    }
+
+    .buff-desc {
+      font-size: 0.78em;
+      color: #718096;
+    }
+
+    .buff-status {
+      font-size: 0.8em;
+      font-weight: 700;
+      color: #38a169;
+    }
+
+    .btn-buy {
+      background-color: #319795;
+      font-size: 0.85em;
+      padding: 6px 12px;
+    }
+
+    .btn-buy:hover {
+      background-color: #2c7a7b;
+    }
+
+    .leaderboard-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
     }
 
     .leaderboard-container {
@@ -145,9 +219,9 @@
     }
 
     .leaderboard-info {
-      font-size: 0.8em;
+      font-size: 0.78em;
       color: #718096;
-      margin-top: 8px;
+      margin-top: 6px;
       text-align: center;
     }
   </style>
@@ -169,28 +243,67 @@
     </div>
 
     <div class="sidebar">
-      <h2>Top 100 High Scores</h2>
-      <div class="leaderboard-container">
-        <table class="leaderboard-table">
-          <thead>
-            <tr>
-              <th style="width: 50px;">Rank</th>
-              <th>Score (Level)</th>
-              <th>Date</th>
-            </tr>
-          </thead>
-          <tbody id="leaderboardBody">
-          </tbody>
-        </table>
+      <!-- Item Shop Panel -->
+      <div class="panel">
+        <h2>Power-Up Shop</h2>
+        <div class="shop-coins-display">
+          Coins: <span id="coinsCount">0</span> 🪙
+        </div>
+        <div class="buff-list">
+          <!-- 2x Damage Buff -->
+          <div class="buff-card">
+            <div class="buff-info">
+              <span class="buff-title">2x Damage</span>
+              <span class="buff-desc">Balls deal double hit damage</span>
+              <span class="buff-status" id="buff2xStatus">Inactive</span>
+            </div>
+            <button class="btn-buy" id="btnBuy2x" onclick="gameManager.buyBuff('doubleDamage')">Buy (300 C)</button>
+          </div>
+
+          <!-- Fireball Penetration Buff -->
+          <div class="buff-card">
+            <div class="buff-info">
+              <span class="buff-title">Fireball (Piercing)</span>
+              <span class="buff-desc">Balls pass straight through bricks</span>
+              <span class="buff-status" id="buffFireStatus">Inactive</span>
+            </div>
+            <button class="btn-buy" id="btnBuyFire" onclick="gameManager.buyBuff('fireball')">Buy (500 C)</button>
+          </div>
+
+          <!-- Laser Row Wipe Buff -->
+          <div class="buff-card">
+            <div class="buff-info">
+              <span class="buff-title">Laser Wipe</span>
+              <span class="buff-desc">Clears bottommost brick row</span>
+              <span class="buff-status">Instant Use</span>
+            </div>
+            <button class="btn-buy" id="btnBuyLaser" onclick="gameManager.buyBuff('laserWipe')">Buy (400 C)</button>
+          </div>
+        </div>
       </div>
-      <div class="leaderboard-info">Scores update to the leaderboard upon Game Over.</div>
+
+      <!-- Leaderboard Panel -->
+      <div class="panel leaderboard-panel">
+        <h2>Top 100 High Scores</h2>
+        <div class="leaderboard-container">
+          <table class="leaderboard-table">
+            <thead>
+              <tr>
+                <th style="width: 50px;">Rank</th>
+                <th>Score (Level)</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboardBody">
+            </tbody>
+          </table>
+        </div>
+        <div class="leaderboard-info">Earn coins by clearing turns & destroying bricks!</div>
+      </div>
     </div>
   </div>
 
   <script>
-    /**
-     * Utility Math & Array Helpers
-     **/
     function randomInt(...args) {
       if (args.length === 1) {
         const [n] = args;
@@ -199,7 +312,9 @@
 
       if (args.length === 2) {
         const [start, end] = args;
+
         if (start > end) throw Error("Start value greater than end value");
+
         return Math.ceil(Math.random() * (end - start)) + start;
       }
     }
@@ -212,7 +327,9 @@
 
       if (args.length === 2) {
         const [start, end] = args;
+
         if (start > end) throw Error("Start value greater than end value");
+
         return Math.random() * (end - start) + start;
       }
     }
@@ -250,7 +367,7 @@
 
   <script>
     /**
-     * 2D Vector Physics Class
+     * Vector Library
      **/
     class Vector {
       constructor(x = 0, y = 0) {
@@ -292,12 +409,13 @@
     }
 
     Vector.mult = (v, n) => new Vector(v.x * n, v.y * n);
+
     Vector.div = (v, n) => new Vector(v.x / n, v.y / n);
   </script>
 
   <script>
     /**
-     * Canvas Rendering Engine
+     *   Canvas Library
      **/
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
@@ -378,7 +496,7 @@
 
   <script>
     /**
-     * Main Game Entities & Controllers
+     *   User Code
      **/
     const POWER = 0.3;
 
@@ -421,6 +539,7 @@
       update() {
         this.velocity.add(this.acceleration);
         this.position.add(this.velocity);
+
         this.acceleration.mult(0);
       }
 
@@ -432,7 +551,7 @@
       stop() {
         this.velocity = new Vector(0, 0);
         this.showDirection = true;
-        if (typeof this.onStop === "function") this.onStop(this);
+        if (this.onStop) this.onStop(this);
         this.downing = false;
       }
 
@@ -457,14 +576,21 @@
       angle(mousePos) {
         const opposite = mousePos.y - this.position.y;
         const adjacent = mousePos.x - this.position.x;
-        return Math.atan2(opposite, adjacent);
+        const angle = Math.atan2(opposite, adjacent);
+
+        return angle;
       }
 
-      display() {
-        circle(this.position.x, this.position.y, this.r, "#5ba7f4");
+      display(state) {
+        let ballColor = "#5ba7f4";
+        if (state && state.buffs) {
+          if (state.buffs.fireballTurns > 0) ballColor = "#ff4500";
+          else if (state.buffs.doubleDamageTurns > 0) ballColor = "#e53e3e";
+        }
+        circle(this.position.x, this.position.y, this.r, ballColor);
       }
 
-      collideWith(brick) {
+      collideWith(brick, state) {
         if (this.downing) return false;
 
         const { x, y } = this.position;
@@ -480,6 +606,11 @@
         const collided = distanceSquared < r * r;
 
         if (!collided) return false;
+
+        // If Fireball (piercing) buff is active, pass straight through without bouncing
+        if (state && state.buffs && state.buffs.fireballTurns > 0) {
+          return true;
+        }
 
         if (
           closestY === brick.y &&
@@ -568,8 +699,6 @@
       }
 
       getHue() {
-        // HP = 1 -> Pure Green (120°)
-        // Higher HP shifts smoothly through Yellow (60°) down to Pure Red (0°)
         return Math.max(0, 120 - (this.n - 1) * 3);
       }
 
@@ -590,8 +719,8 @@
         );
       }
 
-      hit() {
-        this.n--;
+      hit(damage = 1) {
+        this.n = Math.max(0, this.n - damage);
       }
 
       get broken() {
@@ -763,6 +892,7 @@
 
         this.showBallCount(state);
         this.showScore(state);
+        this.showBuffIndicators(state);
       }
 
       showScore(state) {
@@ -771,14 +901,33 @@
         ctx.font = "bold 20px 'Poppins', system-ui, sans-serif";
         ctx.textAlign = "left";
         ctx.textBaseline = "middle";
-        ctx.fillText(`Score: ${state.level}`, 30, uiOffsetY / 2);
+        ctx.fillText(`Score: ${state.level}`, 25, uiOffsetY / 2);
         
         ctx.textAlign = "right";
         ctx.fillText(
           `High Score: ${state.bestLevel}`,
-          width - 30,
+          width - 25,
           uiOffsetY / 2
         );
+        ctx.restore();
+      }
+
+      showBuffIndicators(state) {
+        if (!state || !state.buffs) return;
+        ctx.save();
+        ctx.font = "bold 13px 'Poppins', system-ui, sans-serif";
+        ctx.textAlign = "center";
+        let activeTags = [];
+        if (state.buffs.doubleDamageTurns > 0) {
+          activeTags.push(`💥 2x Dmg (${state.buffs.doubleDamageTurns}t)`);
+        }
+        if (state.buffs.fireballTurns > 0) {
+          activeTags.push(`🔥 Fireball (${state.buffs.fireballTurns}t)`);
+        }
+        if (activeTags.length > 0) {
+          ctx.fillStyle = "#e53e3e";
+          ctx.fillText(activeTags.join("  |  "), width / 2, uiOffsetY / 2);
+        }
         ctx.restore();
       }
 
@@ -799,10 +948,10 @@
       }
 
       gameOver() {
-        fillRect(0, height / 2 - 100, width, 200, "rgba(0, 0, 0, 0.45)");
+        fillRect(0, height / 2 - 100, width, 200, "rgba(0, 0, 0, 0.4)");
         ctx.save();
         ctx.fillStyle = "#ffffff";
-        ctx.font = "bold 44px 'Poppins', system-ui, sans-serif";
+        ctx.font = "bold 42px 'Poppins', system-ui, sans-serif";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         ctx.fillText("GAME OVER!", width / 2, height / 2);
@@ -829,12 +978,14 @@
         this.balls.forEach((ball) => ball.setOnStop(this.onBallStop));
       }
 
-      collideWithBricks(bricks) {
+      collideWithBricks(bricks, state, gameManager) {
+        const damage = (state.buffs && state.buffs.doubleDamageTurns > 0) ? 2 : 1;
         bricks.bricks.forEach((brick) => {
           this.balls.forEach((ball) => {
-            const collided = ball.collideWith(brick);
+            const collided = ball.collideWith(brick, state);
             if (collided) {
-              brick.hit();
+              brick.hit(damage);
+              if (gameManager) gameManager.addCoins(1);
             }
           });
         });
@@ -869,11 +1020,11 @@
         }
       }
 
-      display() {
+      display(state) {
         this.balls.forEach((ball) => {
           ball.update();
           ball.checkEdges();
-          ball.display();
+          ball.display(state);
         });
       }
 
@@ -904,8 +1055,11 @@
         this.particleSystems.run();
       }
 
-      break() {
+      break(gameManager) {
         const brokenBricks = this.bricks.filter((brick) => brick.broken);
+        if (brokenBricks.length > 0 && gameManager) {
+          gameManager.addCoins(brokenBricks.length * 5);
+        }
         this.particleSystems.addParticleSystem(...brokenBricks);
 
         this.bricks = this.bricks.filter((brick) => !brick.broken);
@@ -960,8 +1114,8 @@
 
     class LocalStorageManager {
       constructor() {
-        this.saveKey = "brickBreaker_v3_save";
-        this.scoresKey = "brickBreaker_v3_top100";
+        this.saveKey = "brickBreaker_v4_save";
+        this.scoresKey = "brickBreaker_v4_top100";
         this.storage = window.localStorage;
       }
 
@@ -1035,6 +1189,11 @@
           firstBallStop: true,
           level: 1,
           over: false,
+          coins: 0,
+          buffs: {
+            doubleDamageTurns: 0,
+            fireballTurns: 0
+          },
           bestLevel: this.scoreStorage.getBestScore()
         };
 
@@ -1050,14 +1209,23 @@
 
         this.ballLine = new BallLine();
         this.ui = new UI();
+        this.renderUIControls();
         this.renderLeaderboard();
       }
 
       loadFromDataObject(data) {
         this.state.level = data.state.level || 1;
         this.state.ballCount = data.state.ballCount || 1;
+        this.state.coins = data.state.coins || 0;
         this.state.bestLevel = Math.max(this.scoreStorage.getBestScore(), this.state.level);
         
+        if (data.state.buffs) {
+          this.state.buffs = {
+            doubleDamageTurns: data.state.buffs.doubleDamageTurns || 0,
+            fireballTurns: data.state.buffs.fireballTurns || 0
+          };
+        }
+
         if (data.state.ballPos) {
           this.state.ballPos = new Vector(data.state.ballPos.x, data.state.ballPos.y);
         } else {
@@ -1073,6 +1241,69 @@
         );
       }
 
+      addCoins(amount) {
+        this.state.coins += amount;
+        this.renderUIControls();
+      }
+
+      buyBuff(type) {
+        if (this.state.over) return;
+        if (type === 'doubleDamage') {
+          const cost = 300;
+          if (this.state.coins >= cost) {
+            this.state.coins -= cost;
+            this.state.buffs.doubleDamageTurns += 3;
+          }
+        } else if (type === 'fireball') {
+          const cost = 500;
+          if (this.state.coins >= cost) {
+            this.state.coins -= cost;
+            this.state.buffs.fireballTurns += 2;
+          }
+        } else if (type === 'laserWipe') {
+          const cost = 400;
+          if (this.state.coins >= cost && this.bricks.bricks.length > 0) {
+            this.state.coins -= cost;
+            // Clear bottommost row of bricks
+            let maxY = Math.max(...this.bricks.bricks.map(b => b.y));
+            this.bricks.bricks.forEach(b => {
+              if (Math.abs(b.y - maxY) < 10) b.n = 0;
+            });
+            this.bricks.break(this);
+          }
+        }
+        this.renderUIControls();
+        this.saveCurrentState();
+      }
+
+      renderUIControls() {
+        const coinsElem = document.getElementById("coinsCount");
+        if (coinsElem) coinsElem.textContent = this.state.coins;
+
+        const btn2x = document.getElementById("btnBuy2x");
+        const status2x = document.getElementById("buff2xStatus");
+        if (btn2x && status2x) {
+          btn2x.disabled = this.state.coins < 30;
+          status2x.textContent = this.state.buffs.doubleDamageTurns > 0 
+            ? `${this.state.buffs.doubleDamageTurns} turns left` 
+            : "Inactive";
+        }
+
+        const btnFire = document.getElementById("btnBuyFire");
+        const statusFire = document.getElementById("buffFireStatus");
+        if (btnFire && statusFire) {
+          btnFire.disabled = this.state.coins < 50;
+          statusFire.textContent = this.state.buffs.fireballTurns > 0 
+            ? `${this.state.buffs.fireballTurns} turns left` 
+            : "Inactive";
+        }
+
+        const btnLaser = document.getElementById("btnBuyLaser");
+        if (btnLaser) {
+          btnLaser.disabled = this.state.coins < 40 || this.bricks.bricks.length === 0;
+        }
+      }
+
       saveCurrentState() {
         if (this.state.over) {
           this.scoreStorage.clearSaveData();
@@ -1080,11 +1311,13 @@
         }
 
         const saveData = {
-          version: 3,
+          version: 4,
           timestamp: Date.now(),
           state: {
             level: this.state.level,
             ballCount: this.state.ballCount,
+            coins: this.state.coins,
+            buffs: this.state.buffs,
             ballPos: this.state.ballPos ? { x: this.state.ballPos.x, y: this.state.ballPos.y } : { x: width / 2, y: height - 100 },
             over: this.state.over
           },
@@ -1111,7 +1344,7 @@
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
         a.href = url;
-        a.download = `brick_breaker_v3_save_lvl${this.state.level}.json`;
+        a.download = `brick_breaker_v4_save_lvl${this.state.level}.json`;
         a.click();
         URL.revokeObjectURL(url);
       }
@@ -1128,10 +1361,10 @@
               this.scoreStorage.setSaveData(data);
               this.initGame();
             } else {
-              console.warn("Invalid save file format.");
+              alert("Invalid save file format.");
             }
           } catch (err) {
-            console.error("Failed to parse save file.");
+            alert("Failed to parse save file.");
           }
         };
         reader.readAsText(file);
@@ -1177,7 +1410,7 @@
         this.bonusBalls.addBonusBalls(this.state, newBonusBallIndex);
       }
 
-      shootBalls() {
+      shootBalls(e) {
         if (
           this.state.ballMoving ||
           this.state.brickMoving ||
@@ -1195,15 +1428,15 @@
       }
 
       checkCollision() {
-        this.balls.collideWithBricks(this.bricks);
+        this.balls.collideWithBricks(this.bricks, this.state, this);
         this.bonusBalls.collideWithBall(this.balls);
-        this.bricks.break();
+        this.bricks.break(this);
       }
 
       draw() {
         clear();
         this.ballLine.display(this.state);
-        this.balls.display();
+        this.balls.display(this.state);
         this.bricks.display(this.state);
         this.bonusBalls.display(this.state);
         this.ui.display(this.state);
@@ -1217,7 +1450,17 @@
           this.state.ballMoving = false;
           this.state.brickMoving = true;
 
+          // Turn-based buff decrements
+          if (this.state.buffs.doubleDamageTurns > 0) {
+            this.state.buffs.doubleDamageTurns--;
+          }
+          if (this.state.buffs.fireballTurns > 0) {
+            this.state.buffs.fireballTurns--;
+          }
+          this.renderUIControls();
+
           this.state.level += 1;
+          this.addCoins(10); // Round completion bonus
           this.state.bestLevel = Math.max(this.state.bestLevel, this.state.level);
 
           this.addBallsAndBricks();
@@ -1251,20 +1494,16 @@
 
     canvas.addEventListener("mousemove", (e) => {
       const rect = canvas.getBoundingClientRect();
-      const scaleX = canvas.width / rect.width;
-      const scaleY = canvas.height / rect.height;
-
-      const mx = (e.clientX - rect.left) * scaleX;
-      const my = (e.clientY - rect.top) * scaleY;
+      const mx = e.clientX - rect.left;
+      const my = e.clientY - rect.top;
 
       Mouse.position = new Vector(mx, my);
     });
 
     const gameManager = new GameManager();
 
-    window.onload = function() {
-      gameManager.run();
-    };
+    gameManager.run();
   </script>
 </body>
+
 </html>
