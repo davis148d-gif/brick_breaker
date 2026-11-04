@@ -31,4 +31,4 @@ If you would like to request an update or suggest features, please email me at d
 >Note: I get a **lot** of emails, so I might not see your email the first time. If that happens, please resend the email. 
 
 ## Credits
-+ Davis148d-gif (davis148d@gmail.com)
++ davis148d-gif (davis148d@gmail.com)
