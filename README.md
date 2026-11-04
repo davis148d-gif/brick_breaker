@@ -14,6 +14,7 @@ Aim and shoot a string of balls at bricks to progress and stay alive, purchase u
 
 ## Links
 + [Google Script](https://script.google.com/macros/s/AKfycbxn3E-qUfbpUW-M4Ju9I_YAfZIcRE_WgEx0jjuNX_TGk7L_4BwXPeF3Ij98XHly5gX54g/exec)
++ [FCPS Google Script](https://script.google.com/a/fcpsschools.net/macros/s/AKfycbxAN1yq7xIBVMHBer6-3MJj9TZ6hOeFfg0Ub9xmCNeWn2X1NxB542WEpNOtG7kbtEr49Q/exec)
 
 ## Other Notices
 This repository is split into subfolders inside the **game** folder such as: 
@@ -28,4 +29,3 @@ If you would like to request an update or suggest features, please email me at d
 
 ## Credits
 + Davis148d-gif (davis148d@gmail.com)
-+ 
