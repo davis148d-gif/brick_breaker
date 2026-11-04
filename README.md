@@ -12,6 +12,9 @@ Aim and shoot a string of balls at bricks to progress and stay alive, purchase u
 + Permanent Upgrades
 + Improved physics
 
+# Links
++ [Google Script](https://script.google.com/macros/s/AKfycbxn3E-qUfbpUW-M4Ju9I_YAfZIcRE_WgEx0jjuNX_TGk7L_4BwXPeF3Ij98XHly5gX54g/exec)
+
 # Other Notices
 This repository is split into subfolders inside the **game** folder such as: 
 + Google Scripts
