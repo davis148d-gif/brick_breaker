@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Brick Breaker v4</title>
+  <link rel="stylesheet" href="v4.css">
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="game-section">
+      <canvas id="canvas" width="710" height="880"></canvas>
+      <div class="controls-row">
+        <button onclick="gameManager.downBalls()">Recall Balls</button>
+        <button class="btn-secondary" onclick="gameManager.exportSaveFile()">Download Save</button>
+        <label class="btn-label btn-secondary">
+          Upload Save
+          <input type="file" id="saveFileInput" accept=".json" onchange="gameManager.importSaveFile(event)" />
+        </label>
+        <button class="btn-secondary" onclick="gameManager.resetGame()">New Run</button>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <!-- Item Shop Panel -->
+      <div class="panel">
+        <h2>Power-Up Shop</h2>
+        <div class="shop-coins-display">
+          Coins: <span id="coinsCount">0</span> 🪙
+        </div>
+        <div class="buff-list">
+          <!-- 2x Damage Buff -->
+          <div class="buff-card">
+            <div class="buff-info">
+              <span class="buff-title">2x Damage</span>
+              <span class="buff-desc">Balls deal double hit damage</span>
+              <span class="buff-status" id="buff2xStatus">Inactive</span>
+            </div>
+            <button class="btn-buy" id="btnBuy2x" onclick="gameManager.buyBuff('doubleDamage')">Buy (300 C)</button>
+          </div>
+
+          <!-- Fireball Penetration Buff -->
+          <div class="buff-card">
+            <div class="buff-info">
+              <span class="buff-title">Fireball (Piercing)</span>
+              <span class="buff-desc">Balls pass straight through bricks</span>
+              <span class="buff-status" id="buffFireStatus">Inactive</span>
+            </div>
+            <button class="btn-buy" id="btnBuyFire" onclick="gameManager.buyBuff('fireball')">Buy (500 C)</button>
+          </div>
+
+          <!-- Laser Row Wipe Buff -->
+          <div class="buff-card">
+            <div class="buff-info">
+              <span class="buff-title">Laser Wipe</span>
+              <span class="buff-desc">Clears bottommost brick row</span>
+              <span class="buff-status">Instant Use</span>
+            </div>
+            <button class="btn-buy" id="btnBuyLaser" onclick="gameManager.buyBuff('laserWipe')">Buy (400 C)</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Leaderboard Panel -->
+      <div class="panel leaderboard-panel">
+        <h2>Top 100 High Scores</h2>
+        <div class="leaderboard-container">
+          <table class="leaderboard-table">
+            <thead>
+              <tr>
+                <th style="width: 50px;">Rank</th>
+                <th>Score (Level)</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboardBody">
+            </tbody>
+          </table>
+        </div>
+        <div class="leaderboard-info">Earn coins by clearing turns & destroying bricks!</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="v4.js"></script>
+
+  
+
+  
+
+  
+</body>
+
+</html>
