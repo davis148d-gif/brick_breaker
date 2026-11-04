@@ -14,7 +14,7 @@ function doGet(e) {
     }
   }
   
-  return HtmlService.createTemplateFromFile('Index')
+  return HtmlService.createTemplateFromFile('index')
       .evaluate()
       .setTitle('BRICK BREAKER')
       .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL)
