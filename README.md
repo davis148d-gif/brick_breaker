@@ -1,19 +1,15 @@
 # Brick Breaker 
 Aim and shoot a string of balls at bricks to progress and stay alive, purchase upgrades, and set records. Choose different versions from the original Legacy version to the latest v4.0 with upgrades, record tracking, and JSON save backups.
 
-## What's in v4.0
-+ Temporary Buffs Shop
-+ In-game currency (Coins)
-+ Top Scores Tracker
-+ Save Backups
-+ Save states (so you can reload and continue)
+## What's in v7.0
++ Sliding Bricks
++ TNT, Teleporting, Loot Bricks
 
-## What's coming in v5.0
-+ Permanent Upgrades
-+ Improved physics
+## What's coming in v8.0
++ Difficulty levels
++ Possibly more upgrades
 
-## v4.0 Links
-+ [Google Script](https://script.google.com/macros/s/AKfycbxn3E-qUfbpUW-M4Ju9I_YAfZIcRE_WgEx0jjuNX_TGk7L_4BwXPeF3Ij98XHly5gX54g/exec)
+## v7.0 Links
 + [FCPS Google Script](https://script.google.com/a/fcpsschools.net/macros/s/AKfycbxAN1yq7xIBVMHBer6-3MJj9TZ6hOeFfg0Ub9xmCNeWn2X1NxB542WEpNOtG7kbtEr49Q/exec)
 
 [View all current links](info/LINKS.md)
