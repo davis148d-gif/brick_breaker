@@ -6,7 +6,7 @@
       "startAmmo": 0,
       "critChance": 0,
       "ballSpeed": 0,
-      "autoCollect": 1,
+      "autoCollect": 0,
       "luck": 2
     }
   },
