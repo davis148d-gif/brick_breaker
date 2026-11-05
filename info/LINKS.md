@@ -1,4 +1,8 @@
 # Links
+## v7.0
+### Google Scripts
+> Notice: FCPS Google Scripts only work for accounts within the @fcpsschools.net network.
++ [FCPS Google Script](https://script.google.com/a/fcpsschools.net/macros/s/AKfycbyBEDfbMv3XBZxU2CmC67XLw2G_N_YjgQ3-G21hHYXxgj32zd7Ry59TxM3qytk4cKhv/exec)
 ## v4.0
 ### Google Scripts
 > Notice: The FCPS Google Scripts only work for students within the @fcpsschools.net email domain.
@@ -6,4 +10,3 @@
 + [Google Script 2](https://script.google.com/macros/s/AKfycbyvJ7759PhBIZsvDCyeOyepnevPoIrcTBMnPe13ksEmX26lSpYxF3fiiTTRM61k8Red/exec)
 + [Google Script 3](https://script.google.com/macros/s/AKfycbzUXrQc1Ye3Ej88posx1WvrWXe-KCQrNo4a3H2X4xfREVnGT_JAKOA_mQLagbAyrDSC/exec)
 + [FCPS Google Script](https://script.google.com/a/fcpsschools.net/macros/s/AKfycbxAN1yq7xIBVMHBer6-3MJj9TZ6hOeFfg0Ub9xmCNeWn2X1NxB542WEpNOtG7kbtEr49Q/exec)
-+ [FCPS Google Script 2](https://script.google.com/a/fcpsschools.net/macros/s/AKfycbyBEDfbMv3XBZxU2CmC67XLw2G_N_YjgQ3-G21hHYXxgj32zd7Ry59TxM3qytk4cKhv/exec)
