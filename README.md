@@ -10,7 +10,7 @@ Aim and shoot a string of balls at bricks to progress and stay alive, purchase u
 + Possibly more upgrades
 
 ## v7.0 Links
-+ [FCPS Google Script](https://script.google.com/a/fcpsschools.net/macros/s/AKfycbxAN1yq7xIBVMHBer6-3MJj9TZ6hOeFfg0Ub9xmCNeWn2X1NxB542WEpNOtG7kbtEr49Q/exec)
++ [FCPS Google Script](https://script.google.com/a/fcpsschools.net/macros/s/AKfycbyBEDfbMv3XBZxU2CmC67XLw2G_N_YjgQ3-G21hHYXxgj32zd7Ry59TxM3qytk4cKhv/exec)
 
 [View all current links](info/LINKS.md)
 
