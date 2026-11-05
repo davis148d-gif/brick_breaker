@@ -368,16 +368,6 @@
             <button class="btn-buy" id="btnBuyPermSpeed" onclick="gameManager.buyPermUpgrade('ballSpeed')">Upgrade</button>
           </div>
 
-          <!-- Auto Collect Ammo -->
-          <div class="buff-card">
-            <div class="buff-info">
-              <span class="buff-title">🧲 Auto-Collect</span>
-              <span class="buff-desc">Pull bonus balls automatically</span>
-              <span class="buff-status" id="permAutoStatus">Lvl 0/1 (Cost: 15 Gems)</span>
-            </div>
-            <button class="btn-buy" id="btnBuyPermAuto" onclick="gameManager.buyPermUpgrade('autoCollect')">Upgrade</button>
-          </div>
-
           <!-- Luck Modifier -->
           <div class="buff-card">
             <div class="buff-info">
@@ -1655,7 +1645,6 @@
           startAmmo: { max: 10, costBase: 5, costScale: 3 },
           critChance: { max: 10, costBase: 6, costScale: 3 },
           ballSpeed: { max: 5, costBase: 8, costScale: 4 },
-          autoCollect: { max: 1, costBase: 15, costScale: 0 },
           luck: { max: 5, costBase: 10, costScale: 5 }
         };
 
