@@ -9,6 +9,8 @@ Aim and shoot a string of balls at bricks to progress and stay alive, purchase u
 + Difficulty levels
 + Possibly more upgrades
 
+[View full version info](info/VERSIONS.md)
+
 ## v7.0 Links
 + [FCPS Google Script](https://script.google.com/a/fcpsschools.net/macros/s/AKfycbyBEDfbMv3XBZxU2CmC67XLw2G_N_YjgQ3-G21hHYXxgj32zd7Ry59TxM3qytk4cKhv/exec)
 
@@ -25,5 +27,6 @@ This repository is split into subfolders inside the **game** folder such as:
 If you would like to request an update or suggest features, please email me at davis148d@gmail.com. 
 >Note: I get a **lot** of emails, so I might not see your email the first time. If that happens, please resend the email. 
 
-## Credits
-+ davis148d-gif (davis148d@gmail.com)
+## Other
+[View Credits](info/CREDITS.md)
+[View File Catalog](info/CATALOG.md)
