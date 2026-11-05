@@ -24,6 +24,7 @@
     + v7.html
   + google-scripts (Google Scripts compatible version of Brick Breaker)
     + INSTRUCTIONS.md
+    + code.gs
     + index.html
     + v1.html
     + v2.html
@@ -35,3 +36,39 @@
     + v5.html
     + v6.html
     + v7.html
+  + modular (The code split into .html, .css, and .js files)
+    + index.html
+    + v1
+      + v1.css
+      + v1.html
+      + v1.js
+    + v2
+      + v2.css
+      + v2.html
+      + v2.js
+    + v3
+      + v3.css
+      + v3.html
+      + v3.js
+    + v4
+      + v4.css
+      + v4.html
+      + v4.js
+    + v5
+      + v5.css
+      + v5.html
+      + v5.js
+    + v6
+      + v6.css
+      + v6.html
+      + v6.js
+    + v7
+      + v7.css
+      + v7.html
+      + v7.js
++ info
+  + CATALOG.md
+  + CREDITS.md
+  + LINKS.md
+  + VERSIONS.md
++ README.md
