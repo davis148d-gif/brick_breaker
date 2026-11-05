@@ -29,4 +29,5 @@ If you would like to request an update or suggest features, please email me at d
 
 ## Other
 [View Credits](info/CREDITS.md)
+
 [View File Catalog](info/CATALOG.md)
