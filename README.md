@@ -1,5 +1,5 @@
 # Brick Breaker 
-Aim and shoot a string of balls at bricks to progress and stay alive, purchase upgrades, and set records. Choose different versions from the original Legacy version to the latest v4.0 with upgrades, record tracking, and JSON save backups.
+Aim and shoot a string of balls at bricks to progress and stay alive, purchase upgrades, and set records. Choose different versions from the original Legacy version to the latest v7.0 with upgrades, record tracking, JSON save backups, and different types of bricks.
 
 ## What's in v7.0
 + Sliding Bricks
