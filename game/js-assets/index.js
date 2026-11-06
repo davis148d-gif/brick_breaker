@@ -1,5 +1,4 @@
 
-
         const baseUrl = "<?= getScriptUrl() ?>";
         const gameVersions = [
             {
