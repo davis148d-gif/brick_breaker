@@ -184,6 +184,14 @@
               tag: "v8",
               tagColor: "violet",
               description: "Adds a 5 different difficulty modes."
+            },
+            {
+              id: 9,
+              title: "Speedrun Mode",
+              pageName: "v9",
+              tag: "v9",
+              tagColor: "orange",
+              description: "Adds a Speedrun gamemode and adds a Top Speedrun Time Tracker."
             }
         ];
 
