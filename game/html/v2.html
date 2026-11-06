@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brick Breaker v2</title>
+  <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #faf8ef;
+      margin: 0;
+      padding: 20px 0;
+      font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .game-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 100%;
+    }
+
+    canvas {
+      border: 3px solid #171717;
+      border-radius: 12px;
+      margin: 0 auto;
+      display: block;
+      background-color: #ffffff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      max-width: 100%;
+      height: auto;
+    }
+
+    button {
+      border-radius: 10px;
+      font-size: 1.2em;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      display: block;
+      margin: 16px auto 0 auto;
+      padding: 12px 28px;
+      background-color: #171717;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #333333;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    button:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+  
+  </style>
+</head>
+
+<body>
+  <div class="game-container">
+    <canvas id="canvas" width="710" height="880"></canvas>
+    <button onclick="gameManager.downBalls()">Recall Balls</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/v2.js"></script>
+
+  
+
+  
+
+  
+</body>
+</html>
