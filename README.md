@@ -8,6 +8,8 @@ Aim and shoot a string of balls at bricks to progress and stay alive, purchase u
 ## What's coming in v10.0
 + More Brick types
 
+> Note: The save backup .json formats change across levels, so before v11.0 comes out, you may have to restart. After v11, all save file formats will be identical and back-compatible with any version after v10. 
+
 [View full version info](info/VERSIONS.md)
 
 ## v8.0 Links
