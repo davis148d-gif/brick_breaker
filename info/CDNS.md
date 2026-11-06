@@ -8,3 +8,4 @@
 + v6.js: [https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/v6.js](https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/v6.js)
 + v7.js: [https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/v7.js](https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/v7.js)
 + v8.js: [https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/v8.js](https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/v8.js)
++ v9.js: [https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/v9.js](https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/v9.js)
