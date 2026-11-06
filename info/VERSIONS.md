@@ -1,5 +1,8 @@
 # Versions
 ## Versions List
+## v9.0
++ Adds Speedrun Mode
++ Adds Speedrun Time Tracker
 ## v8.0
 + Adds difficulty levels
 + Updates the canvas UI to be smoother
