@@ -1,4 +1,8 @@
 # Versions
+## Versions List
+## v8.0
++ Adds difficulty levels
++ Updates the canvas UI to be smoother
 ## v7.0
 + New Slider brick
 ## v6.0
