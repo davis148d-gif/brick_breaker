@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Brick Breaker v8</title>
+  <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+    * { box-sizing: border-box; }
+
+    body {
+      background: #faf8ef;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+      color: #222;
+    }
+
+    /* Menu Bar Styles */
+    .menu-bar {
+      display: flex;
+      background-color: #222;
+      padding: 10px 20px;
+      gap: 12px;
+      align-items: center;
+      border-bottom: 2px solid #171717;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .menu-bar button, .menu-bar label.btn-label, .menu-bar select.difficulty-select {
+      background-color: #333;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 0.9em;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-bar button:hover, .menu-bar label.btn-label:hover {
+      background-color: #555;
+      transform: translateY(-1px);
+    }
+
+    select.difficulty-select {
+      background-color: #2b6cb0;
+      color: #fff;
+      outline: none;
+      padding-right: 28px;
+    }
+    select.difficulty-select:hover { background-color: #2c5282; }
+
+    /* Modal Overlay Styles */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal-content {
+      background: #ffffff;
+      border: 2px solid #171717;
+      border-radius: 8px;
+      padding: 20px;
+      width: 400px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 10px; right: 15px;
+      background: none; border: none; font-size: 1.2em;
+      font-weight: bold; cursor: pointer; color: #222;
+      padding: 4px 8px;
+    }
+    .modal-close:hover { background: #eee; border-radius: 4px; }
+
+    .main-container {
+      max-width: 1400px;
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 10px;
+    }
+
+    .game-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    canvas {
+      border: 2px solid #171717;
+      border-radius: 8px;
+      display: block;
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .controls-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    button, label.btn-label {
+      border-radius: 8px;
+      font-size: 0.95em;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      padding: 10px 16px;
+      background-color: #222;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button:hover, label.btn-label:hover {
+      background-color: #444;
+      transform: translateY(-2px);
+    }
+
+    button:active, label.btn-label:active { transform: translateY(0); }
+
+    button:disabled, label.btn-label.disabled {
+      background-color: #cbd5e0 !important;
+      color: #718096 !important;
+      cursor: not-allowed !important;
+      transform: none !important;
+    }
+
+    button.btn-secondary, label.btn-secondary { background-color: #4a5568; }
+    button.btn-secondary:hover, label.btn-secondary:hover { background-color: #2d3748; }
+
+    input[type="file"] { display: none; }
+
+    .sidebar-container {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .sidebar {
+      width: 360px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .panel {
+      background: #ffffff;
+      border: 2px solid #171717;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .panel h2 {
+      margin: 0 0 10px 0;
+      font-size: 1.2em;
+      font-weight: 700;
+      text-align: center;
+      border-bottom: 2px solid #edf2f7;
+      padding-bottom: 6px;
+    }
+
+    .shop-coins-display {
+      text-align: center;
+      font-size: 1.1em;
+      font-weight: 700;
+      color: #d69e2e;
+      margin-bottom: 12px;
+      background: #fefcbf;
+      padding: 6px;
+      border-radius: 6px;
+      border: 1px solid #f6e05e;
+    }
+
+    .shop-gems-display {
+      text-align: center;
+      font-size: 1.1em;
+      font-weight: 700;
+      color: #6b46c1;
+      margin-bottom: 12px;
+      background: #e9d8fd;
+      padding: 6px;
+      border-radius: 6px;
+      border: 1px solid #d6bcfa;
+    }
+
+    .buff-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .buff-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #f7fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+
+    .buff-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .buff-title {
+      font-weight: 700;
+      font-size: 0.9em;
+    }
+
+    .buff-desc {
+      font-size: 0.75em;
+      color: #718096;
+    }
+
+    .buff-status {
+      font-size: 0.78em;
+      font-weight: 700;
+      color: #38a169;
+    }
+
+    .btn-buy {
+      background-color: #319795;
+      font-size: 0.8em;
+      padding: 6px 10px;
+      white-space: nowrap;
+    }
+
+    .btn-buy:hover { background-color: #2c7a7b; }
+
+    .leaderboard-container {
+      flex: 1;
+      overflow-y: auto;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+    }
+
+    .leaderboard-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85em;
+    }
+
+    .leaderboard-table th {
+      position: sticky;
+      top: 0;
+      background-color: #f7fafc;
+      padding: 8px 10px;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .leaderboard-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid #edf2f7;
+    }
+
+    .leaderboard-table tr:nth-child(even) { background-color: #fcfcfc; }
+
+    .leaderboard-info {
+      font-size: 0.75em;
+      color: #718096;
+      margin-top: 6px;
+      text-align: center;
+    }
+
+    .legend-box {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.8em;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .legend-sample {
+      width: 28px;
+      height: 18px;
+      border-radius: 4px;
+    }
+  
+
+  </style>
+</head>
+<body>
+  <!-- Menu Bar -->
+  <div class="menu-bar">
+    <select id="difficultySelect" class="difficulty-select" onchange="gameManager.changeDifficulty(this.value)">
+      <option value="easy">Easy (Max 3 Bricks)</option>
+      <option value="medium" selected>Medium (Max 4 Bricks)</option>
+      <option value="hard">Hard (Max 5 Bricks)</option>
+      <option value="insane">Insane (3-5 Bricks)</option>
+      <option value="asian">ASIAN (4-5 Bricks)</option>
+    </select>
+    <button onclick="openModal('permModal')">Permanent Upgrades</button>
+    <button onclick="openModal('tempModal')">Temporary Shop</button>
+    <button onclick="openModal('legendModal')">Brick Legend</button>
+    <button onclick="openModal('leaderboardModal')">Leaderboard</button>
+  </div>
+
+  <!-- Modals -->
+  <div id="permModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('permModal')">&times;</button>
+      <h2>Permanent Upgrades</h2>
+      <div class="shop-gems-display">
+        Gems: <span id="gemsCountModal">0</span> 💎
+      </div>
+      <div class="buff-list">
+        <div class="buff-card">
+          <div class="buff-info">
+            <span class="buff-title">🎯 Start Ammo</span>
+            <span class="buff-desc">+1 Base Ball per level</span>
+            <span class="buff-status" id="permAmmoStatus">Lvl 0/10 (Cost: 5 Gems)</span>
+          </div>
+          <button class="btn-buy" id="btnBuyPermAmmo" onclick="gameManager.buyPermUpgrade('startAmmo')">Upgrade</button>
+        </div>
+        <div class="buff-card">
+          <div class="buff-info">
+            <span class="buff-title">⚡ Crit Chance</span>
+            <span class="buff-desc">+5% Crit chance (3x dmg)</span>
+            <span class="buff-status" id="permCritStatus">Lvl 0/10 (Cost: 6 Gems)</span>
+          </div>
+          <button class="btn-buy" id="btnBuyPermCrit" onclick="gameManager.buyPermUpgrade('critChance')">Upgrade</button>
+        </div>
+        <div class="buff-card">
+          <div class="buff-info">
+            <span class="buff-title">💨 Ball Speed</span>
+            <span class="buff-desc">+10% Ball shot velocity</span>
+            <span class="buff-status" id="permSpeedStatus">Lvl 0/5 (Cost: 8 Gems)</span>
+          </div>
+          <button class="btn-buy" id="btnBuyPermSpeed" onclick="gameManager.buyPermUpgrade('ballSpeed')">Upgrade</button>
+        </div>
+        <div class="buff-card">
+          <div class="buff-info">
+            <span class="buff-title">🍀 Luck (Extra Coins)</span>
+            <span class="buff-desc">+20% Coin drop multiplier</span>
+            <span class="buff-status" id="permLuckStatus">Lvl 0/5 (Cost: 10 Gems)</span>
+          </div>
+          <button class="btn-buy" id="btnBuyPermLuck" onclick="gameManager.buyPermUpgrade('luck')">Upgrade</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="tempModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('tempModal')">&times;</button>
+      <h2>Temporary Shop</h2>
+      <div class="shop-coins-display" style="margin-bottom: 12px;">
+        Coins: <span id="coinsCountTempModal">0</span> 🪙
+      </div>
+      <div class="buff-list">
+        <div class="buff-card">
+          <div class="buff-info">
+            <span class="buff-title">💥 1.5x Damage</span>
+            <span class="buff-desc">Balls deal 1.5x damage (3 turns)</span>
+            <span class="buff-status" id="buff15xStatus">Inactive</span>
+          </div>
+          <button class="btn-buy" id="btnBuy15x" onclick="gameManager.buyTempBuff('doubleDamage')">Buy (30 C)</button>
+        </div>
+        <div class="buff-card">
+          <div class="buff-info">
+            <span class="buff-title">⚡ Laser Wipe</span>
+            <span class="buff-desc">Clears bottommost brick row</span>
+            <span class="buff-status" id="buffLaserStatus">Instant Use</span>
+          </div>
+          <button class="btn-buy" id="btnBuyLaser" onclick="gameManager.buyTempBuff('laserWipe')">Buy (40 C)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="legendModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('legendModal')">&times;</button>
+      <h2>Brick Styles Legend</h2>
+      <div class="legend-box">
+        <div class="legend-item">
+          <div class="legend-sample" style="background:#00b5d8; border: 3px solid #e0fbfc;"></div>
+          <span><strong>Slider:</strong> Cyan Border with Arrows (Slides Horizontally)</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-sample" style="background:#e53e3e; border: 3px dashed #ff9999;"></div>
+          <span><strong>TNT:</strong> Pulsing Fuse Border (Explodes + Flash Ring)</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-sample" style="background:#d69e2e; border: 3px double #ffffff;"></div>
+          <span><strong>Ammo:</strong> Double White Border (+1 Ball Drop)</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-sample" style="background:#805ad5; border: 3px dotted #e9d8fd;"></div>
+          <span><strong>Teleport:</strong> Dotted Light-Purple Border</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="leaderboardModal" class="modal-overlay">
+    <div class="modal-content" style="height: 600px; display: flex; flex-direction: column;">
+      <button class="modal-close" onclick="closeModal('leaderboardModal')">&times;</button>
+      <h2>Top 100 High Scores</h2>
+      <div class="leaderboard-container" style="flex: 1; overflow-y: auto; margin-top: 10px;">
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th style="width: 45px;">Rank</th>
+              <th>Score</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboardBody"></tbody>
+        </table>
+      </div>
+      <div class="leaderboard-info">v8: Customizable Difficulty Settings (Easy to ASIAN)!</div>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <div class="game-section">
+      <canvas id="canvas" width="710" height="880"></canvas>
+      <div class="controls-row">
+        <button onclick="gameManager.downBalls()">Recall Balls</button>
+        <button class="btn-secondary" onclick="gameManager.exportSaveFile()">Download Save</button>
+        <label class="btn-label btn-secondary">
+          Upload Save
+          <input type="file" id="saveFileInput" accept=".json" onchange="gameManager.importSaveFile(event)" />
+        </label>
+        <button class="btn-secondary" onclick="gameManager.resetGame()">New Run</button>
+      </div>
+    </div>
+
+    <!-- Separate Tracker Container for Coins, Gems, and Active Buffs -->
+    <div class="sidebar">
+      <div class="panel">
+        <h2>Run Stats & Tracker</h2>
+        <div class="shop-coins-display" style="margin-bottom: 8px;">
+          Coins: <span id="trackerCoins">0</span> 🪙
+        </div>
+        <div class="shop-gems-display" style="margin-bottom: 12px;">
+          Gems: <span id="trackerGems">0</span> 💎
+        </div>
+        <div class="buff-list">
+          <div class="buff-card">
+            <div class="buff-info">
+              <span class="buff-title">Active Buffs Status</span>
+              <span class="buff-status" id="trackerActiveBuffs">None</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/v8.js"></script>
+</body>
+</html>
