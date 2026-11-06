@@ -6,7 +6,45 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>BRICK BREAKER</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0d14;
+            background-image: 
+                radial-gradient(at 50% 0%, rgba(124, 58, 237, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(236, 72, 153, 0.1) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(6, 182, 212, 0.1) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        .arcade-font {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .neon-text {
+            text-shadow: 
+                0 0 10px rgba(236, 72, 153, 0.7),
+                0 0 20px rgba(236, 72, 153, 0.5),
+                0 0 30px rgba(124, 58, 237, 0.5);
+        }
+
+        .neon-card {
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .neon-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 
+                0 0 20px rgba(168, 85, 247, 0.35),
+                inset 0 0 15px rgba(168, 85, 247, 0.15);
+        }
+    
+
+    </style>
 </head>
 <body class="text-gray-100 min-h-screen flex flex-col justify-between selection:bg-pink-500 selection:text-white">
 
