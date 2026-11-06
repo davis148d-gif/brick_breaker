@@ -1,0 +1,171 @@
+
+
+        const baseUrl = "<?= getScriptUrl() ?>";
+        const gameVersions = [
+            {
+                id: 1,
+                title: "Legacy Edition",
+                pageName: "v1",
+                tag: "v1",
+                tagColor: "purple",
+                description: "The original version from 10/2024."
+            },
+            {
+                id: 2,
+                title: "Upgraded UI",
+                pageName: "v2",
+                tag: "v2",
+                tagColor: "cyan",
+                description: "Improved UI and interface as well as updated color scheme."
+            },
+            {
+                id: 3,
+                title: "Backups",
+                pageName: "v3",
+                tag: "v3",
+                tagColor: "pink",
+                description: "Implements save backups and dynamic state saving so you can reload and continue as well as download backup saves & track your top scores."
+            },
+            {
+                id: 4,
+                title: "Buffs",
+                pageName: "v4",
+                tag: "v4",
+                tagColor: "amber",
+                description: "Adds quality-of-life buffs, including double damage & fireballs"
+            },
+            {
+              id: 5,
+              title: "Permanent Upgrades",
+              pageName: "v5",
+              tag: "v5",
+              tagColor: "emerald",
+              description: "Adds permanent upgrades bought with Gems."
+            },
+            {
+              id: 6,
+              title: "New Bricks",
+              pageName: "v6",
+              tag: "v6",
+              tagColor: "fuchsia",
+              description: "Adds TNT, Loot, and Teleporting Bricks."
+            },
+            {
+              id: 7,
+              title: "Sliding Bricks",
+              pageName: "v7",
+              tag: "v7",
+              tagColor: "red",
+              description: "Adds a Sliding Brick."
+            },
+            {
+              id: 8,
+              title: "Difficulty Selectors",
+              pageName: "v8",
+              tag: "v8",
+              tagColor: "violet",
+              description: "Adds a 5 different difficulty modes."
+            }
+        ];
+
+        const colorStyles = {
+            purple:  { badge: "bg-purple-500/20 text-purple-300 border-purple-500/40", btn: "bg-purple-600/30 hover:bg-purple-600 border-purple-500/50 hover:border-purple-400 text-purple-200" },
+            cyan:    { badge: "bg-cyan-500/20 text-cyan-300 border-cyan-500/40", btn: "bg-cyan-600/30 hover:bg-cyan-600 border-cyan-500/50 hover:border-cyan-400 text-cyan-200" },
+            pink:    { badge: "bg-pink-500/20 text-pink-300 border-pink-500/40", btn: "bg-pink-600/30 hover:bg-pink-600 border-pink-500/50 hover:border-pink-400 text-pink-200" },
+            amber:   { badge: "bg-amber-500/20 text-amber-300 border-amber-500/40", btn: "bg-amber-600/30 hover:bg-amber-600 border-amber-500/50 hover:border-amber-400 text-amber-200" },
+            emerald: { badge: "bg-emerald-500/20 text-emerald-300 border-emerald-500/40", btn: "bg-emerald-600/30 hover:bg-emerald-600 border-emerald-500/50 hover:border-emerald-400 text-emerald-200" },
+            rose:    { badge: "bg-rose-500/20 text-rose-300 border-rose-500/40", btn: "bg-rose-600/30 hover:bg-rose-600 border-rose-500/50 hover:border-rose-400 text-rose-200" },
+            indigo:  { badge: "bg-indigo-500/20 text-indigo-300 border-indigo-500/40", btn: "bg-indigo-600/30 hover:bg-indigo-600 border-indigo-500/50 hover:border-indigo-400 text-indigo-200" },
+            fuchsia: { badge: "bg-fuchsia-500/20 text-fuchsia-300 border-fuchsia-500/40", btn: "bg-fuchsia-600/30 hover:bg-fuchsia-600 border-fuchsia-500/50 hover:border-fuchsia-400 text-fuchsia-200" },
+            orange:  { badge: "bg-orange-500/20 text-orange-300 border-orange-500/40", btn: "bg-orange-600/30 hover:bg-orange-600 border-orange-500/50 hover:border-orange-400 text-orange-200" },
+            red:     { badge: "bg-red-500/20 text-red-300 border-red-500/40", btn: "bg-red-600/30 hover:bg-red-600 border-red-500/50 hover:border-red-400 text-red-200" },
+            violet:  { badge: "bg-violet-500/20 text-violet-300 border-violet-500/40", btn: "bg-violet-600/30 hover:bg-violet-600 border-violet-500/50 hover:border-violet-400 text-violet-200" }
+        };
+
+        function renderCards() {
+            const container = document.getElementById('versionGrid');
+
+            container.innerHTML = gameVersions.map(v => {
+                const style = colorStyles[v.tagColor] || colorStyles.purple;
+                const fullTargetUrl = baseUrl ? `${baseUrl}?page=${v.pageName}` : `#${v.pageName}`;
+
+                return `
+                    <div class="neon-card group bg-slate-900/90 rounded-2xl border border-purple-500/30 p-5 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-xs text-slate-500 font-mono">v${v.id}.0</span>
+                            </div>
+
+                            <h3 class="arcade-font text-lg font-bold text-white group-hover:text-pink-400 transition mb-3">
+                                ${v.id}. ${v.title}
+                            </h3>
+
+                            <div class="bg-slate-950/60 rounded-xl p-3.5 border border-slate-800/80 mb-5">
+                                <p class="text-slate-300 text-xs leading-relaxed">
+                                    ${v.description}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a href="${fullTargetUrl}" target="_top" class="w-full py-2.5 px-4 rounded-xl border ${style.btn} hover:text-white font-semibold text-center block transition duration-200 text-sm shadow-md">
+                                PLAY VERSION ${v.id} <i class="fa-solid fa-play ml-1.5 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function setupDropdownView() {
+            const dropdown = document.getElementById('versionDropdown');
+            dropdown.innerHTML = gameVersions.map(v => 
+                `<option value="${v.id}">Version ${v.id}: ${v.title}</option>`
+            ).join('');
+
+            if (gameVersions.length > 0) {
+                onVersionSelect(gameVersions[0].id);
+            }
+        }
+
+        function onVersionSelect(versionId) {
+            const selected = gameVersions.find(v => v.id == versionId) || gameVersions[0];
+            const style = colorStyles[selected.tagColor] || colorStyles.purple;
+            const fullTargetUrl = baseUrl ? `${baseUrl}?page=${selected.pageName}` : `#${selected.pageName}`;
+
+            document.getElementById('selectedTitle').innerText = `${selected.id}. ${selected.title}`;
+            document.getElementById('selectedTag').innerText = `v${selected.id}.0`;
+            document.getElementById('selectedDescription').innerText = selected.description;
+            
+            const btn = document.getElementById('selectedPlayBtn');
+            btn.href = fullTargetUrl;
+            btn.className = `w-full py-3 px-4 rounded-xl border ${style.btn} hover:text-white font-semibold text-center block transition duration-200 text-sm shadow-md`;
+            btn.innerHTML = `PLAY VERSION ${selected.id} <i class="fa-solid fa-play ml-1.5 text-xs"></i>`;
+        }
+
+        function switchUiMode(mode) {
+            const gridView = document.getElementById('versionGrid');
+            const dropdownView = document.getElementById('dropdownView');
+            const modeSelect = document.getElementById('uiModeSelect');
+
+            modeSelect.value = mode;
+
+            if (mode === 'dropdown') {
+                gridView.classList.add('hidden');
+                dropdownView.classList.remove('hidden');
+            } else {
+                dropdownView.classList.add('hidden');
+                gridView.classList.remove('hidden');
+            }
+
+            localStorage.setItem('brick_breaker_ui_mode', mode);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderCards();
+            setupDropdownView();
+
+            const savedMode = localStorage.getItem('brick_breaker_ui_mode') || 'grid';
+            switchUiMode(savedMode);
+        });
+    
