@@ -1,7 +1,7 @@
 # Brick Breaker 
 Aim and shoot a string of balls at bricks to progress and stay alive, purchase upgrades, and set records. Choose different versions from the original Legacy version to the latest v7.0 with upgrades, record tracking, JSON save backups, and different types of bricks.
 
-## What's in v7.0
+## What's in v8.0
 + Difficulty levels
 
 ## What's coming in v9.0
