@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brick Breaker v3</title>
+  <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #faf8ef;
+      margin: 0;
+      padding: 20px 10px;
+      font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+      color: #222;
+    }
+
+    .main-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .game-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    canvas {
+      border: 2px solid #171717;
+      border-radius: 8px;
+      display: block;
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      max-width: 100%;
+      height: auto;
+    }
+
+    .controls-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    button, label.btn-label {
+      border-radius: 8px;
+      font-size: 0.95em;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      padding: 10px 18px;
+      background-color: #222;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+
+    button:hover, label.btn-label:hover {
+      background-color: #444;
+      transform: translateY(-2px);
+    }
+
+    button:active, label.btn-label:active {
+      transform: translateY(0);
+    }
+
+    button.btn-secondary, label.btn-secondary {
+      background-color: #4a5568;
+    }
+
+    button.btn-secondary:hover, label.btn-secondary:hover {
+      background-color: #2d3748;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .sidebar {
+      width: 380px;
+      background: #ffffff;
+      border: 2px solid #171717;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      height: 880px;
+    }
+
+    .sidebar h2 {
+      margin: 0 0 12px 0;
+      font-size: 1.4em;
+      font-weight: 700;
+      text-align: center;
+      border-bottom: 2px solid #edf2f7;
+      padding-bottom: 8px;
+    }
+
+    .leaderboard-container {
+      flex: 1;
+      overflow-y: auto;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+    }
+
+    .leaderboard-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88em;
+    }
+
+    .leaderboard-table th {
+      position: sticky;
+      top: 0;
+      background-color: #f7fafc;
+      padding: 8px 10px;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .leaderboard-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid #edf2f7;
+    }
+
+    .leaderboard-table tr:nth-child(even) {
+      background-color: #fcfcfc;
+    }
+
+    .leaderboard-info {
+      font-size: 0.8em;
+      color: #718096;
+      margin-top: 8px;
+      text-align: center;
+    }
+  
+  </style>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="game-section">
+      <canvas id="canvas" width="710" height="880"></canvas>
+      <div class="controls-row">
+        <button onclick="gameManager.downBalls()">Recall Balls</button>
+        <button class="btn-secondary" onclick="gameManager.exportSaveFile()">Download Save</button>
+        <label class="btn-label btn-secondary">
+          Upload Save
+          <input type="file" id="saveFileInput" accept=".json" onchange="gameManager.importSaveFile(event)" />
+        </label>
+        <button class="btn-secondary" onclick="gameManager.resetGame()">New Run</button>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <h2>Top 100 High Scores</h2>
+      <div class="leaderboard-container">
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th style="width: 50px;">Rank</th>
+              <th>Score (Level)</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboardBody">
+          </tbody>
+        </table>
+      </div>
+      <div class="leaderboard-info">Scores update to the leaderboard upon Game Over.</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/v3.js"></script>
+
+  
+
+  
+
+  
+</body>
+</html>
