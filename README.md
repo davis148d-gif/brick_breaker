@@ -2,16 +2,14 @@
 Aim and shoot a string of balls at bricks to progress and stay alive, purchase upgrades, and set records. Choose different versions from the original Legacy version to the latest v7.0 with upgrades, record tracking, JSON save backups, and different types of bricks.
 
 ## What's in v7.0
-+ Sliding Bricks
-+ TNT, Teleporting, Loot Bricks
-
-## What's coming in v8.0
 + Difficulty levels
-+ Possibly more upgrades
+
+## What's coming in v9.0
++ More Brick types
 
 [View full version info](info/VERSIONS.md)
 
-## v7.0 Links
+## v8.0 Links
 + [FCPS Google Script](https://script.google.com/a/fcpsschools.net/macros/s/AKfycbyBEDfbMv3XBZxU2CmC67XLw2G_N_YjgQ3-G21hHYXxgj32zd7Ry59TxM3qytk4cKhv/exec)
 
 [View all current links](info/LINKS.md)
@@ -33,3 +31,5 @@ If you would like to request an update or suggest features, please email me at d
 [View File Catalog](info/CATALOG.md)
 
 [View JSDelivr CDN URLs](info/CDNS.md)
+
+[View Implementation Instructions](info/IMPLEMENTATION.md)
