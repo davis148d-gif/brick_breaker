@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub to jsDelivr Converter</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --accent: #e53e3e;
+      --accent-hover: #c53030;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #334155;
+      --input-bg: #0f172a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      max-width: 650px;
+      width: 100%;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px 16px;
+      background-color: var(--input-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    input[type="text"]:focus {
+      border-color: var(--accent);
+    }
+
+    .output-group {
+      position: relative;
+    }
+
+    .output-group input {
+      padding-right: 90px;
+      background-color: #0b1120;
+    }
+
+    .copy-btn {
+      position: absolute;
+      right: 6px;
+      top: 6px;
+      bottom: 6px;
+      padding: 0 16px;
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .copy-btn:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .error-msg {
+      color: #fc8181;
+      font-size: 0.85rem;
+      margin-top: 6px;
+      display: none;
+    }
+
+    .examples {
+      margin-top: 24px;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+
+    .examples p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .example-tag {
+      display: inline-block;
+      background: #0f172a;
+      border: 1px solid var(--border);
+      font-family: monospace;
+      font-size: 0.75rem;
+      padding: 4px 8px;
+      border-radius: 4px;
+      color: #38bdf8;
+      cursor: pointer;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+
+    .example-tag:hover {
+      border-color: #38bdf8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e53e3e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+      <h1>GitHub to jsDelivr Converter</h1>
+    </div>
+    <p class="subtitle">Paste a GitHub repository file or release URL to get the jsDelivr CDN link.</p>
+
+    <div class="form-group">
+      <label for="github-url">GitHub URL</label>
+      <input type="text" id="github-url" placeholder="https://github.com/user/repo/blob/main/file.js" autocomplete="off">
+      <div id="error-message" class="error-msg">Invalid GitHub file URL format.</div>
+    </div>
+
+    <div class="form-group">
+      <label for="jsdelivr-url">jsDelivr CDN URL</label>
+      <div class="output-group">
+        <input type="text" id="jsdelivr-url" readonly placeholder="CDN link will appear here...">
+        <button class="copy-btn" id="copy-btn">Copy</button>
+      </div>
+    </div>
+
+    <div class="examples">
+      <p>Click an example to test:</p>
+      <span class="example-tag" data-url="https://github.com/jquery/jquery/blob/main/src/core.js">jQuery Core</span>
+      <span class="example-tag" data-url="https://github.com/twbs/bootstrap/blob/v5.3.0/dist/js/bootstrap.min.js">Bootstrap Tag</span>
+    </div>
+  </div>
+
+  <script>
+    const githubInput = document.getElementById('github-url');
+    const jsdelivrInput = document.getElementById('jsdelivr-url');
+    const copyBtn = document.getElementById('copy-btn');
+    const errorMsg = document.getElementById('error-message');
+
+    function convertUrl(url) {
+      const trimmed = url.trim();
+      if (!trimmed) {
+        errorMsg.style.display = 'none';
+        return '';
+      }
+
+      // Format 1: Standard GitHub blob/raw links
+      // https://github.com/user/repo/blob/version/path/to/file.ext
+      // https://raw.githubusercontent.com/user/repo/version/path/to/file.ext
+      const blobRegex = /^https?:\/\/(?:www\.)?(?:github\.com\/([^\/]+)\/([^\/]+)\/(?:blob|raw)\/|raw\.githubusercontent\.com\/([^\/]+)\/([^\/]+)\/)([^\/]+)\/(.+)$/;
+      const blobMatch = trimmed.match(blobRegex);
+
+      if (blobMatch) {
+        errorMsg.style.display = 'none';
+        const user = blobMatch[1] || blobMatch[3];
+        const repo = blobMatch[2] || blobMatch[4];
+        const version = blobMatch[5];
+        const path = blobMatch[6];
+        return `https://cdn.jsdelivr.net/gh/${user}/${repo}@${version}/${path}`;
+      }
+
+      // Format 2: Repository root link (without specific branch or path)
+      // https://github.com/user/repo
+      const repoRegex = /^https?:\/\/(?:www\.)?github\.com\/([^\/]+)\/([^\/]+)\/?$/;
+      const repoMatch = trimmed.match(repoRegex);
+
+      if (repoMatch) {
+        errorMsg.style.display = 'none';
+        const user = repoMatch[1];
+        const repo = repoMatch[2];
+        return `https://cdn.jsdelivr.net/gh/${user}/${repo}/`;
+      }
+
+      errorMsg.style.display = 'block';
+      return '';
+    }
+
+    githubInput.addEventListener('input', () => {
+      jsdelivrInput.value = convertUrl(githubInput.value);
+    });
+
+    copyBtn.addEventListener('click', () => {
+      if (!jsdelivrInput.value) return;
+      jsdelivrInput.select();
+      navigator.clipboard.writeText(jsdelivrInput.value);
+      
+      const originalText = copyBtn.innerText;
+      copyBtn.innerText = 'Copied!';
+      setTimeout(() => {
+        copyBtn.innerText = originalText;
+      }, 1500);
+    });
+
+    document.querySelectorAll('.example-tag').forEach(tag => {
+      tag.addEventListener('click', () => {
+        githubInput.value = tag.getAttribute('data-url');
+        jsdelivrInput.value = convertUrl(githubInput.value);
+      });
+    });
+  </script>
+</body>
+</html>
