@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML to HTML & JS Output Generator</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #334155;
+      --input-bg: #0b1120;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 24px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .input-section {
+        grid-column: span 2;
+      }
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .card-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    textarea {
+      width: 100%;
+      height: 200px;
+      background-color: var(--input-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      padding: 12px;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      resize: vertical;
+      outline: none;
+      white-space: pre;
+    }
+
+    textarea:focus {
+      border-color: var(--accent);
+    }
+
+    .btn {
+      padding: 6px 14px;
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .options {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    .options label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>HTML to HTML & JS Generator</h1>
+    <p class="subtitle">Convert pasted HTML code to clean copyable HTML text and injectable JS scripts.</p>
+
+    <div class="grid">
+      <!-- Input Section -->
+      <div class="card input-section">
+        <div class="card-header">
+          <span class="card-title">Input HTML</span>
+        </div>
+        <textarea id="html-input" placeholder="Paste your raw HTML snippet here..."></textarea>
+        <div class="options">
+          <label for="target-id-input">
+            Target Element ID (JS Output):
+            <input type="text" id="target-id-input" value="app" style="background: var(--input-bg); border: 1px solid var(--border); color: #fff; padding: 4px 8px; border-radius: 4px; width: 120px;">
+          </label>
+        </div>
+      </div>
+
+      <!-- Direct Copy Raw HTML Output -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Raw HTML Output (Unescaped)</span>
+          <button class="btn" onclick="copyToClipboard('html-output', this)">Copy HTML</button>
+        </div>
+        <textarea id="html-output" readonly placeholder="Raw HTML code will appear here..."></textarea>
+      </div>
+
+      <!-- Executable JS Script Output -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Injectable JS File Output</span>
+          <button class="btn" onclick="copyToClipboard('js-output', this)">Copy JS</button>
+        </div>
+        <textarea id="js-output" readonly placeholder="JS code suitable for external fetching will appear here..."></textarea>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const htmlInput = document.getElementById('html-input');
+    const htmlOutput = document.getElementById('html-output');
+    const jsOutput = document.getElementById('js-output');
+    const targetIdInput = document.getElementById('target-id-input');
+
+    function convertCode() {
+      const rawHtml = htmlInput.value;
+      const targetId = targetIdInput.value.trim() || 'app';
+
+      if (!rawHtml) {
+        htmlOutput.value = '';
+        jsOutput.value = '';
+        return;
+      }
+
+      // 1. Raw HTML Output: Preserves exact raw characters (<, >, &, etc.) for direct copy-pasting
+      htmlOutput.value = rawHtml;
+
+      // 2. JS Injection Output: Encodes code safely for external script execution upon fetching
+      const serializedHtml = JSON.stringify(rawHtml);
+      const jsCode = `(function() {
+  const targetId = "${targetId}";
+  const htmlContent = ${serializedHtml};
+
+  function inject() {
+    const container = document.getElementById(targetId) || document.body;
+    const range = document.createRange();
+    range.selectNode(container);
+    const fragment = range.createContextualFragment(htmlContent);
+    container.appendChild(fragment);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', inject);
+  } else {
+    inject();
+  }
+})();`;
+
+      jsOutput.value = jsCode;
+    }
+
+    function copyToClipboard(elementId, btn) {
+      const textarea = document.getElementById(elementId);
+      if (!textarea.value) return;
+
+      textarea.select();
+      navigator.clipboard.writeText(textarea.value);
+
+      const originalText = btn.innerText;
+      btn.innerText = 'Copied!';
+      setTimeout(() => {
+        btn.innerText = originalText;
+      }, 1500);
+    }
+
+    htmlInput.addEventListener('input', convertCode);
+    targetIdInput.addEventListener('input', convertCode);
+  </script>
+</body>
+</html>
