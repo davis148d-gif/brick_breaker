@@ -64,21 +64,26 @@
                         <option value="dropdown" class="bg-slate-900 text-white">Dropdown View</option>
                     </select>
                 </div>
-                <div class="text-xs font-mono text-purple-400 bg-purple-950/60 px-3 py-1.5 rounded-full border border-purple-500/30 hidden sm:block">
-                    4 VERSIONS AVAILABLE
+                <div id="versionCounterBadge" class="text-xs font-mono text-purple-400 bg-purple-950/60 px-3 py-1.5 rounded-full border border-purple-500/30 hidden sm:block">
+                    0 VERSIONS AVAILABLE
                 </div>
             </div>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow w-full">
-        <div class="text-center mb-10">
+        <div class="text-center mb-8">
             <h2 class="arcade-font text-3xl sm:text-4xl font-extrabold text-white mb-3 tracking-wide">
                 SELECT GAME VERSION
             </h2>
-            <p class="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base">
-                Choose from 4 versions of Brick Breaker below.
+            <p id="subTitleText" class="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base">
+                Choose a category or version of Brick Breaker below.
             </p>
+        </div>
+
+        <!-- Game Type / Category Filter Buttons -->
+        <div id="gameTypeFilters" class="flex flex-wrap items-center justify-center gap-2 mb-8">
+            <!-- Dynamically populated from gameTypes array -->
         </div>
 
         <!-- Grid View Layout -->
@@ -93,11 +98,11 @@
                     <label for="versionDropdown" class="text-xs font-bold uppercase tracking-wider text-purple-300">
                         Choose Version:
                     </label>
-                    <select id="versionDropdown" onchange="navigateToVersion(this.value)" class="w-full bg-slate-950 border border-purple-500/40 rounded-xl px-4 py-3 text-white font-semibold text-sm outline-none focus:border-pink-500 transition cursor-pointer">
+                    <select id="versionDropdown" onchange="onVersionSelect(this.value)" class="w-full bg-slate-950 border border-purple-500/40 rounded-xl px-4 py-3 text-white font-semibold text-sm outline-none focus:border-pink-500 transition cursor-pointer">
                     </select>
                 </div>
 
-                <!-- Version Details & Direct href Link (Right Side) -->
+                <!-- Version Details & Play Button (Right Side) -->
                 <div class="md:col-span-7 bg-slate-950/70 rounded-xl p-5 border border-slate-800/80 flex flex-col justify-between min-h-[160px]">
                     <div>
                         <div class="flex justify-between items-center mb-2">
@@ -119,81 +124,111 @@
     </main>
 
     <script>
-        const baseUrl = "<?= getScriptUrl() ?>";
+        // Set baseUrl to empty string for standard relative file navigation (e.g. v1.html, v2.html) on CodeHS
+        const baseUrl = "";
+
+        const gameTypes = [
+            { id: "all", label: "All Modes", icon: "fa-border-all" },
+            { id: "classic", label: "Classic", icon: "fa-gamepad" },
+            { id: "multiplayer", label: "Multiplayer", icon: "fa-users" },
+            { id: "upgrades", label: "Upgrades & Mechanics", icon: "fa-bolt" },
+            { id: "arcade", label: "Arcade & Special Modes", icon: "fa-trophy" }
+        ];
+
         const gameVersions = [
             {
                 id: 1,
                 title: "Legacy Edition",
-                pageName: "v1",
+                pageName: "v1.html",
                 tag: "v1",
                 tagColor: "purple",
+                category: "classic",
                 description: "The original version from 10/2024."
             },
             {
                 id: 2,
                 title: "Upgraded UI",
-                pageName: "v2",
+                pageName: "v2.html",
                 tag: "v2",
                 tagColor: "cyan",
+                category: "classic",
                 description: "Improved UI and interface as well as updated color scheme."
             },
             {
                 id: 3,
                 title: "Backups",
-                pageName: "v3",
+                pageName: "v3.html",
                 tag: "v3",
                 tagColor: "pink",
+                category: "classic",
                 description: "Implements save backups and dynamic state saving so you can reload and continue as well as download backup saves & track your top scores."
             },
             {
                 id: 4,
                 title: "Buffs",
-                pageName: "v4",
+                pageName: "v4.html",
                 tag: "v4",
                 tagColor: "amber",
+                category: "classic",
                 description: "Adds quality-of-life buffs, including double damage & fireballs"
             },
             {
-              id: 5,
-              title: "Permanent Upgrades",
-              pageName: "v5",
-              tag: "v5",
-              tagColor: "emerald",
-              description: "Adds permanent upgrades bought with Gems."
+                id: 5,
+                title: "Permanent Upgrades",
+                pageName: "v5.html",
+                tag: "v5",
+                tagColor: "emerald",
+                category: "classic",
+                description: "Adds permanent upgrades bought with Gems."
             },
             {
-              id: 6,
-              title: "New Bricks",
-              pageName: "v6",
-              tag: "v6",
-              tagColor: "fuchsia",
-              description: "Adds TNT, Loot, and Teleporting Bricks."
+                id: 6,
+                title: "New Bricks",
+                pageName: "v6.html",
+                tag: "v6",
+                tagColor: "fuchsia",
+                category: "classic",
+                description: "Adds TNT, Loot, and Teleporting Bricks."
             },
             {
-              id: 7,
-              title: "Sliding Bricks",
-              pageName: "v7",
-              tag: "v7",
-              tagColor: "red",
-              description: "Adds a Sliding Brick."
+                id: 7,
+                title: "Sliding Bricks",
+                pageName: "v7.html",
+                tag: "v7",
+                tagColor: "red",
+                category: "classic",
+                description: "Adds a Sliding Brick."
             },
             {
-              id: 8,
-              title: "Difficulty Selectors",
-              pageName: "v8",
-              tag: "v8",
-              tagColor: "violet",
-              description: "Adds a 5 different difficulty modes."
+                id: 8,
+                title: "Difficulty Selectors",
+                pageName: "v8.html",
+                tag: "v8",
+                tagColor: "violet",
+                category: "classic",
+                description: "Adds 5 different difficulty modes."
             },
             {
-              id: 9,
-              title: "Speedrun Mode",
-              pageName: "v9",
-              tag: "v9",
-              tagColor: "orange",
-              description: "Adds a Speedrun gamemode and adds a Top Speedrun Time Tracker."
+                id: 9,
+                title: "Speedrun Mode",
+                pageName: "v9.html",
+                tag: "v9",
+                tagColor: "orange",
+                category: "classic",
+                description: "Adds a Speedrun gamemode and adds a Top Speedrun Time Tracker."
+            },
+            {
+                id: 10,
+                title: "Security Patches & New Bricks",
+                pageName: "v10.html",
+                tag: "v10",
+                tagColor: "emerald",
+                category: "classic",
+                description: "Adds 3 new brick types & patches a few security bugs."
             }
         ];
+
+        let activeGameType = "all";
 
         const colorStyles = {
             purple:  { badge: "bg-purple-500/20 text-purple-300 border-purple-500/40", btn: "bg-purple-600/30 hover:bg-purple-600 border-purple-500/50 hover:border-purple-400 text-purple-200" },
@@ -209,22 +244,72 @@
             violet:  { badge: "bg-violet-500/20 text-violet-300 border-violet-500/40", btn: "bg-violet-600/30 hover:bg-violet-600 border-violet-500/50 hover:border-violet-400 text-violet-200" }
         };
 
+        function getFilteredVersions() {
+            if (activeGameType === "all") return gameVersions;
+            return gameVersions.filter(v => v.category === activeGameType);
+        }
+
+        function renderTypeFilters() {
+            const container = document.getElementById('gameTypeFilters');
+            container.innerHTML = gameTypes.map(type => {
+                const isActive = type.id === activeGameType;
+                const activeClasses = isActive 
+                    ? "bg-purple-600 text-white border-purple-400 shadow-lg shadow-purple-600/30" 
+                    : "bg-slate-900/80 text-slate-400 border-purple-500/20 hover:border-purple-500/50 hover:text-purple-200";
+
+                return `
+                    <button onclick="setGameType('${type.id}')" class="px-4 py-2 rounded-xl text-xs font-semibold border transition duration-200 flex items-center space-x-2 ${activeClasses}">
+                        <i class="fa-solid ${type.icon}"></i>
+                        <span>${type.label}</span>
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function setGameType(typeId) {
+            activeGameType = typeId;
+            renderTypeFilters();
+            renderCards();
+            setupDropdownView();
+        }
+
+        function updateHeaderBadge(count) {
+            const badge = document.getElementById('versionCounterBadge');
+            badge.innerText = `${count} VERSION${count === 1 ? '' : 'S'} AVAILABLE`;
+        }
+
         function getTargetUrl(pageName) {
-            return baseUrl ? `${baseUrl}?page=${pageName}` : `${pageName}.html`;
+            if (!baseUrl) return pageName;
+            return baseUrl.endsWith('/') ? `${baseUrl}${pageName}` : `${baseUrl}/${pageName}`;
         }
 
         function renderCards() {
             const container = document.getElementById('versionGrid');
+            const filtered = getFilteredVersions();
+            updateHeaderBadge(filtered.length);
 
-            container.innerHTML = gameVersions.map(v => {
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full text-center py-12 text-slate-500">
+                        <i class="fa-solid fa-ghost text-4xl mb-3"></i>
+                        <p class="text-sm font-semibold">No versions available in this category.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = filtered.map(v => {
                 const style = colorStyles[v.tagColor] || colorStyles.purple;
-                const fullTargetUrl = getTargetUrl(v.pageName);
+                const targetUrl = getTargetUrl(v.pageName);
 
                 return `
                     <div class="neon-card group bg-slate-900/90 rounded-2xl border border-purple-500/30 p-5 flex flex-col justify-between">
                         <div>
                             <div class="flex justify-between items-center mb-3">
                                 <span class="text-xs text-slate-500 font-mono">v${v.id}.0</span>
+                                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border ${style.badge}">
+                                    ${v.category}
+                                </span>
                             </div>
 
                             <h3 class="arcade-font text-lg font-bold text-white group-hover:text-pink-400 transition mb-3">
@@ -239,7 +324,7 @@
                         </div>
 
                         <div>
-                            <a href="${fullTargetUrl}" target="_top" class="w-full py-2.5 px-4 rounded-xl border ${style.btn} hover:text-white font-semibold text-center block transition duration-200 text-sm shadow-md">
+                            <a href="${targetUrl}" target="_top" class="w-full py-2.5 px-4 rounded-xl border ${style.btn} hover:text-white font-semibold text-center block transition duration-200 text-sm shadow-md">
                                 PLAY VERSION ${v.id} <i class="fa-solid fa-play ml-1.5 text-xs"></i>
                             </a>
                         </div>
@@ -250,34 +335,44 @@
 
         function setupDropdownView() {
             const dropdown = document.getElementById('versionDropdown');
-            dropdown.innerHTML = gameVersions.map(v => 
+            const filtered = getFilteredVersions();
+
+            if (filtered.length === 0) {
+                dropdown.innerHTML = `<option value="">No options</option>`;
+                document.getElementById('selectedTitle').innerText = "None Available";
+                document.getElementById('selectedTag').innerText = "";
+                document.getElementById('selectedDescription').innerText = "No versions found under this category.";
+                const btn = document.getElementById('selectedPlayBtn');
+                btn.href = "#";
+                btn.className = "w-full py-3 px-4 rounded-xl border bg-slate-800 border-slate-700 text-slate-500 font-semibold text-center block pointer-events-none text-sm";
+                btn.innerHTML = `PLAY VERSION`;
+                return;
+            }
+
+            dropdown.innerHTML = filtered.map(v => 
                 `<option value="${v.id}">Version ${v.id}: ${v.title}</option>`
             ).join('');
 
-            if (gameVersions.length > 0) {
-                updateSelectedVersionDisplay(gameVersions[0].id);
-            }
+            onVersionSelect(filtered[0].id);
         }
 
-        function updateSelectedVersionDisplay(versionId) {
-            const selected = gameVersions.find(v => v.id == versionId) || gameVersions[0];
+        function onVersionSelect(versionId) {
+            const filtered = getFilteredVersions();
+            const selected = filtered.find(v => v.id == versionId) || filtered[0];
+
+            if (!selected) return;
+
             const style = colorStyles[selected.tagColor] || colorStyles.purple;
-            const fullTargetUrl = getTargetUrl(selected.pageName);
+            const targetUrl = getTargetUrl(selected.pageName);
 
             document.getElementById('selectedTitle').innerText = `${selected.id}. ${selected.title}`;
             document.getElementById('selectedTag').innerText = `v${selected.id}.0`;
             document.getElementById('selectedDescription').innerText = selected.description;
             
             const btn = document.getElementById('selectedPlayBtn');
-            btn.href = fullTargetUrl;
+            btn.href = targetUrl;
             btn.className = `w-full py-3 px-4 rounded-xl border ${style.btn} hover:text-white font-semibold text-center block transition duration-200 text-sm shadow-md`;
             btn.innerHTML = `PLAY VERSION ${selected.id} <i class="fa-solid fa-play ml-1.5 text-xs"></i>`;
-        }
-
-        function navigateToVersion(versionId) {
-            updateSelectedVersionDisplay(versionId);
-            const selected = gameVersions.find(v => v.id == versionId) || gameVersions[0];
-            window.location.href = getTargetUrl(selected.pageName);
         }
 
         function switchUiMode(mode) {
@@ -299,6 +394,7 @@
         }
 
         window.addEventListener('DOMContentLoaded', () => {
+            renderTypeFilters();
             renderCards();
             setupDropdownView();
 
