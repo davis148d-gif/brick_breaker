@@ -1,6 +1,5 @@
 # Brick Breaker 
-Aim and shoot a string of balls at bricks to progress and stay alive, purchase upgrades, and set records. Choose different versions from the original Legacy version to the latest v12.0 with upgrades, record tracking, JSON save backups, and different types of bricks.
-
+Aim and shoot a string of balls at bricks to progress and stay alive, purchase upgrades, and set records. Choose different versions from the original Legacy version to the latest v12.0 with upgrades, record tracking, JSON save backups, 15+ types of bricks, and a new 'Hell' gamemode.
 ## What's in v12
 + Hell mode
 + Updated UI
