@@ -1,5 +1,4 @@
 # JSDelivr CDN URLs
-+ Index: [https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/index.js](https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/index.js)
 + v1.js: [https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/v1.js](https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/v1.js)
 + v2.js: [https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/v2.js](https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/v2.js)
 + v3.js: [https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/v3.js](https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/v3.js)
