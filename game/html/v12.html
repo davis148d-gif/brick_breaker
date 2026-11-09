@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brick Breaker v12</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: #faf8ef;
+      color: #222;
+      font-family: Poppins, system-ui, sans-serif;
+      transition: background 0.4s, color 0.4s;
+    }
+
+    body.hell-mode {
+      background: #1a0505;
+      color: #f7fafc;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu-bar {
+      flex-shrink: 0;
+      z-index: 10;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      background: #222;
+      border-bottom: 2px solid #171717;
+      transition: background 0.4s, border-color 0.4s;
+    }
+
+    body.hell-mode .menu-bar {
+      background: #2d0a0a;
+      border-bottom-color: #4a0e0e;
+    }
+
+    button, select, .btn-label {
+      border: 0;
+      border-radius: 7px;
+      padding: 8px 12px;
+      font: 600 0.85rem Poppins, sans-serif;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    button, .btn-label {
+      cursor: pointer;
+      color: #fff;
+      background: #222;
+      transition: background .15s, transform .15s;
+    }
+
+    body.hell-mode button, body.hell-mode .btn-label {
+      background: #3f1212;
+    }
+
+    button:hover, .btn-label:hover {
+      background: #444;
+      transform: translateY(-1px);
+    }
+
+    body.hell-mode button:hover, body.hell-mode .btn-label:hover {
+      background: #631c1c;
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+      color: #718096;
+      background: #cbd5e0;
+      transform: none;
+    }
+
+    body.hell-mode button:disabled {
+      color: #718096;
+      background: #2d3748;
+    }
+
+    .menu-bar button { background: #333; }
+    .menu-bar button:hover { background: #555; }
+    body.hell-mode .menu-bar button { background: #4a1515; }
+    body.hell-mode .menu-bar button:hover { background: #741d1d; }
+
+    #difficultySelect {
+      color: #fff;
+      background: #2b6cb0;
+      cursor: pointer;
+    }
+
+    body.hell-mode #difficultySelect {
+      background: #9b2c2c;
+    }
+
+    .main-container {
+      flex: 1;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      gap: 16px;
+      padding: 10px;
+      width: 100%;
+      height: calc(100vh - 55px);
+      overflow: hidden;
+    }
+
+    .game-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      min-width: 0;
+    }
+
+    .canvas-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 0;
+    }
+
+    canvas {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      background: #fff;
+      border: 2px solid #171717;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px #00000014;
+      touch-action: none;
+      object-fit: contain;
+      transition: background 0.4s, border-color 0.4s, box-shadow 0.4s;
+    }
+
+    body.hell-mode canvas {
+      background: #250808;
+      border-color: #741d1d;
+      box-shadow: 0 4px 20px #ff000033;
+    }
+
+    .controls-row {
+      flex-shrink: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .secondary { background: #4a5568; }
+    .secondary:hover { background: #2d3748; }
+    body.hell-mode .secondary { background: #581c87; }
+    body.hell-mode .secondary:hover { background: #6b21a8; }
+
+    .danger { background: #e53e3e; }
+    .danger:hover { background: #c53030; }
+
+    .sidebar {
+      width: 320px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    .panel, .modal-content {
+      background: #fff;
+      border: 2px solid #171717;
+      border-radius: 8px;
+      padding: 14px;
+      box-shadow: 0 4px 12px #00000014;
+      transition: background 0.4s, border-color 0.4s, color 0.4s;
+    }
+
+    body.hell-mode .panel, body.hell-mode .modal-content {
+      background: #240a0a;
+      border-color: #631c1c;
+      color: #f7fafc;
+    }
+
+    .panel h2, .modal-content h2 {
+      margin: 0 0 10px;
+      padding-bottom: 6px;
+      text-align: center;
+      font-size: 1.1rem;
+      border-bottom: 2px solid #edf2f7;
+    }
+
+    body.hell-mode .panel h2, body.hell-mode .modal-content h2 {
+      border-bottom-color: #4a1515;
+    }
+
+    .coins, .gems {
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .coins {
+      color: #a77917;
+      background: #fefcbf;
+      border: 1px solid #f6e05e;
+    }
+    body.hell-mode .coins {
+      color: #f6e05e;
+      background: #3d2c00;
+      border-color: #b7791f;
+    }
+
+    .gems {
+      color: #6b46c1;
+      background: #e9d8fd;
+      border: 1px solid #d6bcfa;
+    }
+    body.hell-mode .gems {
+      color: #d6bcfa;
+      background: #2d1545;
+      border-color: #805ad5;
+    }
+
+    .timer {
+      margin: 10px 0;
+      padding: 8px;
+      text-align: center;
+      background: #ebf8ff;
+      border: 1px solid #90cdf4;
+      border-radius: 8px;
+      transition: background 0.4s, border-color 0.4s;
+    }
+
+    body.hell-mode .timer {
+      background: #3b0707;
+      border-color: #9b2c2c;
+    }
+
+    .timer small {
+      display: block;
+      color: #4a5568;
+      font-weight: 600;
+      font-size: 0.75rem;
+    }
+    body.hell-mode .timer small { color: #cbd5e0; }
+
+    #speedrunTimer {
+      display: block;
+      color: #2b6cb0;
+      font-size: 1.4rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+    body.hell-mode #speedrunTimer { color: #fc8181; }
+
+    .overlord-panel {
+      border: 2px solid #9b2c2c;
+      background: #2d0a0a;
+      color: #fff;
+    }
+    .overlord-panel h2 {
+      color: #fc8181;
+      border-bottom-color: #551a1a;
+    }
+    .overlord-speech {
+      font-style: italic;
+      font-size: 0.85rem;
+      color: #feb2b2;
+      text-align: center;
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+    }
+
+    .buff-card, .tracker-row, .brick-info-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 6px 0;
+      padding: 8px;
+      background: #f7fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 7px;
+      transition: background 0.4s, border-color 0.4s;
+    }
+
+    body.hell-mode .buff-card, body.hell-mode .tracker-row, body.hell-mode .brick-info-card {
+      background: #320d0d;
+      border-color: #551a1a;
+    }
+
+    .brick-info-card {
+      justify-content: flex-start;
+    }
+
+    .brick-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+      border: 1px solid #171717;
+    }
+
+    .buff-info { display: flex; flex-direction: column; }
+    .buff-desc, .muted { color: #718096; font-size: .75rem; }
+    body.hell-mode .buff-desc, body.hell-mode .muted { color: #a0aec0; }
+    .buff-status { color: #25855a; font-size: .75rem; font-weight: 700; }
+    body.hell-mode .buff-status { color: #48bb78; }
+    .buy { padding: 6px 10px; background: #319795; white-space: nowrap; }
+
+    .settings-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .settings-grid button, .settings-grid .btn-label {
+      width: 100%;
+      padding: 10px 14px;
+      font-size: 0.95rem;
+      justify-content: flex-start;
+    }
+
+    .tracker-tabs {
+      display: flex;
+      gap: 6px;
+      margin: 10px 0;
+    }
+
+    .tracker-tabs button {
+      flex: 1;
+      padding: 6px;
+      color: #2d3748;
+      background: #edf2f7;
+      border: 1px solid #cbd5e0;
+      font-size: 0.8rem;
+    }
+    body.hell-mode .tracker-tabs button {
+      color: #e2e8f0;
+      background: #3b0707;
+      border-color: #741d1d;
+    }
+
+    .tracker-tabs button.active {
+      color: #fff;
+      background: #2b6cb0;
+    }
+    body.hell-mode .tracker-tabs button.active {
+      background: #9b2c2c;
+    }
+
+    .tracker-pane[hidden] { display: none; }
+
+    .tracker-select {
+      width: 100%;
+      margin: 6px 0;
+      border: 1px solid #cbd5e0;
+      background: #fff;
+      font-size: 0.8rem;
+    }
+    body.hell-mode .tracker-select {
+      background: #320d0d;
+      border-color: #741d1d;
+      color: #fff;
+    }
+
+    .tracker-row strong { font-size: .8rem; }
+    .tracker-row span { font-size: .8rem; font-weight: 700; text-align: right; }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 20;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      background: #0008;
+    }
+
+    .modal-overlay.active { display: flex; }
+
+    .modal-content {
+      position: relative;
+      width: min(550px, 100%);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 7px;
+      right: 8px;
+      padding: 5px 9px;
+      color: #222;
+      background: transparent;
+      font-size: 1.2rem;
+    }
+    body.hell-mode .modal-close { color: #fff; }
+    .modal-close:hover { background: #eee; }
+    body.hell-mode .modal-close:hover { background: #4a1515; }
+
+    .mode-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+      margin: 12px 0;
+    }
+
+    .mode-btn {
+      padding: 11px 6px;
+      border: 2px solid #171717;
+    }
+    body.hell-mode .mode-btn {
+      border-color: #741d1d;
+    }
+
+    .mode-btn.active { background: #2b6cb0; }
+    body.hell-mode .mode-btn.active { background: #9b2c2c; }
+
+    .modal-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 14px;
+    }
+
+    .file-input { display: none; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .85rem;
+    }
+
+    th, td {
+      padding: 8px;
+      border-bottom: 1px solid #edf2f7;
+      text-align: left;
+    }
+    body.hell-mode th, body.hell-mode td {
+      border-bottom-color: #4a1515;
+    }
+
+    th { background: #f7fafc; }
+    body.hell-mode th { background: #3b0707; }
+
+    @media (max-width: 760px) {
+      body { overflow: auto; height: auto; }
+      .main-container { flex-direction: column; height: auto; overflow: visible; }
+      .game-section { width: 100%; height: auto; }
+      .canvas-container { height: calc(100vh - 140px); width: 100%; }
+      .sidebar { width: 100%; height: auto; }
+      .menu-bar { gap: 6px; padding: 6px; }
+    }
+  
+
+  </style>
+</head>
+<body>
+  <nav class="menu-bar">
+    <select id="difficultySelect" aria-label="Difficulty">
+      <option value="easy">Easy (1–3 Bricks)</option>
+      <option value="medium" selected>Medium (1–4 Bricks)</option>
+      <option value="hard">Hard (1–5 Bricks)</option>
+      <option value="insane">Insane (3–5 Bricks)</option>
+      <option value="asian">ASIAN (4–5 Bricks)</option>
+    </select>
+    <button onclick="openModal('permModal')"><i class="fa-solid fa-angles-up"></i> Upgrades</button>
+    <button onclick="openModal('tempModal')"><i class="fa-solid fa-cart-shopping"></i> Shop</button>
+    <button onclick="openModal('gameInfoModal')"><i class="fa-solid fa-circle-info"></i> Game Info</button>
+    <button onclick="openModal('leaderboardModal')"><i class="fa-solid fa-trophy"></i> Leaderboard</button>
+    <button onclick="openModal('settingsModal')"><i class="fa-solid fa-gear"></i> Settings</button>
+  </nav>
+
+  <div id="settingsModal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 400px;">
+      <button class="modal-close" onclick="closeModal('settingsModal')" aria-label="Close">&times;</button>
+      <h2><i class="fa-solid fa-gear"></i> Settings</h2>
+      <div class="settings-grid">
+        <button onclick="closeModal('settingsModal'); gameManager.resetGame();">
+          <i class="fa-solid fa-rotate-right"></i> Start New Run
+        </button>
+        <button class="secondary" onclick="gameManager.exportSaveFile()">
+          <i class="fa-solid fa-download"></i> Download Save
+        </button>
+        <label class="btn-label secondary">
+          <i class="fa-solid fa-upload"></i> Upload Save
+          <input class="file-input" type="file" accept=".json,application/json" onchange="gameManager.importSaveFile(event)">
+        </label>
+        <button class="danger" onclick="gameManager.wipeAllData()">
+          <i class="fa-solid fa-trash-can"></i> Wipe All Data
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modeSelectModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="gameManager.cancelNewRun()" aria-label="Close">&times;</button>
+      <h2>Choose a Game Mode</h2>
+      <p class="muted" id="modeModalMessage">Choose a mode for your new run.</p>
+      <div class="mode-grid">
+        <button class="mode-btn active" data-mode="infinite">Infinite</button>
+        <button class="mode-btn" data-mode="hell">Hell Mode 🔥</button>
+        <button class="mode-btn" data-mode="speedrun_25">Speedrun 25</button>
+        <button class="mode-btn" data-mode="speedrun_50">Speedrun 50</button>
+        <button class="mode-btn" data-mode="speedrun_100">Speedrun 100</button>
+        <button class="mode-btn" data-mode="speedrun_250">Speedrun 250</button>
+        <button class="mode-btn" data-mode="speedrun_500">Speedrun 500</button>
+      </div>
+      <div class="modal-actions">
+        <button onclick="gameManager.startSelectedMode()">Start Selected Mode</button>
+        <button class="secondary" onclick="gameManager.cancelNewRun()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="gameInfoModal" class="modal-overlay">
+    <div class="modal-content" style="max-width:600px;">
+      <button class="modal-close" onclick="closeModal('gameInfoModal')">&times;</button>
+      <h2>Game Info & Guide</h2>
+      
+      <h3 style="color:#2b6cb0; margin-top:12px;">Game Modes</h3>
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#2b6cb0">∞</div>
+        <div class="buff-info">
+          <strong>Infinite Mode</strong>
+          <span class="buff-desc">Endless scaling waves of bricks. Survive as long as possible.</span>
+        </div>
+      </div>
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#9b2c2c">🔥</div>
+        <div class="buff-info">
+          <strong>Hell Mode</strong>
+          <span class="buff-desc">Dark reddish theme. Nullifies all permanent/temporary upgrades, gives bricks +2.5x HP, features relentless Crawlers, Devil bricks, and the Overlord casting evil spells!</span>
+        </div>
+      </div>
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#4a5568">⏱</div>
+        <div class="buff-info">
+          <strong>Speedrun Modes</strong>
+          <span class="buff-desc">Race against the clock to clear 25, 50, 100, 250, or 500 levels as fast as possible.</span>
+        </div>
+      </div>
+
+      <h3 style="color:#2b6cb0; margin-top:16px;">Brick Types & Rarities</h3>
+
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#48bb78">10</div>
+        <div class="buff-info">
+          <strong>Normal (Common)</strong>
+          <span class="buff-desc">Standard brick taking regular damage.</span>
+        </div>
+      </div>
+
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#00b5d8">10</div>
+        <div class="buff-info">
+          <strong>Slider (Common)</strong>
+          <span class="buff-desc">Moves horizontally back and forth, bouncing off walls and bricks.</span>
+        </div>
+      </div>
+
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#d6bcfa">10</div>
+        <div class="buff-info">
+          <strong>Magnet (Common)</strong>
+          <span class="buff-desc">Pulls nearby balls slightly towards it when they pass close by.</span>
+        </div>
+      </div>
+
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#e53e3e">10</div>
+        <div class="buff-info">
+          <strong>TNT (Uncommon)</strong>
+          <span class="buff-desc">Explodes upon destruction, damaging nearby bricks.</span>
+        </div>
+      </div>
+
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#d69e2e">10</div>
+        <div class="buff-info">
+          <strong>Ammo (Uncommon)</strong>
+          <span class="buff-desc">Grants an extra permanent ball when destroyed.</span>
+        </div>
+      </div>
+
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#805ad5">10</div>
+        <div class="buff-info">
+          <strong>Portal (Uncommon)</strong>
+          <span class="buff-desc">Teleports balls that hit it to a random location maintaining velocity & direction.</span>
+        </div>
+      </div>
+
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#2b6cb0">10</div>
+        <div class="buff-info">
+          <strong>Teleport (Uncommon)</strong>
+          <span class="buff-desc">Teleports to a new random location on the board every turn.</span>
+        </div>
+      </div>
+
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#dd6b20">10</div>
+        <div class="buff-info">
+          <strong>Shock (Uncommon)</strong>
+          <span class="buff-desc">Sends balls that touch it immediately back down to the ground.</span>
+        </div>
+      </div>
+
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#ff4500">C</div>
+        <div class="buff-info">
+          <strong>Crawler (Hell Exclusive)</strong>
+          <span class="buff-desc">Slowly and constantly creeps down the board every second, stopping only if blocked by another brick.</span>
+        </div>
+      </div>
+
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#8b0000">D</div>
+        <div class="buff-info">
+          <strong>Devil (Hell Exclusive)</strong>
+          <span class="buff-desc">Spawns a heavy Tank brick randomly directly above it every single turn.</span>
+        </div>
+      </div>
+
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#319795">10</div>
+        <div class="buff-info">
+          <strong>Shield (Rare)</strong>
+          <span class="buff-desc">Turns all surrounding bricks into a 'liquid' state where balls pass harmlessly.</span>
+        </div>
+      </div>
+
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#b7791f">10</div>
+        <div class="buff-info">
+          <strong>Parent (Rare)</strong>
+          <span class="buff-desc">Spawns 1-3 child bricks with 1/3 level HP when broken.</span>
+        </div>
+      </div>
+
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#38a169">10</div>
+        <div class="buff-info">
+          <strong>Healer (Rare)</strong>
+          <span class="buff-desc">Heals all surrounding bricks by 25% of their health at turn end.</span>
+        </div>
+      </div>
+
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#718096">10</div>
+        <div class="buff-info">
+          <strong>Directional (Rare)</strong>
+          <span class="buff-desc">Only takes damage from 2 randomly decided impact directions.</span>
+        </div>
+      </div>
+
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#4fd1c5">10</div>
+        <div class="buff-info">
+          <strong>Phase (Rare)</strong>
+          <span class="buff-desc">Alternates between solid (normal) and liquid (immortal) phases every turn.</span>
+        </div>
+      </div>
+
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#2d3748">50</div>
+        <div class="buff-info">
+          <strong>Tank (Legendary)</strong>
+          <span class="buff-desc">Massive heavy brick featuring traditional HP (or 2.5x in Hell mode).</span>
+        </div>
+      </div>
+
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#d53f8c">1</div>
+        <div class="buff-info">
+          <strong>Angel (Legendary)</strong>
+          <span class="buff-desc">Fixed 1 HP, unhealable, deals 25% damage to surrounding bricks.</span>
+        </div>
+      </div>
+
+      <div class="brick-info-card">
+        <div class="brick-icon" style="background:#4a5568">1</div>
+        <div class="buff-info">
+          <strong>Turret (Legendary)</strong>
+          <span class="buff-desc">Fixed 1 HP, unhealable, deals 25% HP damage to 3 random bricks.</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="permModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('permModal')">&times;</button>
+      <h2>Permanent Upgrades</h2>
+      <div class="gems">Gems: <span id="gemsCountModal">0</span> 💎</div>
+
+      <div class="buff-card">
+        <div class="buff-info">
+          <strong>🎯 Start Ammo</strong>
+          <span class="buff-desc">+1 starting ball per level</span>
+          <span id="permAmmoStatus" class="buff-status"></span>
+        </div>
+        <button class="buy" id="btnBuyPermAmmo" onclick="gameManager.buyPermUpgrade('startAmmo')">Upgrade</button>
+      </div>
+
+      <div class="buff-card">
+        <div class="buff-info">
+          <strong>⚡ Crit Chance</strong>
+          <span class="buff-desc">+5% chance for 3x damage per level</span>
+          <span id="permCritStatus" class="buff-status"></span>
+        </div>
+        <button class="buy" id="btnBuyPermCrit" onclick="gameManager.buyPermUpgrade('critChance')">Upgrade</button>
+      </div>
+
+      <div class="buff-card">
+        <div class="buff-info">
+          <strong>💨 Ball Speed</strong>
+          <span class="buff-desc">+10% shot velocity per level</span>
+          <span id="permSpeedStatus" class="buff-status"></span>
+        </div>
+        <button class="buy" id="btnBuyPermSpeed" onclick="gameManager.buyPermUpgrade('ballSpeed')">Upgrade</button>
+      </div>
+
+      <div class="buff-card">
+        <div class="buff-info">
+          <strong>🍀 Luck</strong>
+          <span class="buff-desc">+20% coin rewards per level</span>
+          <span id="permLuckStatus" class="buff-status"></span>
+        </div>
+        <button class="buy" id="btnBuyPermLuck" onclick="gameManager.buyPermUpgrade('luck')">Upgrade</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="tempModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('tempModal')">&times;</button>
+      <h2>Temporary Shop</h2>
+      <div class="coins">Coins: <span id="coinsCountTempModal">0</span> 🪙</div>
+
+      <div class="buff-card">
+        <div class="buff-info">
+          <strong>💥 1.5x Damage</strong>
+          <span class="buff-desc">Lasts 3 turns (Scales per buy)</span>
+          <span id="buff15xStatus" class="buff-status">Inactive</span>
+        </div>
+        <button class="buy" id="btnBuy15x" onclick="gameManager.buyTempBuff('doubleDamage')">Buy (30 C)</button>
+      </div>
+
+      <div class="buff-card">
+        <div class="buff-info">
+          <strong>⚡ Laser Wipe</strong>
+          <span class="buff-desc">Clears bottom row (Scales per buy)</span>
+        </div>
+        <button class="buy" id="btnBuyLaser" onclick="gameManager.buyTempBuff('laserWipe')">Buy (40 C)</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="leaderboardModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('leaderboardModal')">&times;</button>
+      <h2>High Scores</h2>
+      <div style="max-height:60vh;overflow:auto">
+        <table>
+          <thead><tr><th>Rank</th><th>Level/Mode</th><th>Date</th></tr></thead>
+          <tbody id="leaderboardBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <section class="game-section">
+      <div class="canvas-container">
+        <canvas id="canvas" width="710" height="880" aria-label="Brick Breaker game"></canvas>
+      </div>
+      <div class="controls-row">
+        <button onclick="gameManager.downBalls()"><i class="fa-solid fa-angles-down"></i> Recall Balls</button>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <div id="overlordPanel" class="panel overlord-panel" style="display:none;">
+        <h2>The Overlord</h2>
+        <div id="overlordSpeech" class="overlord-speech">"Mortal, your defiance amuses me..."</div>
+      </div>
+
+      <div class="panel">
+        <h2>Run Tracker</h2>
+        <div class="coins">Coins: <span id="trackerCoins">0</span> 🪙</div>
+        <div class="gems">Gems: <span id="trackerGems">0</span> 💎</div>
+
+        <div class="timer">
+          <small id="timerLabel">Current Speedrun Time</small>
+          <span id="speedrunTimer">—</span>
+        </div>
+
+        <div class="buff-card">
+          <div class="buff-info">
+            <strong>Active Buffs</strong>
+            <span id="trackerActiveBuffs" class="buff-status">None</span>
+          </div>
+        </div>
+
+        <div class="tracker-tabs">
+          <button id="generalTrackerTab" class="active" onclick="gameManager.showTrackerTab('general')">General</button>
+          <button id="speedrunTrackerTab" onclick="gameManager.showTrackerTab('speedrun')">Speedrun</button>
+        </div>
+
+        <div id="generalTrackerPane" class="tracker-pane">
+          <div id="modeTrackerList"></div>
+        </div>
+
+        <div id="speedrunTrackerPane" class="tracker-pane" hidden>
+          <label for="speedrunCategorySelect"><strong>Speedrun category</strong></label>
+          <select id="speedrunCategorySelect" class="tracker-select" onchange="gameManager.renderModeTracker()">
+            <option value="speedrun_25">Speedrun 25</option>
+            <option value="speedrun_50">Speedrun 50</option>
+            <option value="speedrun_100">Speedrun 100</option>
+            <option value="speedrun_250">Speedrun 250</option>
+            <option value="speedrun_500">Speedrun 500</option>
+          </select>
+          <label for="speedrunDiffSelect"><strong>Filter Difficulty</strong></label>
+          <select id="speedrunDiffSelect" class="tracker-select" onchange="gameManager.renderModeTracker()">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+            <option value="insane">Insane</option>
+            <option value="asian">ASIAN</option>
+          </select>
+          <div id="speedrunCategoryTracker"></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/v12.js"></script>
+</body>
+</html>
