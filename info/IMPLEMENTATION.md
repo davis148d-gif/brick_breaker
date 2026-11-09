@@ -16,11 +16,13 @@
 ## CodeHS
 1) Go to [CodeHS](codehs.com) and sign up or log in
 2) Go to the Sandbox
-3) Create a new HTML program
-4) Create all the necessary files & paste the appropriate code into them
-5) Go to the preview window and click the icon to open in a new tab
-6) Enjoy
-> For new version updates, you will have to manually add the new files, but for old versions, the JSDelivr CDN link fetched in the ```<script>``` tag will automatically update the game for you. Eventually, you won't even have to add the new files when the Feather version comes out where the **feather.js** file will automatically update to add the new HTML code to run.
+3) Click the arrow next to 'Create a new program'
+4) Click create via upload
+5) Upload the CodeHS-Upload.zip file in the **game** folder
+6) Select HTML as your program type.
+7) Click create.
+8) Click view program.
+9) Done!
 
 ## CodeAI
 1) Go to [CodeAI](studio.code.org)
