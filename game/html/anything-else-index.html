@@ -124,22 +124,15 @@
     </main>
 
     <script>
-        // Set baseUrl to empty string for standard relative file navigation (e.g. v1.html, v2.html) on CodeHS
-        const baseUrl = "";
-
         const gameTypes = [
-            { id: "all", label: "All Modes", icon: "fa-border-all" },
-            { id: "classic", label: "Classic", icon: "fa-gamepad" },
-            { id: "multiplayer", label: "Multiplayer", icon: "fa-users" },
-            { id: "upgrades", label: "Upgrades & Mechanics", icon: "fa-bolt" },
-            { id: "arcade", label: "Arcade & Special Modes", icon: "fa-trophy" }
+            { id: "classic", label: "Classic", icon: "fa-gamepad" }
+            // go to the fontawesome.com/icons page to find more icons that look good for upcoming categories
         ];
-
         const gameVersions = [
             {
                 id: 1,
                 title: "Legacy Edition",
-                pageName: "v1.html",
+                pageName: "v1",
                 tag: "v1",
                 tagColor: "purple",
                 category: "classic",
@@ -148,7 +141,7 @@
             {
                 id: 2,
                 title: "Upgraded UI",
-                pageName: "v2.html",
+                pageName: "v2",
                 tag: "v2",
                 tagColor: "cyan",
                 category: "classic",
@@ -157,7 +150,7 @@
             {
                 id: 3,
                 title: "Backups",
-                pageName: "v3.html",
+                pageName: "v3",
                 tag: "v3",
                 tagColor: "pink",
                 category: "classic",
@@ -166,7 +159,7 @@
             {
                 id: 4,
                 title: "Buffs",
-                pageName: "v4.html",
+                pageName: "v4",
                 tag: "v4",
                 tagColor: "amber",
                 category: "classic",
@@ -175,7 +168,7 @@
             {
                 id: 5,
                 title: "Permanent Upgrades",
-                pageName: "v5.html",
+                pageName: "v5",
                 tag: "v5",
                 tagColor: "emerald",
                 category: "classic",
@@ -184,7 +177,7 @@
             {
                 id: 6,
                 title: "New Bricks",
-                pageName: "v6.html",
+                pageName: "v6",
                 tag: "v6",
                 tagColor: "fuchsia",
                 category: "classic",
@@ -193,7 +186,7 @@
             {
                 id: 7,
                 title: "Sliding Bricks",
-                pageName: "v7.html",
+                pageName: "v7",
                 tag: "v7",
                 tagColor: "red",
                 category: "classic",
@@ -202,7 +195,7 @@
             {
                 id: 8,
                 title: "Difficulty Selectors",
-                pageName: "v8.html",
+                pageName: "v8",
                 tag: "v8",
                 tagColor: "violet",
                 category: "classic",
@@ -211,7 +204,7 @@
             {
                 id: 9,
                 title: "Speedrun Mode",
-                pageName: "v9.html",
+                pageName: "v9",
                 tag: "v9",
                 tagColor: "orange",
                 category: "classic",
@@ -220,29 +213,29 @@
             {
                 id: 10,
                 title: "Security Patches & New Bricks",
-                pageName: "v10.html",
+                pageName: "v10",
                 tag: "v10",
                 tagColor: "emerald",
                 category: "classic",
                 description: "Adds 3 new brick types & patches a few security bugs."
             },
             {
-                id: 11, 
-                title: "New Bricks",
-                pageName: "v11.html",
-                tag: "v11",
-                tagColor: "pink",
-                category: "classic",
-                description: "Adds 9 new interesting brick types."
+              id: 11,
+              title: "New Bricks",
+              pageName: "v11",
+              tag: "v11",
+              tagColor: "pink",
+              category: "classic",
+              description: "Adds 9 interesting brick types."
             },
             {
-                id: 12,
-                title: "HELL",
-                pageName: "v12.html",
-                tag: "v12",
-                tagColor: "rose",
-                category: "classic",
-                description: "Adds a new HELL gamemode that makes life impossible."
+              id: 12,
+              title: "HELL",
+              pageName: "v12",
+              tag: "v12",
+              tagColor: "rose",
+              category: "classic",
+              description: "Adds a HELL gamemode which makes life impossible."
             }
         ];
 
@@ -296,11 +289,6 @@
             badge.innerText = `${count} VERSION${count === 1 ? '' : 'S'} AVAILABLE`;
         }
 
-        function getTargetUrl(pageName) {
-            if (!baseUrl) return pageName;
-            return baseUrl.endsWith('/') ? `${baseUrl}${pageName}` : `${baseUrl}/${pageName}`;
-        }
-
         function renderCards() {
             const container = document.getElementById('versionGrid');
             const filtered = getFilteredVersions();
@@ -318,7 +306,7 @@
 
             container.innerHTML = filtered.map(v => {
                 const style = colorStyles[v.tagColor] || colorStyles.purple;
-                const targetUrl = getTargetUrl(v.pageName);
+                const fullTargetUrl = `${v.pageName}.html`;
 
                 return `
                     <div class="neon-card group bg-slate-900/90 rounded-2xl border border-purple-500/30 p-5 flex flex-col justify-between">
@@ -342,7 +330,7 @@
                         </div>
 
                         <div>
-                            <a href="${targetUrl}" target="_top" class="w-full py-2.5 px-4 rounded-xl border ${style.btn} hover:text-white font-semibold text-center block transition duration-200 text-sm shadow-md">
+                            <a href="${fullTargetUrl}" target="_top" class="w-full py-2.5 px-4 rounded-xl border ${style.btn} hover:text-white font-semibold text-center block transition duration-200 text-sm shadow-md">
                                 PLAY VERSION ${v.id} <i class="fa-solid fa-play ml-1.5 text-xs"></i>
                             </a>
                         </div>
@@ -381,14 +369,14 @@
             if (!selected) return;
 
             const style = colorStyles[selected.tagColor] || colorStyles.purple;
-            const targetUrl = getTargetUrl(selected.pageName);
+            const fullTargetUrl = `${selected.pageName}.html`;
 
             document.getElementById('selectedTitle').innerText = `${selected.id}. ${selected.title}`;
             document.getElementById('selectedTag').innerText = `v${selected.id}.0`;
             document.getElementById('selectedDescription').innerText = selected.description;
             
             const btn = document.getElementById('selectedPlayBtn');
-            btn.href = targetUrl;
+            btn.href = fullTargetUrl;
             btn.className = `w-full py-3 px-4 rounded-xl border ${style.btn} hover:text-white font-semibold text-center block transition duration-200 text-sm shadow-md`;
             btn.innerHTML = `PLAY VERSION ${selected.id} <i class="fa-solid fa-play ml-1.5 text-xs"></i>`;
         }
