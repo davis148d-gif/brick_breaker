@@ -1,19 +1,20 @@
 # Brick Breaker 
-Aim and shoot a string of balls at bricks to progress and stay alive, purchase upgrades, and set records. Choose different versions from the original Legacy version to the latest v8.0 with upgrades, record tracking, JSON save backups, and different types of bricks.
+Aim and shoot a string of balls at bricks to progress and stay alive, purchase upgrades, and set records. Choose different versions from the original Legacy version to the latest v12.0 with upgrades, record tracking, JSON save backups, and different types of bricks.
 
-## What's in v9.0
-+ Speedrun mode
-+ Top Speedrun Times Tracker
+## What's in v12
++ Hell mode
++ Updated UI
++ Encrypted JSON save backups
 
-## What's coming in v10.0
-+ More Brick types
+## What's coming in v13.0
++ Not planned yet
 
 > Note: The save backup .json formats change across levels, so before v13.0 comes out, you may have to restart. After v13, all save file formats will be identical and back-compatible with any version after v12. 
 
 [View full version info](info/VERSIONS.md)
 
-## v9.0 Links
-+ [FCPS Google Script](https://script.google.com/a/macros/fcpsschools.net/s/AKfycbxlz-7PAd_0KyFYXmjNPNvbY-rSzpm4RWtLabfgc-w1gmHFf7OLAkhZ3u2IXkLTiDA/exec)
+## v12.0 Links
++ [Google Script](https://script.google.com/macros/s/AKfycbzeLX4_YoGB8Ne_S-4HomffhhZatCd2rPmeCxesAMiK5XVQrgkWWqsJexwRVYB3o6W0/exec)
 
 [View all current links](info/LINKS.md)
 
