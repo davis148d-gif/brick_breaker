@@ -1,5 +1,5 @@
 # Brick Breaker 
-Aim and shoot a string of balls at bricks to progress and stay alive, purchase upgrades, and set records. Choose different versions from the original Legacy version to the latest v12.0 with upgrades, record tracking, JSON save backups, 15+ types of bricks, and a new 'Hell' gamemode.
+Aim and shoot a string of balls at bricks to progress and stay alive, purchase upgrades, and set records. Choose different versions from the original Legacy version to the latest v13.0 with upgrades, record tracking, JSON save backups, 15+ types of bricks, and a new 'Hell' gamemode.
 ## What's in v12
 + Hell mode
 + Updated UI
@@ -8,11 +8,11 @@ Aim and shoot a string of balls at bricks to progress and stay alive, purchase u
 ## What's coming in v13.0
 + Not planned yet
 
-> Note: The save backup .json formats change across levels, so before v13.0 comes out, you may have to restart. After v13, all save file formats will be identical and back-compatible with any version after v12. 
+> Note: The save backup .json formats are now compatible with each other for any version after v11.
 
 [View full version info](info/VERSIONS.md)
 
-## v12.0 Links
+## v13.0 Links
 + [Google Script](https://script.google.com/macros/s/AKfycbzeLX4_YoGB8Ne_S-4HomffhhZatCd2rPmeCxesAMiK5XVQrgkWWqsJexwRVYB3o6W0/exec)
 
 [View all current links](info/LINKS.md)
