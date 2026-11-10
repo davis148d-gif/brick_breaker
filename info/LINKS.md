@@ -1,7 +1,7 @@
 # Links
-## v12.0
+## v13.0
 ### Google Scripts
-+ [Google Script](https://script.google.com/macros/s/AKfycbzeLX4_YoGB8Ne_S-4HomffhhZatCd2rPmeCxesAMiK5XVQrgkWWqsJexwRVYB3o6W0/exec)
++ https://script.google.com/macros/s/AKfycbzeLX4_YoGB8Ne_S-4HomffhhZatCd2rPmeCxesAMiK5XVQrgkWWqsJexwRVYB3o6W0/exec 
 ## v4.0
 ### Google Scripts
 > Notice: The FCPS Google Scripts only work for students within the @fcpsschools.net email domain.
