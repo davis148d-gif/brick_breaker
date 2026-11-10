@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf8ef">
   <title>Brick Breaker v13</title>
+  <link rel="icon" href="index.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
-    
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
 
     * { box-sizing: border-box; }
@@ -23,14 +25,14 @@
       transition: background 0.4s, color 0.4s;
     }
 
-    body.hell-mode {
-      background: #1a0505;
-      color: #f7fafc;
-    }
-
     body {
       display: flex;
       flex-direction: column;
+    }
+
+    body.hell-mode {
+      background: #1a0505;
+      color: #f7fafc;
     }
 
     .menu-bar {
@@ -69,9 +71,16 @@
       transition: background .15s, transform .15s;
     }
 
-    body.hell-mode button, body.hell-mode .btn-label { background: #3f1212; }
-    button:hover, .btn-label:hover { background: #444; transform: translateY(-1px); }
-    body.hell-mode button:hover, body.hell-mode .btn-label:hover { background: #631c1c; }
+    body.hell-mode button,
+    body.hell-mode .btn-label { background: #3f1212; }
+
+    button:hover, .btn-label:hover {
+      background: #444;
+      transform: translateY(-1px);
+    }
+
+    body.hell-mode button:hover,
+    body.hell-mode .btn-label:hover { background: #631c1c; }
 
     button:disabled {
       cursor: not-allowed;
@@ -95,6 +104,7 @@
       background: #2b6cb0;
       cursor: pointer;
     }
+
     body.hell-mode #difficultySelect { background: #9b2c2c; }
 
     .main-container {
@@ -183,7 +193,8 @@
       transition: background 0.4s, border-color 0.4s, color 0.4s;
     }
 
-    body.hell-mode .panel, body.hell-mode .modal-content {
+    body.hell-mode .panel,
+    body.hell-mode .modal-content {
       background: #240a0a;
       border-color: #631c1c;
       color: #f7fafc;
@@ -197,7 +208,8 @@
       border-bottom: 2px solid #edf2f7;
     }
 
-    body.hell-mode .panel h2, body.hell-mode .modal-content h2 {
+    body.hell-mode .panel h2,
+    body.hell-mode .modal-content h2 {
       border-bottom-color: #4a1515;
     }
 
@@ -215,6 +227,7 @@
       background: #fefcbf;
       border: 1px solid #f6e05e;
     }
+
     body.hell-mode .coins {
       color: #f6e05e;
       background: #3d2c00;
@@ -226,6 +239,7 @@
       background: #e9d8fd;
       border: 1px solid #d6bcfa;
     }
+
     body.hell-mode .gems {
       color: #d6bcfa;
       background: #2d1545;
@@ -253,6 +267,7 @@
       font-weight: 600;
       font-size: 0.75rem;
     }
+
     body.hell-mode .timer small { color: #cbd5e0; }
 
     #speedrunTimer {
@@ -262,6 +277,7 @@
       font-weight: 700;
       font-variant-numeric: tabular-nums;
     }
+
     body.hell-mode #speedrunTimer { color: #fc8181; }
 
     .overlord-panel {
@@ -269,10 +285,12 @@
       background: #2d0a0a;
       color: #fff;
     }
+
     .overlord-panel h2 {
       color: #fc8181;
       border-bottom-color: #551a1a;
     }
+
     .overlord-speech {
       font-style: italic;
       font-size: 0.85rem;
@@ -298,14 +316,14 @@
       transition: background 0.4s, border-color 0.4s;
     }
 
-    body.hell-mode .buff-card, body.hell-mode .tracker-row, body.hell-mode .brick-info-card {
+    body.hell-mode .buff-card,
+    body.hell-mode .tracker-row,
+    body.hell-mode .brick-info-card {
       background: #320d0d;
       border-color: #551a1a;
     }
 
-    .brick-info-card {
-      justify-content: flex-start;
-    }
+    .brick-info-card { justify-content: flex-start; }
 
     .brick-icon {
       width: 36px;
@@ -320,12 +338,37 @@
       border: 1px solid #171717;
     }
 
-    .buff-info { display: flex; flex-direction: column; }
-    .buff-desc, .muted { color: #718096; font-size: .75rem; }
-    body.hell-mode .buff-desc, body.hell-mode .muted { color: #a0aec0; }
-    .buff-status { color: #25855a; font-size: .75rem; font-weight: 700; }
+    .brick-info-card .brick-icon {
+      font-size: 1rem;
+    }
+
+    .buff-info {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .buff-desc, .muted {
+      color: #718096;
+      font-size: .75rem;
+    }
+
+    body.hell-mode .buff-desc,
+    body.hell-mode .muted { color: #a0aec0; }
+
+    .buff-status {
+      color: #25855a;
+      font-size: .75rem;
+      font-weight: 700;
+    }
+
     body.hell-mode .buff-status { color: #48bb78; }
-    .buy { padding: 6px 10px; background: #319795; white-space: nowrap; }
+
+    .buy {
+      padding: 6px 10px;
+      background: #319795;
+      white-space: nowrap;
+    }
 
     .settings-grid {
       display: flex;
@@ -355,6 +398,7 @@
       border: 1px solid #cbd5e0;
       font-size: 0.8rem;
     }
+
     body.hell-mode .tracker-tabs button {
       color: #e2e8f0;
       background: #3b0707;
@@ -365,10 +409,8 @@
       color: #fff;
       background: #2b6cb0;
     }
-    body.hell-mode .tracker-tabs button.active {
-      background: #9b2c2c;
-    }
 
+    body.hell-mode .tracker-tabs button.active { background: #9b2c2c; }
     .tracker-pane[hidden] { display: none; }
 
     .tracker-select {
@@ -378,6 +420,7 @@
       background: #fff;
       font-size: 0.8rem;
     }
+
     body.hell-mode .tracker-select {
       background: #320d0d;
       border-color: #741d1d;
@@ -385,7 +428,11 @@
     }
 
     .tracker-row strong { font-size: .8rem; }
-    .tracker-row span { font-size: .8rem; font-weight: 700; text-align: right; }
+    .tracker-row span {
+      font-size: .8rem;
+      font-weight: 700;
+      text-align: right;
+    }
 
     .modal-overlay {
       position: fixed;
@@ -416,6 +463,7 @@
       background: transparent;
       font-size: 1.2rem;
     }
+
     body.hell-mode .modal-close { color: #fff; }
     .modal-close:hover { background: #eee; }
     body.hell-mode .modal-close:hover { background: #4a1515; }
@@ -431,10 +479,8 @@
       padding: 11px 6px;
       border: 2px solid #171717;
     }
-    body.hell-mode .mode-btn {
-      border-color: #741d1d;
-    }
 
+    body.hell-mode .mode-btn { border-color: #741d1d; }
     .mode-btn.active { background: #2b6cb0; }
     body.hell-mode .mode-btn.active { background: #9b2c2c; }
 
@@ -459,15 +505,14 @@
       border-bottom: 1px solid #edf2f7;
       text-align: left;
     }
-    body.hell-mode th, body.hell-mode td {
-      border-bottom-color: #4a1515;
-    }
+
+    body.hell-mode th,
+    body.hell-mode td { border-bottom-color: #4a1515; }
+
     th { background: #f7fafc; }
     body.hell-mode th { background: #3b0707; }
 
-    .analysis-panel, .tas-panel {
-      font-size: 0.8rem;
-    }
+    .analysis-panel, .tas-panel { font-size: 0.8rem; }
 
     .analysis-panel label, .tas-panel label {
       display: block;
@@ -482,7 +527,9 @@
       border-radius: 5px;
       font: inherit;
     }
-    body.hell-mode .analysis-panel input, body.hell-mode .save-code-input {
+
+    body.hell-mode .analysis-panel input,
+    body.hell-mode .save-code-input {
       color: #fff;
       background: #320d0d;
       border-color: #741d1d;
@@ -498,8 +545,8 @@
       color: #2b6cb0;
       font-weight: 700;
     }
-    body.hell-mode .analysis-angle { color: #fc8181; }
 
+    body.hell-mode .analysis-angle { color: #fc8181; }
     .tas-delta-faster { color: #25855a; }
     .tas-delta-slower { color: #e53e3e; }
 
@@ -513,20 +560,88 @@
     .leaderboard-tabs button { flex: 1; min-width: 100px; }
     .leaderboard-page[hidden] { display: none; }
 
-    @media (max-width: 760px) {
-      body { overflow: auto; height: auto; }
-      .main-container { flex-direction: column; height: auto; overflow: visible; }
-      .game-section { width: 100%; height: auto; }
-      .canvas-container { height: calc(100vh - 140px); width: 100%; }
-      .sidebar { width: 100%; height: auto; }
-      .menu-bar { gap: 6px; padding: 6px; }
+    #brickGuideList {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px 10px;
     }
-  
 
+    #brickGuideList .brick-info-card {
+      min-width: 0;
+      align-items: flex-start;
+    }
+
+    #brickGuideList .brick-icon {
+      width: 34px;
+      height: 34px;
+      font-size: 0.95rem;
+    }
+
+    #brickGuideList .buff-info strong {
+      font-size: 0.82rem;
+    }
+
+    #brickGuideList .buff-desc {
+      line-height: 1.4;
+      overflow-wrap: anywhere;
+    }
+
+    .brick-tier {
+      display: inline-block;
+      margin-top: 3px;
+      font-size: .68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    @media (max-width: 760px) {
+      body {
+        overflow: auto;
+        height: auto;
+        min-height: 100vh;
+      }
+
+      .main-container {
+        flex-direction: column;
+        height: auto;
+        overflow: visible;
+      }
+
+      .game-section {
+        width: 100%;
+        height: auto;
+        min-height: 60vh;
+      }
+
+      .canvas-container {
+        height: calc(100vh - 140px);
+        width: 100%;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        overflow: visible;
+      }
+
+      .menu-bar {
+        gap: 6px;
+        padding: 6px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #brickGuideList { grid-template-columns: 1fr; }
+      .menu-bar button, #difficultySelect {
+        flex: 1 1 auto;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <nav class="menu-bar">
+  <nav class="menu-bar" aria-label="Game menu">
     <select id="difficultySelect" aria-label="Difficulty">
       <option value="easy">Easy (1–3 Bricks)</option>
       <option value="medium" selected>Medium (1–4 Bricks)</option>
@@ -535,70 +650,70 @@
       <option value="asian">ASIAN (4–5 Bricks)</option>
     </select>
 
-    <button onclick="openModal('permModal')"><i class="fa-solid fa-angles-up"></i> Upgrades</button>
-    <button onclick="openModal('tempModal')"><i class="fa-solid fa-cart-shopping"></i> Shop</button>
-    <button onclick="openModal('gameInfoModal')"><i class="fa-solid fa-circle-info"></i> Game Info</button>
-    <button onclick="openModal('leaderboardModal')"><i class="fa-solid fa-trophy"></i> Leaderboard</button>
-    <button onclick="openModal('settingsModal')"><i class="fa-solid fa-gear"></i> Settings</button>
+    <button type="button" onclick="openModal('permModal')"><i class="fa-solid fa-angles-up" aria-hidden="true"></i> Upgrades</button>
+    <button type="button" onclick="openModal('tempModal')"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Shop</button>
+    <button type="button" onclick="openModal('gameInfoModal')"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Game Info</button>
+    <button type="button" onclick="openModal('leaderboardModal')"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Leaderboard</button>
+    <button type="button" onclick="openModal('settingsModal')"><i class="fa-solid fa-gear" aria-hidden="true"></i> Settings</button>
   </nav>
 
-  <div id="settingsModal" class="modal-overlay">
+  <div id="settingsModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
     <div class="modal-content" style="max-width:420px;">
-      <button class="modal-close" onclick="closeModal('settingsModal')" aria-label="Close">&times;</button>
-      <h2><i class="fa-solid fa-gear"></i> Settings</h2>
+      <button type="button" class="modal-close" onclick="closeModal('settingsModal')" aria-label="Close settings">&times;</button>
+      <h2 id="settingsTitle"><i class="fa-solid fa-gear" aria-hidden="true"></i> Settings</h2>
       <div class="settings-grid">
-        <button onclick="closeModal('settingsModal'); gameManager.resetGame();">
-          <i class="fa-solid fa-rotate-right"></i> Start New Run
+        <button type="button" onclick="closeModal('settingsModal'); gameManager.resetGame();">
+          <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> Start New Run
         </button>
-        <button class="secondary" onclick="gameManager.exportSaveFile()">
-          <i class="fa-solid fa-download"></i> Download Save
+        <button type="button" class="secondary" onclick="gameManager.exportSaveFile()">
+          <i class="fa-solid fa-download" aria-hidden="true"></i> Download Save
         </button>
         <label class="btn-label secondary">
-          <i class="fa-solid fa-upload"></i> Upload Save
+          <i class="fa-solid fa-upload" aria-hidden="true"></i> Upload Save
           <input class="file-input" type="file" accept=".json,application/json" onchange="gameManager.importSaveFile(event)">
         </label>
-        <button class="secondary" onclick="gameManager.showSaveCode()">
-          <i class="fa-solid fa-key"></i> Export Save Code
+        <button type="button" class="secondary" onclick="gameManager.showSaveCode()">
+          <i class="fa-solid fa-key" aria-hidden="true"></i> Export Save Code
         </button>
-        <button class="secondary" onclick="gameManager.importSaveCode()">
-          <i class="fa-solid fa-right-to-bracket"></i> Import Save Code
+        <button type="button" class="secondary" onclick="gameManager.importSaveCode()">
+          <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i> Import Save Code
         </button>
-        <button class="danger" onclick="gameManager.wipeAllData()">
-          <i class="fa-solid fa-trash-can"></i> Wipe All Data
+        <button type="button" class="danger" onclick="gameManager.wipeAllData()">
+          <i class="fa-solid fa-trash-can" aria-hidden="true"></i> Wipe All Data
         </button>
       </div>
     </div>
   </div>
 
-  <div id="modeSelectModal" class="modal-overlay">
+  <div id="modeSelectModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modeSelectTitle">
     <div class="modal-content">
-      <button class="modal-close" onclick="gameManager.cancelNewRun()" aria-label="Close">&times;</button>
-      <h2>Choose a Game Mode</h2>
+      <button type="button" class="modal-close" onclick="gameManager.cancelNewRun()" aria-label="Close mode selection">&times;</button>
+      <h2 id="modeSelectTitle">Choose a Game Mode</h2>
       <p class="muted" id="modeModalMessage">Choose a mode for your new run.</p>
       <div class="mode-grid">
-        <button class="mode-btn active" data-mode="infinite">Infinite</button>
-        <button class="mode-btn" data-mode="hell">Hell Mode 🔥</button>
-        <button class="mode-btn" data-mode="speedrun_25">Speedrun 25</button>
-        <button class="mode-btn" data-mode="speedrun_50">Speedrun 50</button>
-        <button class="mode-btn" data-mode="speedrun_100">Speedrun 100</button>
-        <button class="mode-btn" data-mode="speedrun_250">Speedrun 250</button>
-        <button class="mode-btn" data-mode="speedrun_500">Speedrun 500</button>
+        <button type="button" class="mode-btn active" data-mode="infinite">Infinite</button>
+        <button type="button" class="mode-btn" data-mode="hell">Hell Mode 🔥</button>
+        <button type="button" class="mode-btn" data-mode="speedrun_25">Speedrun 25</button>
+        <button type="button" class="mode-btn" data-mode="speedrun_50">Speedrun 50</button>
+        <button type="button" class="mode-btn" data-mode="speedrun_100">Speedrun 100</button>
+        <button type="button" class="mode-btn" data-mode="speedrun_250">Speedrun 250</button>
+        <button type="button" class="mode-btn" data-mode="speedrun_500">Speedrun 500</button>
       </div>
       <div class="modal-actions">
-        <button onclick="gameManager.startSelectedMode()">Start Selected Mode</button>
-        <button class="secondary" onclick="gameManager.cancelNewRun()">Cancel</button>
+        <button type="button" onclick="gameManager.startSelectedMode()">Start Selected Mode</button>
+        <button type="button" class="secondary" onclick="gameManager.cancelNewRun()">Cancel</button>
       </div>
     </div>
   </div>
 
-  <div id="gameInfoModal" class="modal-overlay">
-    <div class="modal-content" style="max-width:600px;">
-      <button class="modal-close" onclick="closeModal('gameInfoModal')">&times;</button>
-      <h2>Game Info & Guide</h2>
+  <div id="gameInfoModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="gameInfoTitle">
+    <div class="modal-content" style="max-width:700px;">
+      <button type="button" class="modal-close" onclick="closeModal('gameInfoModal')" aria-label="Close game information">&times;</button>
+      <h2 id="gameInfoTitle">Game Info &amp; Guide</h2>
       <h3 style="color:#2b6cb0; margin-top:12px;">Game Modes</h3>
 
       <div class="brick-info-card">
-        <div class="brick-icon" style="background:#2b6cb0">∞</div>
+        <div class="brick-icon" style="background:#2b6cb0" aria-hidden="true">∞</div>
         <div class="buff-info">
           <strong>Infinite Mode</strong>
           <span class="buff-desc">Endless waves. Survive as long as possible.</span>
@@ -606,7 +721,7 @@
       </div>
 
       <div class="brick-info-card">
-        <div class="brick-icon" style="background:#9b2c2c">🔥</div>
+        <div class="brick-icon" style="background:#9b2c2c" aria-hidden="true">🔥</div>
         <div class="buff-info">
           <strong>Hell Mode</strong>
           <span class="buff-desc">Dark theme, stronger bricks, devil/crawler spawns, and the Overlord.</span>
@@ -614,22 +729,23 @@
       </div>
 
       <div class="brick-info-card">
-        <div class="brick-icon" style="background:#4a5568">⏱</div>
+        <div class="brick-icon" style="background:#4a5568" aria-hidden="true"><i class="fa-solid fa-stopwatch"></i></div>
         <div class="buff-info">
           <strong>Speedrun Modes</strong>
           <span class="buff-desc">Clear the target level as fast as possible. Analysis and TAS are available.</span>
         </div>
       </div>
 
-      <h3 style="color:#2b6cb0; margin-top:16px;">Brick Types & Rarities</h3>
-      <div id="brickGuideList"></div>
+      <h3 style="color:#2b6cb0; margin-top:16px;">Brick Types &amp; Rarities</h3>
+      <p class="muted">Icons appear on each brick in the game. The number on a brick is its remaining health.</p>
+      <div id="brickGuideList" aria-live="polite"></div>
     </div>
   </div>
 
-  <div id="permModal" class="modal-overlay">
+  <div id="permModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="permTitle">
     <div class="modal-content">
-      <button class="modal-close" onclick="closeModal('permModal')">&times;</button>
-      <h2>Permanent Upgrades</h2>
+      <button type="button" class="modal-close" onclick="closeModal('permModal')" aria-label="Close upgrades">&times;</button>
+      <h2 id="permTitle">Permanent Upgrades</h2>
       <div class="gems">Gems: <span id="gemsCountModal">0</span> 💎</div>
 
       <div class="buff-card">
@@ -638,7 +754,7 @@
           <span class="buff-desc">+1 starting ball per level</span>
           <span id="permAmmoStatus" class="buff-status"></span>
         </div>
-        <button class="buy" id="btnBuyPermAmmo" onclick="gameManager.buyPermUpgrade('startAmmo')">Upgrade</button>
+        <button type="button" class="buy" id="btnBuyPermAmmo" onclick="gameManager.buyPermUpgrade('startAmmo')">Upgrade</button>
       </div>
 
       <div class="buff-card">
@@ -647,7 +763,7 @@
           <span class="buff-desc">+5% chance for 3x damage per level</span>
           <span id="permCritStatus" class="buff-status"></span>
         </div>
-        <button class="buy" id="btnBuyPermCrit" onclick="gameManager.buyPermUpgrade('critChance')">Upgrade</button>
+        <button type="button" class="buy" id="btnBuyPermCrit" onclick="gameManager.buyPermUpgrade('critChance')">Upgrade</button>
       </div>
 
       <div class="buff-card">
@@ -656,7 +772,7 @@
           <span class="buff-desc">+10% shot velocity per level</span>
           <span id="permSpeedStatus" class="buff-status"></span>
         </div>
-        <button class="buy" id="btnBuyPermSpeed" onclick="gameManager.buyPermUpgrade('ballSpeed')">Upgrade</button>
+        <button type="button" class="buy" id="btnBuyPermSpeed" onclick="gameManager.buyPermUpgrade('ballSpeed')">Upgrade</button>
       </div>
 
       <div class="buff-card">
@@ -665,15 +781,15 @@
           <span class="buff-desc">+20% coin rewards per level</span>
           <span id="permLuckStatus" class="buff-status"></span>
         </div>
-        <button class="buy" id="btnBuyPermLuck" onclick="gameManager.buyPermUpgrade('luck')">Upgrade</button>
+        <button type="button" class="buy" id="btnBuyPermLuck" onclick="gameManager.buyPermUpgrade('luck')">Upgrade</button>
       </div>
     </div>
   </div>
 
-  <div id="tempModal" class="modal-overlay">
+  <div id="tempModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="tempTitle">
     <div class="modal-content">
-      <button class="modal-close" onclick="closeModal('tempModal')">&times;</button>
-      <h2>Temporary Shop</h2>
+      <button type="button" class="modal-close" onclick="closeModal('tempModal')" aria-label="Close shop">&times;</button>
+      <h2 id="tempTitle">Temporary Shop</h2>
       <div class="coins">Coins: <span id="coinsCountTempModal">0</span> 🪙</div>
 
       <div class="buff-card">
@@ -682,7 +798,7 @@
           <span class="buff-desc">Lasts 3 turns (Scales per buy)</span>
           <span id="buff15xStatus" class="buff-status">Inactive</span>
         </div>
-        <button class="buy" id="btnBuy15x" onclick="gameManager.buyTempBuff('doubleDamage')">Buy</button>
+        <button type="button" class="buy" id="btnBuy15x" onclick="gameManager.buyTempBuff('doubleDamage')">Buy</button>
       </div>
 
       <div class="buff-card">
@@ -690,20 +806,20 @@
           <strong>⚡ Laser Wipe</strong>
           <span class="buff-desc">Clears bottom row (Scales per buy)</span>
         </div>
-        <button class="buy" id="btnBuyLaser" onclick="gameManager.buyTempBuff('laserWipe')">Buy</button>
+        <button type="button" class="buy" id="btnBuyLaser" onclick="gameManager.buyTempBuff('laserWipe')">Buy</button>
       </div>
     </div>
   </div>
 
-  <div id="leaderboardModal" class="modal-overlay">
+  <div id="leaderboardModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="leaderboardTitle">
     <div class="modal-content">
-      <button class="modal-close" onclick="closeModal('leaderboardModal')">&times;</button>
-      <h2>Records & Lifetime Stats</h2>
+      <button type="button" class="modal-close" onclick="closeModal('leaderboardModal')" aria-label="Close leaderboard">&times;</button>
+      <h2 id="leaderboardTitle">Records &amp; Lifetime Stats</h2>
 
       <div class="leaderboard-tabs">
-        <button class="active" onclick="gameManager.showLeaderboardPage('scores')">High Scores</button>
-        <button onclick="gameManager.showLeaderboardPage('speedruns')">Speedruns</button>
-        <button onclick="gameManager.showLeaderboardPage('stats')">Lifetime Stats</button>
+        <button type="button" class="active" onclick="gameManager.showLeaderboardPage('scores')">High Scores</button>
+        <button type="button" onclick="gameManager.showLeaderboardPage('speedruns')">Speedruns</button>
+        <button type="button" onclick="gameManager.showLeaderboardPage('stats')">Lifetime Stats</button>
       </div>
 
       <section id="leaderboardScoresPage" class="leaderboard-page">
@@ -741,19 +857,19 @@
         <input id="analysisAngleInput" type="number" step="0.1" value="-90">
 
         <div class="controls-row" style="margin-top:10px;">
-          <button id="analysisFireButton">Fire angle</button>
+          <button type="button" id="analysisFireButton">Fire angle</button>
         </div>
 
         <div id="analysisDetails" class="analysis-details"></div>
       </div>
     </aside>
 
-    <section class="game-section">
+    <section class="game-section" aria-label="Game">
       <div class="canvas-container">
-        <canvas id="canvas" width="710" height="880" aria-label="Brick Breaker game"></canvas>
+        <canvas id="canvas" width="710" height="880" aria-label="Brick Breaker game" role="img"></canvas>
       </div>
       <div class="controls-row">
-        <button onclick="gameManager.downBalls()"><i class="fa-solid fa-angles-down"></i> Recall Balls</button>
+        <button type="button" onclick="gameManager.downBalls()"><i class="fa-solid fa-angles-down" aria-hidden="true"></i> Recall Balls</button>
       </div>
     </section>
 
@@ -781,8 +897,8 @@
         </div>
 
         <div class="tracker-tabs">
-          <button id="generalTrackerTab" class="active" onclick="gameManager.showTrackerTab('general')">General</button>
-          <button id="speedrunTrackerTab" onclick="gameManager.showTrackerTab('speedrun')">Speedrun</button>
+          <button type="button" id="generalTrackerTab" class="active" onclick="gameManager.showTrackerTab('general')">General</button>
+          <button type="button" id="speedrunTrackerTab" onclick="gameManager.showTrackerTab('speedrun')">Speedrun</button>
         </div>
 
         <div id="generalTrackerPane" class="tracker-pane">
@@ -815,5 +931,184 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/gh/davis148d-gif/brick_breaker@main/game/js-assets/v13.js"></script>
+
+  <script>
+    (() => {
+      const brickGuide = [
+        {
+          type: 'normal', name: 'Normal', icon: 'fa-cube', glyph: 'f1b2',
+          color: '#2b6cb0', tier: 'Common',
+          description: 'A standard brick. Reduce its health to zero to break it.'
+        },
+        {
+          type: 'slider', name: 'Slider', icon: 'fa-arrows-left-right', glyph: 'f337',
+          color: '#00b5d8', tier: 'Common',
+          description: 'Moves sideways and bounces off walls and other bricks.'
+        },
+        {
+          type: 'magnet', name: 'Magnet', icon: 'fa-magnet', glyph: 'f076',
+          color: '#805ad5', tier: 'Common',
+          description: 'Pulls nearby balls toward itself.'
+        },
+        {
+          type: 'tnt', name: 'TNT', icon: 'fa-bomb', glyph: 'f1e2',
+          color: '#e53e3e', tier: 'Uncommon',
+          description: 'Explodes when broken and damages nearby bricks.'
+        },
+        {
+          type: 'ammo', name: 'Ammo', icon: 'fa-bullseye', glyph: 'f140',
+          color: '#d69e2e', tier: 'Uncommon',
+          description: 'Grants an extra ball when broken.'
+        },
+        {
+          type: 'portal', name: 'Portal', icon: 'fa-circle-nodes', glyph: 'f1db',
+          color: '#805ad5', tier: 'Uncommon',
+          description: 'Teleports a ball to a random position when hit.'
+        },
+        {
+          type: 'teleport', name: 'Teleporter', icon: 'fa-location-dot', glyph: 'f3c5',
+          color: '#2b6cb0', tier: 'Uncommon',
+          description: 'Moves to a random column after each turn.'
+        },
+        {
+          type: 'shock', name: 'Shock', icon: 'fa-bolt', glyph: 'f0e7',
+          color: '#dd6b20', tier: 'Uncommon',
+          description: 'Shocks a ball on contact, sending it downward.'
+        },
+        {
+          type: 'shield', name: 'Shield', icon: 'fa-shield-halved', glyph: 'f3ed',
+          color: '#319795', tier: 'Rare',
+          description: 'Protects nearby bricks from ball damage.'
+        },
+        {
+          type: 'parent', name: 'Parent', icon: 'fa-people-group', glyph: 'f0c0',
+          color: '#b7791f', tier: 'Rare',
+          description: 'Spawns smaller normal bricks when broken.'
+        },
+        {
+          type: 'healer', name: 'Healer', icon: 'fa-heart-pulse', glyph: 'f21e',
+          color: '#38a169', tier: 'Rare',
+          description: 'Heals nearby bricks at the end of each turn.'
+        },
+        {
+          type: 'directional', name: 'Directional', icon: 'fa-arrows-up-down-left-right', glyph: 'f047',
+          color: '#718096', tier: 'Rare',
+          description: 'Only takes damage from its permitted sides.'
+        },
+        {
+          type: 'phase', name: 'Phase', icon: 'fa-ghost', glyph: 'f6e2',
+          color: '#4fd1c5', tier: 'Rare',
+          description: 'Alternates between solid and liquid each turn.'
+        },
+        {
+          type: 'tank', name: 'Tank', icon: 'fa-truck', glyph: 'f0d1',
+          color: '#2d3748', tier: 'Legendary',
+          description: 'A heavily reinforced brick with high health.'
+        },
+        {
+          type: 'angel', name: 'Angel', icon: 'fa-feather', glyph: 'f52d',
+          color: '#d53f8c', tier: 'Legendary',
+          description: 'Damages nearby bricks at the end of each turn.'
+        },
+        {
+          type: 'turret', name: 'Turret', icon: 'fa-crosshairs', glyph: 'f05b',
+          color: '#4a5568', tier: 'Legendary',
+          description: 'Targets up to three other bricks each turn.'
+        },
+        {
+          type: 'crawler', name: 'Crawler', icon: 'fa-spider', glyph: 'f717',
+          color: '#ff4500', tier: 'Hell',
+          description: 'In Hell Mode, slowly crawls downward between turns.'
+        },
+        {
+          type: 'devil', name: 'Devil', icon: 'fa-fire', glyph: 'f06d',
+          color: '#8b0000', tier: 'Hell',
+          description: 'In Hell Mode, can spawn a tank above itself.'
+        }
+      ];
+
+      const guide = document.getElementById('brickGuideList');
+      if (guide) {
+        const fragment = document.createDocumentFragment();
+
+        for (const brick of brickGuide) {
+          const card = document.createElement('div');
+          card.className = 'brick-info-card';
+
+          const icon = document.createElement('div');
+          icon.className = 'brick-icon';
+          icon.style.backgroundColor = brick.color;
+          icon.setAttribute('aria-hidden', 'true');
+
+          const iconElement = document.createElement('i');
+          iconElement.className = `fa-solid ${brick.icon}`;
+          icon.appendChild(iconElement);
+
+          const info = document.createElement('div');
+          info.className = 'buff-info';
+
+          const name = document.createElement('strong');
+          name.textContent = brick.name;
+
+          const description = document.createElement('span');
+          description.className = 'buff-desc';
+          description.textContent = brick.description;
+
+          const tier = document.createElement('span');
+          tier.className = 'brick-tier muted';
+          tier.textContent = brick.tier;
+
+          info.append(name, description, tier);
+          card.append(icon, info);
+          fragment.appendChild(card);
+        }
+
+        guide.replaceChildren(fragment);
+      }
+
+      /*
+       * Preserve the game's existing brick drawing (colors, outlines, effects,
+       * and health labels), then add a small Font Awesome badge to each brick.
+       */
+      if (typeof gameManager !== 'undefined' &&
+          gameManager &&
+          typeof gameManager.drawBrick === 'function') {
+        const originalDrawBrick = gameManager.drawBrick.bind(gameManager);
+        const canvas = document.getElementById('canvas');
+        const context = canvas && canvas.getContext('2d');
+        const iconsByType = Object.fromEntries(
+          brickGuide.map((brick) => [brick.type, brick.glyph])
+        );
+
+        gameManager.drawBrick = function (brick, shieldBricks = []) {
+          originalDrawBrick(brick, shieldBricks);
+
+          if (!context || !brick) return;
+
+          const glyph = iconsByType[brick.type];
+          if (!glyph) return;
+
+          context.save();
+
+          const badgeX = brick.x + 19;
+          const badgeY = brick.y + 18;
+
+          context.globalAlpha = 1;
+          context.beginPath();
+          context.arc(badgeX, badgeY, 12, 0, Math.PI * 2);
+          context.fillStyle = 'rgba(0, 0, 0, 0.48)';
+          context.fill();
+
+          context.fillStyle = '#fff';
+          context.font = '900 14px "Font Awesome 6 Free"';
+          context.textAlign = 'center';
+          context.textBaseline = 'middle';
+          context.fillText(String.fromCodePoint(parseInt(glyph, 16)), badgeX, badgeY + 0.5);
+
+          context.restore();
+        };
+      }
+    })();
+  </script>
 </body>
 </html>
