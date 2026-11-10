@@ -6,7 +6,7 @@ Aim and shoot a string of balls at bricks to progress and stay alive, purchase u
 + Encrypted JSON save backups
 
 ## What's coming in v14.0
-+ Not planned yet
++ A new 'Tartarus' sequel to the Hell gamemode
 
 > Note: The save backup .json formats are now compatible with each other for any version after v11.
 
