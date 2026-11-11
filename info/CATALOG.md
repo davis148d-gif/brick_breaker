@@ -1,10 +1,19 @@
 # File Catalog
 + Game
+  + assets
+    + index-favicon.png
+    + v8-favicon.png
+    + v9-favicon.png
+    + v10-favicon.png
+    + v11-favicon.png
+    + v12-favicon.png
+    + v13-favicon.png
+    + v14-favicon.png
   + bb-feather (lightweight version of Brick breaker)
     + index.html
-  + codeai (CodeAI / code.org compatible version of Brick Breaker)
-    + INSTRUCTIONS.md
-    + index.html
+  + html
+    + anything-else-index.html
+    + google-scripts-index.html
     + v1.html
     + v2.html
     + v3.html
@@ -12,63 +21,35 @@
     + v5.html
     + v6.html
     + v7.html
-  + codehs (CodeHS compatible version of Brick Breaker)
-    + INSTRUCTIONS.md
-    + index.html
-    + v1.html
-    + v2.html
-    + v3.html
-    + v4.html
-    + v5.html
-    + v6.html
-    + v7.html
-  + google-scripts (Google Scripts compatible version of Brick Breaker)
-    + INSTRUCTIONS.md
-    + code.gs
-    + index.html
-    + v1.html
-    + v2.html
-    + v3.html
-    + v4.html
-    + v5.html
-    + v6.html
-    + v7.html
-    + v5.html
-    + v6.html
-    + v7.html
-  + modular (The code split into .html, .css, and .js files)
-    + index.html
-    + v1
-      + v1.css
-      + v1.html
-      + v1.js
-    + v2
-      + v2.css
-      + v2.html
-      + v2.js
-    + v3
-      + v3.css
-      + v3.html
-      + v3.js
-    + v4
-      + v4.css
-      + v4.html
-      + v4.js
-    + v5
-      + v5.css
-      + v5.html
-      + v5.js
-    + v6
-      + v6.css
-      + v6.html
-      + v6.js
-    + v7
-      + v7.css
-      + v7.html
-      + v7.js
+    + v8.html
+    + v9.html
+    + v10.html
+    + v11.html
+    + v12.html
+    + v13.html
+  + js-assets
+    + v1.js
+    + v2.js
+    + v3.js
+    + v4.js
+    + v5.js
+    + v6.js
+    + v7.js
+    + v8.js
+    + v9.js
+    + v10.js
+    + v11.js
+    + v12.js
+    + v13.js
+  + CodeHS-Upload.zip
+  + code.gs
 + info
   + CATALOG.md
   + CREDITS.md
   + LINKS.md
   + VERSIONS.md
++ tools
+  + jsdelivr.html
+  + html-js.html
 + README.md
++ .gitignore
