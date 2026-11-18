@@ -1,19 +1,19 @@
 # Brick Breaker 
-Aim and shoot a string of balls at bricks to progress and stay alive, purchase upgrades, and set records. Choose different versions from the original Legacy version to the latest v13.0 with upgrades, record tracking, JSON save backups, 15+ types of bricks, and a new 'Hell' gamemode.
-## What's in v13
-+ Hell mode
+Aim and shoot a string of balls at bricks to progress and stay alive, purchase upgrades, and set records. Choose different versions from the original Legacy version to the latest v14.0 with upgrades, record tracking, JSON save backups, 15+ types of bricks, and a new 'Tartarus' gamemode.
+## What's in v14
++ Tartarus mode
 + Updated UI
-+ Encrypted JSON save backups
++ New analytics tools
++ Multiple save files
 
-## What's coming in v14.0
-+ A new 'Tartarus' sequel to the Hell gamemode
+## What's coming in v15.0
++ A new 'Eternal Abyss' sequel to the Tartarus gamemode
 
 > Note: The save backup .json formats are now compatible with each other for any version after v11.
+> v14 is still being updated to be compatible with v13 saves, hold on tight
 
 [View full version info](info/VERSIONS.md)
 
-## v13.0 Links
-+ [Google Script](https://script.google.com/macros/s/AKfycbzeLX4_YoGB8Ne_S-4HomffhhZatCd2rPmeCxesAMiK5XVQrgkWWqsJexwRVYB3o6W0/exec)
 
 [View all current links](info/LINKS.md)
 
