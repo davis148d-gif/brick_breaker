@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'self';">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#faf8ef">
   <title>Brick Breaker v14</title>
@@ -1023,19 +1024,19 @@
         </div>
 
         <div class="home-actions">
-          <button type="button" class="primary-btn" onclick="gameManager.showSlotsScreen()">
+          <button type="button" class="primary-btn" data-action="showSlotsScreen">
             <i class="fa-solid fa-play" aria-hidden="true"></i> Play (Save Slots)
           </button>
-          <button type="button" onclick="openModal('permModal')">
+          <button type="button" data-open-modal="permModal">
             <i class="fa-solid fa-angles-up" aria-hidden="true"></i> Upgrades
           </button>
-          <button type="button" class="secondary" onclick="openModal('leaderboardModal')">
+          <button type="button" class="secondary" data-open-modal="leaderboardModal">
             <i class="fa-solid fa-trophy" aria-hidden="true"></i> Leaderboard &amp; Stats
           </button>
-          <button type="button" class="secondary" onclick="openModal('gameInfoModal')">
+          <button type="button" class="secondary" data-open-modal="gameInfoModal">
             <i class="fa-solid fa-circle-info" aria-hidden="true"></i> Game Info
           </button>
-          <button type="button" class="secondary" onclick="openModal('settingsModal')">
+          <button type="button" class="secondary" data-open-modal="settingsModal">
             <i class="fa-solid fa-gear" aria-hidden="true"></i> Profile &amp; Settings
           </button>
         </div>
@@ -1046,11 +1047,11 @@
   <!-- SAVE SLOTS SCREEN -->
   <div id="slotsView" class="screen-view" hidden>
     <nav class="menu-bar" aria-label="Slots menu">
-      <button type="button" onclick="gameManager.showHomeScreen()"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</button>
-      <button type="button" onclick="openModal('permModal')"><i class="fa-solid fa-angles-up" aria-hidden="true"></i> Upgrades</button>
-      <button type="button" onclick="openModal('gameInfoModal')"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Game Info</button>
-      <button type="button" onclick="openModal('leaderboardModal')"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Leaderboard</button>
-      <button type="button" onclick="openModal('settingsModal')"><i class="fa-solid fa-gear" aria-hidden="true"></i> Settings</button>
+      <button type="button" data-action="showHomeScreen"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</button>
+      <button type="button" data-open-modal="permModal"><i class="fa-solid fa-angles-up" aria-hidden="true"></i> Upgrades</button>
+      <button type="button" data-open-modal="gameInfoModal"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Game Info</button>
+      <button type="button" data-open-modal="leaderboardModal"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Leaderboard</button>
+      <button type="button" data-open-modal="settingsModal"><i class="fa-solid fa-gear" aria-hidden="true"></i> Settings</button>
     </nav>
 
     <div class="slots-screen">
@@ -1073,8 +1074,8 @@
   <!-- GAME SCREEN (Exact v13 UI & Organization) -->
   <div id="gameView" class="screen-view" hidden>
     <nav class="menu-bar" aria-label="Game menu">
-      <button type="button" onclick="gameManager.showHomeScreen()"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</button>
-      <button type="button" id="slotsMenuBtn" onclick="gameManager.showSlotsScreen()"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Slots</button>
+      <button type="button" data-action="showHomeScreen"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</button>
+      <button type="button" id="slotsMenuBtn" data-action="showSlotsScreen"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Slots</button>
 
       <select id="difficultySelect" aria-label="Difficulty">
         <option value="easy">Easy (1–3 Bricks)</option>
@@ -1084,11 +1085,11 @@
         <option value="asian">ASIAN (4–5 Bricks)</option>
       </select>
 
-      <button type="button" onclick="openModal('permModal')"><i class="fa-solid fa-angles-up" aria-hidden="true"></i> Upgrades</button>
-      <button type="button" onclick="openModal('tempModal')"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Shop</button>
-      <button type="button" onclick="openModal('gameInfoModal')"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Game Info</button>
-      <button type="button" onclick="openModal('leaderboardModal')"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Leaderboard</button>
-      <button type="button" onclick="openModal('settingsModal')"><i class="fa-solid fa-gear" aria-hidden="true"></i> Settings</button>
+      <button type="button" data-open-modal="permModal"><i class="fa-solid fa-angles-up" aria-hidden="true"></i> Upgrades</button>
+      <button type="button" data-open-modal="tempModal"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Shop</button>
+      <button type="button" data-open-modal="gameInfoModal"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Game Info</button>
+      <button type="button" data-open-modal="leaderboardModal"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Leaderboard</button>
+      <button type="button" data-open-modal="settingsModal"><i class="fa-solid fa-gear" aria-hidden="true"></i> Settings</button>
     </nav>
 
     <div class="main-container">
@@ -1122,8 +1123,8 @@
           <canvas id="canvas" width="710" height="880" aria-label="Brick Breaker game" role="img"></canvas>
         </div>
         <div class="controls-row">
-          <button type="button" onclick="gameManager.downBalls()"><i class="fa-solid fa-angles-down" aria-hidden="true"></i> Recall Balls</button>
-          <button type="button" id="fastForwardBtn" class="secondary" onclick="gameManager.toggleFastForward()"><i class="fa-solid fa-forward" aria-hidden="true"></i> Fast: 1x</button>
+          <button type="button" data-action="downBalls"><i class="fa-solid fa-angles-down" aria-hidden="true"></i> Recall Balls</button>
+          <button type="button" id="fastForwardBtn" class="secondary" data-action="toggleFastForward"><i class="fa-solid fa-forward" aria-hidden="true"></i> Fast: 1x</button>
         </div>
       </section>
 
@@ -1151,8 +1152,8 @@
           </div>
 
           <div class="tracker-tabs">
-            <button type="button" id="generalTrackerTab" class="active" onclick="gameManager.showTrackerTab('general')">General</button>
-            <button type="button" id="speedrunTrackerTab" onclick="gameManager.showTrackerTab('speedrun')">Speedrun</button>
+            <button type="button" id="generalTrackerTab" class="active" data-action="showTrackerTab" data-arg="general">General</button>
+            <button type="button" id="speedrunTrackerTab" data-action="showTrackerTab" data-arg="speedrun">Speedrun</button>
           </div>
 
           <div id="generalTrackerPane" class="tracker-pane">
@@ -1161,7 +1162,7 @@
 
           <div id="speedrunTrackerPane" class="tracker-pane" hidden>
             <label for="speedrunCategorySelect"><strong>Speedrun category</strong></label>
-            <select id="speedrunCategorySelect" class="tracker-select" onchange="gameManager.renderModeTracker()">
+            <select id="speedrunCategorySelect" class="tracker-select">
               <option value="speedrun_25">Speedrun 25</option>
               <option value="speedrun_50">Speedrun 50</option>
               <option value="speedrun_100">Speedrun 100</option>
@@ -1170,7 +1171,7 @@
             </select>
 
             <label for="speedrunDiffSelect"><strong>Filter Difficulty</strong></label>
-            <select id="speedrunDiffSelect" class="tracker-select" onchange="gameManager.renderModeTracker()">
+            <select id="speedrunDiffSelect" class="tracker-select">
               <option value="easy">Easy</option>
               <option value="medium" selected>Medium</option>
               <option value="hard">Hard</option>
@@ -1188,7 +1189,7 @@
   <!-- MODALS -->
   <div id="settingsModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
     <div class="modal-content" style="max-width:450px;">
-      <button type="button" class="modal-close" onclick="closeModal('settingsModal')" aria-label="Close settings">&times;</button>
+      <button type="button" class="modal-close" data-close-modal="settingsModal" aria-label="Close settings">&times;</button>
       <h2 id="settingsTitle"><i class="fa-solid fa-gear" aria-hidden="true"></i> Profile &amp; Settings</h2>
 
       <div style="margin-bottom:12px;">
@@ -1196,38 +1197,38 @@
         <input id="profileNameInput" class="profile-input" type="text" maxlength="20" placeholder="Player">
         <div style="font-size:0.8rem;font-weight:600;margin-top:8px;">Profile Icon</div>
         <div id="profileIconGrid" class="icon-grid"></div>
-        <button type="button" class="primary-btn" style="width:100%;" onclick="gameManager.saveProfileFromModal()">
+        <button type="button" class="primary-btn" style="width:100%;" data-action="saveProfileFromModal">
           <i class="fa-solid fa-check" aria-hidden="true"></i> Save Profile
         </button>
       </div>
 
       <div class="settings-grid">
-        <button type="button" onclick="closeModal('settingsModal'); gameManager.resetGame();">
+        <button type="button" data-action="resetGameFromSettings">
           <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> Start New Run
         </button>
-        <button type="button" id="btnToggleSound" class="secondary" onclick="gameManager.toggleSetting('sound')">
+        <button type="button" id="btnToggleSound" class="secondary" data-action="toggleSetting" data-arg="sound">
           <i class="fa-solid fa-volume-high" aria-hidden="true"></i> Sound Effects: ON
         </button>
-        <button type="button" id="btnToggleBgm" class="secondary" onclick="gameManager.toggleSetting('bgm')">
+        <button type="button" id="btnToggleBgm" class="secondary" data-action="toggleSetting" data-arg="bgm">
           <i class="fa-solid fa-music" aria-hidden="true"></i> Background Music: ON
         </button>
-        <button type="button" id="btnToggleParticles" class="secondary" onclick="gameManager.toggleSetting('particles')">
+        <button type="button" id="btnToggleParticles" class="secondary" data-action="toggleSetting" data-arg="particles">
           <i class="fa-solid fa-burst" aria-hidden="true"></i> Particles: ON
         </button>
-        <button type="button" class="secondary" onclick="gameManager.exportSaveFile()">
+        <button type="button" class="secondary" data-action="exportSaveFile">
           <i class="fa-solid fa-download" aria-hidden="true"></i> Download Save
         </button>
         <label class="btn-label secondary">
           <i class="fa-solid fa-upload" aria-hidden="true"></i> Upload Save
-          <input class="file-input" type="file" accept=".json,.txt,application/json" onchange="gameManager.importSaveFile(event)">
+          <input id="settingsImportFile" class="file-input" type="file" accept=".json,.txt,application/json">
         </label>
-        <button type="button" class="secondary" onclick="gameManager.showSaveCode()">
+        <button type="button" class="secondary" data-action="showSaveCode">
           <i class="fa-solid fa-key" aria-hidden="true"></i> Export Save Code
         </button>
-        <button type="button" class="secondary" onclick="gameManager.importSaveCode()">
+        <button type="button" class="secondary" data-action="importSaveCode">
           <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i> Import Save Code
         </button>
-        <button type="button" class="danger" onclick="gameManager.wipeAllData()">
+        <button type="button" class="danger" data-action="wipeAllData">
           <i class="fa-solid fa-trash-can" aria-hidden="true"></i> Wipe All Data
         </button>
       </div>
@@ -1236,7 +1237,7 @@
 
   <div id="modeSelectModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modeSelectTitle">
     <div class="modal-content">
-      <button type="button" class="modal-close" onclick="gameManager.cancelNewRun()" aria-label="Close mode selection">&times;</button>
+      <button type="button" class="modal-close" data-action="cancelNewRun" aria-label="Close mode selection">&times;</button>
       <h2 id="modeSelectTitle">Choose a Game Mode</h2>
       <p class="muted" id="modeModalMessage">Choose a mode and difficulty for this slot.</p>
       <div class="mode-grid">
@@ -1261,15 +1262,15 @@
       <p id="modeTartarusHint" class="muted" hidden style="margin:4px 0 0;color:#805ad5;font-weight:600;">Tartarus Mode requires Insane or ASIAN difficulty.</p>
 
       <div class="modal-actions">
-        <button type="button" class="primary-btn" onclick="gameManager.startSelectedMode()">Start Selected Mode</button>
-        <button type="button" class="secondary" onclick="gameManager.cancelNewRun()">Cancel</button>
+        <button type="button" class="primary-btn" data-action="startSelectedMode">Start Selected Mode</button>
+        <button type="button" class="secondary" data-action="cancelNewRun">Cancel</button>
       </div>
     </div>
   </div>
 
   <div id="gameInfoModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="gameInfoTitle">
     <div class="modal-content" style="max-width:700px;">
-      <button type="button" class="modal-close" onclick="closeModal('gameInfoModal')" aria-label="Close game information">&times;</button>
+      <button type="button" class="modal-close" data-close-modal="gameInfoModal" aria-label="Close game information">&times;</button>
       <h2 id="gameInfoTitle">Game Info &amp; Guide</h2>
       <h3 style="color:#2b6cb0; margin-top:12px;">Game Modes</h3>
 
@@ -1313,7 +1314,7 @@
 
   <div id="permModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="permTitle">
     <div class="modal-content">
-      <button type="button" class="modal-close" onclick="closeModal('permModal')" aria-label="Close upgrades">&times;</button>
+      <button type="button" class="modal-close" data-close-modal="permModal" aria-label="Close upgrades">&times;</button>
       <h2 id="permTitle">Permanent Upgrades</h2>
       <div class="gems">Gems: <span id="gemsCountModal">0</span> 💎</div>
 
@@ -1323,7 +1324,7 @@
           <span class="buff-desc">+1 starting ball per level</span>
           <span id="permAmmoStatus" class="buff-status"></span>
         </div>
-        <button type="button" class="buy" id="btnBuyPermAmmo" onclick="gameManager.buyPermUpgrade('startAmmo')">Upgrade</button>
+        <button type="button" class="buy" id="btnBuyPermAmmo" data-action="buyPermUpgrade" data-arg="startAmmo">Upgrade</button>
       </div>
 
       <div class="buff-card">
@@ -1332,7 +1333,7 @@
           <span class="buff-desc">+5% chance for 3x damage per level</span>
           <span id="permCritStatus" class="buff-status"></span>
         </div>
-        <button type="button" class="buy" id="btnBuyPermCrit" onclick="gameManager.buyPermUpgrade('critChance')">Upgrade</button>
+        <button type="button" class="buy" id="btnBuyPermCrit" data-action="buyPermUpgrade" data-arg="critChance">Upgrade</button>
       </div>
 
       <div class="buff-card">
@@ -1341,7 +1342,7 @@
           <span class="buff-desc">+10% shot velocity per level</span>
           <span id="permSpeedStatus" class="buff-status"></span>
         </div>
-        <button type="button" class="buy" id="btnBuyPermSpeed" onclick="gameManager.buyPermUpgrade('ballSpeed')">Upgrade</button>
+        <button type="button" class="buy" id="btnBuyPermSpeed" data-action="buyPermUpgrade" data-arg="ballSpeed">Upgrade</button>
       </div>
 
       <div class="buff-card">
@@ -1350,7 +1351,7 @@
           <span class="buff-desc">+20% coin rewards per level</span>
           <span id="permLuckStatus" class="buff-status"></span>
         </div>
-        <button type="button" class="buy" id="btnBuyPermLuck" onclick="gameManager.buyPermUpgrade('luck')">Upgrade</button>
+        <button type="button" class="buy" id="btnBuyPermLuck" data-action="buyPermUpgrade" data-arg="luck">Upgrade</button>
       </div>
 
       <div class="buff-card">
@@ -1359,7 +1360,7 @@
           <span class="buff-desc">+3% extra gem drop chance per level</span>
           <span id="permGemStatus" class="buff-status"></span>
         </div>
-        <button type="button" class="buy" id="btnBuyPermGem" onclick="gameManager.buyPermUpgrade('gemLuck')">Upgrade</button>
+        <button type="button" class="buy" id="btnBuyPermGem" data-action="buyPermUpgrade" data-arg="gemLuck">Upgrade</button>
       </div>
 
       <div class="buff-card">
@@ -1368,14 +1369,14 @@
           <span class="buff-desc">+3% chance for balls to bounce off the bottom floor</span>
           <span id="permReboundStatus" class="buff-status"></span>
         </div>
-        <button type="button" class="buy" id="btnBuyPermRebound" onclick="gameManager.buyPermUpgrade('rebound')">Upgrade</button>
+        <button type="button" class="buy" id="btnBuyPermRebound" data-action="buyPermUpgrade" data-arg="rebound">Upgrade</button>
       </div>
     </div>
   </div>
 
   <div id="tempModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="tempTitle">
     <div class="modal-content">
-      <button type="button" class="modal-close" onclick="closeModal('tempModal')" aria-label="Close shop">&times;</button>
+      <button type="button" class="modal-close" data-close-modal="tempModal" aria-label="Close shop">&times;</button>
       <h2 id="tempTitle">Temporary Shop</h2>
       <div class="coins">Coins: <span id="coinsCountTempModal">0</span> 🪙</div>
 
@@ -1385,7 +1386,7 @@
           <span class="buff-desc">Lasts 3 turns (Scales per buy)</span>
           <span id="buff15xStatus" class="buff-status">Inactive</span>
         </div>
-        <button type="button" class="buy" id="btnBuy15x" onclick="gameManager.buyTempBuff('doubleDamage')">Buy</button>
+        <button type="button" class="buy" id="btnBuy15x" data-action="buyTempBuff" data-arg="doubleDamage">Buy</button>
       </div>
 
       <div class="buff-card">
@@ -1393,21 +1394,21 @@
           <strong>⚡ Laser Wipe</strong>
           <span class="buff-desc">Clears bottom row (Scales per buy)</span>
         </div>
-        <button type="button" class="buy" id="btnBuyLaser" onclick="gameManager.buyTempBuff('laserWipe')">Buy</button>
+        <button type="button" class="buy" id="btnBuyLaser" data-action="buyTempBuff" data-arg="laserWipe">Buy</button>
       </div>
     </div>
   </div>
 
   <div id="leaderboardModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="leaderboardTitle">
     <div class="modal-content">
-      <button type="button" class="modal-close" onclick="closeModal('leaderboardModal')" aria-label="Close leaderboard">&times;</button>
+      <button type="button" class="modal-close" data-close-modal="leaderboardModal" aria-label="Close leaderboard">&times;</button>
       <h2 id="leaderboardTitle">Records &amp; Lifetime Stats</h2>
 
       <div class="leaderboard-tabs">
-        <button type="button" class="active" onclick="gameManager.showLeaderboardPage('scores')">High Scores</button>
-        <button type="button" onclick="gameManager.showLeaderboardPage('speedruns')">Speedruns</button>
-        <button type="button" onclick="gameManager.showLeaderboardPage('stats')">Lifetime Stats</button>
-        <button type="button" onclick="gameManager.showLeaderboardPage('badges')">Achievements</button>
+        <button type="button" class="active" data-action="showLeaderboardPage" data-arg="scores">High Scores</button>
+        <button type="button" data-action="showLeaderboardPage" data-arg="speedruns">Speedruns</button>
+        <button type="button" data-action="showLeaderboardPage" data-arg="stats">Lifetime Stats</button>
+        <button type="button" data-action="showLeaderboardPage" data-arg="badges">Achievements</button>
       </div>
 
       <section id="leaderboardScoresPage" class="leaderboard-page">
