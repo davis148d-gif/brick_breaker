@@ -1,6 +1,6 @@
 (() => {
 
-  const jlz8zbrlz = [
+  const o9cgmhc9 = [
     {
       "shift": 43,
       "codes": [
@@ -471,65 +471,65 @@
       ]
     }
   ];
-  const tlfxl14 = [];
-  function ea_raeaa_(nco0or) {
-    if (tlfxl14[nco0or] !== undefined) return tlfxl14[nco0or];
-    const q4pavkb4p = jlz8zbrlz[nco0or];
-    let c8nynce8n = '';
-    for (let _nb03qonb = 0; _nb03qonb < q4pavkb4p.codes.length; _nb03qonb++) {
-      c8nynce8n += String.fromCharCode(q4pavkb4p.codes[_nb03qonb] ^ ((q4pavkb4p.shift + _nb03qonb * 7) & 255));
+  const fwgc607wg = [];
+  function q5uvld3(wyi4vg) {
+    if (fwgc607wg[wyi4vg] !== undefined) return fwgc607wg[wyi4vg];
+    const mzbw2nbz = o9cgmhc9[wyi4vg];
+    let etetk8ote = '';
+    for (let xxgel43 = 0; xxgel43 < mzbw2nbz.codes.length; xxgel43++) {
+      etetk8ote += String.fromCharCode(mzbw2nbz.codes[xxgel43] ^ ((mzbw2nbz.shift + xxgel43 * 7) & 255));
     }
-    tlfxl14[nco0or] = c8nynce8n;
-    return c8nynce8n;
+    fwgc607wg[wyi4vg] = etetk8ote;
+    return etetk8ote;
   }
 
-  const g2v4za92 = typeof window.fetch === 'function' ? window.fetch.bind(window) : null;
-  const dlj9bhl = typeof performance !== 'undefined' && typeof performance.now === 'function'
+  const x5jm7zq5 = typeof window.fetch === 'function' ? window.fetch.bind(window) : null;
+  const oouh5eeou = typeof performance !== 'undefined' && typeof performance.now === 'function'
     ? performance.now.bind(performance)
     : (() => Date.now());
-  const p9mkc339 = Date.now;
-  const pvo02p = typeof crypto !== 'undefined' && typeof crypto.getRandomValues === 'function'
+  const og4ajaag = Date.now;
+  const fq2xze = typeof crypto !== 'undefined' && typeof crypto.getRandomValues === 'function'
     ? crypto.getRandomValues.bind(crypto)
     : null;
-  const o1kkau11k = JSON.parse;
-  const p5thzh = JSON.stringify;
-  let zzlaqeez = null;
+  const molhiep = JSON.parse;
+  const woc6kxlo = JSON.stringify;
+  let _0hw1j = null;
   try {
-    zzlaqeez = window.localStorage;
+    _0hw1j = window.localStorage;
   } catch {}
-  let raqdxpraq = () => null;
-  let v0vklv = () => {};
-  let cz_fczkz_ = () => {};
+  let rm4zcnhm4 = () => null;
+  let z0ouxz4 = () => {};
+  let w8hkhfk = () => {};
   try {
-    if (zzlaqeez && typeof Storage !== 'undefined') {
-      raqdxpraq = Storage.prototype.getItem.bind(zzlaqeez);
-      v0vklv = Storage.prototype.setItem.bind(zzlaqeez);
-      cz_fczkz_ = Storage.prototype.removeItem.bind(zzlaqeez);
+    if (_0hw1j && typeof Storage !== 'undefined') {
+      rm4zcnhm4 = Storage.prototype.getItem.bind(_0hw1j);
+      z0ouxz4 = Storage.prototype.setItem.bind(_0hw1j);
+      w8hkhfk = Storage.prototype.removeItem.bind(_0hw1j);
     }
   } catch {}
-  const cc8lmow = typeof window.requestAnimationFrame === 'function'
+  const nwerfkywe = typeof window.requestAnimationFrame === 'function'
     ? window.requestAnimationFrame.bind(window)
-    : ((fjq9bfhj) => window.setTimeout(() => fjq9bfhj(dlj9bhl()), 16));
-  const b0oe6yp = window.setInterval.bind(window);
-  const mrz40mirz = window.clearInterval.bind(window);
-  const oa11t1 = window.setTimeout.bind(window);
-  const ho_9t9d = window.clearTimeout.bind(window);
-  const ng33dibg = EventTarget.prototype.addEventListener;
-  const y4sl8c = typeof Event !== 'undefined'
-    ? Object.getOwnPropertyDescriptor(Event.prototype, ea_raeaa_(8))?.get
+    : ((hp6zbdj) => window.setTimeout(() => hp6zbdj(oouh5eeou()), 16));
+  const zye3mw = window.setInterval.bind(window);
+  const haotv4m = window.clearInterval.bind(window);
+  const _9m8l0 = window.setTimeout.bind(window);
+  const smz1dxxmz = window.clearTimeout.bind(window);
+  const ve7bk0j = EventTarget.prototype.addEventListener;
+  const bn3us5 = typeof Event !== 'undefined'
+    ? Object.getOwnPropertyDescriptor(Event.prototype, q5uvld3(8))?.get
     : null;
 
-  function ccmrkw(pwnl1dpw, _qkbs9xq, eyz697) {
-    return new Promise((rzag_rrz) => {
-      let gw_b10 = false;
-      const nhnk0m = (pfgqv8) => {
-        if (gw_b10) return;
-        gw_b10 = true;
-        ho_9t9d(ewttmy4w);
-        rzag_rrz(pfgqv8);
+  function udf4hjtdf(bi2vb9yi, jk79r45, taqafi) {
+    return new Promise((h0jl0vx) => {
+      let l83w3cg8 = false;
+      const _1yh7f_ = (tb_z813) => {
+        if (l83w3cg8) return;
+        l83w3cg8 = true;
+        smz1dxxmz(g8nyj3x);
+        h0jl0vx(tb_z813);
       };
-      const ewttmy4w = oa11t1(() => nhnk0m(eyz697), _qkbs9xq);
-      Promise.resolve(pwnl1dpw).then(nhnk0m, () => nhnk0m(eyz697));
+      const g8nyj3x = _9m8l0(() => _1yh7f_(taqafi), jk79r45);
+      Promise.resolve(bi2vb9yi).then(_1yh7f_, () => _1yh7f_(taqafi));
     });
   }
 
@@ -537,7 +537,7 @@
 
   if (typeof window !== 'undefined') {
     try {
-      Object.defineProperty(window, ea_raeaa_(7), {
+      Object.defineProperty(window, q5uvld3(7), {
         value: true,
         writable: false,
         configurable: false
@@ -545,30 +545,30 @@
     } catch {}
   }
 
-  function qxhqcshxh(rd_zsyvd) {
-    if (!rd_zsyvd) return false;
-    if (typeof Event !== 'undefined' && !(rd_zsyvd instanceof Event)) return false;
-    return y4sl8c ? Boolean(y4sl8c.call(rd_zsyvd)) : Boolean(rd_zsyvd.isTrusted);
+  function zdd_1x6dd(t8rv4kq8) {
+    if (!t8rv4kq8) return false;
+    if (typeof Event !== 'undefined' && !(t8rv4kq8 instanceof Event)) return false;
+    return bn3us5 ? Boolean(bn3us5.call(t8rv4kq8)) : Boolean(t8rv4kq8.isTrusted);
   }
 
-  function xwcrkm7wc() {
-    if (pvo02p) {
-      const et2y4oyt = new Uint32Array(1);
-      pvo02p(et2y4oyt);
-      return et2y4oyt[0] / 4294967296;
+  function oqhsvmz() {
+    if (fq2xze) {
+      const kktodyu = new Uint32Array(1);
+      fq2xze(kktodyu);
+      return kktodyu[0] / 4294967296;
     }
     return Math.random();
   }
 
-  const k_fy2o0_ = 710;
-  const p06ijpg = 880;
-  const iapws9ea = 80;
-  const ittcimttt = 100;
-  const zqqe33d = 150;
-  const zzy6hhaz = 800;
+  const _8je1mu8j = 710;
+  const g3muzdu = 880;
+  const aj8ue9zj = 80;
+  const w0bbkvu0 = 100;
+  const t6pnm0q6 = 150;
+  const l1n2a8j = 800;
 
-  const ayhmix4 = ea_raeaa_(6);
-  const habtb92ab = [
+  const sghabva = q5uvld3(6);
+  const t8_cj5 = [
     'bb14_active_slot', 'bb14_vlt_shared_meta', 'bb14_vlt_shared_scores',
     'bb14_vlt_shared_modes', 'bb14_vlt_shared_sr', 'bb14_vlt_shared_stats',
     'bb14_vlt_shared_tas', 'bb14_acc_prof', 'bb14_ach_vlt', 'bb14_cfg_vlt',
@@ -576,11 +576,11 @@
     'bb14_vlt_slot_4_run', 'bb14_vlt_slot_5_run'
   ];
 
-  const o48h9e548 = Object.freeze([25, 50, 100, 250, 500]);
-  const wnz71ls = Object.freeze(['easy', 'medium', 'hard', 'insane', 'asian']);
-  const tkixfh = Object.freeze(['insane', 'asian']);
+  const ptw7p61tw = Object.freeze([25, 50, 100, 250, 500]);
+  const uc1iht = Object.freeze(['easy', 'medium', 'hard', 'insane', 'asian']);
+  const z9iwpol9i = Object.freeze(['insane', 'asian']);
 
-  const agxqola = Object.freeze({
+  const ls6v1z7s = Object.freeze({
     startAmmo: Object.freeze({ max: 10, base: 5 }),
     critChance: Object.freeze({ max: 10, base: 6 }),
     ballSpeed: Object.freeze({ max: 5, base: 8 }),
@@ -589,27 +589,27 @@
     rebound: Object.freeze({ max: 10, base: 10 })
   });
 
-  const jfebc70fe = Object.freeze({
+  const hdpaftcdp = Object.freeze({
     common: 0.65,
     uncommon: 0.20,
     rare: 0.12,
     legendary: 0.03
   });
 
-  const ks8pwz = Object.freeze({
+  const mb16jby = Object.freeze({
     common: Object.freeze(['normal', 'slider', 'magnet']),
     uncommon: Object.freeze(['tnt', 'ammo', 'portal', 'teleport', 'shock']),
     rare: Object.freeze(['shield', 'parent', 'healer', 'directional', 'phase']),
     legendary: Object.freeze(['tank', 'angel', 'turret'])
   });
 
-  const pi9wfq = Object.freeze([
+  const o1b09041b = Object.freeze([
     'normal', 'slider', 'magnet', 'tnt', 'ammo', 'portal', 'teleport',
     'shock', 'shield', 'parent', 'healer', 'directional', 'phase',
     'tank', 'angel', 'turret', 'crawler', 'devil', 'titan'
   ]);
 
-  const _5hkevk5 = Object.freeze([
+  const xlo4sy2lo = Object.freeze([
     {
       type: 'normal', name: 'Normal', icon: 'fa-cube', glyph: 'f1b2', fallbackGlyph: '■',
       color: '#2b6cb0', colorEnd: '#1e4e8c', tier: 'Common',
@@ -705,16 +705,16 @@
       color: '#7e22ce', colorEnd: '#2e1065', tier: 'Tartarus',
       description: '2x2 boss brick in Tartarus Mode with heavy health that ignores Shield protection.'
     }
-  ].map((dgllxb8) => Object.freeze(dgllxb8)));
+  ].map((dmvpzp) => Object.freeze(dmvpzp)));
 
-  const ylamnnfl = Object.freeze([
+  const k91tari91 = Object.freeze([
     'fa-cubes', 'fa-trophy', 'fa-crown', 'fa-dragon', 'fa-fire',
     'fa-skull-crossbones', 'fa-bolt', 'fa-gem', 'fa-shield-halved',
     'fa-bullseye', 'fa-star', 'fa-rocket', 'fa-ghost', 'fa-gamepad',
     'fa-spider', 'fa-bomb', 'fa-infinity', 'fa-atom'
   ]);
 
-  const b5ezawk5e = Object.freeze([
+  const kenx513en = Object.freeze([
     { id: 'first_blood', name: 'First Crack', desc: 'Break your first brick.', rewardCoins: 50, rewardGems: 1 },
     { id: 'lvl_10', name: 'Level 10', desc: 'Reach Level 10 in any mode.', rewardCoins: 150, rewardGems: 2 },
     { id: 'lvl_25', name: 'Level 25', desc: 'Reach Level 25 in any mode.', rewardCoins: 350, rewardGems: 5 },
@@ -726,65 +726,65 @@
     { id: 'balls_50', name: '50 Balls', desc: 'Hold 50 balls in a single run.', rewardCoins: 400, rewardGems: 5 },
     { id: 'bricks_1000', name: '1,000 Bricks', desc: 'Break 1,000 total bricks.', rewardCoins: 500, rewardGems: 6 },
     { id: 'speed_25', name: 'Speedrun 25 Clear', desc: 'Complete Speedrun 25.', rewardCoins: 500, rewardGems: 8 }
-  ].map((nz3tfrh) => Object.freeze(nz3tfrh)));
+  ].map((q9tgm0) => Object.freeze(q9tgm0)));
 
-  const t2r7meq2r = Object.freeze(Object.fromEntries(_5hkevk5.map((ekwj7a0) => [ekwj7a0.type, ekwj7a0.glyph])));
-  const r15fjbu15 = Object.freeze(Object.fromEntries(_5hkevk5.map((l0bq7h) => [l0bq7h.type, l0bq7h.fallbackGlyph || '■'])));
-  const ddxeg2x = Object.freeze(Object.fromEntries(_5hkevk5.map((qn4owf7n4) => [qn4owf7n4.type, qn4owf7n4])));
+  const cle3dl7le = Object.freeze(Object.fromEntries(xlo4sy2lo.map((l0awwc) => [l0awwc.type, l0awwc.glyph])));
+  const c1iox_ = Object.freeze(Object.fromEntries(xlo4sy2lo.map((jl7e2ii) => [jl7e2ii.type, jl7e2ii.fallbackGlyph || '■'])));
+  const b9663xm96 = Object.freeze(Object.fromEntries(xlo4sy2lo.map((xrawcj2ra) => [xrawcj2ra.type, xrawcj2ra])));
 
-  const u35i1y = document.getElementById('canvas');
-  const _mvnz2 = u35i1y ? u35i1y.getContext('2d') : null;
+  let nns8g29ns = null;
+  let eso5f0is = null;
 
-  function hf80m5(zdhhjmw, mhbglu, nvg3gykvg, g27n_f22 = 0) {
-    const d7pcmda = typeof zdhhjmw === 'number' ? Math.floor(zdhhjmw) : Number.isFinite(Number(zdhhjmw)) ? Math.floor(Number(zdhhjmw)) : g27n_f22;
-    return Number.isFinite(d7pcmda) ? Math.max(mhbglu, Math.min(nvg3gykvg, d7pcmda)) : g27n_f22;
+  function wj6jnw(al5fywhl5, dsi8o50, gfmuov6, wgfagu4 = 0) {
+    const bz1_7kq = typeof al5fywhl5 === 'number' ? Math.floor(al5fywhl5) : Number.isFinite(Number(al5fywhl5)) ? Math.floor(Number(al5fywhl5)) : wgfagu4;
+    return Number.isFinite(bz1_7kq) ? Math.max(dsi8o50, Math.min(gfmuov6, bz1_7kq)) : wgfagu4;
   }
 
-  function g6h8ko(ahgxpq3hg, ybr17b) {
-    return Math.floor(xwcrkm7wc() * (ybr17b - ahgxpq3hg + 1)) + ahgxpq3hg;
+  function qu8k07lu8(czcxeob, yxsmrl7xs) {
+    return Math.floor(oqhsvmz() * (yxsmrl7xs - czcxeob + 1)) + czcxeob;
   }
 
-  function w7vobzl(gpoe2vx, erkogbrr, ucvjxw) {
-    return Math.max(erkogbrr, Math.min(ucvjxw, gpoe2vx));
+  function lxaa1x5xa(ea3lxgda, vfg31u4, xqv3_s5q) {
+    return Math.max(vfg31u4, Math.min(xqv3_s5q, ea3lxgda));
   }
 
-  function abhc0gcbh(ib445ulb) {
-    const rkguc_ = ib445ulb.slice();
-    for (let x0fr7k90 = rkguc_.length - 1; x0fr7k90 > 0; x0fr7k90--) {
-      const umuyrsv = Math.floor(xwcrkm7wc() * (x0fr7k90 + 1));
-      [rkguc_[x0fr7k90], rkguc_[umuyrsv]] = [rkguc_[umuyrsv], rkguc_[x0fr7k90]];
+  function pxaw3fnx(pii17y5i) {
+    const x71smbk71 = pii17y5i.slice();
+    for (let edjd4t = x71smbk71.length - 1; edjd4t > 0; edjd4t--) {
+      const e56x0d = Math.floor(oqhsvmz() * (edjd4t + 1));
+      [x71smbk71[edjd4t], x71smbk71[e56x0d]] = [x71smbk71[e56x0d], x71smbk71[edjd4t]];
     }
-    return rkguc_;
+    return x71smbk71;
   }
 
-  function hxahoxr(a54gk0_, t40mx9240) {
-    return a54gk0_ !== t40mx9240 &&
-      a54gk0_.x < t40mx9240.x + t40mx9240.w &&
-      a54gk0_.x + a54gk0_.w > t40mx9240.x &&
-      a54gk0_.y < t40mx9240.y + t40mx9240.h &&
-      a54gk0_.y + a54gk0_.h > t40mx9240.y;
+  function bel9kw(l_umxap_, exzzui) {
+    return l_umxap_ !== exzzui &&
+      l_umxap_.x < exzzui.x + exzzui.w &&
+      l_umxap_.x + l_umxap_.w > exzzui.x &&
+      l_umxap_.y < exzzui.y + exzzui.h &&
+      l_umxap_.y + l_umxap_.h > exzzui.y;
   }
 
-  function l89t2fv(w6s808d6s, i7j6evi) {
-    const ubbzd4 = wnz71ls.includes(i7j6evi) ? i7j6evi : 'medium';
-    if (w6s808d6s === 'tartarus' && !tkixfh.includes(ubbzd4)) {
+  function wl61zk6l6(ei5q9v1i5, je3gc29e) {
+    const hkkod63k = uc1iht.includes(je3gc29e) ? je3gc29e : 'medium';
+    if (ei5q9v1i5 === 'tartarus' && !z9iwpol9i.includes(hkkod63k)) {
       return 'insane';
     }
-    return ubbzd4;
+    return hkkod63k;
   }
 
-  function il8cx74l(unnwki) {
-    document.getElementById(unnwki)?.classList.add('active');
+  function g9oton(rii6vihii) {
+    document.getElementById(rii6vihii)?.classList.add('active');
   }
 
-  function iq4lmesq4(do5tqa) {
-    document.getElementById(do5tqa)?.classList.remove('active');
+  function fqzhut(sctfz_) {
+    document.getElementById(sctfz_)?.classList.remove('active');
   }
 
-  function ptf66jk(_sw55uos, uq5ebn) {
-    const pwimfp0 = document.createElement('div');
-    pwimfp0.className = 'modal-overlay active';
-    pwimfp0.innerHTML = `
+  function qm1kwpum(p1nyce, cl1xd28l) {
+    const pg6peljg6 = document.createElement('div');
+    pg6peljg6.className = 'modal-overlay active';
+    pg6peljg6.innerHTML = `
       <div class="modal-content" style="max-width:420px;">
         <button type="button" class="modal-close" aria-label="Close">&times;</button>
         <h2></h2>
@@ -794,21 +794,21 @@
         </div>
       </div>
     `;
-    pwimfp0.querySelector('h2').textContent = _sw55uos;
-    pwimfp0.querySelector('p').textContent = uq5ebn;
-    const ehlnlplh = () => pwimfp0.remove();
-    pwimfp0.querySelector('.modal-close').onclick = (xv745_bv7) => { if (qxhqcshxh(xv745_bv7)) ehlnlplh(); };
-    pwimfp0.querySelector('.primary-btn').onclick = (f8ccii) => { if (qxhqcshxh(f8ccii)) ehlnlplh(); };
-    ng33dibg.call(pwimfp0, 'click', (jesksjh) => {
-      if (qxhqcshxh(jesksjh) && jesksjh.target === pwimfp0) ehlnlplh();
+    pg6peljg6.querySelector('h2').textContent = p1nyce;
+    pg6peljg6.querySelector('p').textContent = cl1xd28l;
+    const kwjcx91w = () => pg6peljg6.remove();
+    pg6peljg6.querySelector('.modal-close').onclick = (soqqe5voq) => { if (zdd_1x6dd(soqqe5voq)) kwjcx91w(); };
+    pg6peljg6.querySelector('.primary-btn').onclick = (pgf3ui2) => { if (zdd_1x6dd(pgf3ui2)) kwjcx91w(); };
+    ve7bk0j.call(pg6peljg6, 'click', (xwmh2ne) => {
+      if (zdd_1x6dd(xwmh2ne) && xwmh2ne.target === pg6peljg6) kwjcx91w();
     });
-    document.body.appendChild(pwimfp0);
+    document.body.appendChild(pg6peljg6);
   }
 
-  function voubd8rou(bqz1x5wq, _919wl, f5lbn7e, yo6_3a_o = 'Confirm', fpzcl17pz = 'danger') {
-    const z4skoq54s = document.createElement('div');
-    z4skoq54s.className = 'modal-overlay active';
-    z4skoq54s.innerHTML = `
+  function qh85nflh(kvjnxf4, ryg5g2yy, q65_0jc65, zxdoth = 'Confirm', v2cq0tl2c = 'danger') {
+    const wou_qioou = document.createElement('div');
+    wou_qioou.className = 'modal-overlay active';
+    wou_qioou.innerHTML = `
       <div class="modal-content" style="max-width:440px;">
         <button type="button" class="modal-close" aria-label="Close">&times;</button>
         <h2></h2>
@@ -819,62 +819,62 @@
         </div>
       </div>
     `;
-    z4skoq54s.querySelector('h2').textContent = bqz1x5wq;
-    z4skoq54s.querySelector('p').textContent = _919wl;
-    const liqg5m6i = z4skoq54s.querySelector('.confirmBtn');
-    liqg5m6i.className = fpzcl17pz;
-    liqg5m6i.textContent = yo6_3a_o;
-    const ew7s05 = () => z4skoq54s.remove();
-    z4skoq54s.querySelector('.modal-close').onclick = (x4sefe4) => { if (qxhqcshxh(x4sefe4)) ew7s05(); };
-    z4skoq54s.querySelector('.cancelBtn').onclick = (trbuwoc) => { if (qxhqcshxh(trbuwoc)) ew7s05(); };
-    liqg5m6i.onclick = (z_vba37_) => {
-      if (!qxhqcshxh(z_vba37_)) return;
-      ew7s05();
-      f5lbn7e();
+    wou_qioou.querySelector('h2').textContent = kvjnxf4;
+    wou_qioou.querySelector('p').textContent = ryg5g2yy;
+    const r3ilowb3 = wou_qioou.querySelector('.confirmBtn');
+    r3ilowb3.className = v2cq0tl2c;
+    r3ilowb3.textContent = zxdoth;
+    const v6g170g6 = () => wou_qioou.remove();
+    wou_qioou.querySelector('.modal-close').onclick = (tzq8ue) => { if (zdd_1x6dd(tzq8ue)) v6g170g6(); };
+    wou_qioou.querySelector('.cancelBtn').onclick = (bb0bgr) => { if (zdd_1x6dd(bb0bgr)) v6g170g6(); };
+    r3ilowb3.onclick = (hdnc9oqdn) => {
+      if (!zdd_1x6dd(hdnc9oqdn)) return;
+      v6g170g6();
+      q65_0jc65();
     };
-    ng33dibg.call(z4skoq54s, 'click', (lhhcumrh) => {
-      if (qxhqcshxh(lhhcumrh) && lhhcumrh.target === z4skoq54s) ew7s05();
+    ve7bk0j.call(wou_qioou, 'click', (lp_ezbnp_) => {
+      if (zdd_1x6dd(lp_ezbnp_) && lp_ezbnp_.target === wou_qioou) v6g170g6();
     });
-    document.body.appendChild(z4skoq54s);
+    document.body.appendChild(wou_qioou);
   }
 
-  class df2vaud {
-    #vnlj1t5;
-    #pn3sp6bn3;
-    #gkt7ww8;
-    #e73t19g7;
+  class g8rko2 {
+    #z7si9x;
+    #q207chs;
+    #ltga2b;
+    #jz5485;
 
-    constructor(eq4z29q = 0) {
-      this.#vnlj1t5 = (Math.floor(xwcrkm7wc() * 0x3fffffff) ^ 0x1a2b3c4d) | 0;
-      this.#pn3sp6bn3 = 0;
-      this.#gkt7ww8 = 0;
-      this.#e73t19g7 = 0;
-      this.fs29nxi(eq4z29q);
+    constructor(cufj8r = 0) {
+      this.#z7si9x = (Math.floor(oqhsvmz() * 0x3fffffff) ^ 0x1a2b3c4d) | 0;
+      this.#q207chs = 0;
+      this.#ltga2b = 0;
+      this.#jz5485 = 0;
+      this.cv14z_4v1(cufj8r);
     }
 
-    fs29nxi(uvyg9t) {
-      const k_xzpm = Number.isFinite(Number(uvyg9t)) ? Math.floor(Number(uvyg9t)) : 0;
-      this.#vnlj1t5 = (Math.floor(xwcrkm7wc() * 0x3fffffff) ^ 0x5f3759df) | 0;
-      this.#pn3sp6bn3 = (k_xzpm ^ this.#vnlj1t5) | 0;
-      this.#gkt7ww8 = k_xzpm * 3 + 7;
-      this.#e73t19g7 = (~k_xzpm ^ (this.#vnlj1t5 >>> 1)) | 0;
+    cv14z_4v1(gx5r4nrx5) {
+      const ilj8jv = Number.isFinite(Number(gx5r4nrx5)) ? Math.floor(Number(gx5r4nrx5)) : 0;
+      this.#z7si9x = (Math.floor(oqhsvmz() * 0x3fffffff) ^ 0x5f3759df) | 0;
+      this.#q207chs = (ilj8jv ^ this.#z7si9x) | 0;
+      this.#ltga2b = ilj8jv * 3 + 7;
+      this.#jz5485 = (~ilj8jv ^ (this.#z7si9x >>> 1)) | 0;
     }
 
-    p2sstm() {
-      const spl4qg = (this.#pn3sp6bn3 ^ this.#vnlj1t5) | 0;
-      const elv8f5f = ((this.#gkt7ww8 - 7) / 3) | 0;
-      const e7n0ci_7n = (~this.#e73t19g7 ^ (this.#vnlj1t5 >>> 1)) | 0;
-      if (spl4qg === elv8f5f && elv8f5f === e7n0ci_7n) {
-        return spl4qg;
+    h1gsbs3() {
+      const i0kclah0 = (this.#q207chs ^ this.#z7si9x) | 0;
+      const dnfjdz = ((this.#ltga2b - 7) / 3) | 0;
+      const qv3hzf = (~this.#jz5485 ^ (this.#z7si9x >>> 1)) | 0;
+      if (i0kclah0 === dnfjdz && dnfjdz === qv3hzf) {
+        return i0kclah0;
       }
-      this.fs29nxi(0);
+      this.cv14z_4v1(0);
       return 0;
     }
   }
 
-  function j5mopo(uy7atsz, p0vl0yy0) {
+  function xua3zgcu(zcespiw, iarl7xlar) {
     return {
-      x: uy7atsz, y: p0vl0yy0,
+      x: zcespiw, y: iarl7xlar,
       vx: 0, vy: 0,
       moving: false,
       downing: false,
@@ -885,333 +885,333 @@
     };
   }
 
-  function m2gxnbv2(hgq4qqq, aw89bnuw8, sjezbt3 = 'infinite') {
-    const hx82v2r = ddxeg2x[hgq4qqq];
-    if (hx82v2r && hgq4qqq !== 'normal') {
-      return [hx82v2r.color, hx82v2r.colorEnd];
+  function byqsum(c0ez9b00e, dx2v985x, fv9n3ziv9 = 'infinite') {
+    const ffvn6cmfv = b9663xm96[c0ez9b00e];
+    if (ffvn6cmfv && c0ez9b00e !== 'normal') {
+      return [ffvn6cmfv.color, ffvn6cmfv.colorEnd];
     }
-    if (sjezbt3 === 'tartarus') {
-      const kfm2r_xfm = w7vobzl(285 - (aw89bnuw8 - 1) * 2.5, 245, 295);
-      return [`hsl(${kfm2r_xfm}, 80%, 54%)`, `hsl(${kfm2r_xfm - 14}, 75%, 34%)`];
+    if (fv9n3ziv9 === 'tartarus') {
+      const wsp9t3zsp = lxaa1x5xa(285 - (dx2v985x - 1) * 2.5, 245, 295);
+      return [`hsl(${wsp9t3zsp}, 80%, 54%)`, `hsl(${wsp9t3zsp - 14}, 75%, 34%)`];
     }
-    if (sjezbt3 === 'hell') {
-      const lnpzabxnp = Math.max(0, 28 - (aw89bnuw8 - 1) * 1.2);
-      return [`hsl(${lnpzabxnp}, 82%, 48%)`, `hsl(${Math.max(0, lnpzabxnp - 8)}, 78%, 28%)`];
+    if (fv9n3ziv9 === 'hell') {
+      const eodjtqwod = Math.max(0, 28 - (dx2v985x - 1) * 1.2);
+      return [`hsl(${eodjtqwod}, 82%, 48%)`, `hsl(${Math.max(0, eodjtqwod - 8)}, 78%, 28%)`];
     }
-    const lwz97jew = Math.max(0, 120 - (aw89bnuw8 - 1) * 3);
-    return [`hsl(${lwz97jew}, 85%, 55%)`, `hsl(${lwz97jew}, 80%, 40%)`];
+    const m16n1u216 = Math.max(0, 120 - (dx2v985x - 1) * 3);
+    return [`hsl(${m16n1u216}, 85%, 55%)`, `hsl(${m16n1u216}, 80%, 40%)`];
   }
 
-  class ydfdnzdd {
-    #f4qz03p4q = null;
-    #xkn8ceak = true;
-    #rfx_11tfx = true;
-    #vq0hti3q = null;
-    #g55n7ma = null;
-    #hbhp4eub = 0;
+  class y40ab2 {
+    #ac9vfczc = null;
+    #o6ct_ck6c = true;
+    #jza6kp = true;
+    #_y_pd0xy_ = null;
+    #i15wqgp15 = null;
+    #gme5rbk = 0;
 
-    n0vre4f0(g26cfi4, fg5u5kbg5) {
-      this.#xkn8ceak = Boolean(g26cfi4);
-      this.#rfx_11tfx = Boolean(fg5u5kbg5);
-      if (!this.#rfx_11tfx || !this.#xkn8ceak) {
-        this.sjmoqirjm();
-      } else if (this.#g55n7ma === 'hell' || this.#g55n7ma === 'tartarus') {
-        this.ozhdbv3(this.#g55n7ma);
+    juss0c(jjatqnej, awxa871) {
+      this.#o6ct_ck6c = Boolean(jjatqnej);
+      this.#jza6kp = Boolean(awxa871);
+      if (!this.#jza6kp || !this.#o6ct_ck6c) {
+        this.g7_ixt();
+      } else if (this.#i15wqgp15 === 'hell' || this.#i15wqgp15 === 'tartarus') {
+        this.iyjb2jfy(this.#i15wqgp15);
       }
     }
 
-    jslyel8() {
-      if (!this.#xkn8ceak) return null;
-      if (!this.#f4qz03p4q && typeof window !== 'undefined') {
-        const g4z7h2 = window.AudioContext || window.webkitAudioContext;
-        if (g4z7h2) this.#f4qz03p4q = new g4z7h2();
+    rusuwh() {
+      if (!this.#o6ct_ck6c) return null;
+      if (!this.#ac9vfczc && typeof window !== 'undefined') {
+        const g2fewz32f = window.AudioContext || window.webkitAudioContext;
+        if (g2fewz32f) this.#ac9vfczc = new g2fewz32f();
       }
-      if (this.#f4qz03p4q && this.#f4qz03p4q.state === 'suspended') {
-        this.#f4qz03p4q.resume().catch(() => {});
+      if (this.#ac9vfczc && this.#ac9vfczc.state === 'suspended') {
+        this.#ac9vfczc.resume().catch(() => {});
       }
-      return this.#f4qz03p4q;
+      return this.#ac9vfczc;
     }
 
-    vzprsk(ip6yue = 1, la6ejuma6 = 'infinite') {
-      const yj17yvdj1 = this.jslyel8();
-      if (!yj17yvdj1) return;
-      const cyi1s6 = yj17yvdj1.currentTime;
-      const twvw12kwv = yj17yvdj1.createOscillator();
-      const p881gql88 = yj17yvdj1.createGain();
-      const srvebc = la6ejuma6 === 'tartarus' ? 220 : la6ejuma6 === 'hell' ? 260 : 340;
-      const l0wxe710w = Math.min(1200, srvebc + ip6yue * 16);
+    _fhqw2l(jzzjmb = 1, xoffuwd = 'infinite') {
+      const i4vsa09 = this.rusuwh();
+      if (!i4vsa09) return;
+      const ssg8axqs = i4vsa09.currentTime;
+      const aew8f8e = i4vsa09.createOscillator();
+      const b0cfqx = i4vsa09.createGain();
+      const kuz40r3 = xoffuwd === 'tartarus' ? 220 : xoffuwd === 'hell' ? 260 : 340;
+      const squ66x5qu = Math.min(1200, kuz40r3 + jzzjmb * 16);
 
-      twvw12kwv.type = la6ejuma6 === 'tartarus' ? 'sawtooth' : la6ejuma6 === 'hell' ? 'triangle' : 'sine';
-      twvw12kwv.frequency.setValueAtTime(l0wxe710w, cyi1s6);
-      twvw12kwv.frequency.exponentialRampToValueAtTime(l0wxe710w * 1.18, cyi1s6 + 0.045);
+      aew8f8e.type = xoffuwd === 'tartarus' ? 'sawtooth' : xoffuwd === 'hell' ? 'triangle' : 'sine';
+      aew8f8e.frequency.setValueAtTime(squ66x5qu, ssg8axqs);
+      aew8f8e.frequency.exponentialRampToValueAtTime(squ66x5qu * 1.18, ssg8axqs + 0.045);
 
-      p881gql88.gain.setValueAtTime(0.075, cyi1s6);
-      p881gql88.gain.exponentialRampToValueAtTime(0.001, cyi1s6 + 0.06);
+      b0cfqx.gain.setValueAtTime(0.075, ssg8axqs);
+      b0cfqx.gain.exponentialRampToValueAtTime(0.001, ssg8axqs + 0.06);
 
-      twvw12kwv.connect(p881gql88);
-      p881gql88.connect(yj17yvdj1.destination);
-      twvw12kwv.start(cyi1s6);
-      twvw12kwv.stop(cyi1s6 + 0.065);
+      aew8f8e.connect(b0cfqx);
+      b0cfqx.connect(i4vsa09.destination);
+      aew8f8e.start(ssg8axqs);
+      aew8f8e.stop(ssg8axqs + 0.065);
     }
 
-    rr8sgqmr8(cymvpu = false) {
-      const q0_ndsr0_ = this.jslyel8();
-      if (!q0_ndsr0_) return;
-      const ltc1xw = q0_ndsr0_.currentTime;
-      const il6ezi3 = q0_ndsr0_.createOscillator();
-      const c0a7mi70 = q0_ndsr0_.createGain();
+    l8rbqae8r(cxnrf9nx = false) {
+      const ptcp6i4t = this.rusuwh();
+      if (!ptcp6i4t) return;
+      const gp_d_wy = ptcp6i4t.currentTime;
+      const eqkcu91q = ptcp6i4t.createOscillator();
+      const li6h4m = ptcp6i4t.createGain();
 
-      il6ezi3.type = cymvpu ? 'sawtooth' : 'triangle';
-      il6ezi3.frequency.setValueAtTime(cymvpu ? 140 : 480, ltc1xw);
-      il6ezi3.frequency.exponentialRampToValueAtTime(cymvpu ? 45 : 160, ltc1xw + (cymvpu ? 0.2 : 0.09));
+      eqkcu91q.type = cxnrf9nx ? 'sawtooth' : 'triangle';
+      eqkcu91q.frequency.setValueAtTime(cxnrf9nx ? 140 : 480, gp_d_wy);
+      eqkcu91q.frequency.exponentialRampToValueAtTime(cxnrf9nx ? 45 : 160, gp_d_wy + (cxnrf9nx ? 0.2 : 0.09));
 
-      c0a7mi70.gain.setValueAtTime(cymvpu ? 0.15 : 0.095, ltc1xw);
-      c0a7mi70.gain.exponentialRampToValueAtTime(0.001, ltc1xw + (cymvpu ? 0.22 : 0.1));
+      li6h4m.gain.setValueAtTime(cxnrf9nx ? 0.15 : 0.095, gp_d_wy);
+      li6h4m.gain.exponentialRampToValueAtTime(0.001, gp_d_wy + (cxnrf9nx ? 0.22 : 0.1));
 
-      il6ezi3.connect(c0a7mi70);
-      c0a7mi70.connect(q0_ndsr0_.destination);
-      il6ezi3.start(ltc1xw);
-      il6ezi3.stop(ltc1xw + (cymvpu ? 0.23 : 0.11));
+      eqkcu91q.connect(li6h4m);
+      li6h4m.connect(ptcp6i4t.destination);
+      eqkcu91q.start(gp_d_wy);
+      eqkcu91q.stop(gp_d_wy + (cxnrf9nx ? 0.23 : 0.11));
     }
 
-    qx92ejex() {
-      const p7bhqx = this.jslyel8();
-      if (!p7bhqx) return;
-      const gl8isv = p7bhqx.currentTime;
-      const g0o_i460o = p7bhqx.createOscillator();
-      const fvmn7iev = p7bhqx.createGain();
+    np6uzx() {
+      const rg0qp7 = this.rusuwh();
+      if (!rg0qp7) return;
+      const u_w5_lv = rg0qp7.currentTime;
+      const tu4m15bu = rg0qp7.createOscillator();
+      const y97c97v9 = rg0qp7.createGain();
 
-      g0o_i460o.type = 'sine';
-      g0o_i460o.frequency.setValueAtTime(587.33, gl8isv);
-      g0o_i460o.frequency.setValueAtTime(880, gl8isv + 0.055);
+      tu4m15bu.type = 'sine';
+      tu4m15bu.frequency.setValueAtTime(587.33, u_w5_lv);
+      tu4m15bu.frequency.setValueAtTime(880, u_w5_lv + 0.055);
 
-      fvmn7iev.gain.setValueAtTime(0.1, gl8isv);
-      fvmn7iev.gain.exponentialRampToValueAtTime(0.001, gl8isv + 0.16);
+      y97c97v9.gain.setValueAtTime(0.1, u_w5_lv);
+      y97c97v9.gain.exponentialRampToValueAtTime(0.001, u_w5_lv + 0.16);
 
-      g0o_i460o.connect(fvmn7iev);
-      fvmn7iev.connect(p7bhqx.destination);
-      g0o_i460o.start(gl8isv);
-      g0o_i460o.stop(gl8isv + 0.17);
+      tu4m15bu.connect(y97c97v9);
+      y97c97v9.connect(rg0qp7.destination);
+      tu4m15bu.start(u_w5_lv);
+      tu4m15bu.stop(u_w5_lv + 0.17);
     }
 
-    _h73j21h7() {
-      const z3tgx8 = this.jslyel8();
-      if (!z3tgx8) return;
-      const okyl1sl = z3tgx8.currentTime;
-      const ae0iwwfe = z3tgx8.createOscillator();
-      const uc531w0c5 = z3tgx8.createGain();
+    rqfcl3() {
+      const xr_o16_r_ = this.rusuwh();
+      if (!xr_o16_r_) return;
+      const ytekt2 = xr_o16_r_.currentTime;
+      const phbtbvxhb = xr_o16_r_.createOscillator();
+      const i_cxrns_c = xr_o16_r_.createGain();
 
-      ae0iwwfe.type = 'sawtooth';
-      ae0iwwfe.frequency.setValueAtTime(220, okyl1sl);
-      ae0iwwfe.frequency.exponentialRampToValueAtTime(55, okyl1sl + 0.45);
+      phbtbvxhb.type = 'sawtooth';
+      phbtbvxhb.frequency.setValueAtTime(220, ytekt2);
+      phbtbvxhb.frequency.exponentialRampToValueAtTime(55, ytekt2 + 0.45);
 
-      uc531w0c5.gain.setValueAtTime(0.14, okyl1sl);
-      uc531w0c5.gain.exponentialRampToValueAtTime(0.001, okyl1sl + 0.48);
+      i_cxrns_c.gain.setValueAtTime(0.14, ytekt2);
+      i_cxrns_c.gain.exponentialRampToValueAtTime(0.001, ytekt2 + 0.48);
 
-      ae0iwwfe.connect(uc531w0c5);
-      uc531w0c5.connect(z3tgx8.destination);
-      ae0iwwfe.start(okyl1sl);
-      ae0iwwfe.stop(okyl1sl + 0.5);
+      phbtbvxhb.connect(i_cxrns_c);
+      i_cxrns_c.connect(xr_o16_r_.destination);
+      phbtbvxhb.start(ytekt2);
+      phbtbvxhb.stop(ytekt2 + 0.5);
     }
 
-    ozhdbv3(ki1sknhi) {
-      this.sjmoqirjm();
-      this.#g55n7ma = ki1sknhi;
-      if (!this.#rfx_11tfx || !this.#xkn8ceak) return;
-      if (ki1sknhi !== 'tartarus' && ki1sknhi !== 'hell') return;
+    iyjb2jfy(yfklvcifk) {
+      this.g7_ixt();
+      this.#i15wqgp15 = yfklvcifk;
+      if (!this.#jza6kp || !this.#o6ct_ck6c) return;
+      if (yfklvcifk !== 'tartarus' && yfklvcifk !== 'hell') return;
 
-      const daa32nga = ki1sknhi === 'tartarus';
-      const l6tfwkl6t = daa32nga
+      const qrq7a2prq = yfklvcifk === 'tartarus';
+      const w7na5ti7n = qrq7a2prq
         ? [110, 130.81, 146.83, 103.83, 98.0, 130.81, 146.83, 123.47]
         : [130.81, 155.56, 174.61, 123.47];
-      const etobpso = daa32nga ? 380 : 420;
-      const jkowhf0k = daa32nga ? 0.095 : 0.04;
+      const eo6vvt5o = qrq7a2prq ? 380 : 420;
+      const qd84qm7 = qrq7a2prq ? 0.095 : 0.04;
 
-      this.#hbhp4eub = 0;
-      this.#vq0hti3q = b0oe6yp(() => {
-        if (!this.#rfx_11tfx || !this.#xkn8ceak) {
-          this.sjmoqirjm();
+      this.#gme5rbk = 0;
+      this.#_y_pd0xy_ = zye3mw(() => {
+        if (!this.#jza6kp || !this.#o6ct_ck6c) {
+          this.g7_ixt();
           return;
         }
-        const kidv6huid = this.jslyel8();
-        if (!kidv6huid || kidv6huid.state === 'suspended') return;
+        const r4enlxp4 = this.rusuwh();
+        if (!r4enlxp4 || r4enlxp4.state === 'suspended') return;
 
-        const qmfq5dcm = kidv6huid.currentTime;
-        const b2kw06v = l6tfwkl6t[this.#hbhp4eub % l6tfwkl6t.length];
+        const rlptjp = r4enlxp4.currentTime;
+        const a6hhsjt6h = w7na5ti7n[this.#gme5rbk % w7na5ti7n.length];
 
-        const hgbamo2 = kidv6huid.createOscillator();
-        const twgsy1y = kidv6huid.createGain();
-        hgbamo2.type = 'triangle';
-        hgbamo2.frequency.setValueAtTime(b2kw06v, qmfq5dcm);
-        twgsy1y.gain.setValueAtTime(jkowhf0k, qmfq5dcm);
-        twgsy1y.gain.exponentialRampToValueAtTime(0.001, qmfq5dcm + 0.34);
-        hgbamo2.connect(twgsy1y);
-        twgsy1y.connect(kidv6huid.destination);
-        hgbamo2.start(qmfq5dcm);
-        hgbamo2.stop(qmfq5dcm + 0.35);
+        const b81t_jy8 = r4enlxp4.createOscillator();
+        const yod3cirod = r4enlxp4.createGain();
+        b81t_jy8.type = 'triangle';
+        b81t_jy8.frequency.setValueAtTime(a6hhsjt6h, rlptjp);
+        yod3cirod.gain.setValueAtTime(qd84qm7, rlptjp);
+        yod3cirod.gain.exponentialRampToValueAtTime(0.001, rlptjp + 0.34);
+        b81t_jy8.connect(yod3cirod);
+        yod3cirod.connect(r4enlxp4.destination);
+        b81t_jy8.start(rlptjp);
+        b81t_jy8.stop(rlptjp + 0.35);
 
-        if (daa32nga) {
-          const jj71iy6j = kidv6huid.createOscillator();
-          const nyd8quuyd = kidv6huid.createGain();
-          jj71iy6j.type = 'sawtooth';
-          jj71iy6j.frequency.setValueAtTime(b2kw06v * 1.5, qmfq5dcm);
-          nyd8quuyd.gain.setValueAtTime(0.028, qmfq5dcm);
-          nyd8quuyd.gain.exponentialRampToValueAtTime(0.001, qmfq5dcm + 0.28);
-          jj71iy6j.connect(nyd8quuyd);
-          nyd8quuyd.connect(kidv6huid.destination);
-          jj71iy6j.start(qmfq5dcm);
-          jj71iy6j.stop(qmfq5dcm + 0.3);
+        if (qrq7a2prq) {
+          const e9v5ufm9 = r4enlxp4.createOscillator();
+          const ua01kji = r4enlxp4.createGain();
+          e9v5ufm9.type = 'sawtooth';
+          e9v5ufm9.frequency.setValueAtTime(a6hhsjt6h * 1.5, rlptjp);
+          ua01kji.gain.setValueAtTime(0.028, rlptjp);
+          ua01kji.gain.exponentialRampToValueAtTime(0.001, rlptjp + 0.28);
+          e9v5ufm9.connect(ua01kji);
+          ua01kji.connect(r4enlxp4.destination);
+          e9v5ufm9.start(rlptjp);
+          e9v5ufm9.stop(rlptjp + 0.3);
         }
 
-        this.#hbhp4eub++;
-      }, etobpso);
+        this.#gme5rbk++;
+      }, eo6vvt5o);
     }
 
-    sjmoqirjm() {
-      if (this.#vq0hti3q !== null) {
-        mrz40mirz(this.#vq0hti3q);
-        this.#vq0hti3q = null;
+    g7_ixt() {
+      if (this.#_y_pd0xy_ !== null) {
+        haotv4m(this.#_y_pd0xy_);
+        this.#_y_pd0xy_ = null;
       }
     }
   }
 
-  class teqdvkfeq {
-    #fiews0 = null;
-    #anch1_q = null;
-    #irerpvar = null;
-    #tuddzpt = ea_raeaa_(24);
-    #ppn02h = ea_raeaa_(26);
-    #p_vn91n_ = ea_raeaa_(27);
+  class zscpzuos {
+    #t3p_l5k3 = null;
+    #vacirc = null;
+    #ihbsekb = null;
+    #vyoqds4y = q5uvld3(24);
+    #mpd0o4apd = q5uvld3(26);
+    #z4pu09_4p = q5uvld3(27);
 
-    cloy5rvlo() {
-      if (!this.#fiews0) {
-        this.#fiews0 = this.#z4_ph0();
+    mvn3xzovn() {
+      if (!this.#t3p_l5k3) {
+        this.#t3p_l5k3 = this.#dqr8yq();
       }
       return {
         ok: true,
         tampered: false,
         vaultToken: '',
-        snapshot: this.x0eylzp0e()
+        snapshot: this.wchixc4ch()
       };
     }
 
-    async ms5w333() {
-      let tms7ql0 = '';
-      try { tms7ql0 = raqdxpraq(ayhmix4) || ''; } catch {}
-      let npge3mb = false;
-      this.#fiews0 = this.#z4_ph0();
+    async h5aikdj5a() {
+      let kld3r18ld = '';
+      try { kld3r18ld = rm4zcnhm4(sghabva) || ''; } catch {}
+      let eo7fin = false;
+      this.#t3p_l5k3 = this.#dqr8yq();
 
-      if (tms7ql0) {
-        if (tms7ql0.startsWith(this.#tuddzpt)) {
-          const i12l0ha12 = await ccmrkw(
-            this.#u9_j19m9_(tms7ql0.slice(this.#tuddzpt.length)),
+      if (kld3r18ld) {
+        if (kld3r18ld.startsWith(this.#vyoqds4y)) {
+          const zqsc5pt = await udf4hjtdf(
+            this.#mdk6jmpd(kld3r18ld.slice(this.#vyoqds4y.length)),
             600,
             null
           );
-          if (i12l0ha12 && typeof i12l0ha12 === 'object') {
-            this.#fiews0 = this.#nvu1g9uvu(i12l0ha12);
+          if (zqsc5pt && typeof zqsc5pt === 'object') {
+            this.#t3p_l5k3 = this.#fcbl1f3(zqsc5pt);
           } else {
-            npge3mb = true;
+            eo7fin = true;
           }
-        } else if (!tms7ql0.startsWith(ea_raeaa_(25))) {
-          npge3mb = true;
+        } else if (!kld3r18ld.startsWith(q5uvld3(25))) {
+          eo7fin = true;
         }
       }
 
-      for (let a34c3123 = 1; a34c3123 <= 5; a34c3123++) {
-        this.#ezpv9s(this.#fiews0.slots[a34c3123]);
+      for (let wa98j2l = 1; wa98j2l <= 5; wa98j2l++) {
+        this.#gord2l2o(this.#t3p_l5k3.slots[wa98j2l]);
       }
 
-      const rllj0j = await ccmrkw(this.#_h7zlg8(), 600, '');
+      const kwcuut0w = await udf4hjtdf(this.#h21wos(), 600, '');
       return {
         ok: true,
-        tampered: npge3mb,
-        vaultToken: rllj0j || '',
-        snapshot: this.x0eylzp0e()
+        tampered: eo7fin,
+        vaultToken: kwcuut0w || '',
+        snapshot: this.wchixc4ch()
       };
     }
 
-    x0eylzp0e() {
-      const td2tfgy = this.#fiews0 || this.#z4_ph0();
-      const v74dx5 = [];
-      for (let wh5hl0 = 1; wh5hl0 <= 5; wh5hl0++) {
-        const bnb4h3 = td2tfgy.slots[wh5hl0];
-        if (bnb4h3 && !bnb4h3.over && !bnb4h3.complete) {
-          v74dx5.push({
-            slot: wh5hl0,
+    wchixc4ch() {
+      const g4iels = this.#t3p_l5k3 || this.#dqr8yq();
+      const wfo_6r = [];
+      for (let jviuhugvi = 1; jviuhugvi <= 5; jviuhugvi++) {
+        const mjdu5c = g4iels.slots[jviuhugvi];
+        if (mjdu5c && !mjdu5c.over && !mjdu5c.complete) {
+          wfo_6r.push({
+            slot: jviuhugvi,
             hasRun: true,
-            mode: bnb4h3.runMode,
-            difficulty: bnb4h3.difficulty,
-            level: bnb4h3.level,
-            ballCount: bnb4h3.ballCount,
-            score: bnb4h3.score,
-            elapsedMs: this.#cuhf1h9(bnb4h3),
-            savedAt: bnb4h3.savedAt
+            mode: mjdu5c.runMode,
+            difficulty: mjdu5c.difficulty,
+            level: mjdu5c.level,
+            ballCount: mjdu5c.ballCount,
+            score: mjdu5c.score,
+            elapsedMs: this.#guvch4bu(mjdu5c),
+            savedAt: mjdu5c.savedAt
           });
         } else {
-          v74dx5.push({ slot: wh5hl0, hasRun: false });
+          wfo_6r.push({ slot: jviuhugvi, hasRun: false });
         }
       }
-      const fxw1kmhx = td2tfgy.slots[td2tfgy.activeSlot] || null;
+      const halzys7a = g4iels.slots[g4iels.activeSlot] || null;
       return {
-        serverNowMs: p9mkc339(),
-        rev: td2tfgy.rev,
-        activeSlot: td2tfgy.activeSlot,
-        meta: { ...td2tfgy.meta, permUpgrades: { ...td2tfgy.meta.permUpgrades } },
-        profile: { ...td2tfgy.profile },
-        settings: { ...td2tfgy.settings },
-        achievements: td2tfgy.achievements.slice(),
-        scores: td2tfgy.scores.slice(),
-        modeRecords: { ...td2tfgy.modeRecords },
-        speedrunRecords: o1kkau11k(p5thzh(td2tfgy.speedrunRecords)),
-        stats: o1kkau11k(p5thzh(td2tfgy.stats)),
-        tas: o1kkau11k(p5thzh(td2tfgy.tas)),
-        slotSummaries: v74dx5,
-        activeRun: fxw1kmhx ? { ...fxw1kmhx, elapsedMs: this.#cuhf1h9(fxw1kmhx) } : null
+        serverNowMs: og4ajaag(),
+        rev: g4iels.rev,
+        activeSlot: g4iels.activeSlot,
+        meta: { ...g4iels.meta, permUpgrades: { ...g4iels.meta.permUpgrades } },
+        profile: { ...g4iels.profile },
+        settings: { ...g4iels.settings },
+        achievements: g4iels.achievements.slice(),
+        scores: g4iels.scores.slice(),
+        modeRecords: { ...g4iels.modeRecords },
+        speedrunRecords: molhiep(woc6kxlo(g4iels.speedrunRecords)),
+        stats: molhiep(woc6kxlo(g4iels.stats)),
+        tas: molhiep(woc6kxlo(g4iels.tas)),
+        slotSummaries: wfo_6r,
+        activeRun: halzys7a ? { ...halzys7a, elapsedMs: this.#guvch4bu(halzys7a) } : null
       };
     }
 
-    async i3sg5i(gfz4e3zfz, iks136 = {}) {
-      if (!this.#fiews0) this.#fiews0 = this.#z4_ph0();
-      const paw9clr = this.#fiews0;
-      const w7n_dv77 = p9mkc339();
+    async kz5bv96z5(ogc6t2ogc, cxwul9i = {}) {
+      if (!this.#t3p_l5k3) this.#t3p_l5k3 = this.#dqr8yq();
+      const f8qabh = this.#t3p_l5k3;
+      const q_tny4z_t = og4ajaag();
 
-      switch (gfz4e3zfz) {
-        case ea_raeaa_(16): {
-          const yjcklw = hf80m5(iks136.slot, 1, 5, paw9clr.activeSlot);
-          this.#ezpv9s(paw9clr.slots[paw9clr.activeSlot], w7n_dv77);
-          paw9clr.activeSlot = yjcklw;
-          if (Boolean(iks136.enterGame) && paw9clr.slots[yjcklw]) {
-            this.#xmgipk9m(paw9clr.slots[yjcklw], w7n_dv77);
+      switch (ogc6t2ogc) {
+        case q5uvld3(16): {
+          const swlnkm = wj6jnw(cxwul9i.slot, 1, 5, f8qabh.activeSlot);
+          this.#gord2l2o(f8qabh.slots[f8qabh.activeSlot], q_tny4z_t);
+          f8qabh.activeSlot = swlnkm;
+          if (Boolean(cxwul9i.enterGame) && f8qabh.slots[swlnkm]) {
+            this.#m4q_svc(f8qabh.slots[swlnkm], q_tny4z_t);
           }
           break;
         }
-        case ea_raeaa_(13): {
-          const nfot5prf = hf80m5(iks136.slot, 1, 5, paw9clr.activeSlot);
-          this.#ezpv9s(paw9clr.slots[nfot5prf], w7n_dv77);
+        case q5uvld3(13): {
+          const mt8ikq0 = wj6jnw(cxwul9i.slot, 1, 5, f8qabh.activeSlot);
+          this.#gord2l2o(f8qabh.slots[mt8ikq0], q_tny4z_t);
           break;
         }
-        case ea_raeaa_(14): {
-          const ul2wmt = hf80m5(iks136.slot, 1, 5, paw9clr.activeSlot);
-          paw9clr.activeSlot = ul2wmt;
-          this.#xmgipk9m(paw9clr.slots[ul2wmt], w7n_dv77);
+        case q5uvld3(14): {
+          const wkoy6dkko = wj6jnw(cxwul9i.slot, 1, 5, f8qabh.activeSlot);
+          f8qabh.activeSlot = wkoy6dkko;
+          this.#m4q_svc(f8qabh.slots[wkoy6dkko], q_tny4z_t);
           break;
         }
-        case ea_raeaa_(12): {
-          const qc5b55a = hf80m5(iks136.slot, 1, 5, paw9clr.activeSlot);
-          const zsunewks = typeof iks136.mode === 'string' && this.#v_i9466_i(iks136.mode) ? iks136.mode : 'infinite';
-          const zd0na6nd = l89t2fv(zsunewks, iks136.difficulty);
-          const g5cxhhl5 = zsunewks === 'hell' ? 1 : (1 + (paw9clr.meta.permUpgrades.startAmmo || 0));
-          this.#ezpv9s(paw9clr.slots[paw9clr.activeSlot], w7n_dv77);
-          paw9clr.activeSlot = qc5b55a;
-          paw9clr.slots[qc5b55a] = {
-            runMode: zsunewks,
-            target: this.#z1g2rgk1(zsunewks),
-            difficulty: zd0na6nd,
+        case q5uvld3(12): {
+          const p2ay8dw2a = wj6jnw(cxwul9i.slot, 1, 5, f8qabh.activeSlot);
+          const hz3tpr = typeof cxwul9i.mode === 'string' && this.#s6zlrix6(cxwul9i.mode) ? cxwul9i.mode : 'infinite';
+          const dsfp_b2sf = wl61zk6l6(hz3tpr, cxwul9i.difficulty);
+          const wun_x_su = hz3tpr === 'hell' ? 1 : (1 + (f8qabh.meta.permUpgrades.startAmmo || 0));
+          this.#gord2l2o(f8qabh.slots[f8qabh.activeSlot], q_tny4z_t);
+          f8qabh.activeSlot = p2ay8dw2a;
+          f8qabh.slots[p2ay8dw2a] = {
+            runMode: hz3tpr,
+            target: this.#pwslse9ws(hz3tpr),
+            difficulty: dsfp_b2sf,
             level: 1,
             score: 0,
-            ballCount: g5cxhhl5,
-            anchorX: k_fy2o0_ / 2,
+            ballCount: wun_x_su,
+            anchorX: _8je1mu8j / 2,
             buffs: { doubleDamageTurns: 0 },
             shopPurchases: { doubleDamage: 0, laserWipe: 0 },
             pendingAmmo: 0,
@@ -1221,7 +1221,7 @@
             over: false,
             complete: false,
             elapsedMs: 0,
-            resumedAtServerMs: w7n_dv77,
+            resumedAtServerMs: q_tny4z_t,
             turnStartedAtServerMs: null,
             bestLevel: 1,
             runBricks: 0,
@@ -1229,384 +1229,384 @@
             runDamage: 0,
             bestCombo: 0,
             overlordTimer: 0,
-            overlordDialogue: zsunewks === 'tartarus' ? '"Welcome to the abyss below Hell..."' : '"Mortal, your defiance amuses me..."',
-            balls: p95v_o(k_fy2o0_ / 2, g5cxhhl5),
-            bricks: this.#y30kxuv30(iks136.bricks).slice(0, 6),
-            bonusBalls: this.#n0owzh(iks136.bonusBalls).slice(0, 2),
+            overlordDialogue: hz3tpr === 'tartarus' ? '"Welcome to the abyss below Hell..."' : '"Mortal, your defiance amuses me..."',
+            balls: fjkqjvfj(_8je1mu8j / 2, wun_x_su),
+            bricks: this.#h9wyya(cxwul9i.bricks).slice(0, 6),
+            bonusBalls: this.#ajl98p(cxwul9i.bonusBalls).slice(0, 2),
             tasRun: { lastElapsed: 0, segment: 0, splits: [], deltas: [] },
-            savedAt: w7n_dv77
+            savedAt: q_tny4z_t
           };
           break;
         }
-        case ea_raeaa_(15): {
-          const o04l0x704 = hf80m5(iks136.slot, 1, 5, paw9clr.activeSlot);
-          const _98tsg = paw9clr.slots[o04l0x704];
-          if (!_98tsg || _98tsg.level > 1 || _98tsg.over || _98tsg.complete) throw new Error('Cannot change difficulty');
-          _98tsg.difficulty = l89t2fv(_98tsg.runMode, iks136.difficulty);
-          _98tsg.savedAt = w7n_dv77;
+        case q5uvld3(15): {
+          const vvyqbnavy = wj6jnw(cxwul9i.slot, 1, 5, f8qabh.activeSlot);
+          const pnelio = f8qabh.slots[vvyqbnavy];
+          if (!pnelio || pnelio.level > 1 || pnelio.over || pnelio.complete) throw new Error('Cannot change difficulty');
+          pnelio.difficulty = wl61zk6l6(pnelio.runMode, cxwul9i.difficulty);
+          pnelio.savedAt = q_tny4z_t;
           break;
         }
-        case ea_raeaa_(9): {
-          const vbp4rlmbp = hf80m5(iks136.slot, 1, 5, paw9clr.activeSlot);
-          const easla2g = paw9clr.slots[vbp4rlmbp];
-          if (!easla2g || easla2g.over || easla2g.complete || easla2g.paused || easla2g.turnInProgress) throw new Error('Cannot shoot');
-          if (easla2g.resumedAtServerMs === null) easla2g.resumedAtServerMs = w7n_dv77;
-          easla2g.turnInProgress = true;
-          easla2g.turnStartedAtServerMs = w7n_dv77;
-          easla2g.runShots += 1;
-          paw9clr.stats.ballsFired = hf80m5(paw9clr.stats.ballsFired + easla2g.ballCount, 0, 50_000_000, paw9clr.stats.ballsFired);
-          easla2g.savedAt = w7n_dv77;
+        case q5uvld3(9): {
+          const ur67vn = wj6jnw(cxwul9i.slot, 1, 5, f8qabh.activeSlot);
+          const gpjbouupj = f8qabh.slots[ur67vn];
+          if (!gpjbouupj || gpjbouupj.over || gpjbouupj.complete || gpjbouupj.paused || gpjbouupj.turnInProgress) throw new Error('Cannot shoot');
+          if (gpjbouupj.resumedAtServerMs === null) gpjbouupj.resumedAtServerMs = q_tny4z_t;
+          gpjbouupj.turnInProgress = true;
+          gpjbouupj.turnStartedAtServerMs = q_tny4z_t;
+          gpjbouupj.runShots += 1;
+          f8qabh.stats.ballsFired = wj6jnw(f8qabh.stats.ballsFired + gpjbouupj.ballCount, 0, 50_000_000, f8qabh.stats.ballsFired);
+          gpjbouupj.savedAt = q_tny4z_t;
           break;
         }
-        case ea_raeaa_(10): {
-          const wa150n0a1 = hf80m5(iks136.slot, 1, 5, paw9clr.activeSlot);
-          const p_lej9 = paw9clr.slots[wa150n0a1];
-          if (!p_lej9 || p_lej9.over || p_lej9.complete || !p_lej9.turnInProgress || p_lej9.turnStartedAtServerMs === null) {
+        case q5uvld3(10): {
+          const itxcuy6tx = wj6jnw(cxwul9i.slot, 1, 5, f8qabh.activeSlot);
+          const mx6vr63x = f8qabh.slots[itxcuy6tx];
+          if (!mx6vr63x || mx6vr63x.over || mx6vr63x.complete || !mx6vr63x.turnInProgress || mx6vr63x.turnStartedAtServerMs === null) {
             throw new Error('No active turn');
           }
-          const _ncgxx3nc = p_lej9.bricks;
-          const b946j0w94 = _ncgxx3nc.length;
-          const rkogdfbko = _ncgxx3nc.filter((f2rf9d) => f2rf9d.type === 'titan').length;
-          const pg0oqopg0 = _ncgxx3nc.filter((p7n1_wu) => p7n1_wu.type === 'ammo').length;
-          const pjdxf0ejd = _ncgxx3nc.filter((d3ko1vc3k) => d3ko1vc3k.type === 'parent').length;
-          const o_y0h4x_ = _ncgxx3nc.reduce((qcl_sl4c, o2h_js7) => qcl_sl4c + o2h_js7.value, 0);
-          const i8kz05 = p_lej9.bonusBalls.length;
+          const em_stgmm_ = mx6vr63x.bricks;
+          const ircthisr = em_stgmm_.length;
+          const tjastgz = em_stgmm_.filter((gamv41c) => gamv41c.type === 'titan').length;
+          const zxpfye8x = em_stgmm_.filter((od_dzu) => od_dzu.type === 'ammo').length;
+          const gnj6pdy = em_stgmm_.filter((hc2ve9) => hc2ve9.type === 'parent').length;
+          const m90gb_ = em_stgmm_.reduce((xwthy36wt, r8mr_4) => xwthy36wt + r8mr_4.value, 0);
+          const cd4ivyxd4 = mx6vr63x.bonusBalls.length;
 
-          const btt25ei = b946j0w94 + pjdxf0ejd * 3 + 2;
-          const hwvltrqwv = hf80m5(iks136.bricksBrokenCount, 0, Math.max(0, btt25ei), 0);
-          const jsu4sv = hf80m5(iks136.titanKills, 0, rkogdfbko, 0);
-          const znxpv6hn = hf80m5(iks136.ammoBroken, 0, pg0oqopg0 + 1, 0);
-          const a1imrm = hf80m5(iks136.bonusCaught, 0, i8kz05 + 1, 0);
-          const yliziimli = Math.max(50, o_y0h4x_ * 2 + pjdxf0ejd * p_lej9.level * 3 + 200);
-          const r1tjv7e1t = w7vobzl(Number(iks136.damageDealt) || 0, 0, yliziimli);
-          const il33cpl = hf80m5(iks136.turnHits, 0, yliziimli + 50, 0);
-          const ualgrv = hf80m5(iks136.bestCombo, 0, 50000, 0);
+          const hl407dcl4 = ircthisr + gnj6pdy * 3 + 2;
+          const v7u6g2x7u = wj6jnw(cxwul9i.bricksBrokenCount, 0, Math.max(0, hl407dcl4), 0);
+          const fi2brc = wj6jnw(cxwul9i.titanKills, 0, tjastgz, 0);
+          const f3ycgd73y = wj6jnw(cxwul9i.ammoBroken, 0, zxpfye8x + 1, 0);
+          const cw_yd3ew_ = wj6jnw(cxwul9i.bonusCaught, 0, cd4ivyxd4 + 1, 0);
+          const hnktps4 = Math.max(50, m90gb_ * 2 + gnj6pdy * mx6vr63x.level * 3 + 200);
+          const qh5hdhph = lxaa1x5xa(Number(cxwul9i.damageDealt) || 0, 0, hnktps4);
+          const u72pyl17 = wj6jnw(cxwul9i.turnHits, 0, hnktps4 + 50, 0);
+          const xyy0e6 = wj6jnw(cxwul9i.bestCombo, 0, 50000, 0);
 
-          const ka3mfvg = p_lej9.runMode === 'hell' ? 0 : (paw9clr.meta.permUpgrades.luck || 0);
-          const c04o44t = Math.round((il33cpl + hwvltrqwv * 5 + jsu4sv * 20 + 10) * (1 + ka3mfvg * 0.2)) + 2;
-          const gaw1mhza = hf80m5(iks136.coinsGained, 10, Math.max(10, c04o44t), 10);
-          const b7wvnxy7 = p_lej9.runMode === 'hell' ? 0 : (hwvltrqwv + jsu4sv * 2);
-          const u27ohdx = hf80m5(iks136.gemsGained, 0, Math.max(0, b7wvnxy7), 0);
+          const c6rvzws = mx6vr63x.runMode === 'hell' ? 0 : (f8qabh.meta.permUpgrades.luck || 0);
+          const an9mz6y = Math.round((u72pyl17 + v7u6g2x7u * 5 + fi2brc * 20 + 10) * (1 + c6rvzws * 0.2)) + 2;
+          const cp2qtsmp2 = wj6jnw(cxwul9i.coinsGained, 10, Math.max(10, an9mz6y), 10);
+          const fm12wdzm1 = mx6vr63x.runMode === 'hell' ? 0 : (v7u6g2x7u + fi2brc * 2);
+          const sdl5jem = wj6jnw(cxwul9i.gemsGained, 0, Math.max(0, fm12wdzm1), 0);
 
-          paw9clr.meta.coins = hf80m5(paw9clr.meta.coins + gaw1mhza, 0, 9_999_999, paw9clr.meta.coins);
-          paw9clr.stats.coinsEarned = hf80m5(paw9clr.stats.coinsEarned + gaw1mhza, 0, 99_999_999, paw9clr.stats.coinsEarned);
-          if (u27ohdx > 0) {
-            paw9clr.meta.gems = hf80m5(paw9clr.meta.gems + u27ohdx, 0, 999_999, paw9clr.meta.gems);
-            paw9clr.stats.gemsEarned = hf80m5(paw9clr.stats.gemsEarned + u27ohdx, 0, 9_999_999, paw9clr.stats.gemsEarned);
+          f8qabh.meta.coins = wj6jnw(f8qabh.meta.coins + cp2qtsmp2, 0, 9_999_999, f8qabh.meta.coins);
+          f8qabh.stats.coinsEarned = wj6jnw(f8qabh.stats.coinsEarned + cp2qtsmp2, 0, 99_999_999, f8qabh.stats.coinsEarned);
+          if (sdl5jem > 0) {
+            f8qabh.meta.gems = wj6jnw(f8qabh.meta.gems + sdl5jem, 0, 999_999, f8qabh.meta.gems);
+            f8qabh.stats.gemsEarned = wj6jnw(f8qabh.stats.gemsEarned + sdl5jem, 0, 9_999_999, f8qabh.stats.gemsEarned);
           }
-          paw9clr.stats.turnsSurvived = hf80m5(paw9clr.stats.turnsSurvived + 1, 0, 5_000_000, paw9clr.stats.turnsSurvived);
-          paw9clr.stats.damageDealt = w7vobzl(paw9clr.stats.damageDealt + r1tjv7e1t, 0, 999_999_999);
-          paw9clr.stats.bricksBroken = hf80m5(paw9clr.stats.bricksBroken + hwvltrqwv, 0, 50_000_000, paw9clr.stats.bricksBroken);
-          if (iks136.brokenByType && typeof iks136.brokenByType === 'object') {
-            let i7xo7c = 0;
-            for (const ewlksuo of pi9wfq) {
-              const m1ncfz21 = hf80m5(iks136.brokenByType[ewlksuo], 0, hwvltrqwv, 0);
-              if (m1ncfz21 > 0 && i7xo7c + m1ncfz21 <= hwvltrqwv) {
-                i7xo7c += m1ncfz21;
-                paw9clr.stats.bricksByType[ewlksuo] = hf80m5((paw9clr.stats.bricksByType[ewlksuo] || 0) + m1ncfz21, 0, 50_000_000, 0);
+          f8qabh.stats.turnsSurvived = wj6jnw(f8qabh.stats.turnsSurvived + 1, 0, 5_000_000, f8qabh.stats.turnsSurvived);
+          f8qabh.stats.damageDealt = lxaa1x5xa(f8qabh.stats.damageDealt + qh5hdhph, 0, 999_999_999);
+          f8qabh.stats.bricksBroken = wj6jnw(f8qabh.stats.bricksBroken + v7u6g2x7u, 0, 50_000_000, f8qabh.stats.bricksBroken);
+          if (cxwul9i.brokenByType && typeof cxwul9i.brokenByType === 'object') {
+            let tdn54rxd = 0;
+            for (const sp8_t7fp8 of o1b09041b) {
+              const _slzfgcs = wj6jnw(cxwul9i.brokenByType[sp8_t7fp8], 0, v7u6g2x7u, 0);
+              if (_slzfgcs > 0 && tdn54rxd + _slzfgcs <= v7u6g2x7u) {
+                tdn54rxd += _slzfgcs;
+                f8qabh.stats.bricksByType[sp8_t7fp8] = wj6jnw((f8qabh.stats.bricksByType[sp8_t7fp8] || 0) + _slzfgcs, 0, 50_000_000, 0);
               }
             }
           }
 
-          p_lej9.turnInProgress = false;
-          p_lej9.turnStartedAtServerMs = null;
-          p_lej9.level = hf80m5(p_lej9.level + 1, 1, 10000, p_lej9.level + 1);
-          p_lej9.bestLevel = Math.max(p_lej9.bestLevel, p_lej9.level);
-          p_lej9.runBricks = hf80m5(p_lej9.runBricks + hwvltrqwv, 0, 1_000_000, p_lej9.runBricks);
-          p_lej9.runDamage = w7vobzl(p_lej9.runDamage + r1tjv7e1t, 0, 999_999_999);
-          p_lej9.bestCombo = Math.max(p_lej9.bestCombo, ualgrv);
-          p_lej9.score = hf80m5(p_lej9.score + Math.round(r1tjv7e1t * 10), 0, 999_999_999, p_lej9.score);
-          p_lej9.anchorX = w7vobzl(Number(iks136.anchorX) || p_lej9.anchorX, 20, k_fy2o0_ - 20);
-          if (p_lej9.runMode !== 'hell' && !['hard', 'insane', 'asian'].includes(p_lej9.difficulty) && p_lej9.buffs.doubleDamageTurns > 0) {
-            p_lej9.buffs.doubleDamageTurns -= 1;
+          mx6vr63x.turnInProgress = false;
+          mx6vr63x.turnStartedAtServerMs = null;
+          mx6vr63x.level = wj6jnw(mx6vr63x.level + 1, 1, 10000, mx6vr63x.level + 1);
+          mx6vr63x.bestLevel = Math.max(mx6vr63x.bestLevel, mx6vr63x.level);
+          mx6vr63x.runBricks = wj6jnw(mx6vr63x.runBricks + v7u6g2x7u, 0, 1_000_000, mx6vr63x.runBricks);
+          mx6vr63x.runDamage = lxaa1x5xa(mx6vr63x.runDamage + qh5hdhph, 0, 999_999_999);
+          mx6vr63x.bestCombo = Math.max(mx6vr63x.bestCombo, xyy0e6);
+          mx6vr63x.score = wj6jnw(mx6vr63x.score + Math.round(qh5hdhph * 10), 0, 999_999_999, mx6vr63x.score);
+          mx6vr63x.anchorX = lxaa1x5xa(Number(cxwul9i.anchorX) || mx6vr63x.anchorX, 20, _8je1mu8j - 20);
+          if (mx6vr63x.runMode !== 'hell' && !['hard', 'insane', 'asian'].includes(mx6vr63x.difficulty) && mx6vr63x.buffs.doubleDamageTurns > 0) {
+            mx6vr63x.buffs.doubleDamageTurns -= 1;
           }
 
-          const kj3muh = this.#cuhf1h9(p_lej9, w7n_dv77);
-          p_lej9.elapsedMs = kj3muh;
-          p_lej9.resumedAtServerMs = w7n_dv77;
+          const m4ah3v34a = this.#guvch4bu(mx6vr63x, q_tny4z_t);
+          mx6vr63x.elapsedMs = m4ah3v34a;
+          mx6vr63x.resumedAtServerMs = q_tny4z_t;
 
-          const motlu4 = hf80m5(iks136.extraBalls, 0, Math.max(0, a1imrm + p_lej9.pendingAmmo + znxpv6hn), 0);
-          p_lej9.pendingAmmo = hf80m5(iks136.pendingAmmo, 0, znxpv6hn + p_lej9.pendingAmmo, 0);
-          if (motlu4 > 0) {
-            p_lej9.ballCount = hf80m5(p_lej9.ballCount + motlu4, 1, 500, p_lej9.ballCount);
+          const h0gwani = wj6jnw(cxwul9i.extraBalls, 0, Math.max(0, cw_yd3ew_ + mx6vr63x.pendingAmmo + f3ycgd73y), 0);
+          mx6vr63x.pendingAmmo = wj6jnw(cxwul9i.pendingAmmo, 0, f3ycgd73y + mx6vr63x.pendingAmmo, 0);
+          if (h0gwani > 0) {
+            mx6vr63x.ballCount = wj6jnw(mx6vr63x.ballCount + h0gwani, 1, 500, mx6vr63x.ballCount);
           }
 
-          this.#gyhpkdzyh(paw9clr, p_lej9);
+          this.#preim1or(f8qabh, mx6vr63x);
 
-          if (p_lej9.runMode.startsWith('speedrun_')) {
-            const da748ona7 = `${p_lej9.runMode}_${p_lej9.difficulty}`;
-            if (!paw9clr.tas[da748ona7]) paw9clr.tas[da748ona7] = { bestSegments: [], splits: [] };
-            const wxb63tixb = p_lej9.tasRun.segment;
-            const ycd_99vcd = Math.max(0, Math.round(kj3muh - p_lej9.tasRun.lastElapsed));
-            const ncuz01mc = paw9clr.tas[da748ona7].bestSegments[wxb63tixb];
-            p_lej9.tasRun.splits[wxb63tixb] = ycd_99vcd;
-            paw9clr.tas[da748ona7].splits[wxb63tixb] = ycd_99vcd;
-            if (typeof ncuz01mc === 'number' && Number.isFinite(ncuz01mc)) {
-              p_lej9.tasRun.deltas[wxb63tixb] = ycd_99vcd - ncuz01mc;
-              if (ycd_99vcd < ncuz01mc) paw9clr.tas[da748ona7].bestSegments[wxb63tixb] = ycd_99vcd;
+          if (mx6vr63x.runMode.startsWith('speedrun_')) {
+            const ghukjdyhu = `${mx6vr63x.runMode}_${mx6vr63x.difficulty}`;
+            if (!f8qabh.tas[ghukjdyhu]) f8qabh.tas[ghukjdyhu] = { bestSegments: [], splits: [] };
+            const sgez1su = mx6vr63x.tasRun.segment;
+            const i4qg3s = Math.max(0, Math.round(m4ah3v34a - mx6vr63x.tasRun.lastElapsed));
+            const gh8putyh8 = f8qabh.tas[ghukjdyhu].bestSegments[sgez1su];
+            mx6vr63x.tasRun.splits[sgez1su] = i4qg3s;
+            f8qabh.tas[ghukjdyhu].splits[sgez1su] = i4qg3s;
+            if (typeof gh8putyh8 === 'number' && Number.isFinite(gh8putyh8)) {
+              mx6vr63x.tasRun.deltas[sgez1su] = i4qg3s - gh8putyh8;
+              if (i4qg3s < gh8putyh8) f8qabh.tas[ghukjdyhu].bestSegments[sgez1su] = i4qg3s;
             } else {
-              p_lej9.tasRun.deltas[wxb63tixb] = null;
-              paw9clr.tas[da748ona7].bestSegments[wxb63tixb] = ycd_99vcd;
+              mx6vr63x.tasRun.deltas[sgez1su] = null;
+              f8qabh.tas[ghukjdyhu].bestSegments[sgez1su] = i4qg3s;
             }
-            p_lej9.tasRun.segment = wxb63tixb + 1;
-            p_lej9.tasRun.lastElapsed = kj3muh;
+            mx6vr63x.tasRun.segment = sgez1su + 1;
+            mx6vr63x.tasRun.lastElapsed = m4ah3v34a;
           }
 
-          const d_1uqf5_ = this.#y30kxuv30(iks136.nextBricks);
-          const j3jcys33j = this.#n0owzh(iks136.nextBonusBalls);
-          const w6ld_cm6l = zzy6hhaz - 90;
-          const x6q40yx6q = d_1uqf5_.some((udksi30dk) => udksi30dk.targetY + udksi30dk.h >= zzy6hhaz - 20 || udksi30dk.y + udksi30dk.h >= zzy6hhaz - 20 || udksi30dk.targetY >= w6ld_cm6l);
+          const bn4tke = this.#h9wyya(cxwul9i.nextBricks);
+          const gkfl57r = this.#ajl98p(cxwul9i.nextBonusBalls);
+          const ln2b54 = l1n2a8j - 90;
+          const h87v36f87 = bn4tke.some((x4z8itr) => x4z8itr.targetY + x4z8itr.h >= l1n2a8j - 20 || x4z8itr.y + x4z8itr.h >= l1n2a8j - 20 || x4z8itr.targetY >= ln2b54);
 
-          if (x6q40yx6q || iks136.over === true) {
-            p_lej9.over = true;
-            p_lej9.paused = true;
-            p_lej9.resumedAtServerMs = null;
-            this.#ghlxi0oh(paw9clr, p_lej9);
-            paw9clr.slots[wa150n0a1] = null;
-          } else if (p_lej9.target !== null && p_lej9.level >= p_lej9.target) {
-            p_lej9.complete = true;
-            p_lej9.paused = true;
-            p_lej9.resumedAtServerMs = null;
-            const ezdg20 = paw9clr.speedrunRecords[p_lej9.runMode];
-            if (ezdg20 && ezdg20[p_lej9.difficulty]) {
-              const mn01ip = ezdg20[p_lej9.difficulty].bestMs;
-              ezdg20[p_lej9.difficulty].bestMs = mn01ip === null ? kj3muh : Math.min(mn01ip, kj3muh);
-              ezdg20[p_lej9.difficulty].clears = hf80m5(ezdg20[p_lej9.difficulty].clears + 1, 0, 100_000, 1);
+          if (h87v36f87 || cxwul9i.over === true) {
+            mx6vr63x.over = true;
+            mx6vr63x.paused = true;
+            mx6vr63x.resumedAtServerMs = null;
+            this.#puhn7z(f8qabh, mx6vr63x);
+            f8qabh.slots[itxcuy6tx] = null;
+          } else if (mx6vr63x.target !== null && mx6vr63x.level >= mx6vr63x.target) {
+            mx6vr63x.complete = true;
+            mx6vr63x.paused = true;
+            mx6vr63x.resumedAtServerMs = null;
+            const jd8inn3d = f8qabh.speedrunRecords[mx6vr63x.runMode];
+            if (jd8inn3d && jd8inn3d[mx6vr63x.difficulty]) {
+              const y_cc35r_c = jd8inn3d[mx6vr63x.difficulty].bestMs;
+              jd8inn3d[mx6vr63x.difficulty].bestMs = y_cc35r_c === null ? m4ah3v34a : Math.min(y_cc35r_c, m4ah3v34a);
+              jd8inn3d[mx6vr63x.difficulty].clears = wj6jnw(jd8inn3d[mx6vr63x.difficulty].clears + 1, 0, 100_000, 1);
             }
-            if (p_lej9.runMode === 'speedrun_25') this.#ne5no8fe5(paw9clr, p_lej9, 'speed_25');
-            paw9clr.slots[wa150n0a1] = null;
+            if (mx6vr63x.runMode === 'speedrun_25') this.#mplmaucpl(f8qabh, mx6vr63x, 'speed_25');
+            f8qabh.slots[itxcuy6tx] = null;
           } else {
-            if (['infinite', 'hell', 'tartarus'].includes(p_lej9.runMode)) {
-              paw9clr.modeRecords[p_lej9.runMode] = Math.max(paw9clr.modeRecords[p_lej9.runMode], p_lej9.level);
+            if (['infinite', 'hell', 'tartarus'].includes(mx6vr63x.runMode)) {
+              f8qabh.modeRecords[mx6vr63x.runMode] = Math.max(f8qabh.modeRecords[mx6vr63x.runMode], mx6vr63x.level);
             }
-            p_lej9.bricks = d_1uqf5_;
-            p_lej9.bonusBalls = j3jcys33j;
-            p_lej9.balls = p95v_o(p_lej9.anchorX, p_lej9.ballCount);
-            p_lej9.overlordTimer = hf80m5(iks136.overlordTimer, 0, 10, p_lej9.overlordTimer);
-            if (typeof iks136.overlordDialogue === 'string') p_lej9.overlordDialogue = iks136.overlordDialogue.slice(0, 160);
-            p_lej9.savedAt = w7n_dv77;
+            mx6vr63x.bricks = bn4tke;
+            mx6vr63x.bonusBalls = gkfl57r;
+            mx6vr63x.balls = fjkqjvfj(mx6vr63x.anchorX, mx6vr63x.ballCount);
+            mx6vr63x.overlordTimer = wj6jnw(cxwul9i.overlordTimer, 0, 10, mx6vr63x.overlordTimer);
+            if (typeof cxwul9i.overlordDialogue === 'string') mx6vr63x.overlordDialogue = cxwul9i.overlordDialogue.slice(0, 160);
+            mx6vr63x.savedAt = q_tny4z_t;
           }
           break;
         }
-        case ea_raeaa_(11): {
-          const yx0o5rr = hf80m5(iks136.slot, 1, 5, paw9clr.activeSlot);
-          const m53r94v = paw9clr.slots[yx0o5rr];
-          if (!m53r94v || m53r94v.over || m53r94v.complete) break;
-          const b5gazjh5 = this.#y30kxuv30(iks136.bricks);
-          const wfyt92h = m53r94v.bricks.filter((c3r2ia) => c3r2ia.type === 'ammo').length;
-          const lyc1x5ay = b5gazjh5.filter((i6tmmd_6) => i6tmmd_6.type === 'ammo').length;
-          if (lyc1x5ay <= wfyt92h + 2 && b5gazjh5.length <= m53r94v.bricks.length + 12) {
-            m53r94v.bricks = b5gazjh5;
+        case q5uvld3(11): {
+          const tk3y9_ = wj6jnw(cxwul9i.slot, 1, 5, f8qabh.activeSlot);
+          const dh4oyosh = f8qabh.slots[tk3y9_];
+          if (!dh4oyosh || dh4oyosh.over || dh4oyosh.complete) break;
+          const fzohwx8 = this.#h9wyya(cxwul9i.bricks);
+          const b6dgeir6 = dh4oyosh.bricks.filter((vmqyq5p) => vmqyq5p.type === 'ammo').length;
+          const hkriiea = fzohwx8.filter((ejy4ay5jy) => ejy4ay5jy.type === 'ammo').length;
+          if (hkriiea <= b6dgeir6 + 2 && fzohwx8.length <= dh4oyosh.bricks.length + 12) {
+            dh4oyosh.bricks = fzohwx8;
           }
-          m53r94v.bonusBalls = this.#n0owzh(iks136.bonusBalls);
-          m53r94v.anchorX = w7vobzl(Number(iks136.anchorX) || m53r94v.anchorX, 20, k_fy2o0_ - 20);
-          m53r94v.savedAt = w7n_dv77;
+          dh4oyosh.bonusBalls = this.#ajl98p(cxwul9i.bonusBalls);
+          dh4oyosh.anchorX = lxaa1x5xa(Number(cxwul9i.anchorX) || dh4oyosh.anchorX, 20, _8je1mu8j - 20);
+          dh4oyosh.savedAt = q_tny4z_t;
           break;
         }
-        case ea_raeaa_(17): {
-          const we4tqdoe4 = typeof iks136.type === 'string' ? iks136.type : '';
-          const pkcdqr = agxqola[we4tqdoe4];
-          if (!pkcdqr) throw new Error('Invalid upgrade');
-          const apc6j8w = paw9clr.slots[paw9clr.activeSlot];
-          if (Boolean(iks136.inGame) && apc6j8w && apc6j8w.runMode === 'hell') throw new Error('Disabled in Hell');
-          const pnewby = paw9clr.meta.permUpgrades[we4tqdoe4] || 0;
-          if (pnewby >= pkcdqr.max) throw new Error('Maxed');
-          const nzzj8blzz = Math.round(pkcdqr.base * Math.pow(1.5, pnewby));
-          if (paw9clr.meta.gems < nzzj8blzz) throw new Error('Insufficient gems');
-          paw9clr.meta.gems -= nzzj8blzz;
-          paw9clr.meta.permUpgrades[we4tqdoe4] = pnewby + 1;
-          if (apc6j8w && apc6j8w.runMode !== 'hell' && we4tqdoe4 === 'startAmmo' && apc6j8w.level === 1 && !apc6j8w.turnInProgress) {
-            apc6j8w.ballCount = 1 + paw9clr.meta.permUpgrades.startAmmo;
-            apc6j8w.balls = p95v_o(apc6j8w.anchorX, apc6j8w.ballCount);
+        case q5uvld3(17): {
+          const _d4ze7nd4 = typeof cxwul9i.type === 'string' ? cxwul9i.type : '';
+          const aymfm26 = ls6v1z7s[_d4ze7nd4];
+          if (!aymfm26) throw new Error('Invalid upgrade');
+          const w3vurez3 = f8qabh.slots[f8qabh.activeSlot];
+          if (Boolean(cxwul9i.inGame) && w3vurez3 && w3vurez3.runMode === 'hell') throw new Error('Disabled in Hell');
+          const abpzinwb = f8qabh.meta.permUpgrades[_d4ze7nd4] || 0;
+          if (abpzinwb >= aymfm26.max) throw new Error('Maxed');
+          const tt5sacit5 = Math.round(aymfm26.base * Math.pow(1.5, abpzinwb));
+          if (f8qabh.meta.gems < tt5sacit5) throw new Error('Insufficient gems');
+          f8qabh.meta.gems -= tt5sacit5;
+          f8qabh.meta.permUpgrades[_d4ze7nd4] = abpzinwb + 1;
+          if (w3vurez3 && w3vurez3.runMode !== 'hell' && _d4ze7nd4 === 'startAmmo' && w3vurez3.level === 1 && !w3vurez3.turnInProgress) {
+            w3vurez3.ballCount = 1 + f8qabh.meta.permUpgrades.startAmmo;
+            w3vurez3.balls = fjkqjvfj(w3vurez3.anchorX, w3vurez3.ballCount);
           }
           break;
         }
-        case ea_raeaa_(18): {
-          const qhdr4t1hd = hf80m5(iks136.slot, 1, 5, paw9clr.activeSlot);
-          const yaqgn7raq = paw9clr.slots[qhdr4t1hd];
-          const xa7stzq = typeof iks136.type === 'string' ? iks136.type : '';
-          if (!yaqgn7raq || yaqgn7raq.over || yaqgn7raq.complete || yaqgn7raq.runMode === 'hell' || ['hard', 'insane', 'asian'].includes(yaqgn7raq.difficulty)) {
+        case q5uvld3(18): {
+          const id9pn9_ = wj6jnw(cxwul9i.slot, 1, 5, f8qabh.activeSlot);
+          const hzy9qa = f8qabh.slots[id9pn9_];
+          const nzf34vg = typeof cxwul9i.type === 'string' ? cxwul9i.type : '';
+          if (!hzy9qa || hzy9qa.over || hzy9qa.complete || hzy9qa.runMode === 'hell' || ['hard', 'insane', 'asian'].includes(hzy9qa.difficulty)) {
             throw new Error('Unavailable');
           }
-          const zw9cxw1w = yaqgn7raq.shopPurchases[xa7stzq === 'doubleDamage' ? 'doubleDamage' : 'laserWipe'] || 0;
-          const it4fm2 = xa7stzq === 'doubleDamage' ? Math.round(30 * Math.pow(1.25, zw9cxw1w)) : Math.round(40 * Math.pow(1.3, zw9cxw1w));
-          if (paw9clr.meta.coins < it4fm2) throw new Error('Insufficient coins');
-          if (xa7stzq === 'doubleDamage') {
-            paw9clr.meta.coins -= it4fm2;
-            yaqgn7raq.buffs.doubleDamageTurns = hf80m5(yaqgn7raq.buffs.doubleDamageTurns + 3, 0, 100, 3);
-            yaqgn7raq.shopPurchases.doubleDamage = hf80m5(yaqgn7raq.shopPurchases.doubleDamage + 1, 0, 500, 1);
-          } else if (xa7stzq === 'laserWipe' && yaqgn7raq.bricks.length) {
-            paw9clr.meta.coins -= it4fm2;
-            yaqgn7raq.shopPurchases.laserWipe = hf80m5(yaqgn7raq.shopPurchases.laserWipe + 1, 0, 500, 1);
-            const zl81m7fl = Math.max(...yaqgn7raq.bricks.map((s6raqv) => s6raqv.y));
-            const noto3mt = yaqgn7raq.bricks.filter((abokw6qb) => Math.abs(abokw6qb.y - zl81m7fl) < 0.5);
-            yaqgn7raq.bricks = yaqgn7raq.bricks.filter((k9ds_bf9) => Math.abs(k9ds_bf9.y - zl81m7fl) >= 0.5);
-            const _wzddm8w = paw9clr.meta.permUpgrades.luck || 0;
-            const jifbyf1 = noto3mt.filter((gujv8ex) => gujv8ex.type === 'titan').length;
-            const q86tn0s86 = noto3mt.filter((o5hyd495h) => o5hyd495h.type === 'ammo').length;
-            const sioaje3i = Math.round((noto3mt.length * 5 + jifbyf1 * 20) * (1 + _wzddm8w * 0.2));
-            paw9clr.meta.coins = hf80m5(paw9clr.meta.coins + sioaje3i, 0, 9_999_999, paw9clr.meta.coins);
-            paw9clr.stats.coinsEarned = hf80m5(paw9clr.stats.coinsEarned + sioaje3i, 0, 99_999_999, paw9clr.stats.coinsEarned);
-            paw9clr.stats.bricksBroken = hf80m5(paw9clr.stats.bricksBroken + noto3mt.length, 0, 50_000_000, paw9clr.stats.bricksBroken);
-            for (const uwrtvb_ of noto3mt) {
-              paw9clr.stats.bricksByType[uwrtvb_.type] = hf80m5((paw9clr.stats.bricksByType[uwrtvb_.type] || 0) + 1, 0, 50_000_000, 0);
+          const i9u9ni = hzy9qa.shopPurchases[nzf34vg === 'doubleDamage' ? 'doubleDamage' : 'laserWipe'] || 0;
+          const i0dqbm = nzf34vg === 'doubleDamage' ? Math.round(30 * Math.pow(1.25, i9u9ni)) : Math.round(40 * Math.pow(1.3, i9u9ni));
+          if (f8qabh.meta.coins < i0dqbm) throw new Error('Insufficient coins');
+          if (nzf34vg === 'doubleDamage') {
+            f8qabh.meta.coins -= i0dqbm;
+            hzy9qa.buffs.doubleDamageTurns = wj6jnw(hzy9qa.buffs.doubleDamageTurns + 3, 0, 100, 3);
+            hzy9qa.shopPurchases.doubleDamage = wj6jnw(hzy9qa.shopPurchases.doubleDamage + 1, 0, 500, 1);
+          } else if (nzf34vg === 'laserWipe' && hzy9qa.bricks.length) {
+            f8qabh.meta.coins -= i0dqbm;
+            hzy9qa.shopPurchases.laserWipe = wj6jnw(hzy9qa.shopPurchases.laserWipe + 1, 0, 500, 1);
+            const m4o1lk = Math.max(...hzy9qa.bricks.map((ibtu8u8bt) => ibtu8u8bt.y));
+            const zp4jdx2p4 = hzy9qa.bricks.filter((ffxu8f) => Math.abs(ffxu8f.y - m4o1lk) < 0.5);
+            hzy9qa.bricks = hzy9qa.bricks.filter((tokbmg) => Math.abs(tokbmg.y - m4o1lk) >= 0.5);
+            const l46hvrz46 = f8qabh.meta.permUpgrades.luck || 0;
+            const ogl8jaqgl = zp4jdx2p4.filter((pk6ypy2k) => pk6ypy2k.type === 'titan').length;
+            const axn1_9mxn = zp4jdx2p4.filter((yet4nn) => yet4nn.type === 'ammo').length;
+            const p2m0xhm = Math.round((zp4jdx2p4.length * 5 + ogl8jaqgl * 20) * (1 + l46hvrz46 * 0.2));
+            f8qabh.meta.coins = wj6jnw(f8qabh.meta.coins + p2m0xhm, 0, 9_999_999, f8qabh.meta.coins);
+            f8qabh.stats.coinsEarned = wj6jnw(f8qabh.stats.coinsEarned + p2m0xhm, 0, 99_999_999, f8qabh.stats.coinsEarned);
+            f8qabh.stats.bricksBroken = wj6jnw(f8qabh.stats.bricksBroken + zp4jdx2p4.length, 0, 50_000_000, f8qabh.stats.bricksBroken);
+            for (const _c9s0b of zp4jdx2p4) {
+              f8qabh.stats.bricksByType[_c9s0b.type] = wj6jnw((f8qabh.stats.bricksByType[_c9s0b.type] || 0) + 1, 0, 50_000_000, 0);
             }
-            yaqgn7raq.pendingAmmo = hf80m5(yaqgn7raq.pendingAmmo + q86tn0s86, 0, 50, yaqgn7raq.pendingAmmo);
-            this.#gyhpkdzyh(paw9clr, yaqgn7raq);
-            yaqgn7raq.savedAt = w7n_dv77;
+            hzy9qa.pendingAmmo = wj6jnw(hzy9qa.pendingAmmo + axn1_9mxn, 0, 50, hzy9qa.pendingAmmo);
+            this.#preim1or(f8qabh, hzy9qa);
+            hzy9qa.savedAt = q_tny4z_t;
           }
           break;
         }
-        case ea_raeaa_(19): {
-          const jt4wkqet = hf80m5(iks136.slot, 1, 5, paw9clr.activeSlot);
-          const u05fbj = paw9clr.slots[jt4wkqet];
-          if (!u05fbj) break;
-          this.#ghlxi0oh(paw9clr, u05fbj, w7n_dv77);
-          paw9clr.slots[jt4wkqet] = null;
+        case q5uvld3(19): {
+          const b4z9yf9 = wj6jnw(cxwul9i.slot, 1, 5, f8qabh.activeSlot);
+          const a8lwa0x8l = f8qabh.slots[b4z9yf9];
+          if (!a8lwa0x8l) break;
+          this.#puhn7z(f8qabh, a8lwa0x8l, q_tny4z_t);
+          f8qabh.slots[b4z9yf9] = null;
           break;
         }
-        case ea_raeaa_(20): {
-          const kwmn8t3wm = hf80m5(iks136.slot, 1, 5, paw9clr.activeSlot);
-          paw9clr.slots[kwmn8t3wm] = null;
+        case q5uvld3(20): {
+          const r35nda = wj6jnw(cxwul9i.slot, 1, 5, f8qabh.activeSlot);
+          f8qabh.slots[r35nda] = null;
           break;
         }
-        case ea_raeaa_(21): {
-          paw9clr.profile = {
-            name: String(iks136.name || 'Player').trim().slice(0, 20) || 'Player',
-            icon: ylamnnfl.includes(iks136.icon) ? iks136.icon : 'fa-cubes'
+        case q5uvld3(21): {
+          f8qabh.profile = {
+            name: String(cxwul9i.name || 'Player').trim().slice(0, 20) || 'Player',
+            icon: k91tari91.includes(cxwul9i.icon) ? cxwul9i.icon : 'fa-cubes'
           };
           break;
         }
-        case ea_raeaa_(22): {
-          paw9clr.settings = { sound: Boolean(iks136.sound), bgm: Boolean(iks136.bgm), particles: Boolean(iks136.particles) };
+        case q5uvld3(22): {
+          f8qabh.settings = { sound: Boolean(cxwul9i.sound), bgm: Boolean(cxwul9i.bgm), particles: Boolean(cxwul9i.particles) };
           break;
         }
-        case ea_raeaa_(23): {
-          this.#fiews0 = this.#z4_ph0();
+        case q5uvld3(23): {
+          this.#t3p_l5k3 = this.#dqr8yq();
           break;
         }
       }
 
-      await this.#_h7zlg8();
-      return this.x0eylzp0e();
+      await this.#h21wos();
+      return this.wchixc4ch();
     }
 
-    async xyn13s9y(cfqnbgnf, zffjyo2) {
-      const h22r2us22 = this.#fiews0 || this.#z4_ph0();
-      const rv4e3t = hf80m5(zffjyo2, 1, 5, h22r2us22.activeSlot);
-      const zlkh41 = h22r2us22.slots[rv4e3t];
-      const svc89vm = {
+    async mmp4z5fmp(w5_opiy5_, c4h7wb) {
+      const z5rakcq5r = this.#t3p_l5k3 || this.#dqr8yq();
+      const g_7y55t = wj6jnw(c4h7wb, 1, 5, z5rakcq5r.activeSlot);
+      const _j73wt5 = z5rakcq5r.slots[g_7y55t];
+      const c_76w8j_ = {
         version: 14,
-        meta: h22r2us22.meta,
-        profile: h22r2us22.profile,
-        achievements: h22r2us22.achievements,
-        scores: h22r2us22.scores,
-        modeRecords: h22r2us22.modeRecords,
-        speedrunRecords: h22r2us22.speedrunRecords,
-        stats: h22r2us22.stats,
-        tas: h22r2us22.tas,
-        game: zlkh41 ? { ...zlkh41, elapsedMs: this.#cuhf1h9(zlkh41) } : null
+        meta: z5rakcq5r.meta,
+        profile: z5rakcq5r.profile,
+        achievements: z5rakcq5r.achievements,
+        scores: z5rakcq5r.scores,
+        modeRecords: z5rakcq5r.modeRecords,
+        speedrunRecords: z5rakcq5r.speedrunRecords,
+        stats: z5rakcq5r.stats,
+        tas: z5rakcq5r.tas,
+        game: _j73wt5 ? { ..._j73wt5, elapsedMs: this.#guvch4bu(_j73wt5) } : null
       };
-      const fyl9fi = await this.#nx22fi6(svc89vm);
-      if (cfqnbgnf === 'file') {
-        return p5thzh({ format: this.#ppn02h, v: 14, payload: fyl9fi });
+      const eu06bq9u0 = await this.#j1f5qaf(c_76w8j_);
+      if (w5_opiy5_ === 'file') {
+        return woc6kxlo({ format: this.#mpd0o4apd, v: 14, payload: eu06bq9u0 });
       }
-      return `${this.#p_vn91n_}${fyl9fi}`;
+      return `${this.#z4pu09_4p}${eu06bq9u0}`;
     }
 
-    async cvsed5avs(qbv6951, w0n1vaq) {
-      const mnc34uqn = String(qbv6951 || '').trim();
-      let ll8c8nm = null;
-      if (mnc34uqn.startsWith(this.#p_vn91n_)) {
-        ll8c8nm = await this.#dki4sqv(mnc34uqn.slice(this.#p_vn91n_.length));
-      } else if (mnc34uqn.startsWith('{')) {
+    async iue35ti(_6wejgr, yg7rup8g7) {
+      const ajwiu71jw = String(_6wejgr || '').trim();
+      let hgrn80_gr = null;
+      if (ajwiu71jw.startsWith(this.#z4pu09_4p)) {
+        hgrn80_gr = await this.#mbiwcb(ajwiu71jw.slice(this.#z4pu09_4p.length));
+      } else if (ajwiu71jw.startsWith('{')) {
         try {
-          const n1_wqtr = o1kkau11k(mnc34uqn);
-          if (n1_wqtr && n1_wqtr.format === this.#ppn02h && typeof n1_wqtr.payload === 'string') {
-            ll8c8nm = await this.#dki4sqv(n1_wqtr.payload);
+          const jnta5evn = molhiep(ajwiu71jw);
+          if (jnta5evn && jnta5evn.format === this.#mpd0o4apd && typeof jnta5evn.payload === 'string') {
+            hgrn80_gr = await this.#mbiwcb(jnta5evn.payload);
           }
         } catch {
-          ll8c8nm = null;
+          hgrn80_gr = null;
         }
       }
-      if (!ll8c8nm || typeof ll8c8nm !== 'object') throw new Error('Invalid save data');
+      if (!hgrn80_gr || typeof hgrn80_gr !== 'object') throw new Error('Invalid save data');
 
-      const nhkw65i = this.#fiews0 || this.#z4_ph0();
-      const nslnscts = hf80m5(w0n1vaq, 1, 5, nhkw65i.activeSlot);
-      nhkw65i.activeSlot = nslnscts;
-      const wnyul8 = this.#nvu1g9uvu({
-        meta: ll8c8nm.meta,
-        profile: ll8c8nm.profile,
-        achievements: ll8c8nm.achievements,
-        scores: ll8c8nm.scores,
-        modeRecords: ll8c8nm.modeRecords,
-        speedrunRecords: ll8c8nm.speedrunRecords,
-        stats: ll8c8nm.stats,
-        tas: ll8c8nm.tas,
-        slots: { [nslnscts]: ll8c8nm.game || ll8c8nm.run || null }
+      const z_4y5u = this.#t3p_l5k3 || this.#dqr8yq();
+      const af3jr0_f3 = wj6jnw(yg7rup8g7, 1, 5, z_4y5u.activeSlot);
+      z_4y5u.activeSlot = af3jr0_f3;
+      const bm56bk = this.#fcbl1f3({
+        meta: hgrn80_gr.meta,
+        profile: hgrn80_gr.profile,
+        achievements: hgrn80_gr.achievements,
+        scores: hgrn80_gr.scores,
+        modeRecords: hgrn80_gr.modeRecords,
+        speedrunRecords: hgrn80_gr.speedrunRecords,
+        stats: hgrn80_gr.stats,
+        tas: hgrn80_gr.tas,
+        slots: { [af3jr0_f3]: hgrn80_gr.game || hgrn80_gr.run || null }
       });
 
-      nhkw65i.meta.coins = Math.max(nhkw65i.meta.coins, wnyul8.meta.coins);
-      nhkw65i.meta.gems = Math.max(nhkw65i.meta.gems, wnyul8.meta.gems);
-      for (const i0kynxn0k of Object.keys(agxqola)) {
-        nhkw65i.meta.permUpgrades[i0kynxn0k] = Math.max(nhkw65i.meta.permUpgrades[i0kynxn0k] || 0, wnyul8.meta.permUpgrades[i0kynxn0k] || 0);
+      z_4y5u.meta.coins = Math.max(z_4y5u.meta.coins, bm56bk.meta.coins);
+      z_4y5u.meta.gems = Math.max(z_4y5u.meta.gems, bm56bk.meta.gems);
+      for (const khisu8nh of Object.keys(ls6v1z7s)) {
+        z_4y5u.meta.permUpgrades[khisu8nh] = Math.max(z_4y5u.meta.permUpgrades[khisu8nh] || 0, bm56bk.meta.permUpgrades[khisu8nh] || 0);
       }
-      nhkw65i.profile = wnyul8.profile;
-      for (const ugi37j6 of wnyul8.achievements) {
-        if (!nhkw65i.achievements.includes(ugi37j6)) nhkw65i.achievements.push(ugi37j6);
+      z_4y5u.profile = bm56bk.profile;
+      for (const om4o1dw of bm56bk.achievements) {
+        if (!z_4y5u.achievements.includes(om4o1dw)) z_4y5u.achievements.push(om4o1dw);
       }
-      nhkw65i.scores = [...nhkw65i.scores, ...wnyul8.scores].sort((fxqh4euxq, q8c6ev88) => q8c6ev88.score - fxqh4euxq.score).slice(0, 100);
-      nhkw65i.modeRecords = {
-        infinite: Math.max(nhkw65i.modeRecords.infinite, wnyul8.modeRecords.infinite),
-        hell: Math.max(nhkw65i.modeRecords.hell, wnyul8.modeRecords.hell),
-        tartarus: Math.max(nhkw65i.modeRecords.tartarus, wnyul8.modeRecords.tartarus)
+      z_4y5u.scores = [...z_4y5u.scores, ...bm56bk.scores].sort((fyqyw9, i_21ta) => i_21ta.score - fyqyw9.score).slice(0, 100);
+      z_4y5u.modeRecords = {
+        infinite: Math.max(z_4y5u.modeRecords.infinite, bm56bk.modeRecords.infinite),
+        hell: Math.max(z_4y5u.modeRecords.hell, bm56bk.modeRecords.hell),
+        tartarus: Math.max(z_4y5u.modeRecords.tartarus, bm56bk.modeRecords.tartarus)
       };
-      for (const e8gqtc1 of o48h9e548) {
-        const yfgppzffg = `speedrun_${e8gqtc1}`;
-        for (const cce90y0ce of wnz71ls) {
-          const e9sf10l9 = wnyul8.speedrunRecords[yfgppzffg][cce90y0ce];
-          const iz_sjmqz_ = nhkw65i.speedrunRecords[yfgppzffg][cce90y0ce];
-          if (e9sf10l9.bestMs !== null) iz_sjmqz_.bestMs = iz_sjmqz_.bestMs === null ? e9sf10l9.bestMs : Math.min(iz_sjmqz_.bestMs, e9sf10l9.bestMs);
-          iz_sjmqz_.clears = Math.max(iz_sjmqz_.clears, e9sf10l9.clears);
+      for (const h5ufbnh5u of ptw7p61tw) {
+        const odzhn6 = `speedrun_${h5ufbnh5u}`;
+        for (const i2k7l0x of uc1iht) {
+          const mq7b664q7 = bm56bk.speedrunRecords[odzhn6][i2k7l0x];
+          const idwhq7n = z_4y5u.speedrunRecords[odzhn6][i2k7l0x];
+          if (mq7b664q7.bestMs !== null) idwhq7n.bestMs = idwhq7n.bestMs === null ? mq7b664q7.bestMs : Math.min(idwhq7n.bestMs, mq7b664q7.bestMs);
+          idwhq7n.clears = Math.max(idwhq7n.clears, mq7b664q7.clears);
         }
       }
-      nhkw65i.stats.ballsFired = Math.max(nhkw65i.stats.ballsFired, wnyul8.stats.ballsFired);
-      nhkw65i.stats.turnsSurvived = Math.max(nhkw65i.stats.turnsSurvived, wnyul8.stats.turnsSurvived);
-      nhkw65i.stats.gemsEarned = Math.max(nhkw65i.stats.gemsEarned, wnyul8.stats.gemsEarned);
-      nhkw65i.stats.coinsEarned = Math.max(nhkw65i.stats.coinsEarned, wnyul8.stats.coinsEarned);
-      nhkw65i.stats.damageDealt = Math.max(nhkw65i.stats.damageDealt, wnyul8.stats.damageDealt);
-      nhkw65i.stats.bricksBroken = Math.max(nhkw65i.stats.bricksBroken, wnyul8.stats.bricksBroken);
-      for (const odldrhrdl of pi9wfq) {
-        nhkw65i.stats.bricksByType[odldrhrdl] = Math.max(nhkw65i.stats.bricksByType[odldrhrdl] || 0, wnyul8.stats.bricksByType[odldrhrdl] || 0);
+      z_4y5u.stats.ballsFired = Math.max(z_4y5u.stats.ballsFired, bm56bk.stats.ballsFired);
+      z_4y5u.stats.turnsSurvived = Math.max(z_4y5u.stats.turnsSurvived, bm56bk.stats.turnsSurvived);
+      z_4y5u.stats.gemsEarned = Math.max(z_4y5u.stats.gemsEarned, bm56bk.stats.gemsEarned);
+      z_4y5u.stats.coinsEarned = Math.max(z_4y5u.stats.coinsEarned, bm56bk.stats.coinsEarned);
+      z_4y5u.stats.damageDealt = Math.max(z_4y5u.stats.damageDealt, bm56bk.stats.damageDealt);
+      z_4y5u.stats.bricksBroken = Math.max(z_4y5u.stats.bricksBroken, bm56bk.stats.bricksBroken);
+      for (const kf59gf0f of o1b09041b) {
+        z_4y5u.stats.bricksByType[kf59gf0f] = Math.max(z_4y5u.stats.bricksByType[kf59gf0f] || 0, bm56bk.stats.bricksByType[kf59gf0f] || 0);
       }
-      nhkw65i.tas = { ...nhkw65i.tas, ...wnyul8.tas };
-      nhkw65i.slots[nslnscts] = wnyul8.slots[nslnscts];
+      z_4y5u.tas = { ...z_4y5u.tas, ...bm56bk.tas };
+      z_4y5u.slots[af3jr0_f3] = bm56bk.slots[af3jr0_f3];
 
-      await this.#_h7zlg8();
-      return this.x0eylzp0e();
+      await this.#h21wos();
+      return this.wchixc4ch();
     }
 
-    #v_i9466_i(hii0p7pii) {
-      return ['infinite', 'hell', 'tartarus', 'speedrun_25', 'speedrun_50', 'speedrun_100', 'speedrun_250', 'speedrun_500'].includes(hii0p7pii);
+    #s6zlrix6(o25so142) {
+      return ['infinite', 'hell', 'tartarus', 'speedrun_25', 'speedrun_50', 'speedrun_100', 'speedrun_250', 'speedrun_500'].includes(o25so142);
     }
 
-    #z1g2rgk1(_gdc2kq) {
-      if (!_gdc2kq.startsWith('speedrun_')) return null;
-      return Number(_gdc2kq.split('_')[1]) || null;
+    #pwslse9ws(fn_f_arn) {
+      if (!fn_f_arn.startsWith('speedrun_')) return null;
+      return Number(fn_f_arn.split('_')[1]) || null;
     }
 
-    #o9fxk0r9(c0uxn040) {
-      if (c0uxn040 === 'hell') return 'Hell Mode';
-      if (c0uxn040 === 'tartarus') return 'Tartarus Mode';
-      if (c0uxn040.startsWith('speedrun_')) return `Speedrun ${c0uxn040.split('_')[1]}`;
+    #m7lotbe7l(dx2aa6) {
+      if (dx2aa6 === 'hell') return 'Hell Mode';
+      if (dx2aa6 === 'tartarus') return 'Tartarus Mode';
+      if (dx2aa6.startsWith('speedrun_')) return `Speedrun ${dx2aa6.split('_')[1]}`;
       return 'Infinite';
     }
 
-    #z4_ph0() {
-      const ih_yg2 = {};
-      for (const ywvdv1 of o48h9e548) {
-        ih_yg2[`speedrun_${ywvdv1}`] = {};
-        for (const g9pqiqn9 of wnz71ls) ih_yg2[`speedrun_${ywvdv1}`][g9pqiqn9] = { bestMs: null, clears: 0 };
+    #dqr8yq() {
+      const foynpr3 = {};
+      for (const rj0z44 of ptw7p61tw) {
+        foynpr3[`speedrun_${rj0z44}`] = {};
+        for (const ziv17y of uc1iht) foynpr3[`speedrun_${rj0z44}`][ziv17y] = { bestMs: null, clears: 0 };
       }
       return {
         rev: 1,
@@ -1617,692 +1617,692 @@
         achievements: [],
         scores: [],
         modeRecords: { infinite: 1, hell: 1, tartarus: 1 },
-        speedrunRecords: ih_yg2,
-        stats: { ballsFired: 0, turnsSurvived: 0, gemsEarned: 0, coinsEarned: 0, damageDealt: 0, bricksBroken: 0, bricksByType: Object.fromEntries(pi9wfq.map((f669225) => [f669225, 0])) },
+        speedrunRecords: foynpr3,
+        stats: { ballsFired: 0, turnsSurvived: 0, gemsEarned: 0, coinsEarned: 0, damageDealt: 0, bricksBroken: 0, bricksByType: Object.fromEntries(o1b09041b.map((vuiwnf) => [vuiwnf, 0])) },
         tas: {},
         slots: { 1: null, 2: null, 3: null, 4: null, 5: null }
       };
     }
 
-    #y30kxuv30(lqrpgktq) {
-      if (!Array.isArray(lqrpgktq)) return [];
-      return lqrpgktq.slice(0, 120).map((qgjaxc) => {
-        const horwi0 = qgjaxc && typeof qgjaxc === 'object' ? qgjaxc : {};
-        const zb1lq_7b1 = typeof horwi0.type === 'string' && pi9wfq.includes(horwi0.type) ? horwi0.type : 'normal';
-        const yqqdmzrqq = zb1lq_7b1 === 'titan' ? 230 : hf80m5(horwi0.w, 40, 240, 110);
-        const sogv5hlo = zb1lq_7b1 === 'titan' ? 150 : hf80m5(horwi0.h, 30, 160, 70);
-        const kvw_9o8 = w7vobzl(Number(horwi0.y) || zqqe33d, 0, zzy6hhaz - sogv5hlo);
-        const h0ab_w00a = {
-          x: w7vobzl(Number(horwi0.x) || 5, 5, k_fy2o0_ - 5 - yqqdmzrqq),
-          y: kvw_9o8,
-          targetY: w7vobzl(Number(horwi0.targetY) || kvw_9o8, 0, zzy6hhaz),
-          w: yqqdmzrqq,
-          h: sogv5hlo,
-          value: hf80m5(horwi0.value, 1, 10_000_000, 1),
-          type: zb1lq_7b1,
-          slideDir: horwi0.slideDir === -1 ? -1 : 1,
-          slideSpeed: w7vobzl(Number(horwi0.slideSpeed) || 1.5, 0, 6)
+    #h9wyya(rf9s9dif9) {
+      if (!Array.isArray(rf9s9dif9)) return [];
+      return rf9s9dif9.slice(0, 120).map((a2bp0af2b) => {
+        const nxpvdu6x = a2bp0af2b && typeof a2bp0af2b === 'object' ? a2bp0af2b : {};
+        const o1_vh3z1_ = typeof nxpvdu6x.type === 'string' && o1b09041b.includes(nxpvdu6x.type) ? nxpvdu6x.type : 'normal';
+        const uy8kcyoy8 = o1_vh3z1_ === 'titan' ? 230 : wj6jnw(nxpvdu6x.w, 40, 240, 110);
+        const lb1qra = o1_vh3z1_ === 'titan' ? 150 : wj6jnw(nxpvdu6x.h, 30, 160, 70);
+        const s3xcw1e3 = lxaa1x5xa(Number(nxpvdu6x.y) || t6pnm0q6, 0, l1n2a8j - lb1qra);
+        const m7y6zx = {
+          x: lxaa1x5xa(Number(nxpvdu6x.x) || 5, 5, _8je1mu8j - 5 - uy8kcyoy8),
+          y: s3xcw1e3,
+          targetY: lxaa1x5xa(Number(nxpvdu6x.targetY) || s3xcw1e3, 0, l1n2a8j),
+          w: uy8kcyoy8,
+          h: lb1qra,
+          value: wj6jnw(nxpvdu6x.value, 1, 10_000_000, 1),
+          type: o1_vh3z1_,
+          slideDir: nxpvdu6x.slideDir === -1 ? -1 : 1,
+          slideSpeed: lxaa1x5xa(Number(nxpvdu6x.slideSpeed) || 1.5, 0, 6)
         };
-        if (Array.isArray(horwi0.allowedDirs)) {
-          h0ab_w00a.allowedDirs = horwi0.allowedDirs.filter((l343_ke) => ['top', 'bottom', 'left', 'right'].includes(l343_ke)).slice(0, 4);
+        if (Array.isArray(nxpvdu6x.allowedDirs)) {
+          m7y6zx.allowedDirs = nxpvdu6x.allowedDirs.filter((u4vhqx6) => ['top', 'bottom', 'left', 'right'].includes(u4vhqx6)).slice(0, 4);
         }
-        if (horwi0.phase === 'liquid' || horwi0.phase === 'solid') h0ab_w00a.phase = horwi0.phase;
-        return h0ab_w00a;
+        if (nxpvdu6x.phase === 'liquid' || nxpvdu6x.phase === 'solid') m7y6zx.phase = nxpvdu6x.phase;
+        return m7y6zx;
       });
     }
 
-    #n0owzh(ifpmgrk) {
-      if (!Array.isArray(ifpmgrk)) return [];
-      return ifpmgrk.slice(0, 30).map((d3osquv) => {
-        const xex11tme = d3osquv && typeof d3osquv === 'object' ? d3osquv : {};
-        const ir5nnrf = w7vobzl(Number(xex11tme.y) || (zqqe33d + 35), 0, zzy6hhaz - 20);
+    #ajl98p(slb1d8) {
+      if (!Array.isArray(slb1d8)) return [];
+      return slb1d8.slice(0, 30).map((xadwmv) => {
+        const ryd6xr3yd = xadwmv && typeof xadwmv === 'object' ? xadwmv : {};
+        const us688lgs6 = lxaa1x5xa(Number(ryd6xr3yd.y) || (t6pnm0q6 + 35), 0, l1n2a8j - 20);
         return {
-          x: w7vobzl(Number(xex11tme.x) || k_fy2o0_ / 2, 20, k_fy2o0_ - 20),
-          y: ir5nnrf,
-          targetY: w7vobzl(Number(xex11tme.targetY) || ir5nnrf, 0, zzy6hhaz),
+          x: lxaa1x5xa(Number(ryd6xr3yd.x) || _8je1mu8j / 2, 20, _8je1mu8j - 20),
+          y: us688lgs6,
+          targetY: lxaa1x5xa(Number(ryd6xr3yd.targetY) || us688lgs6, 0, l1n2a8j),
           r: 14,
-          hit: Boolean(xex11tme.hit)
+          hit: Boolean(ryd6xr3yd.hit)
         };
       });
     }
 
-    #nvu1g9uvu(j81m0f) {
-      const skzeb5 = this.#z4_ph0();
-      if (!j81m0f || typeof j81m0f !== 'object') return skzeb5;
-      skzeb5.rev = hf80m5(j81m0f.rev, 1, 100_000_000, 1);
-      skzeb5.activeSlot = hf80m5(j81m0f.activeSlot, 1, 5, 1);
-      if (j81m0f.meta && typeof j81m0f.meta === 'object') {
-        skzeb5.meta.coins = hf80m5(j81m0f.meta.coins, 0, 9_999_999, 0);
-        skzeb5.meta.gems = hf80m5(j81m0f.meta.gems, 0, 999_999, 0);
-        const yiw0eg3i = j81m0f.meta.permUpgrades && typeof j81m0f.meta.permUpgrades === 'object' ? j81m0f.meta.permUpgrades : {};
-        for (const [ms74kd0, rxdzkt] of Object.entries(agxqola)) {
-          skzeb5.meta.permUpgrades[ms74kd0] = hf80m5(yiw0eg3i[ms74kd0], 0, rxdzkt.max, 0);
+    #fcbl1f3(eg_5tr) {
+      const bftg6vd = this.#dqr8yq();
+      if (!eg_5tr || typeof eg_5tr !== 'object') return bftg6vd;
+      bftg6vd.rev = wj6jnw(eg_5tr.rev, 1, 100_000_000, 1);
+      bftg6vd.activeSlot = wj6jnw(eg_5tr.activeSlot, 1, 5, 1);
+      if (eg_5tr.meta && typeof eg_5tr.meta === 'object') {
+        bftg6vd.meta.coins = wj6jnw(eg_5tr.meta.coins, 0, 9_999_999, 0);
+        bftg6vd.meta.gems = wj6jnw(eg_5tr.meta.gems, 0, 999_999, 0);
+        const kp71g3 = eg_5tr.meta.permUpgrades && typeof eg_5tr.meta.permUpgrades === 'object' ? eg_5tr.meta.permUpgrades : {};
+        for (const [m1ui5l, eerzp9mer] of Object.entries(ls6v1z7s)) {
+          bftg6vd.meta.permUpgrades[m1ui5l] = wj6jnw(kp71g3[m1ui5l], 0, eerzp9mer.max, 0);
         }
       }
-      if (j81m0f.profile && typeof j81m0f.profile === 'object') {
-        skzeb5.profile = {
-          name: String(j81m0f.profile.name || 'Player').trim().slice(0, 20) || 'Player',
-          icon: ylamnnfl.includes(j81m0f.profile.icon) ? j81m0f.profile.icon : 'fa-cubes'
+      if (eg_5tr.profile && typeof eg_5tr.profile === 'object') {
+        bftg6vd.profile = {
+          name: String(eg_5tr.profile.name || 'Player').trim().slice(0, 20) || 'Player',
+          icon: k91tari91.includes(eg_5tr.profile.icon) ? eg_5tr.profile.icon : 'fa-cubes'
         };
       }
-      if (j81m0f.settings && typeof j81m0f.settings === 'object') {
-        skzeb5.settings = {
-          sound: j81m0f.settings.sound !== false,
-          bgm: j81m0f.settings.bgm !== false,
-          particles: j81m0f.settings.particles !== false
+      if (eg_5tr.settings && typeof eg_5tr.settings === 'object') {
+        bftg6vd.settings = {
+          sound: eg_5tr.settings.sound !== false,
+          bgm: eg_5tr.settings.bgm !== false,
+          particles: eg_5tr.settings.particles !== false
         };
       }
-      if (Array.isArray(j81m0f.achievements)) {
-        skzeb5.achievements = [...new Set(j81m0f.achievements.filter((hu1n_d6u) => b5ezawk5e.some((osxu8nls) => osxu8nls.id === hu1n_d6u)))];
+      if (Array.isArray(eg_5tr.achievements)) {
+        bftg6vd.achievements = [...new Set(eg_5tr.achievements.filter((n1gnrf) => kenx513en.some((f3e8g1v3e) => f3e8g1v3e.id === n1gnrf)))];
       }
-      if (Array.isArray(j81m0f.scores)) {
-        skzeb5.scores = j81m0f.scores.slice(0, 100).map((l7dhcz) => ({
-          score: hf80m5(l7dhcz?.score, 0, 10000, 0),
-          mode: String(l7dhcz?.mode || 'Infinite').slice(0, 24),
-          date: String(l7dhcz?.date || '').slice(0, 24)
-        })).filter((ixjl0mn) => ixjl0mn.score >= 1).sort((lx29j6, _z4y0_5z4) => _z4y0_5z4.score - lx29j6.score);
+      if (Array.isArray(eg_5tr.scores)) {
+        bftg6vd.scores = eg_5tr.scores.slice(0, 100).map((sgf9wjlg) => ({
+          score: wj6jnw(sgf9wjlg?.score, 0, 10000, 0),
+          mode: String(sgf9wjlg?.mode || 'Infinite').slice(0, 24),
+          date: String(sgf9wjlg?.date || '').slice(0, 24)
+        })).filter((gptdmkupt) => gptdmkupt.score >= 1).sort((f6_l3036, ugmw129g) => ugmw129g.score - f6_l3036.score);
       }
-      if (j81m0f.modeRecords && typeof j81m0f.modeRecords === 'object') {
-        skzeb5.modeRecords = {
-          infinite: hf80m5(j81m0f.modeRecords.infinite, 1, 10000, 1),
-          hell: hf80m5(j81m0f.modeRecords.hell, 1, 10000, 1),
-          tartarus: hf80m5(j81m0f.modeRecords.tartarus, 1, 10000, 1)
+      if (eg_5tr.modeRecords && typeof eg_5tr.modeRecords === 'object') {
+        bftg6vd.modeRecords = {
+          infinite: wj6jnw(eg_5tr.modeRecords.infinite, 1, 10000, 1),
+          hell: wj6jnw(eg_5tr.modeRecords.hell, 1, 10000, 1),
+          tartarus: wj6jnw(eg_5tr.modeRecords.tartarus, 1, 10000, 1)
         };
       }
-      if (j81m0f.speedrunRecords && typeof j81m0f.speedrunRecords === 'object') {
-        for (const u_3t9g of o48h9e548) {
-          const p0x7rej0 = `speedrun_${u_3t9g}`;
-          const xnpk8rmnp = j81m0f.speedrunRecords[p0x7rej0] || {};
-          for (const ve_r3i of wnz71ls) {
-            const qztdkt_zt = xnpk8rmnp[ve_r3i] || {};
-            skzeb5.speedrunRecords[p0x7rej0][ve_r3i] = {
-              bestMs: typeof qztdkt_zt.bestMs === 'number' && Number.isFinite(qztdkt_zt.bestMs) ? hf80m5(qztdkt_zt.bestMs, 1, 86_400_000, 1) : null,
-              clears: hf80m5(qztdkt_zt.clears, 0, 100_000, 0)
+      if (eg_5tr.speedrunRecords && typeof eg_5tr.speedrunRecords === 'object') {
+        for (const y6o0lie of ptw7p61tw) {
+          const _254fp2 = `speedrun_${y6o0lie}`;
+          const jsp_b3 = eg_5tr.speedrunRecords[_254fp2] || {};
+          for (const ftozt9 of uc1iht) {
+            const jlmg16o = jsp_b3[ftozt9] || {};
+            bftg6vd.speedrunRecords[_254fp2][ftozt9] = {
+              bestMs: typeof jlmg16o.bestMs === 'number' && Number.isFinite(jlmg16o.bestMs) ? wj6jnw(jlmg16o.bestMs, 1, 86_400_000, 1) : null,
+              clears: wj6jnw(jlmg16o.clears, 0, 100_000, 0)
             };
           }
         }
       }
-      if (j81m0f.stats && typeof j81m0f.stats === 'object') {
-        const p5bqo92 = j81m0f.stats;
-        skzeb5.stats.ballsFired = hf80m5(p5bqo92.ballsFired, 0, 50_000_000, 0);
-        skzeb5.stats.turnsSurvived = hf80m5(p5bqo92.turnsSurvived, 0, 5_000_000, 0);
-        skzeb5.stats.gemsEarned = hf80m5(p5bqo92.gemsEarned, 0, 9_999_999, 0);
-        skzeb5.stats.coinsEarned = hf80m5(p5bqo92.coinsEarned, 0, 99_999_999, 0);
-        skzeb5.stats.damageDealt = w7vobzl(Number(p5bqo92.damageDealt) || 0, 0, 999_999_999);
-        skzeb5.stats.bricksBroken = hf80m5(p5bqo92.bricksBroken, 0, 50_000_000, 0);
-        for (const uv2l7f4v of pi9wfq) {
-          skzeb5.stats.bricksByType[uv2l7f4v] = hf80m5(p5bqo92.bricksByType?.[uv2l7f4v], 0, 50_000_000, 0);
+      if (eg_5tr.stats && typeof eg_5tr.stats === 'object') {
+        const wac1ob = eg_5tr.stats;
+        bftg6vd.stats.ballsFired = wj6jnw(wac1ob.ballsFired, 0, 50_000_000, 0);
+        bftg6vd.stats.turnsSurvived = wj6jnw(wac1ob.turnsSurvived, 0, 5_000_000, 0);
+        bftg6vd.stats.gemsEarned = wj6jnw(wac1ob.gemsEarned, 0, 9_999_999, 0);
+        bftg6vd.stats.coinsEarned = wj6jnw(wac1ob.coinsEarned, 0, 99_999_999, 0);
+        bftg6vd.stats.damageDealt = lxaa1x5xa(Number(wac1ob.damageDealt) || 0, 0, 999_999_999);
+        bftg6vd.stats.bricksBroken = wj6jnw(wac1ob.bricksBroken, 0, 50_000_000, 0);
+        for (const morc9p4or of o1b09041b) {
+          bftg6vd.stats.bricksByType[morc9p4or] = wj6jnw(wac1ob.bricksByType?.[morc9p4or], 0, 50_000_000, 0);
         }
       }
-      if (j81m0f.tas && typeof j81m0f.tas === 'object') {
-        for (const [kt47d6h, lmuvy_o] of Object.entries(j81m0f.tas)) {
-          if (lmuvy_o && typeof lmuvy_o === 'object' && kt47d6h.length <= 40) {
-            skzeb5.tas[kt47d6h] = {
-              bestSegments: Array.isArray(lmuvy_o.bestSegments) ? lmuvy_o.bestSegments.slice(0, 1000).map((juddexiu) => hf80m5(juddexiu, 0, 86_400_000, 0)) : [],
-              splits: Array.isArray(lmuvy_o.splits) ? lmuvy_o.splits.slice(0, 1000).map((cnzpncbnz) => hf80m5(cnzpncbnz, 0, 86_400_000, 0)) : []
+      if (eg_5tr.tas && typeof eg_5tr.tas === 'object') {
+        for (const [jx6ekzqx, d_m3ddx_] of Object.entries(eg_5tr.tas)) {
+          if (d_m3ddx_ && typeof d_m3ddx_ === 'object' && jx6ekzqx.length <= 40) {
+            bftg6vd.tas[jx6ekzqx] = {
+              bestSegments: Array.isArray(d_m3ddx_.bestSegments) ? d_m3ddx_.bestSegments.slice(0, 1000).map((fkicauzk) => wj6jnw(fkicauzk, 0, 86_400_000, 0)) : [],
+              splits: Array.isArray(d_m3ddx_.splits) ? d_m3ddx_.splits.slice(0, 1000).map((o7yquze7) => wj6jnw(o7yquze7, 0, 86_400_000, 0)) : []
             };
           }
         }
       }
-      if (j81m0f.slots && typeof j81m0f.slots === 'object') {
-        for (let sjwmlxbj = 1; sjwmlxbj <= 5; sjwmlxbj++) {
-          const i_rfte = j81m0f.slots[String(sjwmlxbj)];
-          if (!i_rfte || typeof i_rfte !== 'object' || i_rfte.over || i_rfte.complete) {
-            skzeb5.slots[sjwmlxbj] = null;
+      if (eg_5tr.slots && typeof eg_5tr.slots === 'object') {
+        for (let tqbh18 = 1; tqbh18 <= 5; tqbh18++) {
+          const ccenss = eg_5tr.slots[String(tqbh18)];
+          if (!ccenss || typeof ccenss !== 'object' || ccenss.over || ccenss.complete) {
+            bftg6vd.slots[tqbh18] = null;
             continue;
           }
-          const dikfz8r = this.#v_i9466_i(i_rfte.runMode) ? i_rfte.runMode : 'infinite';
-          const or_xdc = hf80m5(i_rfte.level, 1, 10000, 1);
-          const ml3vnsul3 = dikfz8r === 'hell' && or_xdc === 1 ? 1 : hf80m5(i_rfte.ballCount, 1, 500, 1);
-          const gzdcxnzzd = w7vobzl(Number(i_rfte.anchorX) || k_fy2o0_ / 2, 20, k_fy2o0_ - 20);
-          skzeb5.slots[sjwmlxbj] = {
-            runMode: dikfz8r,
-            target: this.#z1g2rgk1(dikfz8r),
-            difficulty: l89t2fv(dikfz8r, i_rfte.difficulty),
-            level: or_xdc,
-            score: hf80m5(i_rfte.score, 0, 999_999_999, 0),
-            ballCount: ml3vnsul3,
-            anchorX: gzdcxnzzd,
-            buffs: { doubleDamageTurns: hf80m5(i_rfte.buffs?.doubleDamageTurns, 0, 100, 0) },
+          const ydzmjn5 = this.#s6zlrix6(ccenss.runMode) ? ccenss.runMode : 'infinite';
+          const ucr75mdcr = wj6jnw(ccenss.level, 1, 10000, 1);
+          const fcd6bt = ydzmjn5 === 'hell' && ucr75mdcr === 1 ? 1 : wj6jnw(ccenss.ballCount, 1, 500, 1);
+          const vyvx5d = lxaa1x5xa(Number(ccenss.anchorX) || _8je1mu8j / 2, 20, _8je1mu8j - 20);
+          bftg6vd.slots[tqbh18] = {
+            runMode: ydzmjn5,
+            target: this.#pwslse9ws(ydzmjn5),
+            difficulty: wl61zk6l6(ydzmjn5, ccenss.difficulty),
+            level: ucr75mdcr,
+            score: wj6jnw(ccenss.score, 0, 999_999_999, 0),
+            ballCount: fcd6bt,
+            anchorX: vyvx5d,
+            buffs: { doubleDamageTurns: wj6jnw(ccenss.buffs?.doubleDamageTurns, 0, 100, 0) },
             shopPurchases: {
-              doubleDamage: hf80m5(i_rfte.shopPurchases?.doubleDamage, 0, 500, 0),
-              laserWipe: hf80m5(i_rfte.shopPurchases?.laserWipe, 0, 500, 0)
+              doubleDamage: wj6jnw(ccenss.shopPurchases?.doubleDamage, 0, 500, 0),
+              laserWipe: wj6jnw(ccenss.shopPurchases?.laserWipe, 0, 500, 0)
             },
-            pendingAmmo: hf80m5(i_rfte.pendingAmmo, 0, 50, 0),
+            pendingAmmo: wj6jnw(ccenss.pendingAmmo, 0, 50, 0),
             paused: true,
             turnInProgress: false,
             brickMoving: false,
             over: false,
             complete: false,
-            elapsedMs: hf80m5(i_rfte.elapsedMs, 0, 86_400_000, 0),
+            elapsedMs: wj6jnw(ccenss.elapsedMs, 0, 86_400_000, 0),
             resumedAtServerMs: null,
             turnStartedAtServerMs: null,
-            bestLevel: hf80m5(i_rfte.bestLevel, 1, 10000, or_xdc),
-            runBricks: hf80m5(i_rfte.runBricks, 0, 1_000_000, 0),
-            runShots: hf80m5(i_rfte.runShots, 0, 1_000_000, 0),
-            runDamage: w7vobzl(Number(i_rfte.runDamage) || 0, 0, 999_999_999),
-            bestCombo: hf80m5(i_rfte.bestCombo, 0, 50000, 0),
-            overlordTimer: hf80m5(i_rfte.overlordTimer, 0, 10, 0),
-            overlordDialogue: typeof i_rfte.overlordDialogue === 'string' ? i_rfte.overlordDialogue.slice(0, 160) : '"Mortal, your defiance amuses me..."',
-            balls: p95v_o(gzdcxnzzd, ml3vnsul3),
-            bricks: this.#y30kxuv30(i_rfte.bricks),
-            bonusBalls: this.#n0owzh(i_rfte.bonusBalls),
+            bestLevel: wj6jnw(ccenss.bestLevel, 1, 10000, ucr75mdcr),
+            runBricks: wj6jnw(ccenss.runBricks, 0, 1_000_000, 0),
+            runShots: wj6jnw(ccenss.runShots, 0, 1_000_000, 0),
+            runDamage: lxaa1x5xa(Number(ccenss.runDamage) || 0, 0, 999_999_999),
+            bestCombo: wj6jnw(ccenss.bestCombo, 0, 50000, 0),
+            overlordTimer: wj6jnw(ccenss.overlordTimer, 0, 10, 0),
+            overlordDialogue: typeof ccenss.overlordDialogue === 'string' ? ccenss.overlordDialogue.slice(0, 160) : '"Mortal, your defiance amuses me..."',
+            balls: fjkqjvfj(vyvx5d, fcd6bt),
+            bricks: this.#h9wyya(ccenss.bricks),
+            bonusBalls: this.#ajl98p(ccenss.bonusBalls),
             tasRun: {
-              lastElapsed: hf80m5(i_rfte.tasRun?.lastElapsed, 0, 86_400_000, 0),
-              segment: hf80m5(i_rfte.tasRun?.segment, 0, 10000, Math.max(0, or_xdc - 1)),
-              splits: Array.isArray(i_rfte.tasRun?.splits) ? i_rfte.tasRun.splits.slice(0, 1000).map((mt2298y) => hf80m5(mt2298y, 0, 86_400_000, 0)) : [],
-              deltas: Array.isArray(i_rfte.tasRun?.deltas) ? i_rfte.tasRun.deltas.slice(0, 1000) : []
+              lastElapsed: wj6jnw(ccenss.tasRun?.lastElapsed, 0, 86_400_000, 0),
+              segment: wj6jnw(ccenss.tasRun?.segment, 0, 10000, Math.max(0, ucr75mdcr - 1)),
+              splits: Array.isArray(ccenss.tasRun?.splits) ? ccenss.tasRun.splits.slice(0, 1000).map((d7x7rm) => wj6jnw(d7x7rm, 0, 86_400_000, 0)) : [],
+              deltas: Array.isArray(ccenss.tasRun?.deltas) ? ccenss.tasRun.deltas.slice(0, 1000) : []
             },
-            savedAt: hf80m5(i_rfte.savedAt, 0, 9_999_999_999_999, p9mkc339())
+            savedAt: wj6jnw(ccenss.savedAt, 0, 9_999_999_999_999, og4ajaag())
           };
         }
       }
-      return skzeb5;
+      return bftg6vd;
     }
 
-    #cuhf1h9(beamq2j, sjxr1fz = p9mkc339()) {
-      let ybz_za4bz = beamq2j.elapsedMs || 0;
-      if (!beamq2j.paused && beamq2j.resumedAtServerMs !== null) {
-        ybz_za4bz += Math.max(0, sjxr1fz - beamq2j.resumedAtServerMs);
+    #guvch4bu(g2bzvek2b, m75r3p875 = og4ajaag()) {
+      let xjekcm = g2bzvek2b.elapsedMs || 0;
+      if (!g2bzvek2b.paused && g2bzvek2b.resumedAtServerMs !== null) {
+        xjekcm += Math.max(0, m75r3p875 - g2bzvek2b.resumedAtServerMs);
       }
-      return hf80m5(ybz_za4bz, 0, 86_400_000, 0);
+      return wj6jnw(xjekcm, 0, 86_400_000, 0);
     }
 
-    #ezpv9s(jqb4_ax, jhqnxrj = p9mkc339()) {
-      if (!jqb4_ax || jqb4_ax.over || jqb4_ax.complete) return;
-      jqb4_ax.elapsedMs = this.#cuhf1h9(jqb4_ax, jhqnxrj);
-      jqb4_ax.resumedAtServerMs = null;
-      jqb4_ax.paused = true;
+    #gord2l2o(qii9or6, _y5yqe4y5 = og4ajaag()) {
+      if (!qii9or6 || qii9or6.over || qii9or6.complete) return;
+      qii9or6.elapsedMs = this.#guvch4bu(qii9or6, _y5yqe4y5);
+      qii9or6.resumedAtServerMs = null;
+      qii9or6.paused = true;
     }
 
-    #xmgipk9m(bmvo9h, iaeqzrsa = p9mkc339()) {
-      if (!bmvo9h || bmvo9h.over || bmvo9h.complete) return;
-      bmvo9h.paused = false;
-      bmvo9h.resumedAtServerMs = iaeqzrsa;
+    #m4q_svc(zcs3qgec, k3n63kq3n = og4ajaag()) {
+      if (!zcs3qgec || zcs3qgec.over || zcs3qgec.complete) return;
+      zcs3qgec.paused = false;
+      zcs3qgec.resumedAtServerMs = k3n63kq3n;
     }
 
-    #ne5no8fe5(fu1_tdpu1, mhex_ache, vkviax8) {
-      const o_ge69j = b5ezawk5e.find((c9h2zsx9h) => c9h2zsx9h.id === vkviax8);
-      if (!o_ge69j || fu1_tdpu1.achievements.includes(vkviax8)) return;
-      fu1_tdpu1.achievements.push(vkviax8);
-      const bwtymnowt = mhex_ache && mhex_ache.runMode !== 'hell' ? (fu1_tdpu1.meta.permUpgrades.luck || 0) : 0;
-      const wwwyan = Math.round(o_ge69j.rewardCoins * (1 + bwtymnowt * 0.2));
-      fu1_tdpu1.meta.coins = hf80m5(fu1_tdpu1.meta.coins + wwwyan, 0, 9_999_999, fu1_tdpu1.meta.coins);
-      fu1_tdpu1.stats.coinsEarned = hf80m5(fu1_tdpu1.stats.coinsEarned + wwwyan, 0, 99_999_999, fu1_tdpu1.stats.coinsEarned);
-      if (!mhex_ache || mhex_ache.runMode !== 'hell') {
-        fu1_tdpu1.meta.gems = hf80m5(fu1_tdpu1.meta.gems + o_ge69j.rewardGems, 0, 999_999, fu1_tdpu1.meta.gems);
-        fu1_tdpu1.stats.gemsEarned = hf80m5(fu1_tdpu1.stats.gemsEarned + o_ge69j.rewardGems, 0, 9_999_999, fu1_tdpu1.stats.gemsEarned);
+    #mplmaucpl(u8_e6y1, jzakb7, hmflod5mf) {
+      const v9_1qhy = kenx513en.find((m3zxnuu) => m3zxnuu.id === hmflod5mf);
+      if (!v9_1qhy || u8_e6y1.achievements.includes(hmflod5mf)) return;
+      u8_e6y1.achievements.push(hmflod5mf);
+      const lfzaov5 = jzakb7 && jzakb7.runMode !== 'hell' ? (u8_e6y1.meta.permUpgrades.luck || 0) : 0;
+      const fre1nikr = Math.round(v9_1qhy.rewardCoins * (1 + lfzaov5 * 0.2));
+      u8_e6y1.meta.coins = wj6jnw(u8_e6y1.meta.coins + fre1nikr, 0, 9_999_999, u8_e6y1.meta.coins);
+      u8_e6y1.stats.coinsEarned = wj6jnw(u8_e6y1.stats.coinsEarned + fre1nikr, 0, 99_999_999, u8_e6y1.stats.coinsEarned);
+      if (!jzakb7 || jzakb7.runMode !== 'hell') {
+        u8_e6y1.meta.gems = wj6jnw(u8_e6y1.meta.gems + v9_1qhy.rewardGems, 0, 999_999, u8_e6y1.meta.gems);
+        u8_e6y1.stats.gemsEarned = wj6jnw(u8_e6y1.stats.gemsEarned + v9_1qhy.rewardGems, 0, 9_999_999, u8_e6y1.stats.gemsEarned);
       }
     }
 
-    #gyhpkdzyh(byrew1m, fpurm86) {
-      if (byrew1m.stats.bricksBroken >= 1) this.#ne5no8fe5(byrew1m, fpurm86, 'first_blood');
-      if (byrew1m.stats.bricksBroken >= 1000) this.#ne5no8fe5(byrew1m, fpurm86, 'bricks_1000');
-      if (fpurm86.level >= 10) this.#ne5no8fe5(byrew1m, fpurm86, 'lvl_10');
-      if (fpurm86.level >= 25) this.#ne5no8fe5(byrew1m, fpurm86, 'lvl_25');
-      if (fpurm86.level >= 50) this.#ne5no8fe5(byrew1m, fpurm86, 'lvl_50');
-      if (fpurm86.level >= 100) this.#ne5no8fe5(byrew1m, fpurm86, 'lvl_100');
-      if (fpurm86.runMode === 'hell' && fpurm86.level >= 20) this.#ne5no8fe5(byrew1m, fpurm86, 'hell_survivor');
-      if (fpurm86.runMode === 'tartarus' && fpurm86.level >= 15) this.#ne5no8fe5(byrew1m, fpurm86, 'tartarus_15');
-      if (fpurm86.difficulty === 'asian' && fpurm86.level >= 20) this.#ne5no8fe5(byrew1m, fpurm86, 'asian_master');
-      if (fpurm86.ballCount >= 50) this.#ne5no8fe5(byrew1m, fpurm86, 'balls_50');
+    #preim1or(kaoy2e0ao, xah75g) {
+      if (kaoy2e0ao.stats.bricksBroken >= 1) this.#mplmaucpl(kaoy2e0ao, xah75g, 'first_blood');
+      if (kaoy2e0ao.stats.bricksBroken >= 1000) this.#mplmaucpl(kaoy2e0ao, xah75g, 'bricks_1000');
+      if (xah75g.level >= 10) this.#mplmaucpl(kaoy2e0ao, xah75g, 'lvl_10');
+      if (xah75g.level >= 25) this.#mplmaucpl(kaoy2e0ao, xah75g, 'lvl_25');
+      if (xah75g.level >= 50) this.#mplmaucpl(kaoy2e0ao, xah75g, 'lvl_50');
+      if (xah75g.level >= 100) this.#mplmaucpl(kaoy2e0ao, xah75g, 'lvl_100');
+      if (xah75g.runMode === 'hell' && xah75g.level >= 20) this.#mplmaucpl(kaoy2e0ao, xah75g, 'hell_survivor');
+      if (xah75g.runMode === 'tartarus' && xah75g.level >= 15) this.#mplmaucpl(kaoy2e0ao, xah75g, 'tartarus_15');
+      if (xah75g.difficulty === 'asian' && xah75g.level >= 20) this.#mplmaucpl(kaoy2e0ao, xah75g, 'asian_master');
+      if (xah75g.ballCount >= 50) this.#mplmaucpl(kaoy2e0ao, xah75g, 'balls_50');
     }
 
-    #ghlxi0oh(ht538g_, tbh6dod, _4gj8il = p9mkc339()) {
-      const xn483adn4 = this.#cuhf1h9(tbh6dod, _4gj8il);
-      if (['infinite', 'hell', 'tartarus'].includes(tbh6dod.runMode)) {
-        ht538g_.modeRecords[tbh6dod.runMode] = Math.max(ht538g_.modeRecords[tbh6dod.runMode], tbh6dod.level);
-        ht538g_.scores.push({
-          score: hf80m5(tbh6dod.level, 1, 10000, 1),
-          mode: this.#o9fxk0r9(tbh6dod.runMode),
+    #puhn7z(px584vpx5, nu_tp7, y5ru69m5 = og4ajaag()) {
+      const cpmesqzpm = this.#guvch4bu(nu_tp7, y5ru69m5);
+      if (['infinite', 'hell', 'tartarus'].includes(nu_tp7.runMode)) {
+        px584vpx5.modeRecords[nu_tp7.runMode] = Math.max(px584vpx5.modeRecords[nu_tp7.runMode], nu_tp7.level);
+        px584vpx5.scores.push({
+          score: wj6jnw(nu_tp7.level, 1, 10000, 1),
+          mode: this.#m7lotbe7l(nu_tp7.runMode),
           date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: '2-digit' })
         });
-        ht538g_.scores.sort((r9ioy389, bk2o48) => bk2o48.score - r9ioy389.score);
-        ht538g_.scores = ht538g_.scores.slice(0, 100);
-      } else if (tbh6dod.target !== null && tbh6dod.level >= tbh6dod.target) {
-        const ysdardqs = ht538g_.speedrunRecords[tbh6dod.runMode];
-        if (ysdardqs && ysdardqs[tbh6dod.difficulty]) {
-          const lde84e = ysdardqs[tbh6dod.difficulty].bestMs;
-          ysdardqs[tbh6dod.difficulty].bestMs = lde84e === null ? xn483adn4 : Math.min(lde84e, xn483adn4);
-          ysdardqs[tbh6dod.difficulty].clears = hf80m5(ysdardqs[tbh6dod.difficulty].clears + 1, 0, 100_000, 1);
+        px584vpx5.scores.sort((wrytlvgry, qh_f0r2) => qh_f0r2.score - wrytlvgry.score);
+        px584vpx5.scores = px584vpx5.scores.slice(0, 100);
+      } else if (nu_tp7.target !== null && nu_tp7.level >= nu_tp7.target) {
+        const m59z6i = px584vpx5.speedrunRecords[nu_tp7.runMode];
+        if (m59z6i && m59z6i[nu_tp7.difficulty]) {
+          const c7rdxw = m59z6i[nu_tp7.difficulty].bestMs;
+          m59z6i[nu_tp7.difficulty].bestMs = c7rdxw === null ? cpmesqzpm : Math.min(c7rdxw, cpmesqzpm);
+          m59z6i[nu_tp7.difficulty].clears = wj6jnw(m59z6i[nu_tp7.difficulty].clears + 1, 0, 100_000, 1);
         }
       }
     }
 
-    async #ihwfli6h() {
-      if (this.#anch1_q) return this.#anch1_q;
-      if (this.#irerpvar) return this.#irerpvar;
-      this.#irerpvar = ccmrkw((async () => {
-        const okkgxt0kk = globalThis.crypto?.subtle;
-        if (!okkgxt0kk) return null;
+    async #i3vqlmt() {
+      if (this.#vacirc) return this.#vacirc;
+      if (this.#ihbsekb) return this.#ihbsekb;
+      this.#ihbsekb = udf4hjtdf((async () => {
+        const s9oti1y = globalThis.crypto?.subtle;
+        if (!s9oti1y) return null;
         try {
           if (typeof indexedDB !== 'undefined' && typeof indexedDB.open === 'function') {
-            const vkcljw2k = await new Promise((u4hrn1e) => {
-              let wk_48o = false;
-              const epyu7o = (snsxyt) => {
-                if (wk_48o) return;
-                wk_48o = true;
-                ho_9t9d(hmvdgj);
-                u4hrn1e(snsxyt);
+            const i1dl1zh = await new Promise((axcogw0xc) => {
+              let _x2__0wx2 = false;
+              const qphrvxtph = (ck_oe7yk_) => {
+                if (_x2__0wx2) return;
+                _x2__0wx2 = true;
+                smz1dxxmz(dbbxpopbb);
+                axcogw0xc(ck_oe7yk_);
               };
-              const hmvdgj = oa11t1(() => epyu7o(null), 250);
+              const dbbxpopbb = _9m8l0(() => qphrvxtph(null), 250);
               try {
-                const s2ykhc52 = indexedDB.open(ea_raeaa_(28), 1);
-                s2ykhc52.onupgradeneeded = () => {
+                const rm2pb0 = indexedDB.open(q5uvld3(28), 1);
+                rm2pb0.onupgradeneeded = () => {
                   try {
-                    const q263lqi = s2ykhc52.result;
-                    if (!q263lqi.objectStoreNames.contains('keys')) q263lqi.createObjectStore('keys');
+                    const ccnfjjq = rm2pb0.result;
+                    if (!ccnfjjq.objectStoreNames.contains('keys')) ccnfjjq.createObjectStore('keys');
                   } catch {}
                 };
-                s2ykhc52.onsuccess = () => {
-                  const ikgf_q = s2ykhc52.result;
+                rm2pb0.onsuccess = () => {
+                  const o073ot60 = rm2pb0.result;
                   try {
-                    const tv_sbsr = ikgf_q.transaction('keys', 'readonly');
-                    const ti1uslri = tv_sbsr.objectStore('keys').get('vault_key');
-                    ti1uslri.onsuccess = () => { try { ikgf_q.close(); } catch {} epyu7o(ti1uslri.result || null); };
-                    ti1uslri.onerror = () => { try { ikgf_q.close(); } catch {} epyu7o(null); };
-                  } catch { try { ikgf_q.close(); } catch {} epyu7o(null); }
+                    const lvtq36 = o073ot60.transaction('keys', 'readonly');
+                    const eahgcc = lvtq36.objectStore('keys').get('vault_key');
+                    eahgcc.onsuccess = () => { try { o073ot60.close(); } catch {} qphrvxtph(eahgcc.result || null); };
+                    eahgcc.onerror = () => { try { o073ot60.close(); } catch {} qphrvxtph(null); };
+                  } catch { try { o073ot60.close(); } catch {} qphrvxtph(null); }
                 };
-                s2ykhc52.onerror = () => epyu7o(null);
-                s2ykhc52.onblocked = () => epyu7o(null);
-              } catch { epyu7o(null); }
+                rm2pb0.onerror = () => qphrvxtph(null);
+                rm2pb0.onblocked = () => qphrvxtph(null);
+              } catch { qphrvxtph(null); }
             });
-            if (vkcljw2k) {
-              this.#anch1_q = vkcljw2k;
-              return vkcljw2k;
+            if (i1dl1zh) {
+              this.#vacirc = i1dl1zh;
+              return i1dl1zh;
             }
           }
         } catch {}
 
         // Non-extractable key: never readable from JS source or inspect console
-        let uo53vuxo5 = null;
+        let vztlsu0zt = null;
         try {
-          uo53vuxo5 = await ccmrkw(
-            okkgxt0kk.generateKey({ name: 'AES-GCM', length: 256 }, false, ['encrypt', 'decrypt']),
+          vztlsu0zt = await udf4hjtdf(
+            s9oti1y.generateKey({ name: 'AES-GCM', length: 256 }, false, ['encrypt', 'decrypt']),
             400,
             null
           );
         } catch {
           return null;
         }
-        if (!uo53vuxo5) return null;
-        this.#anch1_q = uo53vuxo5;
+        if (!vztlsu0zt) return null;
+        this.#vacirc = vztlsu0zt;
         try {
           if (typeof indexedDB !== 'undefined' && typeof indexedDB.open === 'function') {
-            await new Promise((_7raahk) => {
-              let _utb00rut = false;
-              const e92tadk9 = () => {
-                if (_utb00rut) return;
-                _utb00rut = true;
-                ho_9t9d(qbyz28jb);
-                _7raahk();
+            await new Promise((hw8fa1p) => {
+              let vfw24sjf = false;
+              const r1alf06 = () => {
+                if (vfw24sjf) return;
+                vfw24sjf = true;
+                smz1dxxmz(hkda7ywk);
+                hw8fa1p();
               };
-              const qbyz28jb = oa11t1(e92tadk9, 250);
+              const hkda7ywk = _9m8l0(r1alf06, 250);
               try {
-                const t3b4dqe3 = indexedDB.open(ea_raeaa_(28), 1);
-                t3b4dqe3.onupgradeneeded = () => {
+                const zc_wq2_c = indexedDB.open(q5uvld3(28), 1);
+                zc_wq2_c.onupgradeneeded = () => {
                   try {
-                    const eiwm6vpiw = t3b4dqe3.result;
-                    if (!eiwm6vpiw.objectStoreNames.contains('keys')) eiwm6vpiw.createObjectStore('keys');
+                    const hdjh9jrd = zc_wq2_c.result;
+                    if (!hdjh9jrd.objectStoreNames.contains('keys')) hdjh9jrd.createObjectStore('keys');
                   } catch {}
                 };
-                t3b4dqe3.onsuccess = () => {
-                  const ymuldx3 = t3b4dqe3.result;
+                zc_wq2_c.onsuccess = () => {
+                  const xaeqhu = zc_wq2_c.result;
                   try {
-                    const s_3wu1d_3 = ymuldx3.transaction('keys', 'readwrite');
-                    s_3wu1d_3.objectStore('keys').put(uo53vuxo5, 'vault_key');
-                    s_3wu1d_3.oncomplete = () => { try { ymuldx3.close(); } catch {} e92tadk9(); };
-                    s_3wu1d_3.onerror = () => { try { ymuldx3.close(); } catch {} e92tadk9(); };
-                  } catch { try { ymuldx3.close(); } catch {} e92tadk9(); }
+                    const g9tsm2 = xaeqhu.transaction('keys', 'readwrite');
+                    g9tsm2.objectStore('keys').put(vztlsu0zt, 'vault_key');
+                    g9tsm2.oncomplete = () => { try { xaeqhu.close(); } catch {} r1alf06(); };
+                    g9tsm2.onerror = () => { try { xaeqhu.close(); } catch {} r1alf06(); };
+                  } catch { try { xaeqhu.close(); } catch {} r1alf06(); }
                 };
-                t3b4dqe3.onerror = e92tadk9;
-                t3b4dqe3.onblocked = e92tadk9;
-              } catch { e92tadk9(); }
+                zc_wq2_c.onerror = r1alf06;
+                zc_wq2_c.onblocked = r1alf06;
+              } catch { r1alf06(); }
             });
           }
         } catch {}
-        return uo53vuxo5;
+        return vztlsu0zt;
       })(), 750, null);
-      return this.#irerpvar;
+      return this.#ihbsekb;
     }
 
-    async #nx22fi6(r1jzhu21) {
+    async #j1f5qaf(y3f923d3f) {
       try {
-        const vt2593ft2 = await this.#ihwfli6h();
-        const emb3st = new TextEncoder().encode(p5thzh(r1jzhu21));
-        if (!vt2593ft2 || !globalThis.crypto?.subtle || !pvo02p) {
+        const a7exm2 = await this.#i3vqlmt();
+        const sk9tkeg = new TextEncoder().encode(woc6kxlo(y3f923d3f));
+        if (!a7exm2 || !globalThis.crypto?.subtle || !fq2xze) {
           return '';
         }
-        const tv751okv7 = new Uint8Array(12);
-        pvo02p(tv751okv7);
-        const logwk5xog = await ccmrkw(
-          globalThis.crypto.subtle.encrypt({ name: 'AES-GCM', iv: tv751okv7 }, vt2593ft2, emb3st),
+        const h6djed = new Uint8Array(12);
+        fq2xze(h6djed);
+        const _e5c_cie5 = await udf4hjtdf(
+          globalThis.crypto.subtle.encrypt({ name: 'AES-GCM', iv: h6djed }, a7exm2, sk9tkeg),
           400,
           null
         );
-        if (!logwk5xog) return '';
-        const bt61s1st = new Uint8Array(logwk5xog);
-        const iqt14llq = new Uint8Array(tv751okv7.length + bt61s1st.length);
-        iqt14llq.set(tv751okv7, 0);
-        iqt14llq.set(bt61s1st, tv751okv7.length);
-        let fyc18p5 = '';
-        for (let wezecaze = 0; wezecaze < iqt14llq.length; wezecaze++) fyc18p5 += String.fromCharCode(iqt14llq[wezecaze]);
-        return btoa(fyc18p5);
+        if (!_e5c_cie5) return '';
+        const bgc4v4 = new Uint8Array(_e5c_cie5);
+        const a2l22cr2l = new Uint8Array(h6djed.length + bgc4v4.length);
+        a2l22cr2l.set(h6djed, 0);
+        a2l22cr2l.set(bgc4v4, h6djed.length);
+        let mtdp8s_ = '';
+        for (let wenctkre = 0; wenctkre < a2l22cr2l.length; wenctkre++) mtdp8s_ += String.fromCharCode(a2l22cr2l[wenctkre]);
+        return btoa(mtdp8s_);
       } catch {
         return '';
       }
     }
 
-    async #dki4sqv(uzpsqs1zp) {
+    async #mbiwcb(bct63vn) {
       try {
-        const c4eb7n = await this.#ihwfli6h();
-        if (!c4eb7n || !globalThis.crypto?.subtle || !uzpsqs1zp) return null;
-        const a2wc0r1 = atob(uzpsqs1zp.trim());
-        const bkigek = new Uint8Array(a2wc0r1.length);
-        for (let lptq_pqpt = 0; lptq_pqpt < a2wc0r1.length; lptq_pqpt++) bkigek[lptq_pqpt] = a2wc0r1.charCodeAt(lptq_pqpt);
-        if (bkigek.length < 14) return null;
-        const fgyoh49gy = bkigek.slice(0, 12);
-        const aylkecyy = bkigek.slice(12);
-        const jmhi1g = await ccmrkw(
-          globalThis.crypto.subtle.decrypt({ name: 'AES-GCM', iv: fgyoh49gy }, c4eb7n, aylkecyy),
+        const dff19qjff = await this.#i3vqlmt();
+        if (!dff19qjff || !globalThis.crypto?.subtle || !bct63vn) return null;
+        const r1cp6r81 = atob(bct63vn.trim());
+        const gxwsax2xw = new Uint8Array(r1cp6r81.length);
+        for (let zenegbcen = 0; zenegbcen < r1cp6r81.length; zenegbcen++) gxwsax2xw[zenegbcen] = r1cp6r81.charCodeAt(zenegbcen);
+        if (gxwsax2xw.length < 14) return null;
+        const u2jb6wg2j = gxwsax2xw.slice(0, 12);
+        const kg0wk2 = gxwsax2xw.slice(12);
+        const ngec0doge = await udf4hjtdf(
+          globalThis.crypto.subtle.decrypt({ name: 'AES-GCM', iv: u2jb6wg2j }, dff19qjff, kg0wk2),
           400,
           null
         );
-        if (!jmhi1g) return null;
-        return o1kkau11k(new TextDecoder().decode(jmhi1g));
+        if (!ngec0doge) return null;
+        return molhiep(new TextDecoder().decode(ngec0doge));
       } catch {
         return null;
       }
     }
 
-    async #yewz8ia(pr99qutr9) {
-      const hjuk6jyj = await this.#nx22fi6(pr99qutr9);
-      return hjuk6jyj ? `${this.#tuddzpt}${hjuk6jyj}` : '';
+    async #aqur0ms(fri3rs2ri) {
+      const r5k5ctc = await this.#j1f5qaf(fri3rs2ri);
+      return r5k5ctc ? `${this.#vyoqds4y}${r5k5ctc}` : '';
     }
 
-    async #u9_j19m9_(on8_zcnn8) {
-      return this.#dki4sqv(on8_zcnn8);
+    async #mdk6jmpd(kd3jjw5) {
+      return this.#mbiwcb(kd3jjw5);
     }
 
-    async #_h7zlg8() {
-      const va36a42a3 = this.#fiews0;
-      if (!va36a42a3) return '';
-      va36a42a3.rev += 1;
-      const fjyrn7pj = await this.#yewz8ia(va36a42a3);
-      if (fjyrn7pj) {
-        try { v0vklv(ayhmix4, fjyrn7pj); } catch {}
+    async #h21wos() {
+      const _0wt3bx = this.#t3p_l5k3;
+      if (!_0wt3bx) return '';
+      _0wt3bx.rev += 1;
+      const w3tuzw83t = await this.#aqur0ms(_0wt3bx);
+      if (w3tuzw83t) {
+        try { z0ouxz4(sghabva, w3tuzw83t); } catch {}
       }
-      return fjyrn7pj;
+      return w3tuzw83t;
     }
   }
 
-  class dtdxnkgt {
-    #dm37wsv = null;
-    #woucwdoo = null;
-    #c9j7rqr9 = null;
-    #q7uqmxv7u = Promise.resolve();
-    #bhq9_p = false;
-    #tyyzyzs = 0;
-    #mko6n7b = 0;
-    #n01m61a0 = null;
+  class x2ybyy {
+    #ek16me7k = null;
+    #e17mzk11 = null;
+    #npdtsgmp = null;
+    #ckcekgokc = Promise.resolve();
+    #im0gow6m0 = false;
+    #dyguumiy = 0;
+    #byd0m26y = 0;
+    #ptl9l1f = null;
 
-    async ms5w333() {
-      for (const pc7vx0 of habtb92ab) {
-        try { cz_fczkz_(pc7vx0); } catch {}
+    async h5aikdj5a() {
+      for (const fil5gk0i of t8_cj5) {
+        try { w8hkhfk(fil5gk0i); } catch {}
       }
 
-      let p894o0 = '';
-      try { p894o0 = raqdxpraq(ayhmix4) || ''; } catch {}
+      let fcycp3wc = '';
+      try { fcycp3wc = rm4zcnhm4(sghabva) || ''; } catch {}
 
-      const eqkaq51 = typeof location !== 'undefined' ? String(location.protocol || '') : '';
-      const zjg9swqjg = typeof location !== 'undefined' && location.origin === 'null';
-      const neb9eeqeb = !['http:', 'https:'].includes(eqkaq51);
-      const urpawj = typeof navigator !== 'undefined' && navigator.onLine === false;
-      if (neb9eeqeb || zjg9swqjg || urpawj || !g2v4za92) {
-        return this.#onzjxemnz();
+      const b907s4 = typeof location !== 'undefined' ? String(location.protocol || '') : '';
+      const f45d_5 = typeof location !== 'undefined' && location.origin === 'null';
+      const kc420uec = !['http:', 'https:'].includes(b907s4);
+      const ltp04j = typeof navigator !== 'undefined' && navigator.onLine === false;
+      if (kc420uec || f45d_5 || ltp04j || !x5jm7zq5) {
+        return this.#g573h04();
       }
 
-      const i7sjkav = await ccmrkw(
-        this.#uewdlq5e(ea_raeaa_(0), { vaultToken: p894o0 }, false),
+      const x1fuyum1f = await udf4hjtdf(
+        this.#flzrvk(q5uvld3(0), { vaultToken: fcycp3wc }, false),
         1250,
         { ok: false, __staticNotFound: true }
       );
-      if (!i7sjkav || i7sjkav.__staticNotFound) {
-        return this.#onzjxemnz();
+      if (!x1fuyum1f || x1fuyum1f.__staticNotFound) {
+        return this.#g573h04();
       }
 
-      if (!i7sjkav.ok || !i7sjkav.sessionToken) {
-        this.#bhq9_p = true;
+      if (!x1fuyum1f.ok || !x1fuyum1f.sessionToken) {
+        this.#im0gow6m0 = true;
         throw new Error('Server verification unavailable');
       }
-      this.#dm37wsv = i7sjkav.sessionToken;
-      this.#woucwdoo = i7sjkav.actionNonce;
-      if (i7sjkav.vaultToken) {
-        try { v0vklv(ayhmix4, i7sjkav.vaultToken); } catch {}
+      this.#ek16me7k = x1fuyum1f.sessionToken;
+      this.#e17mzk11 = x1fuyum1f.actionNonce;
+      if (x1fuyum1f.vaultToken) {
+        try { z0ouxz4(sghabva, x1fuyum1f.vaultToken); } catch {}
       }
-      this.#i7yek2b(i7sjkav.snapshot);
-      if (i7sjkav.tampered) {
-        ptf66jk('Integrity Notice', 'Tampered local save data was detected and reset by server verification.');
+      this.#j976xqr97(x1fuyum1f.snapshot);
+      if (x1fuyum1f.tampered) {
+        qm1kwpum('Integrity Notice', 'Tampered local save data was detected and reset by server verification.');
       }
-      return this.#c9j7rqr9;
+      return this.#npdtsgmp;
     }
 
-    td83s3() {
-      if (!this.#n01m61a0) {
-        this.#n01m61a0 = new teqdvkfeq();
+    zcdihy3c() {
+      if (!this.#ptl9l1f) {
+        this.#ptl9l1f = new zscpzuos();
       }
-      const n24sya = this.#n01m61a0.cloy5rvlo();
-      this.#dm37wsv = 'local';
-      this.#woucwdoo = 'local';
-      this.#bhq9_p = false;
-      this.#i7yek2b(n24sya.snapshot);
-      return this.#c9j7rqr9;
+      const bkytnng = this.#ptl9l1f.mvn3xzovn();
+      this.#ek16me7k = 'local';
+      this.#e17mzk11 = 'local';
+      this.#im0gow6m0 = false;
+      this.#j976xqr97(bkytnng.snapshot);
+      return this.#npdtsgmp;
     }
 
-    async #onzjxemnz() {
-      if (!this.#n01m61a0) {
-        this.#n01m61a0 = new teqdvkfeq();
+    async #g573h04() {
+      if (!this.#ptl9l1f) {
+        this.#ptl9l1f = new zscpzuos();
       }
-      const hclrbn = await ccmrkw(this.#n01m61a0.ms5w333(), 1000, null);
-      if (!hclrbn || !hclrbn.snapshot) {
-        return this.td83s3();
+      const z2lk_k = await udf4hjtdf(this.#ptl9l1f.h5aikdj5a(), 1000, null);
+      if (!z2lk_k || !z2lk_k.snapshot) {
+        return this.zcdihy3c();
       }
-      this.#dm37wsv = 'local';
-      this.#woucwdoo = 'local';
-      this.#bhq9_p = false;
-      this.#i7yek2b(hclrbn.snapshot);
-      if (hclrbn.tampered) {
-        ptf66jk('Integrity Notice', 'Tampered local save data was detected and reset.');
+      this.#ek16me7k = 'local';
+      this.#e17mzk11 = 'local';
+      this.#im0gow6m0 = false;
+      this.#j976xqr97(z2lk_k.snapshot);
+      if (z2lk_k.tampered) {
+        qm1kwpum('Integrity Notice', 'Tampered local save data was detected and reset.');
       }
-      return this.#c9j7rqr9;
+      return this.#npdtsgmp;
     }
 
-    xbqwzn() {
-      return Boolean(this.#dm37wsv && this.#c9j7rqr9 && !this.#bhq9_p);
+    pp2jyp() {
+      return Boolean(this.#ek16me7k && this.#npdtsgmp && !this.#im0gow6m0);
     }
 
-    ccwgtj_() {
-      return this.#bhq9_p;
+    si5oiuq() {
+      return this.#im0gow6m0;
     }
 
-    pmm22ozm() {
-      return this.#c9j7rqr9;
+    wgiha8_gi() {
+      return this.#npdtsgmp;
     }
 
-    ycae4g() {
-      const knox2h_no = this.#c9j7rqr9;
-      const wcko_h7c = knox2h_no?.activeRun;
-      if (!wcko_h7c) return 0;
-      if (wcko_h7c.paused || wcko_h7c.over || wcko_h7c.complete || wcko_h7c.resumedAtServerMs === null) {
-        return wcko_h7c.elapsedMs || 0;
+    p83ks6() {
+      const b0x7xbv0 = this.#npdtsgmp;
+      const kljx8iql = b0x7xbv0?.activeRun;
+      if (!kljx8iql) return 0;
+      if (kljx8iql.paused || kljx8iql.over || kljx8iql.complete || kljx8iql.resumedAtServerMs === null) {
+        return kljx8iql.elapsedMs || 0;
       }
-      const clwmn_v = Math.max(0, dlj9bhl() - this.#tyyzyzs);
-      return Math.max(0, Math.min(86400000, Math.round(this.#mko6n7b + clwmn_v)));
+      const xpg10n = Math.max(0, oouh5eeou() - this.#dyguumiy);
+      return Math.max(0, Math.min(86400000, Math.round(this.#byd0m26y + xpg10n)));
     }
 
-    i3sg5i(f8ker3a8k, p8hvh1 = {}) {
-      if (this.#bhq9_p || !this.#dm37wsv) {
+    kz5bv96z5(kr3eo34, k19ogaf1 = {}) {
+      if (this.#im0gow6m0 || !this.#ek16me7k) {
         return Promise.reject(new Error('Session locked'));
       }
-      if (this.#n01m61a0) {
-        const _v10s7 = this.#q7uqmxv7u.then(async () => {
-          const sdr3y8 = await this.#n01m61a0.i3sg5i(f8ker3a8k, p8hvh1);
-          this.#i7yek2b(sdr3y8);
-          return this.#c9j7rqr9;
+      if (this.#ptl9l1f) {
+        const z34zvuu34 = this.#ckcekgokc.then(async () => {
+          const aa76l90a = await this.#ptl9l1f.kz5bv96z5(kr3eo34, k19ogaf1);
+          this.#j976xqr97(aa76l90a);
+          return this.#npdtsgmp;
         });
-        this.#q7uqmxv7u = _v10s7.catch(() => {});
-        return _v10s7;
+        this.#ckcekgokc = z34zvuu34.catch(() => {});
+        return z34zvuu34;
       }
-      const hdflfjn = this.#q7uqmxv7u.then(async () => {
-        const xi3pjr = await this.#uewdlq5e(ea_raeaa_(1), {
-          action: f8ker3a8k,
-          payload: p8hvh1,
-          actionNonce: this.#woucwdoo
+      const e7z9cwr = this.#ckcekgokc.then(async () => {
+        const m8nyl1h8 = await this.#flzrvk(q5uvld3(1), {
+          action: kr3eo34,
+          payload: k19ogaf1,
+          actionNonce: this.#e17mzk11
         }, true);
-        if (!xi3pjr || !xi3pjr.ok) {
-          throw new Error(xi3pjr?.error || 'Action rejected');
+        if (!m8nyl1h8 || !m8nyl1h8.ok) {
+          throw new Error(m8nyl1h8?.error || 'Action rejected');
         }
-        this.#woucwdoo = xi3pjr.actionNonce;
-        if (xi3pjr.vaultToken) {
-          try { v0vklv(ayhmix4, xi3pjr.vaultToken); } catch {}
+        this.#e17mzk11 = m8nyl1h8.actionNonce;
+        if (m8nyl1h8.vaultToken) {
+          try { z0ouxz4(sghabva, m8nyl1h8.vaultToken); } catch {}
         }
-        this.#i7yek2b(xi3pjr.snapshot);
-        return this.#c9j7rqr9;
+        this.#j976xqr97(m8nyl1h8.snapshot);
+        return this.#npdtsgmp;
       });
-      this.#q7uqmxv7u = hdflfjn.catch(() => {});
-      return hdflfjn;
+      this.#ckcekgokc = e7z9cwr.catch(() => {});
+      return e7z9cwr;
     }
 
-    async e6k1ake6k(x2z91h52, bt4476d) {
-      if (this.#bhq9_p || !this.#dm37wsv) throw new Error('Session locked');
-      if (this.#n01m61a0) {
-        return this.#n01m61a0.xyn13s9y(x2z91h52, bt4476d);
+    async ageehrj(itnln9v, oj98dkpj) {
+      if (this.#im0gow6m0 || !this.#ek16me7k) throw new Error('Session locked');
+      if (this.#ptl9l1f) {
+        return this.#ptl9l1f.mmp4z5fmp(itnln9v, oj98dkpj);
       }
-      const be7a_je = await this.#uewdlq5e(ea_raeaa_(2), { format: x2z91h52, slot: bt4476d }, true);
-      if (!be7a_je || !be7a_je.ok || typeof be7a_je.content !== 'string') {
+      const bk59z8 = await this.#flzrvk(q5uvld3(2), { format: itnln9v, slot: oj98dkpj }, true);
+      if (!bk59z8 || !bk59z8.ok || typeof bk59z8.content !== 'string') {
         throw new Error('Export failed');
       }
-      return be7a_je.content;
+      return bk59z8.content;
     }
 
-    t8tya6m(ivh3ln7v, jxxdahox) {
-      if (this.#bhq9_p || !this.#dm37wsv) {
+    zqzvum4q(xr5d10, zxhyi6) {
+      if (this.#im0gow6m0 || !this.#ek16me7k) {
         return Promise.reject(new Error('Session locked'));
       }
-      if (this.#n01m61a0) {
-        const wxmh291 = this.#q7uqmxv7u.then(async () => {
-          const gz4j8_cz = await this.#n01m61a0.cvsed5avs(ivh3ln7v, jxxdahox);
-          this.#i7yek2b(gz4j8_cz);
-          return this.#c9j7rqr9;
+      if (this.#ptl9l1f) {
+        const rpj5wk = this.#ckcekgokc.then(async () => {
+          const gonsa4v = await this.#ptl9l1f.iue35ti(xr5d10, zxhyi6);
+          this.#j976xqr97(gonsa4v);
+          return this.#npdtsgmp;
         });
-        this.#q7uqmxv7u = wxmh291.catch(() => {});
-        return wxmh291;
+        this.#ckcekgokc = rpj5wk.catch(() => {});
+        return rpj5wk;
       }
-      const efh3f0 = this.#q7uqmxv7u.then(async () => {
-        const fnrbi_bnr = await this.#uewdlq5e(ea_raeaa_(3), {
-          rawText: ivh3ln7v,
-          slot: jxxdahox,
-          actionNonce: this.#woucwdoo
+      const nfy6f1if = this.#ckcekgokc.then(async () => {
+        const gv_qaqu = await this.#flzrvk(q5uvld3(3), {
+          rawText: xr5d10,
+          slot: zxhyi6,
+          actionNonce: this.#e17mzk11
         }, true);
-        if (!fnrbi_bnr || !fnrbi_bnr.ok) {
-          throw new Error(fnrbi_bnr?.error || 'Invalid save data');
+        if (!gv_qaqu || !gv_qaqu.ok) {
+          throw new Error(gv_qaqu?.error || 'Invalid save data');
         }
-        this.#woucwdoo = fnrbi_bnr.actionNonce;
-        if (fnrbi_bnr.vaultToken) {
-          try { v0vklv(ayhmix4, fnrbi_bnr.vaultToken); } catch {}
+        this.#e17mzk11 = gv_qaqu.actionNonce;
+        if (gv_qaqu.vaultToken) {
+          try { z0ouxz4(sghabva, gv_qaqu.vaultToken); } catch {}
         }
-        this.#i7yek2b(fnrbi_bnr.snapshot);
-        return this.#c9j7rqr9;
+        this.#j976xqr97(gv_qaqu.snapshot);
+        return this.#npdtsgmp;
       });
-      this.#q7uqmxv7u = efh3f0.catch(() => {});
-      return efh3f0;
+      this.#ckcekgokc = nfy6f1if.catch(() => {});
+      return nfy6f1if;
     }
 
-    #i7yek2b(j50dz19) {
-      this.#c9j7rqr9 = j50dz19;
-      this.#tyyzyzs = dlj9bhl();
-      this.#mko6n7b = j50dz19?.activeRun?.elapsedMs || 0;
+    #j976xqr97(_jyht23j) {
+      this.#npdtsgmp = _jyht23j;
+      this.#dyguumiy = oouh5eeou();
+      this.#byd0m26y = _jyht23j?.activeRun?.elapsedMs || 0;
     }
 
-    async #uewdlq5e(r06x0v5, ixgrixvx, jker95jk) {
-      if (!g2v4za92) {
-        return !jker95jk ? { ok: false, __staticNotFound: true } : { ok: false, error: 'Offline' };
+    async #flzrvk(vq6di3mq, e0hv_bh0, nms45o) {
+      if (!x5jm7zq5) {
+        return !nms45o ? { ok: false, __staticNotFound: true } : { ok: false, error: 'Offline' };
       }
-      const ltijxzbti = {
+      const ffaw8j1 = {
         'Content-Type': 'application/json',
-        [ea_raeaa_(5)]: ea_raeaa_(4)
+        [q5uvld3(5)]: q5uvld3(4)
       };
-      if (jker95jk) {
-        ltijxzbti.Authorization = `Bearer ${this.#dm37wsv}`;
+      if (nms45o) {
+        ffaw8j1.Authorization = `Bearer ${this.#ek16me7k}`;
       }
-      const boqffl9o = jker95jk ? 5000 : 1050;
-      const sb2v8uab = typeof AbortController === 'function' ? new AbortController() : null;
-      const jn3xyiqn3 = sb2v8uab ? oa11t1(() => { try { sb2v8uab.abort(); } catch {} }, boqffl9o) : null;
+      const eind78pi = nms45o ? 5000 : 1050;
+      const ogmxgt1g = typeof AbortController === 'function' ? new AbortController() : null;
+      const i5bmqxj5 = ogmxgt1g ? _9m8l0(() => { try { ogmxgt1g.abort(); } catch {} }, eind78pi) : null;
 
-      const b6boaut = (async () => {
+      const hbthjud = (async () => {
         try {
-          const jgpvphogp = await g2v4za92(r06x0v5, {
+          const vcrfrf9c = await x5jm7zq5(vq6di3mq, {
             method: 'POST',
-            headers: ltijxzbti,
-            body: p5thzh(ixgrixvx),
+            headers: ffaw8j1,
+            body: woc6kxlo(e0hv_bh0),
             credentials: 'same-origin',
-            signal: sb2v8uab ? sb2v8uab.signal : undefined
+            signal: ogmxgt1g ? ogmxgt1g.signal : undefined
           });
-          let u4j1l8e = '';
-          if (jgpvphogp && typeof jgpvphogp.text === 'function') {
-            u4j1l8e = await jgpvphogp.text();
+          let xeu930leu = '';
+          if (vcrfrf9c && typeof vcrfrf9c.text === 'function') {
+            xeu930leu = await vcrfrf9c.text();
           }
-          return { ok: true, resp: jgpvphogp, rawText: u4j1l8e };
+          return { ok: true, resp: vcrfrf9c, rawText: xeu930leu };
         } catch {
           return { ok: false, networkError: true };
         }
       })();
 
-      const bf8tmap = await ccmrkw(b6boaut, boqffl9o + 50, { ok: false, timedOut: true });
-      if (jn3xyiqn3 !== null) ho_9t9d(jn3xyiqn3);
-      if (!bf8tmap || !bf8tmap.ok) {
-        try { sb2v8uab?.abort(); } catch {}
-        if (!jker95jk) {
+      const av53_cwv = await udf4hjtdf(hbthjud, eind78pi + 50, { ok: false, timedOut: true });
+      if (i5bmqxj5 !== null) smz1dxxmz(i5bmqxj5);
+      if (!av53_cwv || !av53_cwv.ok) {
+        try { ogmxgt1g?.abort(); } catch {}
+        if (!nms45o) {
           return { ok: false, __staticNotFound: true };
         }
         throw new Error('Network error');
       }
 
-      const { resp: b_o8wx, rawText: xc342p3c3 } = bf8tmap;
-      if ((b_o8wx.type === 'opaqueredirect' || b_o8wx.status >= 404 || b_o8wx.status === 0) && !jker95jk) {
+      const { resp: rti4n6ct, rawText: v4h0qab4 } = av53_cwv;
+      if ((rti4n6ct.type === 'opaqueredirect' || rti4n6ct.status >= 404 || rti4n6ct.status === 0) && !nms45o) {
         return { ok: false, __staticNotFound: true };
       }
 
-      const ee9ga__e9 = (b_o8wx.headers?.get?.('content-type') || '').toLowerCase();
-      let ocf1h5nc = null;
+      const mmkw_c = (rti4n6ct.headers?.get?.('content-type') || '').toLowerCase();
+      let mj9_dr_j = null;
       try {
-        ocf1h5nc = xc342p3c3 ? o1kkau11k(xc342p3c3) : null;
+        mj9_dr_j = v4h0qab4 ? molhiep(v4h0qab4) : null;
       } catch {
-        ocf1h5nc = null;
+        mj9_dr_j = null;
       }
 
-      if (!jker95jk && (!ocf1h5nc || typeof ocf1h5nc !== 'object' || ee9ga__e9.includes('text/html') || (!b_o8wx.ok && typeof ocf1h5nc.error !== 'string'))) {
+      if (!nms45o && (!mj9_dr_j || typeof mj9_dr_j !== 'object' || mmkw_c.includes('text/html') || (!rti4n6ct.ok && typeof mj9_dr_j.error !== 'string'))) {
         return { ok: false, __staticNotFound: true };
       }
 
-      if (!b_o8wx.ok) {
-        if (b_o8wx.status === 400 && ocf1h5nc && typeof ocf1h5nc.actionNonce === 'string') {
-          this.#woucwdoo = ocf1h5nc.actionNonce;
+      if (!rti4n6ct.ok) {
+        if (rti4n6ct.status === 400 && mj9_dr_j && typeof mj9_dr_j.actionNonce === 'string') {
+          this.#e17mzk11 = mj9_dr_j.actionNonce;
         }
-        if (b_o8wx.status === 401 || b_o8wx.status === 403 || b_o8wx.status === 409) {
-          this.#bhq9_p = true;
-          ptf66jk('Session Verification Failed', 'Game session was locked because server verification failed. Reload to start a verified session.');
+        if (rti4n6ct.status === 401 || rti4n6ct.status === 403 || rti4n6ct.status === 409) {
+          this.#im0gow6m0 = true;
+          qm1kwpum('Session Verification Failed', 'Game session was locked because server verification failed. Reload to start a verified session.');
         }
-        return ocf1h5nc || { ok: false, error: `HTTP ${b_o8wx.status}` };
+        return mj9_dr_j || { ok: false, error: `HTTP ${rti4n6ct.status}` };
       }
-      return ocf1h5nc;
+      return mj9_dr_j;
     }
   }
 
-  class wgl0p7 {
-    #_j8g43oj = new dtdxnkgt();
-    #h21pfiv2 = new ydfdnzdd();
-    #kxk4kgex = Object.freeze({
+  class ybejk8ob {
+    #c9cvlih = new x2ybyy();
+    #ajs9ht7j = new y40ab2();
+    #b4jnfwr = Object.freeze({
       infinite: Object.freeze({ label: 'Infinite', target: null }),
       hell: Object.freeze({ label: 'Hell Mode', target: null }),
       tartarus: Object.freeze({ label: 'Tartarus Mode', target: null }),
@@ -2313,117 +2313,117 @@
       speedrun_500: Object.freeze({ label: 'Speedrun 500', target: 500 })
     });
 
-    #e6xy89h6x = 'home';
-    #qufqi2_ = 'infinite';
-    #hop5xrh = null;
-    #leic7c4e = false;
-    #m61z1ci = 0;
-    #_6kwav76k = { x: k_fy2o0_ / 2, y: 400 };
-    #l45t9zt4 = [];
-    #vz63mjdz6 = false;
-    #qwaafmb = 'fa-cubes';
-    #rydq0td = null;
-    #lvoyq4bvo = null;
-    #m18564p1 = false;
-    #nhplrew = false;
-    #c4m0wjl = false;
-    #aswzcuqsw = false;
+    #y01jcy = 'home';
+    #mrdx2t1r = 'infinite';
+    #hgtu0tegt = null;
+    #_lns25xln = false;
+    #lav7hpca = 0;
+    #ahveib = { x: _8je1mu8j / 2, y: 400 };
+    #pcfzn_e = [];
+    #ahlf0p = false;
+    #rctqbni = 'fa-cubes';
+    #b8xcy0 = null;
+    #s__gxdo = null;
+    #dfo44th = false;
+    #axec6mg = false;
+    #rv07k1gv = false;
+    #bd5axvzd = false;
 
     constructor() {
-      this.p7va6dc();
-      this.iat6yd2a();
-      this.zo_3hkw();
-      this.cmh_z21();
-      this.po0fxh5();
-      this.lo2c_3_o2();
-      this.x96uv3896();
-      this.pn1sv7hn1();
-      this.#zp_nzq();
-      cc8lmow((mjox3sx) => this.d7tway27t(mjox3sx));
+      this.vf5pl0();
+      this.jzgoxd();
+      this.v8pru998();
+      this.yx19oj0x1();
+      this._trvavq();
+      this.eyuphum();
+      this.pntkny4n();
+      this.tm0uz6();
+      this.#g58krch58();
+      nwerfkywe((m9infwj9i) => this.d8obvgq(m9infwj9i));
     }
 
-    p7va6dc() {
-      const je8pvxx = document.fonts;
-      const izom1skzo = () => {
+    vf5pl0() {
+      const pbambjt = document.fonts;
+      const fqssf10 = () => {
         try {
-          document.body?.classList?.toggle('no-fa', !f0f2pvs0());
+          document.body?.classList?.toggle('no-fa', !eu1q2au());
         } catch {}
       };
       try {
         document.body?.classList?.add('no-fa');
-        const kfndn2 = document.head;
-        if (kfndn2 && typeof document.createElement === 'function') {
+        const mu_32cr = document.head;
+        if (mu_32cr && typeof document.createElement === 'function') {
           if (!document.querySelector('link[href*="font-awesome"]')) {
-            const tg2c6zhg2 = document.createElement('link');
-            tg2c6zhg2.rel = 'stylesheet';
-            tg2c6zhg2.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
-            ng33dibg.call(tg2c6zhg2, 'load', () => {
+            const rrt1pmart = document.createElement('link');
+            rrt1pmart.rel = 'stylesheet';
+            rrt1pmart.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
+            ve7bk0j.call(rrt1pmart, 'load', () => {
               try {
-                if (je8pvxx && typeof je8pvxx.load === 'function') {
-                  je8pvxx.load('900 14px "Font Awesome 6 Free"').then(izom1skzo).catch(izom1skzo);
+                if (pbambjt && typeof pbambjt.load === 'function') {
+                  pbambjt.load('900 14px "Font Awesome 6 Free"').then(fqssf10).catch(fqssf10);
                 } else {
-                  izom1skzo();
+                  fqssf10();
                 }
-              } catch { izom1skzo(); }
+              } catch { fqssf10(); }
             });
-            ng33dibg.call(tg2c6zhg2, 'error', izom1skzo);
-            kfndn2.appendChild(tg2c6zhg2);
+            ve7bk0j.call(rrt1pmart, 'error', fqssf10);
+            mu_32cr.appendChild(rrt1pmart);
           }
           if (!document.querySelector('link[href*="fonts.googleapis.com"]')) {
-            const nybgtr = document.createElement('link');
-            nybgtr.rel = 'stylesheet';
-            nybgtr.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap';
-            kfndn2.appendChild(nybgtr);
+            const nnzgdupn = document.createElement('link');
+            nnzgdupn.rel = 'stylesheet';
+            nnzgdupn.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap';
+            mu_32cr.appendChild(nnzgdupn);
           }
         }
-        if (je8pvxx && typeof je8pvxx.load === 'function') {
-          je8pvxx.load('900 14px "Font Awesome 6 Free"').then(izom1skzo).catch(() => {});
+        if (pbambjt && typeof pbambjt.load === 'function') {
+          pbambjt.load('900 14px "Font Awesome 6 Free"').then(fqssf10).catch(() => {});
         }
-        if (je8pvxx && je8pvxx.ready && typeof je8pvxx.ready.then === 'function') {
-          je8pvxx.ready.then(izom1skzo).catch(() => {});
+        if (pbambjt && pbambjt.ready && typeof pbambjt.ready.then === 'function') {
+          pbambjt.ready.then(fqssf10).catch(() => {});
         }
       } catch {}
-      izom1skzo();
-      oa11t1(izom1skzo, 400);
-      oa11t1(izom1skzo, 1500);
+      fqssf10();
+      _9m8l0(fqssf10, 400);
+      _9m8l0(fqssf10, 1500);
     }
 
-    async #zp_nzq() {
-      if (this.#aswzcuqsw) return;
-      this.#aswzcuqsw = true;
-      this.#c4m0wjl = false;
-      this.pn1sv7hn1();
+    async #g58krch58() {
+      if (this.#bd5axvzd) return;
+      this.#bd5axvzd = true;
+      this.#rv07k1gv = false;
+      this.tm0uz6();
       try {
-        let lyc6gjdy = await ccmrkw(this.#_j8g43oj.ms5w333(), 2200, null);
-        if (!lyc6gjdy || !this.#_j8g43oj.pmm22ozm()) {
-          lyc6gjdy = this.#_j8g43oj.td83s3();
+        let ue141m = await udf4hjtdf(this.#c9cvlih.h5aikdj5a(), 2200, null);
+        if (!ue141m || !this.#c9cvlih.wgiha8_gi()) {
+          ue141m = this.#c9cvlih.zcdihy3c();
         }
-        this.#m18564p1 = true;
-        this.#c4m0wjl = false;
-        this.#qwaafmb = lyc6gjdy.profile?.icon || 'fa-cubes';
-        this.l89r2vv8();
-        this.zo_3hkw();
-        if (lyc6gjdy.activeRun && !lyc6gjdy.activeRun.over && !lyc6gjdy.activeRun.complete) {
-          this.#_z3qukk(lyc6gjdy, false);
+        this.#dfo44th = true;
+        this.#rv07k1gv = false;
+        this.#rctqbni = ue141m.profile?.icon || 'fa-cubes';
+        this.ddjzl0x();
+        this.v8pru998();
+        if (ue141m.activeRun && !ue141m.activeRun.over && !ue141m.activeRun.complete) {
+          this.#l3_53e(ue141m, false);
         } else {
-          this.#rydq0td = null;
+          this.#b8xcy0 = null;
         }
-        if (this.#e6xy89h6x === 'slots') {
-          await this.dekstui();
+        if (this.#y01jcy === 'slots') {
+          await this.ygf_d3();
         } else {
-          await this.u3d_8aq3(true);
+          await this.eaqjxf9aq(true);
         }
       } catch {
-        this.#c4m0wjl = true;
-        this.pn1sv7hn1();
-        ptf66jk('Verification Required', 'Could not reach the game verification server. Open the game through the app server to play.');
+        this.#rv07k1gv = true;
+        this.tm0uz6();
+        qm1kwpum('Verification Required', 'Could not reach the game verification server. Open the game through the app server to play.');
       } finally {
-        this.#aswzcuqsw = false;
-        this.pn1sv7hn1();
+        this.#bd5axvzd = false;
+        this.tm0uz6();
       }
     }
 
-    #x28u11l2() {
+    #zamo2e4am() {
       return {
         bricksBrokenCount: 0,
         damageDealt: 0,
@@ -2434,730 +2434,730 @@
         ammoBroken: 0,
         bonusCaught: 0,
         bestCombo: 0,
-        brokenByType: Object.fromEntries(pi9wfq.map((_pdrkvu) => [_pdrkvu, 0]))
+        brokenByType: Object.fromEntries(o1b09041b.map((v0htxik0) => [v0htxik0, 0]))
       };
     }
 
-    #_z3qukk(ulepkas, crabbftr = false) {
-      const q205hak20 = ulepkas?.activeRun;
-      if (!q205hak20) {
-        this.#rydq0td = null;
+    #l3_53e(nekcryx, gngtgopn = false) {
+      const uhawdc = nekcryx?.activeRun;
+      if (!uhawdc) {
+        this.#b8xcy0 = null;
         return;
       }
-      const l2ci56d2c = this.#rydq0td?.turnInProgress && this.#rydq0td.balls?.some((et_9oe) => et_9oe.moving);
-      this.#rydq0td = {
-        runMode: q205hak20.runMode,
-        target: q205hak20.target,
-        level: q205hak20.level,
-        score: q205hak20.score,
-        coins: ulepkas.meta.coins,
-        gems: ulepkas.meta.gems,
-        permUpgrades: q205hak20.runMode === 'hell'
+      const jj20ceij = this.#b8xcy0?.turnInProgress && this.#b8xcy0.balls?.some((ufo7_65fo) => ufo7_65fo.moving);
+      this.#b8xcy0 = {
+        runMode: uhawdc.runMode,
+        target: uhawdc.target,
+        level: uhawdc.level,
+        score: uhawdc.score,
+        coins: nekcryx.meta.coins,
+        gems: nekcryx.meta.gems,
+        permUpgrades: uhawdc.runMode === 'hell'
           ? { startAmmo: 0, critChance: 0, ballSpeed: 0, luck: 0, gemLuck: 0, rebound: 0 }
-          : { ...ulepkas.meta.permUpgrades },
-        difficulty: q205hak20.difficulty,
-        ballCount: q205hak20.ballCount,
-        anchorX: q205hak20.anchorX,
-        balls: l2ci56d2c ? this.#rydq0td.balls : (Array.isArray(q205hak20.balls) ? q205hak20.balls.map((_6f74b_) => ({ ..._6f74b_ })) : p95v_o(q205hak20.anchorX, q205hak20.ballCount)),
-        bricks: Array.isArray(q205hak20.bricks) ? q205hak20.bricks.map((qna6ep4) => ({ ...qna6ep4 })) : [],
-        bonusBalls: Array.isArray(q205hak20.bonusBalls) ? q205hak20.bonusBalls.map((om29eqsm) => ({ ...om29eqsm })) : [],
-        buffs: { ...q205hak20.buffs },
-        shopPurchases: { ...q205hak20.shopPurchases },
-        pendingAmmo: q205hak20.pendingAmmo || 0,
-        paused: crabbftr ? false : Boolean(q205hak20.paused),
-        turnInProgress: Boolean(l2ci56d2c),
-        brickMoving: Boolean(this.#rydq0td?.brickMoving),
-        over: Boolean(q205hak20.over),
-        complete: Boolean(q205hak20.complete),
-        elapsedMs: q205hak20.elapsedMs || 0,
-        bestLevel: q205hak20.bestLevel || q205hak20.level,
-        runBricks: q205hak20.runBricks || 0,
-        runShots: q205hak20.runShots || 0,
-        runDamage: q205hak20.runDamage || 0,
-        bestCombo: q205hak20.bestCombo || 0,
+          : { ...nekcryx.meta.permUpgrades },
+        difficulty: uhawdc.difficulty,
+        ballCount: uhawdc.ballCount,
+        anchorX: uhawdc.anchorX,
+        balls: jj20ceij ? this.#b8xcy0.balls : (Array.isArray(uhawdc.balls) ? uhawdc.balls.map((t3ix_5) => ({ ...t3ix_5 })) : fjkqjvfj(uhawdc.anchorX, uhawdc.ballCount)),
+        bricks: Array.isArray(uhawdc.bricks) ? uhawdc.bricks.map((_h1n870h1) => ({ ..._h1n870h1 })) : [],
+        bonusBalls: Array.isArray(uhawdc.bonusBalls) ? uhawdc.bonusBalls.map((imghlo6) => ({ ...imghlo6 })) : [],
+        buffs: { ...uhawdc.buffs },
+        shopPurchases: { ...uhawdc.shopPurchases },
+        pendingAmmo: uhawdc.pendingAmmo || 0,
+        paused: gngtgopn ? false : Boolean(uhawdc.paused),
+        turnInProgress: Boolean(jj20ceij),
+        brickMoving: Boolean(this.#b8xcy0?.brickMoving),
+        over: Boolean(uhawdc.over),
+        complete: Boolean(uhawdc.complete),
+        elapsedMs: uhawdc.elapsedMs || 0,
+        bestLevel: uhawdc.bestLevel || uhawdc.level,
+        runBricks: uhawdc.runBricks || 0,
+        runShots: uhawdc.runShots || 0,
+        runDamage: uhawdc.runDamage || 0,
+        bestCombo: uhawdc.bestCombo || 0,
         turnCombo: 0,
-        secLevel: new df2vaud(q205hak20.level),
-        secCoins: new df2vaud(ulepkas.meta.coins),
-        secGems: new df2vaud(ulepkas.meta.gems),
-        secBallCount: new df2vaud(q205hak20.ballCount),
-        overlordTimer: q205hak20.overlordTimer || 0,
-        overlordDialogue: q205hak20.overlordDialogue || '"Mortal, your defiance amuses me..."',
-        tasRun: q205hak20.tasRun || { lastElapsed: 0, segment: 0, splits: [], deltas: [] }
+        secLevel: new g8rko2(uhawdc.level),
+        secCoins: new g8rko2(nekcryx.meta.coins),
+        secGems: new g8rko2(nekcryx.meta.gems),
+        secBallCount: new g8rko2(uhawdc.ballCount),
+        overlordTimer: uhawdc.overlordTimer || 0,
+        overlordDialogue: uhawdc.overlordDialogue || '"Mortal, your defiance amuses me..."',
+        tasRun: uhawdc.tasRun || { lastElapsed: 0, segment: 0, splits: [], deltas: [] }
       };
-      if (!this.#lvoyq4bvo) this.#lvoyq4bvo = this.#x28u11l2();
+      if (!this.#s__gxdo) this.#s__gxdo = this.#zamo2e4am();
     }
 
-    #ysxe1cd(zj37063j3) {
-      if (!zj37063j3 || !this.#rydq0td) return;
-      this.#rydq0td.coins = zj37063j3.meta.coins;
-      this.#rydq0td.gems = zj37063j3.meta.gems;
-      this.#rydq0td.secCoins.fs29nxi(zj37063j3.meta.coins);
-      this.#rydq0td.secGems.fs29nxi(zj37063j3.meta.gems);
-      if (this.#rydq0td.runMode !== 'hell') {
-        this.#rydq0td.permUpgrades = { ...zj37063j3.meta.permUpgrades };
+    #b1pv_qj(cuz_xs) {
+      if (!cuz_xs || !this.#b8xcy0) return;
+      this.#b8xcy0.coins = cuz_xs.meta.coins;
+      this.#b8xcy0.gems = cuz_xs.meta.gems;
+      this.#b8xcy0.secCoins.cv14z_4v1(cuz_xs.meta.coins);
+      this.#b8xcy0.secGems.cv14z_4v1(cuz_xs.meta.gems);
+      if (this.#b8xcy0.runMode !== 'hell') {
+        this.#b8xcy0.permUpgrades = { ...cuz_xs.meta.permUpgrades };
       }
-      if (zj37063j3.activeRun) {
-        this.#rydq0td.level = zj37063j3.activeRun.level;
-        this.#rydq0td.secLevel.fs29nxi(zj37063j3.activeRun.level);
-        this.#rydq0td.ballCount = zj37063j3.activeRun.ballCount;
-        this.#rydq0td.secBallCount.fs29nxi(zj37063j3.activeRun.ballCount);
-        this.#rydq0td.buffs = { ...zj37063j3.activeRun.buffs };
-        this.#rydq0td.shopPurchases = { ...zj37063j3.activeRun.shopPurchases };
-        this.#rydq0td.pendingAmmo = zj37063j3.activeRun.pendingAmmo;
-        this.#rydq0td.tasRun = zj37063j3.activeRun.tasRun || this.#rydq0td.tasRun;
-        this.#rydq0td.elapsedMs = zj37063j3.activeRun.elapsedMs;
-      }
-    }
-
-    l89r2vv8() {
-      const vraj_j9r = this.#_j8g43oj.pmm22ozm();
-      const yzjjy2z = vraj_j9r?.settings || { sound: true, bgm: true, particles: true };
-      this.#h21pfiv2.n0vre4f0(yzjjy2z.sound, yzjjy2z.bgm);
-      this.cmh_z21();
-    }
-
-    cmh_z21() {
-      const flk78d = this.#_j8g43oj.pmm22ozm()?.settings || { sound: true, bgm: true, particles: true };
-      const fgs3e6e = document.getElementById('btnToggleSound');
-      const vmu_142m = document.getElementById('btnToggleBgm');
-      const zaeprz_ae = document.getElementById('btnToggleParticles');
-      if (fgs3e6e) fgs3e6e.innerHTML = `<i class="fa-solid fa-volume-high" aria-hidden="true"></i> Sound Effects: ${flk78d.sound ? 'ON' : 'OFF'}`;
-      if (vmu_142m) vmu_142m.innerHTML = `<i class="fa-solid fa-music" aria-hidden="true"></i> Background Music: ${flk78d.bgm ? 'ON' : 'OFF'}`;
-      if (zaeprz_ae) zaeprz_ae.innerHTML = `<i class="fa-solid fa-burst" aria-hidden="true"></i> Particles: ${flk78d.particles ? 'ON' : 'OFF'}`;
-    }
-
-    async fn0yoe(gqfnzhm) {
-      if (!this.#m18564p1) return;
-      const rylt7k = this.#_j8g43oj.pmm22ozm()?.settings || { sound: true, bgm: true, particles: true };
-      const ksq1008s = { ...rylt7k, [gqfnzhm]: !rylt7k[gqfnzhm] };
-      await this.#_j8g43oj.i3sg5i(ea_raeaa_(22), ksq1008s);
-      this.l89r2vv8();
-      if (gqfnzhm === 'bgm' && ksq1008s.bgm && this.#e6xy89h6x === 'game' && this.#rydq0td) {
-        this.#h21pfiv2.ozhdbv3(this.#rydq0td.runMode);
+      if (cuz_xs.activeRun) {
+        this.#b8xcy0.level = cuz_xs.activeRun.level;
+        this.#b8xcy0.secLevel.cv14z_4v1(cuz_xs.activeRun.level);
+        this.#b8xcy0.ballCount = cuz_xs.activeRun.ballCount;
+        this.#b8xcy0.secBallCount.cv14z_4v1(cuz_xs.activeRun.ballCount);
+        this.#b8xcy0.buffs = { ...cuz_xs.activeRun.buffs };
+        this.#b8xcy0.shopPurchases = { ...cuz_xs.activeRun.shopPurchases };
+        this.#b8xcy0.pendingAmmo = cuz_xs.activeRun.pendingAmmo;
+        this.#b8xcy0.tasRun = cuz_xs.activeRun.tasRun || this.#b8xcy0.tasRun;
+        this.#b8xcy0.elapsedMs = cuz_xs.activeRun.elapsedMs;
       }
     }
 
-    zo_3hkw() {
-      const jaz932saz = this.#_j8g43oj.pmm22ozm()?.profile || { name: 'Player', icon: 'fa-cubes' };
-      this.#qwaafmb = jaz932saz.icon;
-      const zb8xj2 = document.getElementById('profileNameInput');
-      if (zb8xj2) zb8xj2.value = jaz932saz.name;
+    ddjzl0x() {
+      const xlxfppml = this.#c9cvlih.wgiha8_gi();
+      const g73gc0i7 = xlxfppml?.settings || { sound: true, bgm: true, particles: true };
+      this.#ajs9ht7j.juss0c(g73gc0i7.sound, g73gc0i7.bgm);
+      this.yx19oj0x1();
+    }
 
-      const evmwl4zvm = document.getElementById('profileIconGrid');
-      if (!evmwl4zvm) return;
+    yx19oj0x1() {
+      const peyii70ey = this.#c9cvlih.wgiha8_gi()?.settings || { sound: true, bgm: true, particles: true };
+      const unxlwlx = document.getElementById('btnToggleSound');
+      const frqbtnnr = document.getElementById('btnToggleBgm');
+      const c6wytj6 = document.getElementById('btnToggleParticles');
+      if (unxlwlx) unxlwlx.innerHTML = `<i class="fa-solid fa-volume-high" aria-hidden="true"></i> Sound Effects: ${peyii70ey.sound ? 'ON' : 'OFF'}`;
+      if (frqbtnnr) frqbtnnr.innerHTML = `<i class="fa-solid fa-music" aria-hidden="true"></i> Background Music: ${peyii70ey.bgm ? 'ON' : 'OFF'}`;
+      if (c6wytj6) c6wytj6.innerHTML = `<i class="fa-solid fa-burst" aria-hidden="true"></i> Particles: ${peyii70ey.particles ? 'ON' : 'OFF'}`;
+    }
 
-      evmwl4zvm.innerHTML = '';
-      for (const b1d34o_1d of ylamnnfl) {
-        const iircib1i = document.createElement('button');
-        iircib1i.type = 'button';
-        iircib1i.className = `icon-pick-btn${b1d34o_1d === this.#qwaafmb ? ' active' : ''}`;
-        iircib1i.innerHTML = `<i class="fa-solid ${b1d34o_1d}" aria-hidden="true"></i>`;
-        iircib1i.onclick = (yirjwimir) => {
-          if (!qxhqcshxh(yirjwimir)) return;
-          this.#qwaafmb = b1d34o_1d;
-          evmwl4zvm.querySelectorAll('.icon-pick-btn').forEach((rycqczfyc) => rycqczfyc.classList.remove('active'));
-          iircib1i.classList.add('active');
+    async mjo3t0(sh9u3gnh) {
+      if (!this.#dfo44th) return;
+      const dihgbk3ih = this.#c9cvlih.wgiha8_gi()?.settings || { sound: true, bgm: true, particles: true };
+      const wfq0g4jf = { ...dihgbk3ih, [sh9u3gnh]: !dihgbk3ih[sh9u3gnh] };
+      await this.#c9cvlih.kz5bv96z5(q5uvld3(22), wfq0g4jf);
+      this.ddjzl0x();
+      if (sh9u3gnh === 'bgm' && wfq0g4jf.bgm && this.#y01jcy === 'game' && this.#b8xcy0) {
+        this.#ajs9ht7j.iyjb2jfy(this.#b8xcy0.runMode);
+      }
+    }
+
+    v8pru998() {
+      const r7lxpb17l = this.#c9cvlih.wgiha8_gi()?.profile || { name: 'Player', icon: 'fa-cubes' };
+      this.#rctqbni = r7lxpb17l.icon;
+      const myv89bkyv = document.getElementById('profileNameInput');
+      if (myv89bkyv) myv89bkyv.value = r7lxpb17l.name;
+
+      const f0tb5k80 = document.getElementById('profileIconGrid');
+      if (!f0tb5k80) return;
+
+      f0tb5k80.innerHTML = '';
+      for (const bonqoceo of k91tari91) {
+        const f4dll1 = document.createElement('button');
+        f4dll1.type = 'button';
+        f4dll1.className = `icon-pick-btn${bonqoceo === this.#rctqbni ? ' active' : ''}`;
+        f4dll1.innerHTML = `<i class="fa-solid ${bonqoceo}" aria-hidden="true"></i>`;
+        f4dll1.onclick = (mdn_k6) => {
+          if (!zdd_1x6dd(mdn_k6)) return;
+          this.#rctqbni = bonqoceo;
+          f0tb5k80.querySelectorAll('.icon-pick-btn').forEach((mw6713m) => mw6713m.classList.remove('active'));
+          f4dll1.classList.add('active');
         };
-        evmwl4zvm.appendChild(iircib1i);
+        f0tb5k80.appendChild(f4dll1);
       }
     }
 
-    async n37r2953() {
-      if (!this.#m18564p1) return;
-      const clgi1crl = document.getElementById('profileNameInput');
-      const fb7m7gib = (clgi1crl?.value || 'Player').trim() || 'Player';
-      await this.#_j8g43oj.i3sg5i(ea_raeaa_(21), { name: fb7m7gib, icon: this.#qwaafmb });
-      this.pn1sv7hn1();
-      iq4lmesq4('settingsModal');
+    async jyux50myu() {
+      if (!this.#dfo44th) return;
+      const jxzvv5 = document.getElementById('profileNameInput');
+      const huk4k8 = (jxzvv5?.value || 'Player').trim() || 'Player';
+      await this.#c9cvlih.kz5bv96z5(q5uvld3(21), { name: huk4k8, icon: this.#rctqbni });
+      this.tm0uz6();
+      fqzhut('settingsModal');
     }
 
-    iat6yd2a() {
-      const x_8iyj8 = document.getElementById('brickGuideList');
-      if (!x_8iyj8) return;
-      const hakb5nta = document.createDocumentFragment();
+    jzgoxd() {
+      const _8emwki8e = document.getElementById('brickGuideList');
+      if (!_8emwki8e) return;
+      const wip7ys = document.createDocumentFragment();
 
-      for (const zo4jvi1o4 of _5hkevk5) {
-        const f3l0pio3 = document.createElement('div');
-        f3l0pio3.className = 'brick-info-card';
+      for (const nm5qhr9m of xlo4sy2lo) {
+        const z6fr91e = document.createElement('div');
+        z6fr91e.className = 'brick-info-card';
 
-        const tir56k1ir = document.createElement('div');
-        tir56k1ir.className = 'brick-icon';
-        tir56k1ir.style.background = `linear-gradient(180deg, ${zo4jvi1o4.color}, ${zo4jvi1o4.colorEnd})`;
-        tir56k1ir.setAttribute('aria-hidden', 'true');
+        const ghkpz74hk = document.createElement('div');
+        ghkpz74hk.className = 'brick-icon';
+        ghkpz74hk.style.background = `linear-gradient(180deg, ${nm5qhr9m.color}, ${nm5qhr9m.colorEnd})`;
+        ghkpz74hk.setAttribute('aria-hidden', 'true');
 
-        const t1oshgb = document.createElement('i');
-        t1oshgb.className = `fa-solid ${zo4jvi1o4.icon}`;
-        tir56k1ir.appendChild(t1oshgb);
+        const yabs2xlab = document.createElement('i');
+        yabs2xlab.className = `fa-solid ${nm5qhr9m.icon}`;
+        ghkpz74hk.appendChild(yabs2xlab);
 
-        const gm47yb = document.createElement('div');
-        gm47yb.className = 'buff-info';
+        const xv0sea0 = document.createElement('div');
+        xv0sea0.className = 'buff-info';
 
-        const y7d69yp7 = document.createElement('strong');
-        y7d69yp7.textContent = zo4jvi1o4.name;
+        const u0gh7gd = document.createElement('strong');
+        u0gh7gd.textContent = nm5qhr9m.name;
 
-        const q37arny37 = document.createElement('span');
-        q37arny37.className = 'buff-desc';
-        q37arny37.textContent = zo4jvi1o4.description;
+        const mwnbpn = document.createElement('span');
+        mwnbpn.className = 'buff-desc';
+        mwnbpn.textContent = nm5qhr9m.description;
 
-        const cl1b1_3 = document.createElement('span');
-        cl1b1_3.className = 'brick-tier muted';
-        cl1b1_3.textContent = zo4jvi1o4.tier;
+        const mx6t8h0x6 = document.createElement('span');
+        mx6t8h0x6.className = 'brick-tier muted';
+        mx6t8h0x6.textContent = nm5qhr9m.tier;
 
-        gm47yb.append(y7d69yp7, q37arny37, cl1b1_3);
-        f3l0pio3.append(tir56k1ir, gm47yb);
-        hakb5nta.appendChild(f3l0pio3);
+        xv0sea0.append(u0gh7gd, mwnbpn, mx6t8h0x6);
+        z6fr91e.append(ghkpz74hk, xv0sea0);
+        wip7ys.appendChild(z6fr91e);
       }
 
-      x_8iyj8.replaceChildren(hakb5nta);
+      _8emwki8e.replaceChildren(wip7ys);
     }
 
-    async u3d_8aq3(_81s52 = false) {
-      if (!_81s52 && this.#e6xy89h6x === 'game' && this.#rydq0td && !this.#rydq0td.over && !this.#rydq0td.complete) {
-        this.#rydq0td.paused = true;
-        await this.#_j8g43oj.i3sg5i(ea_raeaa_(13), { slot: this.#_j8g43oj.pmm22ozm()?.activeSlot || 1 }).catch(() => {});
+    async eaqjxf9aq(odh95r = false) {
+      if (!odh95r && this.#y01jcy === 'game' && this.#b8xcy0 && !this.#b8xcy0.over && !this.#b8xcy0.complete) {
+        this.#b8xcy0.paused = true;
+        await this.#c9cvlih.kz5bv96z5(q5uvld3(13), { slot: this.#c9cvlih.wgiha8_gi()?.activeSlot || 1 }).catch(() => {});
       }
-      this.#e6xy89h6x = 'home';
-      this.#h21pfiv2.sjmoqirjm();
+      this.#y01jcy = 'home';
+      this.#ajs9ht7j.g7_ixt();
       document.getElementById('homeView').hidden = false;
       document.getElementById('slotsView').hidden = true;
       document.getElementById('gameView').hidden = true;
-      this.fcs259_();
-      this.pn1sv7hn1();
-      this.lo2c_3_o2();
+      this.yyoa51uy();
+      this.tm0uz6();
+      this.eyuphum();
     }
 
-    async dekstui() {
-      if (this.#e6xy89h6x === 'game' && this.#rydq0td && !this.#rydq0td.over && !this.#rydq0td.complete) {
-        this.#rydq0td.paused = true;
-        await this.#_j8g43oj.i3sg5i(ea_raeaa_(13), { slot: this.#_j8g43oj.pmm22ozm()?.activeSlot || 1 }).catch(() => {});
+    async ygf_d3() {
+      if (this.#y01jcy === 'game' && this.#b8xcy0 && !this.#b8xcy0.over && !this.#b8xcy0.complete) {
+        this.#b8xcy0.paused = true;
+        await this.#c9cvlih.kz5bv96z5(q5uvld3(13), { slot: this.#c9cvlih.wgiha8_gi()?.activeSlot || 1 }).catch(() => {});
       }
-      this.#e6xy89h6x = 'slots';
-      this.#h21pfiv2.sjmoqirjm();
+      this.#y01jcy = 'slots';
+      this.#ajs9ht7j.g7_ixt();
       document.getElementById('homeView').hidden = true;
       document.getElementById('slotsView').hidden = false;
       document.getElementById('gameView').hidden = true;
-      this.fcs259_();
-      this.pn1sv7hn1();
-      this.lo2c_3_o2();
+      this.yyoa51uy();
+      this.tm0uz6();
+      this.eyuphum();
     }
 
-    async m_njtf4(iho0p0 = false) {
-      this.#e6xy89h6x = 'game';
+    async k2na7q52n(knvxjb0nv = false) {
+      this.#y01jcy = 'game';
       document.getElementById('homeView').hidden = true;
       document.getElementById('slotsView').hidden = true;
       document.getElementById('gameView').hidden = false;
-      this.fcs259_();
-      if (this.#rydq0td && !this.#rydq0td.over && !this.#rydq0td.complete) {
-        this.#rydq0td.paused = false;
-        if (!iho0p0) {
-          await this.#_j8g43oj.i3sg5i(ea_raeaa_(14), { slot: this.#_j8g43oj.pmm22ozm()?.activeSlot || 1 }).catch(() => {});
+      this.yyoa51uy();
+      if (this.#b8xcy0 && !this.#b8xcy0.over && !this.#b8xcy0.complete) {
+        this.#b8xcy0.paused = false;
+        if (!knvxjb0nv) {
+          await this.#c9cvlih.kz5bv96z5(q5uvld3(14), { slot: this.#c9cvlih.wgiha8_gi()?.activeSlot || 1 }).catch(() => {});
         }
-        this.#h21pfiv2.ozhdbv3(this.#rydq0td.runMode);
+        this.#ajs9ht7j.iyjb2jfy(this.#b8xcy0.runMode);
       }
-      this.skzwoc4kz();
-      this.lo2c_3_o2();
-      this.f05fi4k();
-      this.ac34wmmc3();
-      this.ble3sr();
-      this.l8vnw46();
+      this.xa81bkp();
+      this.eyuphum();
+      this.zeikjx();
+      this.umrt7wemr();
+      this.s5kxw3g5();
+      this.s7iey9z7();
     }
 
-    pn1sv7hn1() {
-      const zz204m1z = this.#_j8g43oj.pmm22ozm();
-      const eeb5__ = document.getElementById('slotList');
-      if (!zz204m1z) {
-        if (eeb5__) {
-          eeb5__.innerHTML = '';
-          const kbnw2df = document.createElement('div');
-          kbnw2df.className = 'slot-card';
-          const ny5fmr = document.createElement('div');
-          ny5fmr.className = 'slot-left';
-          const yrowu24 = document.createElement('div');
-          yrowu24.className = 'buff-info';
-          const kxzg9egxz = document.createElement('strong');
-          kxzg9egxz.textContent = this.#c4m0wjl ? 'Session Verification Required' : 'Loading save slots...';
-          const wpeyqah = document.createElement('span');
-          wpeyqah.className = 'buff-desc';
-          wpeyqah.textContent = this.#c4m0wjl
+    tm0uz6() {
+      const okrbdxj = this.#c9cvlih.wgiha8_gi();
+      const xhvlxayh = document.getElementById('slotList');
+      if (!okrbdxj) {
+        if (xhvlxayh) {
+          xhvlxayh.innerHTML = '';
+          const aqj2d67 = document.createElement('div');
+          aqj2d67.className = 'slot-card';
+          const c6wma2 = document.createElement('div');
+          c6wma2.className = 'slot-left';
+          const nuvniq7 = document.createElement('div');
+          nuvniq7.className = 'buff-info';
+          const msrkx8a = document.createElement('strong');
+          msrkx8a.textContent = this.#rv07k1gv ? 'Session Verification Required' : 'Loading save slots...';
+          const qjoirg4j = document.createElement('span');
+          qjoirg4j.className = 'buff-desc';
+          qjoirg4j.textContent = this.#rv07k1gv
             ? 'Could not reach server verification. Click Retry to reconnect.'
             : 'Connecting to save storage...';
-          yrowu24.append(kxzg9egxz, wpeyqah);
-          ny5fmr.appendChild(yrowu24);
-          kbnw2df.appendChild(ny5fmr);
-          if (this.#c4m0wjl) {
-            const y8cgujs8c = document.createElement('div');
-            y8cgujs8c.className = 'slot-actions';
-            const itknwmlt = document.createElement('button');
-            itknwmlt.type = 'button';
-            itknwmlt.className = 'primary-btn';
-            itknwmlt.textContent = 'Retry';
-            itknwmlt.onclick = (re_rpree_) => {
-              if (!qxhqcshxh(re_rpree_)) return;
-              this.#zp_nzq();
+          nuvniq7.append(msrkx8a, qjoirg4j);
+          c6wma2.appendChild(nuvniq7);
+          aqj2d67.appendChild(c6wma2);
+          if (this.#rv07k1gv) {
+            const ht06aogt0 = document.createElement('div');
+            ht06aogt0.className = 'slot-actions';
+            const bsqij5gsq = document.createElement('button');
+            bsqij5gsq.type = 'button';
+            bsqij5gsq.className = 'primary-btn';
+            bsqij5gsq.textContent = 'Retry';
+            bsqij5gsq.onclick = (p2uurbf2) => {
+              if (!zdd_1x6dd(p2uurbf2)) return;
+              this.#g58krch58();
             };
-            y8cgujs8c.appendChild(itknwmlt);
-            kbnw2df.appendChild(y8cgujs8c);
+            ht06aogt0.appendChild(bsqij5gsq);
+            aqj2d67.appendChild(ht06aogt0);
           }
-          eeb5__.appendChild(kbnw2df);
+          xhvlxayh.appendChild(aqj2d67);
         }
         return;
       }
-      const h70vz1 = zz204m1z.profile;
-      const hk68b63k6 = zz204m1z.meta;
+      const m0uj0u = okrbdxj.profile;
+      const l3wvnr53 = okrbdxj.meta;
 
-      const unhkkhhnh = document.getElementById('homeProfileIcon');
-      const rmipeu = document.getElementById('homeProfileSmallIcon');
-      const fzzol2hz = document.getElementById('homeProfileName');
-      if (unhkkhhnh) unhkkhhnh.className = `fa-solid ${h70vz1.icon}`;
-      if (rmipeu) rmipeu.className = `fa-solid ${h70vz1.icon}`;
-      if (fzzol2hz) fzzol2hz.textContent = h70vz1.name;
+      const tbxocbab = document.getElementById('homeProfileIcon');
+      const lfm_6gz = document.getElementById('homeProfileSmallIcon');
+      const b5mja59 = document.getElementById('homeProfileName');
+      if (tbxocbab) tbxocbab.className = `fa-solid ${m0uj0u.icon}`;
+      if (lfm_6gz) lfm_6gz.className = `fa-solid ${m0uj0u.icon}`;
+      if (b5mja59) b5mja59.textContent = m0uj0u.name;
 
-      const c1y8ahl1 = document.getElementById('homeCoins');
-      const z5c32y4 = document.getElementById('homeGems');
-      const lg6xssfg6 = document.getElementById('slotsCoins');
-      const wpe756o = document.getElementById('slotsGems');
-      if (c1y8ahl1) c1y8ahl1.textContent = hk68b63k6.coins;
-      if (z5c32y4) z5c32y4.textContent = hk68b63k6.gems;
-      if (lg6xssfg6) lg6xssfg6.textContent = hk68b63k6.coins;
-      if (wpe756o) wpe756o.textContent = hk68b63k6.gems;
+      const ytcc7e = document.getElementById('homeCoins');
+      const gj4s6ta = document.getElementById('homeGems');
+      const frmsgw5 = document.getElementById('slotsCoins');
+      const oatxbt2at = document.getElementById('slotsGems');
+      if (ytcc7e) ytcc7e.textContent = l3wvnr53.coins;
+      if (gj4s6ta) gj4s6ta.textContent = l3wvnr53.gems;
+      if (frmsgw5) frmsgw5.textContent = l3wvnr53.coins;
+      if (oatxbt2at) oatxbt2at.textContent = l3wvnr53.gems;
 
-      const ik3e4q = document.getElementById('slotsMenuBtn');
-      if (ik3e4q) {
-        ik3e4q.innerHTML = `<i class="fa-solid fa-layer-group" aria-hidden="true"></i> Slot ${zz204m1z.activeSlot}`;
+      const ghr2c_7 = document.getElementById('slotsMenuBtn');
+      if (ghr2c_7) {
+        ghr2c_7.innerHTML = `<i class="fa-solid fa-layer-group" aria-hidden="true"></i> Slot ${okrbdxj.activeSlot}`;
       }
 
-      this.po0fxh5();
+      this._trvavq();
 
-      if (!eeb5__) return;
+      if (!xhvlxayh) return;
 
-      const j4qmmhs4 = zz204m1z.slotSummaries || [];
-      eeb5__.innerHTML = '';
+      const gtaj52bta = okrbdxj.slotSummaries || [];
+      xhvlxayh.innerHTML = '';
 
-      for (const mi3e0u of j4qmmhs4) {
-        const vemejyeem = document.createElement('div');
-        const lhfrrrbh = mi3e0u.hasRun
-          ? (mi3e0u.mode === 'hell'
+      for (const ko2g302 of gtaj52bta) {
+        const a6yum846y = document.createElement('div');
+        const hy2k4pfy = ko2g302.hasRun
+          ? (ko2g302.mode === 'hell'
             ? 'occupied mode-hell'
-            : mi3e0u.mode === 'tartarus'
+            : ko2g302.mode === 'tartarus'
               ? 'occupied mode-tartarus'
-              : mi3e0u.mode.startsWith('speedrun_')
+              : ko2g302.mode.startsWith('speedrun_')
                 ? 'occupied mode-speedrun'
                 : 'occupied')
           : '';
-        vemejyeem.className = `slot-card ${lhfrrrbh}`.trim();
+        a6yum846y.className = `slot-card ${hy2k4pfy}`.trim();
 
-        const tjsy2hb = document.createElement('div');
-        tjsy2hb.className = 'slot-left';
+        const jk1pf6 = document.createElement('div');
+        jk1pf6.className = 'slot-left';
 
-        const _2v53k4 = document.createElement('div');
-        _2v53k4.className = 'slot-num';
-        _2v53k4.textContent = `#${mi3e0u.slot}`;
+        const e2nwe132n = document.createElement('div');
+        e2nwe132n.className = 'slot-num';
+        e2nwe132n.textContent = `#${ko2g302.slot}`;
 
-        const yjj3ghbjj = document.createElement('div');
-        yjj3ghbjj.className = 'buff-info';
+        const a56teqy56 = document.createElement('div');
+        a56teqy56.className = 'buff-info';
 
-        if (mi3e0u.hasRun) {
-          const vuuymjsuu = document.createElement('strong');
-          vuuymjsuu.textContent = `${this.futpyaaut(mi3e0u.mode)} (${String(mi3e0u.difficulty || 'medium').toUpperCase()})`;
-          const wheptb5he = document.createElement('span');
-          wheptb5he.className = 'buff-desc';
-          const bzayd7 = mi3e0u.mode.startsWith('speedrun_')
-            ? ` · ${this.pdya3k9(mi3e0u.elapsedMs || 0)}`
+        if (ko2g302.hasRun) {
+          const dvp17ja = document.createElement('strong');
+          dvp17ja.textContent = `${this.i35f4k(ko2g302.mode)} (${String(ko2g302.difficulty || 'medium').toUpperCase()})`;
+          const r301a41 = document.createElement('span');
+          r301a41.className = 'buff-desc';
+          const cwe50n4w = ko2g302.mode.startsWith('speedrun_')
+            ? ` · ${this.do_uuv0o(ko2g302.elapsedMs || 0)}`
             : '';
-          wheptb5he.textContent = `Level ${mi3e0u.level} · Balls: ${mi3e0u.ballCount}${bzayd7}`;
-          yjj3ghbjj.append(vuuymjsuu, wheptb5he);
+          r301a41.textContent = `Level ${ko2g302.level} · Balls: ${ko2g302.ballCount}${cwe50n4w}`;
+          a56teqy56.append(dvp17ja, r301a41);
         } else {
-          const ry_9mp = document.createElement('strong');
-          ry_9mp.textContent = 'Empty Slot';
-          const zr5jup = document.createElement('span');
-          zr5jup.className = 'buff-desc';
-          zr5jup.textContent = 'Start a new run or import a save into this slot.';
-          yjj3ghbjj.append(ry_9mp, zr5jup);
+          const fm7x2lg = document.createElement('strong');
+          fm7x2lg.textContent = 'Empty Slot';
+          const hm635j7m = document.createElement('span');
+          hm635j7m.className = 'buff-desc';
+          hm635j7m.textContent = 'Start a new run or import a save into this slot.';
+          a56teqy56.append(fm7x2lg, hm635j7m);
         }
 
-        tjsy2hb.append(_2v53k4, yjj3ghbjj);
+        jk1pf6.append(e2nwe132n, a56teqy56);
 
-        const azs7b47 = document.createElement('div');
-        azs7b47.className = 'slot-actions';
+        const ofxq93 = document.createElement('div');
+        ofxq93.className = 'slot-actions';
 
-        const w0ryyjo = document.createElement('label');
-        w0ryyjo.className = 'btn-label secondary';
-        w0ryyjo.innerHTML = '<i class="fa-solid fa-upload" aria-hidden="true"></i> Import';
-        const j7vkyc = document.createElement('input');
-        j7vkyc.type = 'file';
-        j7vkyc.accept = '.json,.txt,application/json';
-        j7vkyc.className = 'file-input';
-        j7vkyc.onchange = (t3u8ff) => {
-          if (!qxhqcshxh(t3u8ff)) return;
-          this.thdcy3ih(t3u8ff, mi3e0u.slot, true);
+        const qmvjcr6m = document.createElement('label');
+        qmvjcr6m.className = 'btn-label secondary';
+        qmvjcr6m.innerHTML = '<i class="fa-solid fa-upload" aria-hidden="true"></i> Import';
+        const rcij57ac = document.createElement('input');
+        rcij57ac.type = 'file';
+        rcij57ac.accept = '.json,.txt,application/json';
+        rcij57ac.className = 'file-input';
+        rcij57ac.onchange = (skiws0s) => {
+          if (!zdd_1x6dd(skiws0s)) return;
+          this.eor7wj(skiws0s, ko2g302.slot, true);
         };
-        w0ryyjo.appendChild(j7vkyc);
-        azs7b47.appendChild(w0ryyjo);
+        qmvjcr6m.appendChild(rcij57ac);
+        ofxq93.appendChild(qmvjcr6m);
 
-        if (mi3e0u.hasRun) {
-          const cmnx37q = document.createElement('button');
-          cmnx37q.type = 'button';
-          cmnx37q.className = 'danger';
-          cmnx37q.title = 'Clear Slot';
-          cmnx37q.innerHTML = '<i class="fa-solid fa-trash-can" aria-hidden="true"></i>';
-          cmnx37q.onclick = (u3umnxk3) => {
-            if (!qxhqcshxh(u3umnxk3)) return;
-            voubd8rou(
-              `Clear Slot #${mi3e0u.slot}`,
-              `Clear Slot #${mi3e0u.slot}? Shared coins, gems, upgrades, and records will stay.`,
+        if (ko2g302.hasRun) {
+          const bs7jldj = document.createElement('button');
+          bs7jldj.type = 'button';
+          bs7jldj.className = 'danger';
+          bs7jldj.title = 'Clear Slot';
+          bs7jldj.innerHTML = '<i class="fa-solid fa-trash-can" aria-hidden="true"></i>';
+          bs7jldj.onclick = (xlf29so) => {
+            if (!zdd_1x6dd(xlf29so)) return;
+            qh85nflh(
+              `Clear Slot #${ko2g302.slot}`,
+              `Clear Slot #${ko2g302.slot}? Shared coins, gems, upgrades, and records will stay.`,
               async () => {
-                const fsk_j90sk = await this.#_j8g43oj.i3sg5i(ea_raeaa_(20), { slot: mi3e0u.slot });
-                if (fsk_j90sk.activeSlot === mi3e0u.slot) this.#rydq0td = null;
-                this.pn1sv7hn1();
+                const rlqf9zxl = await this.#c9cvlih.kz5bv96z5(q5uvld3(20), { slot: ko2g302.slot });
+                if (rlqf9zxl.activeSlot === ko2g302.slot) this.#b8xcy0 = null;
+                this.tm0uz6();
               },
               'Clear Slot',
               'danger'
             );
           };
-          azs7b47.appendChild(cmnx37q);
+          ofxq93.appendChild(bs7jldj);
 
-          const fu2oyqt = document.createElement('button');
-          fu2oyqt.type = 'button';
-          fu2oyqt.className = 'primary-btn';
-          fu2oyqt.innerHTML = '<i class="fa-solid fa-play" aria-hidden="true"></i> Resume';
-          fu2oyqt.onclick = (s8zqdzk8) => {
-            if (!qxhqcshxh(s8zqdzk8)) return;
-            this.dq88aceq(mi3e0u.slot, true);
+          const s75f8_2 = document.createElement('button');
+          s75f8_2.type = 'button';
+          s75f8_2.className = 'primary-btn';
+          s75f8_2.innerHTML = '<i class="fa-solid fa-play" aria-hidden="true"></i> Resume';
+          s75f8_2.onclick = (_x241a) => {
+            if (!zdd_1x6dd(_x241a)) return;
+            this.a1t0lbk1t(ko2g302.slot, true);
           };
-          azs7b47.appendChild(fu2oyqt);
+          ofxq93.appendChild(s75f8_2);
         } else {
-          const h_54t5a_ = document.createElement('button');
-          h_54t5a_.type = 'button';
-          h_54t5a_.className = 'primary-btn';
-          h_54t5a_.innerHTML = '<i class="fa-solid fa-play" aria-hidden="true"></i> Start New';
-          h_54t5a_.onclick = (j0fpz3c0f) => {
-            if (!qxhqcshxh(j0fpz3c0f)) return;
-            this.umpp2sm(mi3e0u.slot);
+          const jnankl8n = document.createElement('button');
+          jnankl8n.type = 'button';
+          jnankl8n.className = 'primary-btn';
+          jnankl8n.innerHTML = '<i class="fa-solid fa-play" aria-hidden="true"></i> Start New';
+          jnankl8n.onclick = (hn2k2yl) => {
+            if (!zdd_1x6dd(hn2k2yl)) return;
+            this.xgolwq(ko2g302.slot);
           };
-          azs7b47.appendChild(h_54t5a_);
+          ofxq93.appendChild(jnankl8n);
         }
 
-        vemejyeem.append(tjsy2hb, azs7b47);
-        eeb5__.appendChild(vemejyeem);
+        a6yum846y.append(jk1pf6, ofxq93);
+        xhvlxayh.appendChild(a6yum846y);
       }
     }
 
-    umpp2sm(rt8ciu) {
-      this.#hop5xrh = rt8ciu;
-      this.#vz63mjdz6 = true;
-      this.#qufqi2_ = 'infinite';
-      document.querySelectorAll('.mode-btn').forEach((r9q9o_w9) => {
-        r9q9o_w9.classList.toggle('active', r9q9o_w9.dataset.mode === 'infinite');
+    xgolwq(jr24jh) {
+      this.#hgtu0tegt = jr24jh;
+      this.#ahlf0p = true;
+      this.#mrdx2t1r = 'infinite';
+      document.querySelectorAll('.mode-btn').forEach((z1qxlqe) => {
+        z1qxlqe.classList.toggle('active', z1qxlqe.dataset.mode === 'infinite');
       });
-      this.v1h0brz1h();
-      const phmppea = document.getElementById('modeModalMessage');
-      if (phmppea) phmppea.textContent = `Choose a mode and difficulty for Slot #${rt8ciu}.`;
-      il8cx74l('modeSelectModal');
+      this.czgdhzhzg();
+      const binzmh = document.getElementById('modeModalMessage');
+      if (binzmh) binzmh.textContent = `Choose a mode and difficulty for Slot #${jr24jh}.`;
+      g9oton('modeSelectModal');
     }
 
-    v1h0brz1h() {
-      const oj_76je = document.getElementById('modeDifficultySelect');
-      const ykk_cb = document.getElementById('modeTartarusHint');
-      if (!oj_76je) return;
+    czgdhzhzg() {
+      const lk0w3enk = document.getElementById('modeDifficultySelect');
+      const mpwfnf9p = document.getElementById('modeTartarusHint');
+      if (!lk0w3enk) return;
 
-      const t2cn89j2c = this.#qufqi2_ === 'tartarus';
-      for (const g3442nj3 of oj_76je.options) {
-        g3442nj3.disabled = t2cn89j2c && !tkixfh.includes(g3442nj3.value);
+      const g6d2lix6d = this.#mrdx2t1r === 'tartarus';
+      for (const hlm3ef2 of lk0w3enk.options) {
+        hlm3ef2.disabled = g6d2lix6d && !z9iwpol9i.includes(hlm3ef2.value);
       }
-      if (t2cn89j2c && !tkixfh.includes(oj_76je.value)) {
-        oj_76je.value = 'insane';
+      if (g6d2lix6d && !z9iwpol9i.includes(lk0w3enk.value)) {
+        lk0w3enk.value = 'insane';
       }
-      if (ykk_cb) ykk_cb.hidden = !t2cn89j2c;
+      if (mpwfnf9p) mpwfnf9p.hidden = !g6d2lix6d;
     }
 
-    x96uv3896() {
-      const i6ofoa96o = (r5egt_25, w1fb3d5, mu0giu6u0) => {
-        if (r5egt_25) ng33dibg.call(r5egt_25, w1fb3d5, mu0giu6u0);
+    pntkny4n() {
+      const _6jqvl = (dtbw9vj, vm8f22mm8, lq8m5n3) => {
+        if (dtbw9vj) ve7bk0j.call(dtbw9vj, vm8f22mm8, lq8m5n3);
       };
 
-      i6ofoa96o(document, 'click', (_z3puns) => {
-        if (!qxhqcshxh(_z3puns)) return;
-        const j49y72049 = _z3puns.target instanceof Element ? _z3puns.target : _z3puns.target?.parentElement;
-        if (!j49y72049) return;
+      _6jqvl(document, 'click', (w51meph) => {
+        if (!zdd_1x6dd(w51meph)) return;
+        const s0ajjjj0 = w51meph.target instanceof Element ? w51meph.target : w51meph.target?.parentElement;
+        if (!s0ajjjj0) return;
 
-        const e1stsvj = j49y72049.closest('[data-open-modal]');
-        if (e1stsvj) {
-          this.#h21pfiv2.jslyel8();
-          il8cx74l(e1stsvj.dataset.openModal);
+        const l48lbc = s0ajjjj0.closest('[data-open-modal]');
+        if (l48lbc) {
+          this.#ajs9ht7j.rusuwh();
+          g9oton(l48lbc.dataset.openModal);
           return;
         }
 
-        const exbegd = j49y72049.closest('[data-close-modal]');
-        if (exbegd) {
-          iq4lmesq4(exbegd.dataset.closeModal);
+        const muj80abu = s0ajjjj0.closest('[data-close-modal]');
+        if (muj80abu) {
+          fqzhut(muj80abu.dataset.closeModal);
           return;
         }
 
-        const n1z31gp1z = j49y72049.closest('[data-action]');
-        if (!n1z31gp1z) return;
+        const su2e2cx = s0ajjjj0.closest('[data-action]');
+        if (!su2e2cx) return;
 
-        this.#h21pfiv2.jslyel8();
-        const v2amezj2a = n1z31gp1z.dataset.action;
-        const phh29t = n1z31gp1z.dataset.arg;
+        this.#ajs9ht7j.rusuwh();
+        const m3rl6j = su2e2cx.dataset.action;
+        const d6hwz7a6 = su2e2cx.dataset.arg;
 
-        switch (v2amezj2a) {
-          case 'showHomeScreen': this.u3d_8aq3(); break;
-          case 'showSlotsScreen': this.dekstui(); break;
-          case 'downBalls': this.em3ux49(); break;
-          case 'toggleFastForward': this.a_uqwd(); break;
-          case 'showTrackerTab': this.nwvqof(phh29t); break;
-          case 'saveProfileFromModal': this.n37r2953(); break;
+        switch (m3rl6j) {
+          case 'showHomeScreen': this.eaqjxf9aq(); break;
+          case 'showSlotsScreen': this.ygf_d3(); break;
+          case 'downBalls': this.pf9b2pl(); break;
+          case 'toggleFastForward': this.ajlhhu(); break;
+          case 'showTrackerTab': this.lh0avf8(d6hwz7a6); break;
+          case 'saveProfileFromModal': this.jyux50myu(); break;
           case 'resetGameFromSettings':
-            iq4lmesq4('settingsModal');
-            this.bn6lqx();
+            fqzhut('settingsModal');
+            this.a51oj4();
             break;
-          case 'toggleSetting': this.fn0yoe(phh29t); break;
-          case 'exportSaveFile': this.rbpilrd(); break;
-          case 'showSaveCode': this.gabg8w7a(); break;
-          case 'importSaveCode': this.s6u35w16(); break;
-          case 'wipeAllData': this.iuumiw(); break;
-          case 'cancelNewRun': this._3a9r1q(); break;
-          case 'startSelectedMode': this.p0zla91(); break;
-          case ea_raeaa_(17): this.ihaestoh(phh29t); break;
-          case ea_raeaa_(18): this.mkab9l(phh29t); break;
-          case 'showLeaderboardPage': this.pz7s1_(phh29t); break;
+          case 'toggleSetting': this.mjo3t0(d6hwz7a6); break;
+          case 'exportSaveFile': this.xngvdeyng(); break;
+          case 'showSaveCode': this.yhhbm4f(); break;
+          case 'importSaveCode': this.x6d5gj(); break;
+          case 'wipeAllData': this.m4lju2(); break;
+          case 'cancelNewRun': this.hk4s6xtk(); break;
+          case 'startSelectedMode': this.olscmldls(); break;
+          case q5uvld3(17): this.zafgzhaa(d6hwz7a6); break;
+          case q5uvld3(18): this.tc4nio(d6hwz7a6); break;
+          case 'showLeaderboardPage': this.pu5em3qu5(d6hwz7a6); break;
         }
       });
 
-      i6ofoa96o(document.getElementById('speedrunCategorySelect'), 'change', (o0sryqs) => {
-        if (qxhqcshxh(o0sryqs)) this.f05fi4k();
+      _6jqvl(document.getElementById('speedrunCategorySelect'), 'change', (x6cloqp6c) => {
+        if (zdd_1x6dd(x6cloqp6c)) this.zeikjx();
       });
 
-      i6ofoa96o(document.getElementById('speedrunDiffSelect'), 'change', (emqvifrmq) => {
-        if (qxhqcshxh(emqvifrmq)) this.f05fi4k();
+      _6jqvl(document.getElementById('speedrunDiffSelect'), 'change', (py6n5r) => {
+        if (zdd_1x6dd(py6n5r)) this.zeikjx();
       });
 
-      i6ofoa96o(document.getElementById('settingsImportFile'), 'change', (wq3xu69q3) => {
-        if (!qxhqcshxh(wq3xu69q3)) return;
-        const lgqv0s = this.#_j8g43oj.pmm22ozm()?.activeSlot || 1;
-        this.thdcy3ih(wq3xu69q3, lgqv0s, true);
+      _6jqvl(document.getElementById('settingsImportFile'), 'change', (ows1oujws) => {
+        if (!zdd_1x6dd(ows1oujws)) return;
+        const f7yo23t7 = this.#c9cvlih.wgiha8_gi()?.activeSlot || 1;
+        this.eor7wj(ows1oujws, f7yo23t7, true);
       });
 
-      document.querySelectorAll('.mode-btn').forEach((e31ky4v3) => {
-        i6ofoa96o(e31ky4v3, 'click', (d7ieufm7) => {
-          if (!qxhqcshxh(d7ieufm7)) return;
-          this.#qufqi2_ = e31ky4v3.dataset.mode;
-          document.querySelectorAll('.mode-btn').forEach((ag51op6g) => {
-            ag51op6g.classList.toggle('active', ag51op6g === e31ky4v3);
+      document.querySelectorAll('.mode-btn').forEach((ppsqskqps) => {
+        _6jqvl(ppsqskqps, 'click', (dwtfofnw) => {
+          if (!zdd_1x6dd(dwtfofnw)) return;
+          this.#mrdx2t1r = ppsqskqps.dataset.mode;
+          document.querySelectorAll('.mode-btn').forEach((sq5ylj3) => {
+            sq5ylj3.classList.toggle('active', sq5ylj3 === ppsqskqps);
           });
-          this.v1h0brz1h();
+          this.czgdhzhzg();
         });
       });
 
-      i6ofoa96o(document.getElementById('difficultySelect'), 'change', async (dymlb19) => {
-        if (!qxhqcshxh(dymlb19)) return;
-        if (!this.#rydq0td || this.#rydq0td.level > 1 || this.#rydq0td.over || this.#rydq0td.complete) return;
-        const wicu6fd = l89t2fv(this.#rydq0td.runMode, dymlb19.target.value);
-        dymlb19.target.value = wicu6fd;
+      _6jqvl(document.getElementById('difficultySelect'), 'change', async (nf_4qe) => {
+        if (!zdd_1x6dd(nf_4qe)) return;
+        if (!this.#b8xcy0 || this.#b8xcy0.level > 1 || this.#b8xcy0.over || this.#b8xcy0.complete) return;
+        const ki_h1p4i_ = wl61zk6l6(this.#b8xcy0.runMode, nf_4qe.target.value);
+        nf_4qe.target.value = ki_h1p4i_;
         try {
-          const qflvs0kf = await this.#_j8g43oj.i3sg5i(ea_raeaa_(15), {
-            slot: this.#_j8g43oj.pmm22ozm()?.activeSlot || 1,
-            difficulty: wicu6fd
+          const o55ggi = await this.#c9cvlih.kz5bv96z5(q5uvld3(15), {
+            slot: this.#c9cvlih.wgiha8_gi()?.activeSlot || 1,
+            difficulty: ki_h1p4i_
           });
-          this.#_z3qukk(qflvs0kf, true);
-          this.skzwoc4kz();
+          this.#l3_53e(o55ggi, true);
+          this.xa81bkp();
         } catch {}
       });
 
-      i6ofoa96o(u35i1y, 'pointermove', (jod4ttvo) => {
-        if (!qxhqcshxh(jod4ttvo) || !u35i1y) return;
-        const fobgmc = u35i1y.getBoundingClientRect();
-        if (fobgmc.width > 0 && fobgmc.height > 0) {
-          this.#_6kwav76k.x = (jod4ttvo.clientX - fobgmc.left) * k_fy2o0_ / fobgmc.width;
-          this.#_6kwav76k.y = (jod4ttvo.clientY - fobgmc.top) * p06ijpg / fobgmc.height;
-          this.ble3sr();
+      _6jqvl(nns8g29ns, 'pointermove', (wlf4et) => {
+        if (!zdd_1x6dd(wlf4et) || !nns8g29ns) return;
+        const qzwj14t = nns8g29ns.getBoundingClientRect();
+        if (qzwj14t.width > 0 && qzwj14t.height > 0) {
+          this.#ahveib.x = (wlf4et.clientX - qzwj14t.left) * _8je1mu8j / qzwj14t.width;
+          this.#ahveib.y = (wlf4et.clientY - qzwj14t.top) * g3muzdu / qzwj14t.height;
+          this.s5kxw3g5();
         }
       });
 
-      i6ofoa96o(u35i1y, 'pointerdown', (clrxlsb) => {
-        if (!qxhqcshxh(clrxlsb) || !u35i1y) return;
-        const _0c78q3 = u35i1y.getBoundingClientRect();
-        if (_0c78q3.width > 0 && _0c78q3.height > 0 && Number.isFinite(clrxlsb.clientX) && Number.isFinite(clrxlsb.clientY)) {
-          this.#_6kwav76k.x = (clrxlsb.clientX - _0c78q3.left) * k_fy2o0_ / _0c78q3.width;
-          this.#_6kwav76k.y = (clrxlsb.clientY - _0c78q3.top) * p06ijpg / _0c78q3.height;
+      _6jqvl(nns8g29ns, 'pointerdown', (ah5v7fah) => {
+        if (!zdd_1x6dd(ah5v7fah) || !nns8g29ns) return;
+        const qtwe7r = nns8g29ns.getBoundingClientRect();
+        if (qtwe7r.width > 0 && qtwe7r.height > 0 && Number.isFinite(ah5v7fah.clientX) && Number.isFinite(ah5v7fah.clientY)) {
+          this.#ahveib.x = (ah5v7fah.clientX - qtwe7r.left) * _8je1mu8j / qtwe7r.width;
+          this.#ahveib.y = (ah5v7fah.clientY - qtwe7r.top) * g3muzdu / qtwe7r.height;
         }
-        this.#h21pfiv2.jslyel8();
-        this.y16gizj();
+        this.#ajs9ht7j.rusuwh();
+        this.la1xew();
       });
 
-      i6ofoa96o(document.getElementById('analysisAngleInput'), 'input', (___1ayv) => {
-        if (qxhqcshxh(___1ayv)) this.ble3sr();
+      _6jqvl(document.getElementById('analysisAngleInput'), 'input', (nauqk6) => {
+        if (zdd_1x6dd(nauqk6)) this.s5kxw3g5();
       });
 
-      i6ofoa96o(document.getElementById('analysisFireButton'), 'click', (r07zec007) => {
-        if (!qxhqcshxh(r07zec007)) return;
-        this.#h21pfiv2.jslyel8();
-        const dyd7fux = document.getElementById('analysisAngleInput');
-        const lho0av8 = Number(dyd7fux?.value);
-        if (Number.isFinite(lho0av8)) {
-          this.y16gizj(lho0av8);
-        }
-      });
-
-      i6ofoa96o(window, 'beforeunload', () => {
-        if (this.#rydq0td && !this.#rydq0td.over && !this.#rydq0td.complete && !this.#rydq0td.paused) {
-          this.#_j8g43oj.i3sg5i(ea_raeaa_(13), { slot: this.#_j8g43oj.pmm22ozm()?.activeSlot || 1 }).catch(() => {});
+      _6jqvl(document.getElementById('analysisFireButton'), 'click', (asui8z2s) => {
+        if (!zdd_1x6dd(asui8z2s)) return;
+        this.#ajs9ht7j.rusuwh();
+        const zwmofx = document.getElementById('analysisAngleInput');
+        const wbmqnslb = Number(zwmofx?.value);
+        if (Number.isFinite(wbmqnslb)) {
+          this.la1xew(wbmqnslb);
         }
       });
 
-      i6ofoa96o(document, 'visibilitychange', () => {
-        if (!this.#m18564p1 || !this.#rydq0td || this.#rydq0td.over || this.#rydq0td.complete) return;
-        const usmw4ros = this.#_j8g43oj.pmm22ozm()?.activeSlot || 1;
+      _6jqvl(window, 'beforeunload', () => {
+        if (this.#b8xcy0 && !this.#b8xcy0.over && !this.#b8xcy0.complete && !this.#b8xcy0.paused) {
+          this.#c9cvlih.kz5bv96z5(q5uvld3(13), { slot: this.#c9cvlih.wgiha8_gi()?.activeSlot || 1 }).catch(() => {});
+        }
+      });
+
+      _6jqvl(document, 'visibilitychange', () => {
+        if (!this.#dfo44th || !this.#b8xcy0 || this.#b8xcy0.over || this.#b8xcy0.complete) return;
+        const dsxctr6s = this.#c9cvlih.wgiha8_gi()?.activeSlot || 1;
         if (document.hidden) {
-          this.#rydq0td.paused = true;
-          this.#_j8g43oj.i3sg5i(ea_raeaa_(13), { slot: usmw4ros }).catch(() => {});
-        } else if (this.#e6xy89h6x === 'game') {
-          this.#rydq0td.paused = false;
-          this.#_j8g43oj.i3sg5i(ea_raeaa_(14), { slot: usmw4ros }).catch(() => {});
+          this.#b8xcy0.paused = true;
+          this.#c9cvlih.kz5bv96z5(q5uvld3(13), { slot: dsxctr6s }).catch(() => {});
+        } else if (this.#y01jcy === 'game') {
+          this.#b8xcy0.paused = false;
+          this.#c9cvlih.kz5bv96z5(q5uvld3(14), { slot: dsxctr6s }).catch(() => {});
         }
       });
     }
 
-    async dq88aceq(c3u3vqm3u, ikr6s2 = true) {
-      if (!this.#m18564p1) return;
+    async a1t0lbk1t(yll7lu, pebffb = true) {
+      if (!this.#dfo44th) return;
       try {
-        const x10nw6m = await this.#_j8g43oj.i3sg5i(ea_raeaa_(16), { slot: c3u3vqm3u, enterGame: ikr6s2 });
-        if (x10nw6m.activeRun && !x10nw6m.activeRun.over && !x10nw6m.activeRun.complete) {
-          this.#_z3qukk(x10nw6m, ikr6s2);
-          this.#lvoyq4bvo = this.#x28u11l2();
-          if (ikr6s2) {
-            await this.m_njtf4(true);
+        const ma3j6g = await this.#c9cvlih.kz5bv96z5(q5uvld3(16), { slot: yll7lu, enterGame: pebffb });
+        if (ma3j6g.activeRun && !ma3j6g.activeRun.over && !ma3j6g.activeRun.complete) {
+          this.#l3_53e(ma3j6g, pebffb);
+          this.#s__gxdo = this.#zamo2e4am();
+          if (pebffb) {
+            await this.k2na7q52n(true);
           } else {
-            this.pn1sv7hn1();
+            this.tm0uz6();
           }
         } else {
-          this.#hop5xrh = c3u3vqm3u;
-          await this.j88okvc88(c3u3vqm3u, 'infinite', 'medium');
+          this.#hgtu0tegt = yll7lu;
+          await this.haghikm(yll7lu, 'infinite', 'medium');
         }
       } catch {}
     }
 
-    futpyaaut(qg41d9) {
-      return this.#kxk4kgex[qg41d9]?.label || 'Infinite';
+    i35f4k(ev8yti) {
+      return this.#b4jnfwr[ev8yti]?.label || 'Infinite';
     }
 
-    fcs259_() {
+    yyoa51uy() {
       document.body.classList.remove('hell-mode', 'tartarus-mode');
-      const m85ebjd85 = document.getElementById('overlordPanel');
-      const tojizx = document.getElementById('overlordTitle');
+      const k4c9li84c = document.getElementById('overlordPanel');
+      const wqck5ukqc = document.getElementById('overlordTitle');
 
-      if (this.#e6xy89h6x !== 'game' || !this.#rydq0td) {
-        if (m85ebjd85) m85ebjd85.style.display = 'none';
+      if (this.#y01jcy !== 'game' || !this.#b8xcy0) {
+        if (k4c9li84c) k4c9li84c.style.display = 'none';
         return;
       }
 
-      if (this.#rydq0td.runMode === 'hell') {
+      if (this.#b8xcy0.runMode === 'hell') {
         document.body.classList.add('hell-mode');
-        if (m85ebjd85) m85ebjd85.style.display = 'block';
-        if (tojizx) tojizx.textContent = 'The Overlord';
-      } else if (this.#rydq0td.runMode === 'tartarus') {
+        if (k4c9li84c) k4c9li84c.style.display = 'block';
+        if (wqck5ukqc) wqck5ukqc.textContent = 'The Overlord';
+      } else if (this.#b8xcy0.runMode === 'tartarus') {
         document.body.classList.add('tartarus-mode');
-        if (m85ebjd85) m85ebjd85.style.display = 'block';
-        if (tojizx) tojizx.textContent = 'Tartarus Watcher';
+        if (k4c9li84c) k4c9li84c.style.display = 'block';
+        if (wqck5ukqc) wqck5ukqc.textContent = 'Tartarus Watcher';
       } else {
-        if (m85ebjd85) m85ebjd85.style.display = 'none';
+        if (k4c9li84c) k4c9li84c.style.display = 'none';
       }
     }
 
-    pdya3k9(dk9uefek9) {
-      const st7n9ldt7 = Math.max(0, Math.round(dk9uefek9));
-      const jsw2qe4sw = Math.floor(st7n9ldt7 / 60000);
-      const g6srrnn6s = Math.floor((st7n9ldt7 % 60000) / 1000);
-      const qz0ah9xz = st7n9ldt7 % 1000;
-      return `${String(jsw2qe4sw).padStart(2, '0')}:${String(g6srrnn6s).padStart(2, '0')}.${String(qz0ah9xz).padStart(3, '0')}`;
+    do_uuv0o(zv4xzh) {
+      const y7esrl = Math.max(0, Math.round(zv4xzh));
+      const hm0mw17m = Math.floor(y7esrl / 60000);
+      const zk57jgu = Math.floor((y7esrl % 60000) / 1000);
+      const zknz5s = y7esrl % 1000;
+      return `${String(hm0mw17m).padStart(2, '0')}:${String(zk57jgu).padStart(2, '0')}.${String(zknz5s).padStart(3, '0')}`;
     }
 
-    a5bc1y(snww6rlnw) {
-      if (snww6rlnw === 0) return '±0.000s';
-      const ud338e3d3 = snww6rlnw > 0 ? '+' : '-';
-      const aopibowop = Math.abs(Math.round(snww6rlnw));
-      if (aopibowop >= 60000) return `${ud338e3d3}${this.pdya3k9(aopibowop)}`;
-      return `${ud338e3d3}${(aopibowop / 1000).toFixed(3)}s`;
+    kppbcqrp(tusjar) {
+      if (tusjar === 0) return '±0.000s';
+      const kxe9syfx = tusjar > 0 ? '+' : '-';
+      const m2_7bme2 = Math.abs(Math.round(tusjar));
+      if (m2_7bme2 >= 60000) return `${kxe9syfx}${this.do_uuv0o(m2_7bme2)}`;
+      return `${kxe9syfx}${(m2_7bme2 / 1000).toFixed(3)}s`;
     }
 
-    ac34wmmc3() {
-      if (!this.#rydq0td) return;
-      const ggodrjd = document.getElementById('speedrunTimer');
-      const bu7gr3gu7 = document.getElementById('timerLabel');
-      if (!ggodrjd || !bu7gr3gu7) return;
-      bu7gr3gu7.textContent = `${this.futpyaaut(this.#rydq0td.runMode)} Time`;
-      ggodrjd.textContent = this.#rydq0td.runMode.startsWith('speedrun_')
-        ? this.pdya3k9(this.#_j8g43oj.ycae4g())
+    umrt7wemr() {
+      if (!this.#b8xcy0) return;
+      const wevb7cy = document.getElementById('speedrunTimer');
+      const idxz12 = document.getElementById('timerLabel');
+      if (!wevb7cy || !idxz12) return;
+      idxz12.textContent = `${this.i35f4k(this.#b8xcy0.runMode)} Time`;
+      wevb7cy.textContent = this.#b8xcy0.runMode.startsWith('speedrun_')
+        ? this.do_uuv0o(this.#c9cvlih.p83ks6())
         : '—';
     }
 
-    async bn6lqx() {
-      if (!this.#m18564p1) return;
-      const pr5np53r5 = this.#_j8g43oj.pmm22ozm()?.activeSlot || 1;
-      if (this.#rydq0td && !this.#rydq0td.over && !this.#rydq0td.complete) {
-        this.#rydq0td.paused = true;
-        await this.#_j8g43oj.i3sg5i(ea_raeaa_(13), { slot: pr5np53r5 }).catch(() => {});
+    async a51oj4() {
+      if (!this.#dfo44th) return;
+      const b7der15 = this.#c9cvlih.wgiha8_gi()?.activeSlot || 1;
+      if (this.#b8xcy0 && !this.#b8xcy0.over && !this.#b8xcy0.complete) {
+        this.#b8xcy0.paused = true;
+        await this.#c9cvlih.kz5bv96z5(q5uvld3(13), { slot: b7der15 }).catch(() => {});
       }
 
-      this.#hop5xrh = pr5np53r5;
-      this.#vz63mjdz6 = true;
-      this.#qufqi2_ = 'infinite';
-      document.querySelectorAll('.mode-btn').forEach((n30zr9) => {
-        n30zr9.classList.toggle('active', n30zr9.dataset.mode === 'infinite');
+      this.#hgtu0tegt = b7der15;
+      this.#ahlf0p = true;
+      this.#mrdx2t1r = 'infinite';
+      document.querySelectorAll('.mode-btn').forEach((m4gypi) => {
+        m4gypi.classList.toggle('active', m4gypi.dataset.mode === 'infinite');
       });
-      this.v1h0brz1h();
+      this.czgdhzhzg();
 
       document.getElementById('modeModalMessage').textContent =
-        `Starting a new run replaces Slot #${this.#hop5xrh}. Choose a mode and difficulty.`;
-      il8cx74l('modeSelectModal');
+        `Starting a new run replaces Slot #${this.#hgtu0tegt}. Choose a mode and difficulty.`;
+      g9oton('modeSelectModal');
     }
 
-    async _3a9r1q() {
-      this.#vz63mjdz6 = false;
-      this.#hop5xrh = null;
-      iq4lmesq4('modeSelectModal');
+    async hk4s6xtk() {
+      this.#ahlf0p = false;
+      this.#hgtu0tegt = null;
+      fqzhut('modeSelectModal');
 
-      if (this.#e6xy89h6x === 'game' && this.#rydq0td && !this.#rydq0td.over && !this.#rydq0td.complete) {
-        this.#rydq0td.paused = false;
-        const ir5k_ssr = this.#_j8g43oj.pmm22ozm()?.activeSlot || 1;
-        await this.#_j8g43oj.i3sg5i(ea_raeaa_(14), { slot: ir5k_ssr }).catch(() => {});
+      if (this.#y01jcy === 'game' && this.#b8xcy0 && !this.#b8xcy0.over && !this.#b8xcy0.complete) {
+        this.#b8xcy0.paused = false;
+        const pbolnt = this.#c9cvlih.wgiha8_gi()?.activeSlot || 1;
+        await this.#c9cvlih.kz5bv96z5(q5uvld3(14), { slot: pbolnt }).catch(() => {});
       }
     }
 
-    async p0zla91() {
-      if (!this.#vz63mjdz6 || !this.#m18564p1) return;
-      const eu0n506u0 = this.#hop5xrh || this.#_j8g43oj.pmm22ozm()?.activeSlot || 1;
-      const mufwvavu = this.#kxk4kgex[this.#qufqi2_] ? this.#qufqi2_ : 'infinite';
-      const o_vijx = document.getElementById('modeDifficultySelect')?.value || 'medium';
-      const buf3ot1uf = l89t2fv(mufwvavu, o_vijx);
+    async olscmldls() {
+      if (!this.#ahlf0p || !this.#dfo44th) return;
+      const kohozn = this.#hgtu0tegt || this.#c9cvlih.wgiha8_gi()?.activeSlot || 1;
+      const ncbt3aecb = this.#b4jnfwr[this.#mrdx2t1r] ? this.#mrdx2t1r : 'infinite';
+      const g_qc7v9 = document.getElementById('modeDifficultySelect')?.value || 'medium';
+      const k0efjre0 = wl61zk6l6(ncbt3aecb, g_qc7v9);
 
-      this.#vz63mjdz6 = false;
-      this.#hop5xrh = null;
-      iq4lmesq4('modeSelectModal');
-      await this.j88okvc88(eu0n506u0, mufwvavu, buf3ot1uf);
+      this.#ahlf0p = false;
+      this.#hgtu0tegt = null;
+      fqzhut('modeSelectModal');
+      await this.haghikm(kohozn, ncbt3aecb, k0efjre0);
     }
 
-    async j88okvc88(_7pxqy, mlwi42, q_joyht_j) {
-      this.#l45t9zt4 = [];
-      this.#leic7c4e = false;
-      this.#lvoyq4bvo = this.#x28u11l2();
+    async haghikm(xq35ie, aztb_5izt, v3dihfv3) {
+      this.#pcfzn_e = [];
+      this.#_lns25xln = false;
+      this.#s__gxdo = this.#zamo2e4am();
 
-      const c9x7zdx9 = this.#_j8g43oj.pmm22ozm();
-      const j71kafz71 = mlwi42 === 'hell' ? 1 : (1 + (c9x7zdx9?.meta?.permUpgrades?.startAmmo || 0));
-      this.#rydq0td = {
-        runMode: mlwi42,
-        target: this.#kxk4kgex[mlwi42].target,
+      const tqx7xreq = this.#c9cvlih.wgiha8_gi();
+      const ayfnef = aztb_5izt === 'hell' ? 1 : (1 + (tqx7xreq?.meta?.permUpgrades?.startAmmo || 0));
+      this.#b8xcy0 = {
+        runMode: aztb_5izt,
+        target: this.#b4jnfwr[aztb_5izt].target,
         level: 1,
         score: 0,
-        coins: c9x7zdx9?.meta?.coins || 0,
-        gems: c9x7zdx9?.meta?.gems || 0,
-        permUpgrades: mlwi42 === 'hell'
+        coins: tqx7xreq?.meta?.coins || 0,
+        gems: tqx7xreq?.meta?.gems || 0,
+        permUpgrades: aztb_5izt === 'hell'
           ? { startAmmo: 0, critChance: 0, ballSpeed: 0, luck: 0, gemLuck: 0, rebound: 0 }
-          : { ...(c9x7zdx9?.meta?.permUpgrades || {}) },
-        difficulty: q_joyht_j,
-        ballCount: j71kafz71,
-        anchorX: k_fy2o0_ / 2,
-        balls: p95v_o(k_fy2o0_ / 2, j71kafz71),
+          : { ...(tqx7xreq?.meta?.permUpgrades || {}) },
+        difficulty: v3dihfv3,
+        ballCount: ayfnef,
+        anchorX: _8je1mu8j / 2,
+        balls: fjkqjvfj(_8je1mu8j / 2, ayfnef),
         bricks: [],
         bonusBalls: [],
         buffs: { doubleDamageTurns: 0 },
@@ -3175,72 +3175,72 @@
         runDamage: 0,
         bestCombo: 0,
         turnCombo: 0,
-        secLevel: new df2vaud(1),
-        secCoins: new df2vaud(c9x7zdx9?.meta?.coins || 0),
-        secGems: new df2vaud(c9x7zdx9?.meta?.gems || 0),
-        secBallCount: new df2vaud(j71kafz71),
+        secLevel: new g8rko2(1),
+        secCoins: new g8rko2(tqx7xreq?.meta?.coins || 0),
+        secGems: new g8rko2(tqx7xreq?.meta?.gems || 0),
+        secBallCount: new g8rko2(ayfnef),
         overlordTimer: 0,
-        overlordDialogue: mlwi42 === 'tartarus'
+        overlordDialogue: aztb_5izt === 'tartarus'
           ? '"Welcome to the abyss below Hell..."'
           : '"Mortal, your defiance amuses me..."',
         tasRun: { lastElapsed: 0, segment: 0, splits: [], deltas: [] }
       };
 
-      this.hrskdo3rs(false);
+      this.kbbpy3ubb(false);
 
       try {
-        const p0y1z4u0y = await this.#_j8g43oj.i3sg5i(ea_raeaa_(12), {
-          slot: _7pxqy,
-          mode: mlwi42,
-          difficulty: q_joyht_j,
-          bricks: this.#rydq0td.bricks,
-          bonusBalls: this.#rydq0td.bonusBalls
+        const hoys2m5oy = await this.#c9cvlih.kz5bv96z5(q5uvld3(12), {
+          slot: xq35ie,
+          mode: aztb_5izt,
+          difficulty: v3dihfv3,
+          bricks: this.#b8xcy0.bricks,
+          bonusBalls: this.#b8xcy0.bonusBalls
         });
-        this.#_z3qukk(p0y1z4u0y, true);
-        const ar49vlor4 = document.getElementById('difficultySelect');
-        if (ar49vlor4) ar49vlor4.value = q_joyht_j;
-        await this.m_njtf4(true);
+        this.#l3_53e(hoys2m5oy, true);
+        const fumlplm = document.getElementById('difficultySelect');
+        if (fumlplm) fumlplm.value = v3dihfv3;
+        await this.k2na7q52n(true);
       } catch {}
     }
 
-    a_uqwd() {
-      if (!this.#rydq0td || !this.#rydq0td.turnInProgress) return;
-      this.#leic7c4e = !this.#leic7c4e;
-      this.lmdld6om();
+    ajlhhu() {
+      if (!this.#b8xcy0 || !this.#b8xcy0.turnInProgress) return;
+      this.#_lns25xln = !this.#_lns25xln;
+      this.dt1uiv7t1();
     }
 
-    lmdld6om() {
-      const wnpptn = document.getElementById('fastForwardBtn');
-      if (!wnpptn) return;
-      wnpptn.innerHTML = `<i class="fa-solid fa-forward" aria-hidden="true"></i> Fast: ${this.#leic7c4e ? '3x' : '1x'}`;
-      wnpptn.className = this.#leic7c4e ? 'primary-btn' : 'secondary';
+    dt1uiv7t1() {
+      const ks_wsa = document.getElementById('fastForwardBtn');
+      if (!ks_wsa) return;
+      ks_wsa.innerHTML = `<i class="fa-solid fa-forward" aria-hidden="true"></i> Fast: ${this.#_lns25xln ? '3x' : '1x'}`;
+      ks_wsa.className = this.#_lns25xln ? 'primary-btn' : 'secondary';
     }
 
-    async rbpilrd() {
-      if (!this.#m18564p1) return;
+    async xngvdeyng() {
+      if (!this.#dfo44th) return;
       try {
-        const ro76i6 = this.#_j8g43oj.pmm22ozm()?.activeSlot || 1;
-        const oy7ng80y = await this.#_j8g43oj.e6k1ake6k('file', ro76i6);
-        const pgcm0la = new Blob([oy7ng80y], { type: 'application/json' });
-        const enagh6p = URL.createObjectURL(pgcm0la);
-        const wudopkkud = document.createElement('a');
-        wudopkkud.href = enagh6p;
-        wudopkkud.download = `brick_breaker_v14_slot${ro76i6}_${this.#rydq0td?.runMode || 'save'}_level_${this.#rydq0td?.level || 1}.json`;
-        wudopkkud.click();
-        URL.revokeObjectURL(enagh6p);
+        const fklb5py = this.#c9cvlih.wgiha8_gi()?.activeSlot || 1;
+        const sen0s9me = await this.#c9cvlih.ageehrj('file', fklb5py);
+        const anvg82gn = new Blob([sen0s9me], { type: 'application/json' });
+        const jzv011x = URL.createObjectURL(anvg82gn);
+        const ab7cic8b = document.createElement('a');
+        ab7cic8b.href = jzv011x;
+        ab7cic8b.download = `brick_breaker_v14_slot${fklb5py}_${this.#b8xcy0?.runMode || 'save'}_level_${this.#b8xcy0?.level || 1}.json`;
+        ab7cic8b.click();
+        URL.revokeObjectURL(jzv011x);
       } catch {
-        ptf66jk('Export Error', 'Could not generate encrypted backup.');
+        qm1kwpum('Export Error', 'Could not generate encrypted backup.');
       }
     }
 
-    async gabg8w7a() {
-      if (!this.#m18564p1) return;
+    async yhhbm4f() {
+      if (!this.#dfo44th) return;
       try {
-        const etka_39tk = this.#_j8g43oj.pmm22ozm()?.activeSlot || 1;
-        const cwamldt = await this.#_j8g43oj.e6k1ake6k('code', etka_39tk);
-        const c6z0_lz6 = document.createElement('div');
-        c6z0_lz6.className = 'modal-overlay active';
-        c6z0_lz6.innerHTML = `
+        const qi6dqnh = this.#c9cvlih.wgiha8_gi()?.activeSlot || 1;
+        const l_5dbjo_ = await this.#c9cvlih.ageehrj('code', qi6dqnh);
+        const es9jnr0 = document.createElement('div');
+        es9jnr0.className = 'modal-overlay active';
+        es9jnr0.innerHTML = `
           <div class="modal-content" style="max-width:620px;">
             <button type="button" class="modal-close" aria-label="Close">&times;</button>
             <h2>Encrypted Save Code</h2>
@@ -3251,34 +3251,34 @@
             </div>
           </div>
         `;
-        c6z0_lz6.querySelector('textarea').value = cwamldt;
-        c6z0_lz6.querySelector('.modal-close').onclick = (ia1m517a) => { if (qxhqcshxh(ia1m517a)) c6z0_lz6.remove(); };
-        c6z0_lz6.querySelector('.copyBtn').onclick = async (lx74_x) => {
-          if (!qxhqcshxh(lx74_x)) return;
-          const qp8ealpp8 = c6z0_lz6.querySelector('.copyBtn');
+        es9jnr0.querySelector('textarea').value = l_5dbjo_;
+        es9jnr0.querySelector('.modal-close').onclick = (imvfbwj) => { if (zdd_1x6dd(imvfbwj)) es9jnr0.remove(); };
+        es9jnr0.querySelector('.copyBtn').onclick = async (yzbe8pfz) => {
+          if (!zdd_1x6dd(yzbe8pfz)) return;
+          const uxdcwv = es9jnr0.querySelector('.copyBtn');
           try {
-            await navigator.clipboard.writeText(cwamldt);
+            await navigator.clipboard.writeText(l_5dbjo_);
           } catch {
-            c6z0_lz6.querySelector('textarea').select();
+            es9jnr0.querySelector('textarea').select();
             document.execCommand('copy');
           }
-          qp8ealpp8.textContent = 'Copied!';
-          oa11t1(() => { qp8ealpp8.textContent = 'Copy code'; }, 1500);
+          uxdcwv.textContent = 'Copied!';
+          _9m8l0(() => { uxdcwv.textContent = 'Copy code'; }, 1500);
         };
-        ng33dibg.call(c6z0_lz6, 'click', (g7xqw5u7) => {
-          if (qxhqcshxh(g7xqw5u7) && g7xqw5u7.target === c6z0_lz6) c6z0_lz6.remove();
+        ve7bk0j.call(es9jnr0, 'click', (al45vunl) => {
+          if (zdd_1x6dd(al45vunl) && al45vunl.target === es9jnr0) es9jnr0.remove();
         });
-        document.body.appendChild(c6z0_lz6);
+        document.body.appendChild(es9jnr0);
       } catch {
-        ptf66jk('Export Error', 'Could not export save code.');
+        qm1kwpum('Export Error', 'Could not export save code.');
       }
     }
 
-    s6u35w16() {
-      if (!this.#m18564p1) return;
-      const qo1c6zvo = document.createElement('div');
-      qo1c6zvo.className = 'modal-overlay active';
-      qo1c6zvo.innerHTML = `
+    x6d5gj() {
+      if (!this.#dfo44th) return;
+      const fzasu2 = document.createElement('div');
+      fzasu2.className = 'modal-overlay active';
+      fzasu2.innerHTML = `
         <div class="modal-content" style="max-width:560px;">
           <button type="button" class="modal-close" aria-label="Close">&times;</button>
           <h2>Import Save Code</h2>
@@ -3290,592 +3290,592 @@
           </div>
         </div>
       `;
-      const jgghaau = () => qo1c6zvo.remove();
-      qo1c6zvo.querySelector('.modal-close').onclick = (omegs9cm) => { if (qxhqcshxh(omegs9cm)) jgghaau(); };
-      qo1c6zvo.querySelector('.cancelBtn').onclick = (wtsigje) => { if (qxhqcshxh(wtsigje)) jgghaau(); };
-      qo1c6zvo.querySelector('.applyBtn').onclick = async (jkdgtp) => {
-        if (!qxhqcshxh(jkdgtp)) return;
-        const qxbnmz4xb = qo1c6zvo.querySelector('textarea').value;
-        if (!qxbnmz4xb || !qxbnmz4xb.trim()) return;
+      const fdmfelzd = () => fzasu2.remove();
+      fzasu2.querySelector('.modal-close').onclick = (_8ume33) => { if (zdd_1x6dd(_8ume33)) fdmfelzd(); };
+      fzasu2.querySelector('.cancelBtn').onclick = (k3o1lx_) => { if (zdd_1x6dd(k3o1lx_)) fdmfelzd(); };
+      fzasu2.querySelector('.applyBtn').onclick = async (lkcubgdk) => {
+        if (!zdd_1x6dd(lkcubgdk)) return;
+        const ig5vcp0g5 = fzasu2.querySelector('textarea').value;
+        if (!ig5vcp0g5 || !ig5vcp0g5.trim()) return;
         try {
-          const ip1m11 = this.#_j8g43oj.pmm22ozm()?.activeSlot || 1;
-          const o7qbu4v = await this.#_j8g43oj.t8tya6m(qxbnmz4xb, ip1m11);
-          this.#_z3qukk(o7qbu4v, true);
-          this.#lvoyq4bvo = this.#x28u11l2();
-          iq4lmesq4('settingsModal');
-          jgghaau();
-          this.zo_3hkw();
-          this.pn1sv7hn1();
-          if (o7qbu4v.activeRun) {
-            await this.m_njtf4(true);
+          const n4o3nui4 = this.#c9cvlih.wgiha8_gi()?.activeSlot || 1;
+          const v3whjio = await this.#c9cvlih.zqzvum4q(ig5vcp0g5, n4o3nui4);
+          this.#l3_53e(v3whjio, true);
+          this.#s__gxdo = this.#zamo2e4am();
+          fqzhut('settingsModal');
+          fdmfelzd();
+          this.v8pru998();
+          this.tm0uz6();
+          if (v3whjio.activeRun) {
+            await this.k2na7q52n(true);
           }
-          ptf66jk('Save Loaded', 'Authenticated save code loaded successfully.');
+          qm1kwpum('Save Loaded', 'Authenticated save code loaded successfully.');
         } catch {
-          ptf66jk('Authentication Failed', 'Invalid or tampered save data.');
+          qm1kwpum('Authentication Failed', 'Invalid or tampered save data.');
         }
       };
-      ng33dibg.call(qo1c6zvo, 'click', (kq_plcrq) => {
-        if (qxhqcshxh(kq_plcrq) && kq_plcrq.target === qo1c6zvo) jgghaau();
+      ve7bk0j.call(fzasu2, 'click', (a6dxc9d) => {
+        if (zdd_1x6dd(a6dxc9d) && a6dxc9d.target === fzasu2) fdmfelzd();
       });
-      document.body.appendChild(qo1c6zvo);
+      document.body.appendChild(fzasu2);
     }
 
-    thdcy3ih(ymuoqlbmu, l6py1k, k6zwd_ = true) {
-      const f6ny3f0 = ymuoqlbmu.target.files?.[0];
-      if (!f6ny3f0 || !this.#m18564p1) return;
-      const srru7k5 = new FileReader();
-      srru7k5.onload = async () => {
+    eor7wj(em4b0ab, geeayf, uzwwehj = true) {
+      const _lk68u1lk = em4b0ab.target.files?.[0];
+      if (!_lk68u1lk || !this.#dfo44th) return;
+      const ijj6fu = new FileReader();
+      ijj6fu.onload = async () => {
         try {
-          const nu90tp1u = String(srru7k5.result || '');
-          const wfm0sk = await this.#_j8g43oj.t8tya6m(nu90tp1u, l6py1k);
-          this.#_z3qukk(wfm0sk, k6zwd_);
-          this.#lvoyq4bvo = this.#x28u11l2();
-          iq4lmesq4('settingsModal');
-          this.zo_3hkw();
-          this.pn1sv7hn1();
-          if (k6zwd_ && wfm0sk.activeRun) {
-            await this.m_njtf4(true);
+          const tv5lqud = String(ijj6fu.result || '');
+          const udid0em = await this.#c9cvlih.zqzvum4q(tv5lqud, geeayf);
+          this.#l3_53e(udid0em, uzwwehj);
+          this.#s__gxdo = this.#zamo2e4am();
+          fqzhut('settingsModal');
+          this.v8pru998();
+          this.tm0uz6();
+          if (uzwwehj && udid0em.activeRun) {
+            await this.k2na7q52n(true);
           }
-          ptf66jk('Save Loaded', 'Authenticated backup loaded successfully.');
+          qm1kwpum('Save Loaded', 'Authenticated backup loaded successfully.');
         } catch {
-          ptf66jk('Authentication Failed', 'Invalid or tampered save data.');
+          qm1kwpum('Authentication Failed', 'Invalid or tampered save data.');
         }
-        ymuoqlbmu.target.value = '';
+        em4b0ab.target.value = '';
       };
-      srru7k5.readAsText(f6ny3f0);
+      ijj6fu.readAsText(_lk68u1lk);
     }
 
-    iuumiw() {
-      if (!this.#m18564p1) return;
-      voubd8rou(
+    m4lju2() {
+      if (!this.#dfo44th) return;
+      qh85nflh(
         'Wipe All Data',
         'Are you sure you want to wipe all data? This will permanently delete all 5 save slots, upgrades, high scores, speedrun records, TAS splits, profile, and lifetime stats.',
         async () => {
-          try { cz_fczkz_(ayhmix4); } catch {}
-          await this.#_j8g43oj.i3sg5i(ea_raeaa_(23), {});
-          this.#l45t9zt4 = [];
-          this.#rydq0td = null;
-          this.#lvoyq4bvo = this.#x28u11l2();
-          iq4lmesq4('settingsModal');
-          this.l89r2vv8();
-          this.zo_3hkw();
-          await this.u3d_8aq3(true);
+          try { w8hkhfk(sghabva); } catch {}
+          await this.#c9cvlih.kz5bv96z5(q5uvld3(23), {});
+          this.#pcfzn_e = [];
+          this.#b8xcy0 = null;
+          this.#s__gxdo = this.#zamo2e4am();
+          fqzhut('settingsModal');
+          this.ddjzl0x();
+          this.v8pru998();
+          await this.eaqjxf9aq(true);
         },
         'Wipe Everything',
         'danger'
       );
     }
 
-    ju261um(dgk23_fgk = null) {
-      let qrbp4jc;
-      let y7aytr97;
+    vsml5rhs(sa5f6xga5 = null) {
+      let s8qshz68q;
+      let wazaft;
 
-      if (Number.isFinite(dgk23_fgk)) {
-        const h0d_7po = w7vobzl(dgk23_fgk, -175, -5);
-        const ovamihx = h0d_7po * Math.PI / 180;
-        qrbp4jc = Math.cos(ovamihx);
-        y7aytr97 = Math.sin(ovamihx);
-        if (!Number.isFinite(y7aytr97) || y7aytr97 > -0.08) y7aytr97 = -0.08;
+      if (Number.isFinite(sa5f6xga5)) {
+        const hgoges = lxaa1x5xa(sa5f6xga5, -175, -5);
+        const o322afc3 = hgoges * Math.PI / 180;
+        s8qshz68q = Math.cos(o322afc3);
+        wazaft = Math.sin(o322afc3);
+        if (!Number.isFinite(wazaft) || wazaft > -0.08) wazaft = -0.08;
       } else {
-        const hjzh8s = Number.isFinite(this.#_6kwav76k.x) ? this.#_6kwav76k.x : k_fy2o0_ / 2;
-        const e_qdug = Math.min(Number.isFinite(this.#_6kwav76k.y) ? this.#_6kwav76k.y : 400, zzy6hhaz - 80);
-        qrbp4jc = hjzh8s - this.#rydq0td.anchorX;
-        y7aytr97 = e_qdug - (zzy6hhaz - 20);
-        if (y7aytr97 > -40) y7aytr97 = -40;
+        const ybxj1g2bx = Number.isFinite(this.#ahveib.x) ? this.#ahveib.x : _8je1mu8j / 2;
+        const dm58ae = Math.min(Number.isFinite(this.#ahveib.y) ? this.#ahveib.y : 400, l1n2a8j - 80);
+        s8qshz68q = ybxj1g2bx - this.#b8xcy0.anchorX;
+        wazaft = dm58ae - (l1n2a8j - 20);
+        if (wazaft > -40) wazaft = -40;
       }
 
-      const j0vfy2z0 = Math.hypot(qrbp4jc, y7aytr97) || 1;
-      return { x: qrbp4jc / j0vfy2z0, y: y7aytr97 / j0vfy2z0 };
+      const y3pqm4t3 = Math.hypot(s8qshz68q, wazaft) || 1;
+      return { x: s8qshz68q / y3pqm4t3, y: wazaft / y3pqm4t3 };
     }
 
-    wubwwvvu() {
-      const noxc_w1 = this.ju261um();
-      return Math.atan2(noxc_w1.y, noxc_w1.x);
+    huh1ve2u() {
+      const hqlkwi_q = this.vsml5rhs();
+      return Math.atan2(hqlkwi_q.y, hqlkwi_q.x);
     }
 
-    e6s8jdz(kvvcxae, rw0qjn5w, mk2vru0k, _m5oar, bg8rmx8g8, hmj3hpumj) {
-      const uyuvnoq = bg8rmx8g8.x - hmj3hpumj;
-      const jmxleqgm = bg8rmx8g8.x + bg8rmx8g8.w + hmj3hpumj;
-      const knx2f3fnx = bg8rmx8g8.y - hmj3hpumj;
-      const co_oybn = bg8rmx8g8.y + bg8rmx8g8.h + hmj3hpumj;
+    xfju18dfj(hkz5ef, utiiv8lt, lr8vu_kr8, so5hqep, n1_3fv, kurd972) {
+      const udzh96 = n1_3fv.x - kurd972;
+      const neieb8 = n1_3fv.x + n1_3fv.w + kurd972;
+      const p53iffq5 = n1_3fv.y - kurd972;
+      const waf912 = n1_3fv.y + n1_3fv.h + kurd972;
 
-      let a8d8jk = -Infinity;
-      let jbhrr4 = Infinity;
-      let _4b7_k = 0;
-      let wqsm6wxqs = 0;
+      let limg8wxi = -Infinity;
+      let jogug0_o = Infinity;
+      let yjeuuroj = 0;
+      let j2gcw7u2g = 0;
 
-      if (Math.abs(mk2vru0k) < 1e-9) {
-        if (kvvcxae < uyuvnoq || kvvcxae > jmxleqgm) return null;
+      if (Math.abs(lr8vu_kr8) < 1e-9) {
+        if (hkz5ef < udzh96 || hkz5ef > neieb8) return null;
       } else {
-        const bavf7l1a = (uyuvnoq - kvvcxae) / mk2vru0k;
-        const lc7y4wtc = (jmxleqgm - kvvcxae) / mk2vru0k;
-        const psecqvhse = Math.min(bavf7l1a, lc7y4wtc);
-        const typ5de7 = Math.max(bavf7l1a, lc7y4wtc);
-        if (psecqvhse > a8d8jk) {
-          a8d8jk = psecqvhse;
-          _4b7_k = mk2vru0k > 0 ? -1 : 1;
-          wqsm6wxqs = 0;
+        const h1idqfi = (udzh96 - hkz5ef) / lr8vu_kr8;
+        const ystj88yst = (neieb8 - hkz5ef) / lr8vu_kr8;
+        const o8jgal98 = Math.min(h1idqfi, ystj88yst);
+        const ulx3ih6lx = Math.max(h1idqfi, ystj88yst);
+        if (o8jgal98 > limg8wxi) {
+          limg8wxi = o8jgal98;
+          yjeuuroj = lr8vu_kr8 > 0 ? -1 : 1;
+          j2gcw7u2g = 0;
         }
-        jbhrr4 = Math.min(jbhrr4, typ5de7);
+        jogug0_o = Math.min(jogug0_o, ulx3ih6lx);
       }
 
-      if (Math.abs(_m5oar) < 1e-9) {
-        if (rw0qjn5w < knx2f3fnx || rw0qjn5w > co_oybn) return null;
+      if (Math.abs(so5hqep) < 1e-9) {
+        if (utiiv8lt < p53iffq5 || utiiv8lt > waf912) return null;
       } else {
-        const f7bgnob7 = (knx2f3fnx - rw0qjn5w) / _m5oar;
-        const xg7639 = (co_oybn - rw0qjn5w) / _m5oar;
-        const hdoe2o = Math.min(f7bgnob7, xg7639);
-        const bgc5vepg = Math.max(f7bgnob7, xg7639);
-        if (hdoe2o > a8d8jk) {
-          a8d8jk = hdoe2o;
-          _4b7_k = 0;
-          wqsm6wxqs = _m5oar > 0 ? -1 : 1;
+        const j9owevk9 = (p53iffq5 - utiiv8lt) / so5hqep;
+        const buc9t5v = (waf912 - utiiv8lt) / so5hqep;
+        const auvnkx = Math.min(j9owevk9, buc9t5v);
+        const lgj7yh_ = Math.max(j9owevk9, buc9t5v);
+        if (auvnkx > limg8wxi) {
+          limg8wxi = auvnkx;
+          yjeuuroj = 0;
+          j2gcw7u2g = so5hqep > 0 ? -1 : 1;
         }
-        jbhrr4 = Math.min(jbhrr4, bgc5vepg);
+        jogug0_o = Math.min(jogug0_o, lgj7yh_);
       }
 
-      if (jbhrr4 < a8d8jk || jbhrr4 < 0) return null;
-      if (a8d8jk < 0) return { distance: jbhrr4, normalX: -_4b7_k, normalY: -wqsm6wxqs };
-      return { distance: a8d8jk, normalX: _4b7_k, normalY: wqsm6wxqs };
+      if (jogug0_o < limg8wxi || jogug0_o < 0) return null;
+      if (limg8wxi < 0) return { distance: jogug0_o, normalX: -yjeuuroj, normalY: -j2gcw7u2g };
+      return { distance: limg8wxi, normalX: yjeuuroj, normalY: j2gcw7u2g };
     }
 
-    zbqh243bq(_qa6rsnqa = null) {
-      if (!this.#rydq0td) return [];
-      const cb1g2p3 = 16;
-      let zlxqvjdlx = this.#rydq0td.anchorX;
-      let vzfcg5b = zzy6hhaz - 20;
-      const nuv6jsfu = this.ju261um(_qa6rsnqa);
-      let kmnn1e = nuv6jsfu.x;
-      let m7igav = nuv6jsfu.y;
-      const acno31 = [{ x: zlxqvjdlx, y: vzfcg5b }];
+    r2v9av(dtbx66 = null) {
+      if (!this.#b8xcy0) return [];
+      const v7kt7c = 16;
+      let _95egrf = this.#b8xcy0.anchorX;
+      let f7mp9cj = l1n2a8j - 20;
+      const oxsrat = this.vsml5rhs(dtbx66);
+      let yp_l1n1 = oxsrat.x;
+      let yt7z1g = oxsrat.y;
+      const v2cqanj = [{ x: _95egrf, y: f7mp9cj }];
 
-      for (let yeqbgu2e = 0; yeqbgu2e < 32; yeqbgu2e++) {
-        let w_kf78d_ = Infinity;
-        let xz6vpo = null;
-        let vdjp4s1 = 0;
-        let _behic1b = 0;
-        const meyw2l = [];
+      for (let ijfg__5 = 0; ijfg__5 < 32; ijfg__5++) {
+        let tlqec3pl = Infinity;
+        let gnudnt = null;
+        let c7rq0jc = 0;
+        let dtqiaw5tq = 0;
+        const mj91lfwj9 = [];
 
-        if (kmnn1e > 1e-9) meyw2l.push({ distance: (k_fy2o0_ - cb1g2p3 - zlxqvjdlx) / kmnn1e, normalX: -1, normalY: 0, type: 'wall' });
-        else if (kmnn1e < -1e-9) meyw2l.push({ distance: (cb1g2p3 - zlxqvjdlx) / kmnn1e, normalX: 1, normalY: 0, type: 'wall' });
-        if (m7igav < -1e-9) meyw2l.push({ distance: (ittcimttt + cb1g2p3 - vzfcg5b) / m7igav, normalX: 0, normalY: 1, type: 'wall' });
+        if (yp_l1n1 > 1e-9) mj91lfwj9.push({ distance: (_8je1mu8j - v7kt7c - _95egrf) / yp_l1n1, normalX: -1, normalY: 0, type: 'wall' });
+        else if (yp_l1n1 < -1e-9) mj91lfwj9.push({ distance: (v7kt7c - _95egrf) / yp_l1n1, normalX: 1, normalY: 0, type: 'wall' });
+        if (yt7z1g < -1e-9) mj91lfwj9.push({ distance: (w0bbkvu0 + v7kt7c - f7mp9cj) / yt7z1g, normalX: 0, normalY: 1, type: 'wall' });
 
-        for (const gwjw01l of meyw2l) {
-          if (gwjw01l.distance > 0 && gwjw01l.distance < w_kf78d_) {
-            w_kf78d_ = gwjw01l.distance;
-            xz6vpo = gwjw01l.type;
-            vdjp4s1 = gwjw01l.normalX;
-            _behic1b = gwjw01l.normalY;
+        for (const k5fg5st5 of mj91lfwj9) {
+          if (k5fg5st5.distance > 0 && k5fg5st5.distance < tlqec3pl) {
+            tlqec3pl = k5fg5st5.distance;
+            gnudnt = k5fg5st5.type;
+            c7rq0jc = k5fg5st5.normalX;
+            dtqiaw5tq = k5fg5st5.normalY;
           }
         }
 
-        for (const _f6o64 of this.#rydq0td.bricks) {
-          const _t2iev = this.e6s8jdz(zlxqvjdlx, vzfcg5b, kmnn1e, m7igav, _f6o64, cb1g2p3);
-          if (_t2iev && _t2iev.distance > 0 && _t2iev.distance < w_kf78d_) {
-            w_kf78d_ = _t2iev.distance;
-            xz6vpo = 'brick';
-            vdjp4s1 = _t2iev.normalX;
-            _behic1b = _t2iev.normalY;
+        for (const ama7hl of this.#b8xcy0.bricks) {
+          const wdby0old = this.xfju18dfj(_95egrf, f7mp9cj, yp_l1n1, yt7z1g, ama7hl, v7kt7c);
+          if (wdby0old && wdby0old.distance > 0 && wdby0old.distance < tlqec3pl) {
+            tlqec3pl = wdby0old.distance;
+            gnudnt = 'brick';
+            c7rq0jc = wdby0old.normalX;
+            dtqiaw5tq = wdby0old.normalY;
           }
         }
 
-        if (!Number.isFinite(w_kf78d_) || w_kf78d_ <= 0) break;
+        if (!Number.isFinite(tlqec3pl) || tlqec3pl <= 0) break;
 
-        zlxqvjdlx += kmnn1e * w_kf78d_;
-        vzfcg5b += m7igav * w_kf78d_;
-        acno31.push({ x: zlxqvjdlx, y: vzfcg5b });
+        _95egrf += yp_l1n1 * tlqec3pl;
+        f7mp9cj += yt7z1g * tlqec3pl;
+        v2cqanj.push({ x: _95egrf, y: f7mp9cj });
 
-        if (xz6vpo === 'brick') break;
-        if (vdjp4s1 !== 0) kmnn1e *= -1;
-        if (_behic1b !== 0) m7igav *= -1;
+        if (gnudnt === 'brick') break;
+        if (c7rq0jc !== 0) yp_l1n1 *= -1;
+        if (dtqiaw5tq !== 0) yt7z1g *= -1;
 
-        zlxqvjdlx += kmnn1e * 0.05;
-        vzfcg5b += m7igav * 0.05;
+        _95egrf += yp_l1n1 * 0.05;
+        f7mp9cj += yt7z1g * 0.05;
       }
 
-      return acno31;
+      return v2cqanj;
     }
 
-    b13fd1n13(q4bbfzy4b, i20kzy62) {
-      if (q4bbfzy4b || i20kzy62) {
-        const dmvphdlm = xwcrkm7wc();
-        if (dmvphdlm < 0.16) return 'crawler';
-        if (dmvphdlm < 0.26) return 'devil';
+    pykxiy(e5nnn025, eiz3ro6iz) {
+      if (e5nnn025 || eiz3ro6iz) {
+        const hdqhl3wdq = oqhsvmz();
+        if (hdqhl3wdq < 0.16) return 'crawler';
+        if (hdqhl3wdq < 0.26) return 'devil';
       }
 
-      const ty4wnwg = xwcrkm7wc();
-      let pfduiqw = 'common';
-      let y7y1eo07 = 0;
-      for (const [bvxmtr, k5o68h] of Object.entries(jfebc70fe)) {
-        y7y1eo07 += k5o68h;
-        if (ty4wnwg <= y7y1eo07) {
-          pfduiqw = bvxmtr;
+      const sejjta7ej = oqhsvmz();
+      let gaty_zgat = 'common';
+      let s58bmre = 0;
+      for (const [c5ocly6, ybf7u62bf] of Object.entries(hdpaftcdp)) {
+        s58bmre += ybf7u62bf;
+        if (sejjta7ej <= s58bmre) {
+          gaty_zgat = c5ocly6;
           break;
         }
       }
-      const m6d8yy = ks8pwz[pfduiqw] || ks8pwz.common;
-      return m6d8yy[Math.floor(xwcrkm7wc() * m6d8yy.length)];
+      const y3mp_xc3 = mb16jby[gaty_zgat] || mb16jby.common;
+      return y3mp_xc3[Math.floor(oqhsvmz() * y3mp_xc3.length)];
     }
 
-    hrskdo3rs(kitjtr2 = this.#rydq0td.level > 1) {
-      const cvs8bf = this.xr594hjr5();
-      const um9hdb7 = zqqe33d;
-      const rjgcmw = kitjtr2 ? um9hdb7 - 80 : um9hdb7;
-      const smhq9a = (this.#rydq0td.runMode === 'hell');
-      const my86kozy = (this.#rydq0td.runMode === 'tartarus');
+    kbbpy3ubb(su9ln2uu9 = this.#b8xcy0.level > 1) {
+      const fnzlv5snz = this.mo6dnr();
+      const ezrktk = t6pnm0q6;
+      const q5tvoxt5 = su9ln2uu9 ? ezrktk - 80 : ezrktk;
+      const k_525kb_ = (this.#b8xcy0.runMode === 'hell');
+      const _gqul9 = (this.#b8xcy0.runMode === 'tartarus');
 
-      const w0emi_m0e = abhc0gcbh([0, 1, 2, 3, 4, 5]);
-      const fsqoum8s = w0emi_m0e[0];
-      let st6a02ct = w0emi_m0e.slice(1);
+      const ouh4sh = pxaw3fnx([0, 1, 2, 3, 4, 5]);
+      const u3plql63p = ouh4sh[0];
+      let tghpf03gh = ouh4sh.slice(1);
 
-      this.#rydq0td.bonusBalls.push({
-        x: fsqoum8s * 120 + 60,
-        y: rjgcmw + 35,
-        targetY: um9hdb7 + 35,
+      this.#b8xcy0.bonusBalls.push({
+        x: u3plql63p * 120 + 60,
+        y: q5tvoxt5 + 35,
+        targetY: ezrktk + 35,
         r: 14,
         hit: false
       });
 
-      if (my86kozy && this.#rydq0td.level % 5 === 0) {
-        const ejtvtb = st6a02ct.slice().sort((_vc0jj0v, gnecd01ne) => _vc0jj0v - gnecd01ne);
-        for (let ic8i1lxc = 0; ic8i1lxc < ejtvtb.length - 1; ic8i1lxc++) {
-          if (ejtvtb[ic8i1lxc + 1] === ejtvtb[ic8i1lxc] + 1) {
-            const l88q25k88 = ejtvtb[ic8i1lxc];
-            const qfku5v = ejtvtb[ic8i1lxc + 1];
-            const ifcan5g = Math.max(20, Math.round(this.#rydq0td.level * 12));
-            this.#rydq0td.bricks.push({
-              x: l88q25k88 * 120 + 5,
-              y: rjgcmw,
-              targetY: um9hdb7,
+      if (_gqul9 && this.#b8xcy0.level % 5 === 0) {
+        const wd61ha = tghpf03gh.slice().sort((e9nibm1, y_ks8u6_) => e9nibm1 - y_ks8u6_);
+        for (let ot31gd = 0; ot31gd < wd61ha.length - 1; ot31gd++) {
+          if (wd61ha[ot31gd + 1] === wd61ha[ot31gd] + 1) {
+            const t7bdqc = wd61ha[ot31gd];
+            const _i8vxzci = wd61ha[ot31gd + 1];
+            const fpklnb2pk = Math.max(20, Math.round(this.#b8xcy0.level * 12));
+            this.#b8xcy0.bricks.push({
+              x: t7bdqc * 120 + 5,
+              y: q5tvoxt5,
+              targetY: ezrktk,
               w: 230,
               h: 150,
-              value: ifcan5g,
+              value: fpklnb2pk,
               type: 'titan',
               slideDir: 1,
               slideSpeed: 0
             });
-            st6a02ct = st6a02ct.filter((zqqbaxeq) => zqqbaxeq !== l88q25k88 && zqqbaxeq !== qfku5v);
+            tghpf03gh = tghpf03gh.filter((mseoo07) => mseoo07 !== t7bdqc && mseoo07 !== _i8vxzci);
             break;
           }
         }
       }
 
-      const tvia2i9v = st6a02ct.slice(0, Math.min(cvs8bf, st6a02ct.length));
+      const chcttpphc = tghpf03gh.slice(0, Math.min(fnzlv5snz, tghpf03gh.length));
 
-      for (const pqwfgq of tvia2i9v) {
-        const t0k0ego = this.b13fd1n13(smhq9a, my86kozy);
+      for (const s16y4d of chcttpphc) {
+        const z4871pa48 = this.pykxiy(k_525kb_, _gqul9);
 
-        let nbjgq3sb = this.#rydq0td.level;
-        if (t0k0ego === 'ammo') nbjgq3sb = Math.round(nbjgq3sb * 1.5);
-        else if (t0k0ego === 'tank') nbjgq3sb = Math.max(5, nbjgq3sb * 5);
-        else if (t0k0ego === 'angel' || t0k0ego === 'turret') nbjgq3sb = 1;
-        else if (t0k0ego === 'crawler' || t0k0ego === 'devil') nbjgq3sb = Math.max(1, Math.round(nbjgq3sb * 0.8));
-        else if (['shield', 'shock', 'portal', 'teleport', 'parent', 'healer', 'directional', 'phase', 'magnet'].includes(t0k0ego)) {
-          nbjgq3sb = Math.max(1, Math.round(nbjgq3sb * 0.8));
+        let ofo6kg = this.#b8xcy0.level;
+        if (z4871pa48 === 'ammo') ofo6kg = Math.round(ofo6kg * 1.5);
+        else if (z4871pa48 === 'tank') ofo6kg = Math.max(5, ofo6kg * 5);
+        else if (z4871pa48 === 'angel' || z4871pa48 === 'turret') ofo6kg = 1;
+        else if (z4871pa48 === 'crawler' || z4871pa48 === 'devil') ofo6kg = Math.max(1, Math.round(ofo6kg * 0.8));
+        else if (['shield', 'shock', 'portal', 'teleport', 'parent', 'healer', 'directional', 'phase', 'magnet'].includes(z4871pa48)) {
+          ofo6kg = Math.max(1, Math.round(ofo6kg * 0.8));
         }
 
-        if (smhq9a) nbjgq3sb = Math.max(1, Math.round(nbjgq3sb * 2.5));
-        else if (my86kozy) nbjgq3sb = Math.max(1, Math.round(nbjgq3sb * 3.5));
+        if (k_525kb_) ofo6kg = Math.max(1, Math.round(ofo6kg * 2.5));
+        else if (_gqul9) ofo6kg = Math.max(1, Math.round(ofo6kg * 3.5));
 
-        const cqi1fl0 = {
-          x: pqwfgq * 120 + 5,
-          y: rjgcmw,
-          targetY: um9hdb7,
+        const or1fj9c = {
+          x: s16y4d * 120 + 5,
+          y: q5tvoxt5,
+          targetY: ezrktk,
           w: 110,
           h: 70,
-          value: nbjgq3sb,
-          type: t0k0ego,
-          slideDir: xwcrkm7wc() < 0.5 ? -1 : 1,
-          slideSpeed: 1.5 + xwcrkm7wc()
+          value: ofo6kg,
+          type: z4871pa48,
+          slideDir: oqhsvmz() < 0.5 ? -1 : 1,
+          slideSpeed: 1.5 + oqhsvmz()
         };
 
-        if (t0k0ego === 'directional') {
-          cqi1fl0.allowedDirs = abhc0gcbh(['top', 'bottom', 'left', 'right']).slice(0, 2);
+        if (z4871pa48 === 'directional') {
+          or1fj9c.allowedDirs = pxaw3fnx(['top', 'bottom', 'left', 'right']).slice(0, 2);
         }
-        if (t0k0ego === 'phase') {
-          cqi1fl0.phase = xwcrkm7wc() < 0.5 ? 'solid' : 'liquid';
+        if (z4871pa48 === 'phase') {
+          or1fj9c.phase = oqhsvmz() < 0.5 ? 'solid' : 'liquid';
         }
-        this.#rydq0td.bricks.push(cqi1fl0);
+        this.#b8xcy0.bricks.push(or1fj9c);
       }
 
-      this.ntyor6ct();
+      this.dcv77zhc();
     }
 
-    ntyor6ct() {
-      const _8czju0 = this.#rydq0td.bricks;
-      const geqtznieq = [];
+    dcv77zhc() {
+      const ld6b137d6 = this.#b8xcy0.bricks;
+      const moocp24 = [];
 
-      for (const q47fdd of _8czju0) {
-        if (!geqtznieq.some((dnd8yswn) => hxahoxr(q47fdd, dnd8yswn))) {
-          geqtznieq.push(q47fdd);
+      for (const r3ubo4g3 of ld6b137d6) {
+        if (!moocp24.some((sy72rr) => bel9kw(r3ubo4g3, sy72rr))) {
+          moocp24.push(r3ubo4g3);
           continue;
         }
 
-        let r3yyo5j3 = false;
-        const inz94s = q47fdd.w > 120 ? 5 : 6;
-        for (let j9u08de = 0; j9u08de < 8 && !r3yyo5j3; j9u08de++) {
-          for (let m9nkyfj = 0; m9nkyfj < inz94s && !r3yyo5j3; m9nkyfj++) {
-            const tffj194ff = {
-              ...q47fdd,
-              x: m9nkyfj * 120 + 5,
-              y: zqqe33d + j9u08de * 80,
-              targetY: zqqe33d + j9u08de * 80
+        let rdauxfxda = false;
+        const pyo1vqoy = r3ubo4g3.w > 120 ? 5 : 6;
+        for (let ry7r8hpy = 0; ry7r8hpy < 8 && !rdauxfxda; ry7r8hpy++) {
+          for (let v5v_6ot5 = 0; v5v_6ot5 < pyo1vqoy && !rdauxfxda; v5v_6ot5++) {
+            const tdg20sfd = {
+              ...r3ubo4g3,
+              x: v5v_6ot5 * 120 + 5,
+              y: t6pnm0q6 + ry7r8hpy * 80,
+              targetY: t6pnm0q6 + ry7r8hpy * 80
             };
-            if (!geqtznieq.some((rf23xb7f2) => hxahoxr(tffj194ff, rf23xb7f2))) {
-              q47fdd.x = tffj194ff.x;
-              q47fdd.y = tffj194ff.y;
-              q47fdd.targetY = tffj194ff.targetY;
-              geqtznieq.push(q47fdd);
-              r3yyo5j3 = true;
+            if (!moocp24.some((tkd2id1kd) => bel9kw(tdg20sfd, tkd2id1kd))) {
+              r3ubo4g3.x = tdg20sfd.x;
+              r3ubo4g3.y = tdg20sfd.y;
+              r3ubo4g3.targetY = tdg20sfd.targetY;
+              moocp24.push(r3ubo4g3);
+              rdauxfxda = true;
             }
           }
         }
       }
 
-      this.#rydq0td.bricks = geqtznieq;
+      this.#b8xcy0.bricks = moocp24;
     }
 
-    xr594hjr5() {
-      switch (this.#rydq0td.difficulty) {
-        case 'easy': return g6h8ko(1, 3);
-        case 'hard': return g6h8ko(1, 5);
-        case 'insane': return g6h8ko(3, 5);
-        case 'asian': return g6h8ko(4, 5);
-        default: return g6h8ko(1, 4);
+    mo6dnr() {
+      switch (this.#b8xcy0.difficulty) {
+        case 'easy': return qu8k07lu8(1, 3);
+        case 'hard': return qu8k07lu8(1, 5);
+        case 'insane': return qu8k07lu8(3, 5);
+        case 'asian': return qu8k07lu8(4, 5);
+        default: return qu8k07lu8(1, 4);
       }
     }
 
-    fn4g9qwn() {
-      if (!this.#rydq0td) return;
-      this.#rydq0td.level = this.#rydq0td.secLevel.p2sstm();
-      this.#rydq0td.coins = this.#rydq0td.secCoins.p2sstm();
-      this.#rydq0td.gems = this.#rydq0td.secGems.p2sstm();
-      this.#rydq0td.ballCount = this.#rydq0td.secBallCount.p2sstm();
+    fcpznrxcp() {
+      if (!this.#b8xcy0) return;
+      this.#b8xcy0.level = this.#b8xcy0.secLevel.h1gsbs3();
+      this.#b8xcy0.coins = this.#b8xcy0.secCoins.h1gsbs3();
+      this.#b8xcy0.gems = this.#b8xcy0.secGems.h1gsbs3();
+      this.#b8xcy0.ballCount = this.#b8xcy0.secBallCount.h1gsbs3();
     }
 
-    kch03lj(i41n_t) {
-      const dswhso = this.#rydq0td.runMode === 'hell' ? 0 : (Number(this.#rydq0td.permUpgrades.luck) || 0);
-      const h_acyub = Math.round(i41n_t * (1 + dswhso * 0.2));
-      if (this.#lvoyq4bvo && h_acyub > 0) this.#lvoyq4bvo.coinsGained += h_acyub;
-      const ht73f2 = this.#rydq0td.secCoins.p2sstm();
-      const dl574prl = Math.max(0, ht73f2 + h_acyub);
-      this.#rydq0td.coins = dl574prl;
-      this.#rydq0td.secCoins.fs29nxi(dl574prl);
-      this.skzwoc4kz();
+    yj49kyaj4(vunpn0) {
+      const iqtl6zoq = this.#b8xcy0.runMode === 'hell' ? 0 : (Number(this.#b8xcy0.permUpgrades.luck) || 0);
+      const y042u4 = Math.round(vunpn0 * (1 + iqtl6zoq * 0.2));
+      if (this.#s__gxdo && y042u4 > 0) this.#s__gxdo.coinsGained += y042u4;
+      const pixt5g0i = this.#b8xcy0.secCoins.h1gsbs3();
+      const ro0w03o = Math.max(0, pixt5g0i + y042u4);
+      this.#b8xcy0.coins = ro0w03o;
+      this.#b8xcy0.secCoins.cv14z_4v1(ro0w03o);
+      this.xa81bkp();
     }
 
-    f1wlhs(ov5mo3u) {
-      if (this.#rydq0td.runMode === 'hell' && ov5mo3u > 0) return;
-      if (this.#lvoyq4bvo && ov5mo3u > 0) this.#lvoyq4bvo.gemsGained += ov5mo3u;
-      const qrydskq = this.#rydq0td.secGems.p2sstm();
-      const wbaj447 = Math.max(0, qrydskq + ov5mo3u);
-      this.#rydq0td.gems = wbaj447;
-      this.#rydq0td.secGems.fs29nxi(wbaj447);
-      this.skzwoc4kz();
+    tfx8dx_f(vxf9suw) {
+      if (this.#b8xcy0.runMode === 'hell' && vxf9suw > 0) return;
+      if (this.#s__gxdo && vxf9suw > 0) this.#s__gxdo.gemsGained += vxf9suw;
+      const y0z6tak0 = this.#b8xcy0.secGems.h1gsbs3();
+      const hd78vnyd7 = Math.max(0, y0z6tak0 + vxf9suw);
+      this.#b8xcy0.gems = hd78vnyd7;
+      this.#b8xcy0.secGems.cv14z_4v1(hd78vnyd7);
+      this.xa81bkp();
     }
 
-    gt7f0out7(i1mxait1m) {
-      const zpnz41 = this.#rydq0td?.shopPurchases?.[i1mxait1m] || 0;
-      if (i1mxait1m === 'doubleDamage') return Math.round(30 * Math.pow(1.25, zpnz41));
-      if (i1mxait1m === 'laserWipe') return Math.round(40 * Math.pow(1.3, zpnz41));
+    a7oshau7(csskzp) {
+      const f0xto4f0 = this.#b8xcy0?.shopPurchases?.[csskzp] || 0;
+      if (csskzp === 'doubleDamage') return Math.round(30 * Math.pow(1.25, f0xto4f0));
+      if (csskzp === 'laserWipe') return Math.round(40 * Math.pow(1.3, f0xto4f0));
       return 50;
     }
 
-    async ihaestoh(v_c52c) {
-      if (!this.#m18564p1) return;
-      if (this.#rydq0td && this.#rydq0td.runMode === 'hell' && this.#e6xy89h6x === 'game') return;
+    async zafgzhaa(ptbrevstb) {
+      if (!this.#dfo44th) return;
+      if (this.#b8xcy0 && this.#b8xcy0.runMode === 'hell' && this.#y01jcy === 'game') return;
       try {
-        const ntrvl91t = await this.#_j8g43oj.i3sg5i(ea_raeaa_(17), {
-          type: v_c52c,
-          inGame: this.#e6xy89h6x === 'game'
+        const zp54nfbp5 = await this.#c9cvlih.kz5bv96z5(q5uvld3(17), {
+          type: ptbrevstb,
+          inGame: this.#y01jcy === 'game'
         });
-        this.#ysxe1cd(ntrvl91t);
-        if (this.#rydq0td && this.#rydq0td.runMode !== 'hell' && v_c52c === 'startAmmo' && this.#rydq0td.level === 1 && !this.#rydq0td.balls.some((f6a7tg1) => f6a7tg1.moving)) {
-          this.#rydq0td.balls = p95v_o(this.#rydq0td.anchorX, ntrvl91t.activeRun?.ballCount || this.#rydq0td.ballCount);
+        this.#b1pv_qj(zp54nfbp5);
+        if (this.#b8xcy0 && this.#b8xcy0.runMode !== 'hell' && ptbrevstb === 'startAmmo' && this.#b8xcy0.level === 1 && !this.#b8xcy0.balls.some((ygt_sz) => ygt_sz.moving)) {
+          this.#b8xcy0.balls = fjkqjvfj(this.#b8xcy0.anchorX, zp54nfbp5.activeRun?.ballCount || this.#b8xcy0.ballCount);
         }
-        this.pn1sv7hn1();
-        this.skzwoc4kz();
+        this.tm0uz6();
+        this.xa81bkp();
       } catch {}
     }
 
-    async mkab9l(vnuum7un) {
-      if (!this.#m18564p1 || !this.#rydq0td || this.#rydq0td.over || this.#rydq0td.complete || this.#rydq0td.runMode === 'hell') return;
-      if (['hard', 'insane', 'asian'].includes(this.#rydq0td.difficulty)) return;
-      const a2ahem8 = this.gt7f0out7(vnuum7un);
-      if (this.#rydq0td.coins < a2ahem8) return;
-      if (vnuum7un === 'laserWipe' && !this.#rydq0td.bricks.length) return;
+    async tc4nio(a82wan18) {
+      if (!this.#dfo44th || !this.#b8xcy0 || this.#b8xcy0.over || this.#b8xcy0.complete || this.#b8xcy0.runMode === 'hell') return;
+      if (['hard', 'insane', 'asian'].includes(this.#b8xcy0.difficulty)) return;
+      const e5b74cv5b = this.a7oshau7(a82wan18);
+      if (this.#b8xcy0.coins < e5b74cv5b) return;
+      if (a82wan18 === 'laserWipe' && !this.#b8xcy0.bricks.length) return;
 
-      const bxtaoctxt = vnuum7un === 'laserWipe' ? this.#rydq0td.bricks.slice() : [];
+      const r_eyl12 = a82wan18 === 'laserWipe' ? this.#b8xcy0.bricks.slice() : [];
       try {
-        const onb3b4vnb = await this.#_j8g43oj.i3sg5i(ea_raeaa_(18), {
-          slot: this.#_j8g43oj.pmm22ozm()?.activeSlot || 1,
-          type: vnuum7un
+        const pug4nab = await this.#c9cvlih.kz5bv96z5(q5uvld3(18), {
+          slot: this.#c9cvlih.wgiha8_gi()?.activeSlot || 1,
+          type: a82wan18
         });
-        if (vnuum7un === 'laserWipe' && onb3b4vnb.activeRun) {
-          const p10m4b = Math.max(...bxtaoctxt.map((en4fugp) => en4fugp.y));
-          for (const l1luoe of bxtaoctxt.filter((iuqwlpy) => Math.abs(iuqwlpy.y - p10m4b) < 0.5)) {
-            this.ks6ap9(l1luoe);
+        if (a82wan18 === 'laserWipe' && pug4nab.activeRun) {
+          const q2xx7t8 = Math.max(...r_eyl12.map((ur03vnfr) => ur03vnfr.y));
+          for (const ct3zxt8t of r_eyl12.filter((df8stjhf8) => Math.abs(df8stjhf8.y - q2xx7t8) < 0.5)) {
+            this.ppapwqbpa(ct3zxt8t);
           }
-          this.#rydq0td.bricks = onb3b4vnb.activeRun.bricks.map((vfnxsr) => ({ ...vfnxsr }));
-          this.#h21pfiv2.rr8sgqmr8(true);
+          this.#b8xcy0.bricks = pug4nab.activeRun.bricks.map((kbdydk5b) => ({ ...kbdydk5b }));
+          this.#ajs9ht7j.l8rbqae8r(true);
         }
-        this.#ysxe1cd(onb3b4vnb);
-        this.skzwoc4kz();
+        this.#b1pv_qj(pug4nab);
+        this.xa81bkp();
       } catch {}
     }
 
-    nwvqof(yfz_uf) {
-      const bc0562fc = yfz_uf === 'speedrun';
-      document.getElementById('generalTrackerPane').hidden = bc0562fc;
-      document.getElementById('speedrunTrackerPane').hidden = !bc0562fc;
-      document.getElementById('generalTrackerTab').classList.toggle('active', !bc0562fc);
-      document.getElementById('speedrunTrackerTab').classList.toggle('active', bc0562fc);
-      this.f05fi4k();
+    lh0avf8(phky0o) {
+      const o75se0x75 = phky0o === 'speedrun';
+      document.getElementById('generalTrackerPane').hidden = o75se0x75;
+      document.getElementById('speedrunTrackerPane').hidden = !o75se0x75;
+      document.getElementById('generalTrackerTab').classList.toggle('active', !o75se0x75);
+      document.getElementById('speedrunTrackerTab').classList.toggle('active', o75se0x75);
+      this.zeikjx();
     }
 
-    f05fi4k() {
-      const areigwo = this.#_j8g43oj.pmm22ozm();
-      if (!areigwo) return;
-      const tza2hn5 = areigwo.modeRecords;
-      const o7vt45 = document.getElementById('modeTrackerList');
+    zeikjx() {
+      const eimxfgdim = this.#c9cvlih.wgiha8_gi();
+      if (!eimxfgdim) return;
+      const cwl84vjwl = eimxfgdim.modeRecords;
+      const h7sause = document.getElementById('modeTrackerList');
 
-      if (o7vt45) {
-        o7vt45.innerHTML = `
+      if (h7sause) {
+        h7sause.innerHTML = `
           <div class="tracker-row">
             <strong>Infinite best level</strong>
-            <span>${Number(tza2hn5.infinite) || 1}</span>
+            <span>${Number(cwl84vjwl.infinite) || 1}</span>
           </div>
           <div class="tracker-row">
             <strong>Hell Mode best level</strong>
-            <span>${Number(tza2hn5.hell) || 1}</span>
+            <span>${Number(cwl84vjwl.hell) || 1}</span>
           </div>
           <div class="tracker-row">
             <strong>Tartarus best level</strong>
-            <span>${Number(tza2hn5.tartarus) || 1}</span>
+            <span>${Number(cwl84vjwl.tartarus) || 1}</span>
           </div>`;
       }
 
-      const _6kkg726k = document.getElementById('speedrunCategorySelect');
-      const dwg36gr = document.getElementById('speedrunDiffSelect');
-      const wq87ff = _6kkg726k?.value || 'speedrun_25';
-      const dyblulhy = dwg36gr?.value || 'medium';
+      const phlri30h = document.getElementById('speedrunCategorySelect');
+      const u9ixtr = document.getElementById('speedrunDiffSelect');
+      const mv2rhvxv2 = phlri30h?.value || 'speedrun_25';
+      const ikiijdhki = u9ixtr?.value || 'medium';
 
-      const s9goaha = this.#kxk4kgex[wq87ff];
-      const fm2ayr = areigwo.speedrunRecords?.[wq87ff]?.[dyblulhy];
-      const qmqnaa = document.getElementById('speedrunCategoryTracker');
+      const n4h9qah4h = this.#b4jnfwr[mv2rhvxv2];
+      const rawkh9 = eimxfgdim.speedrunRecords?.[mv2rhvxv2]?.[ikiijdhki];
+      const zuhxa60 = document.getElementById('speedrunCategoryTracker');
 
-      if (qmqnaa && s9goaha && fm2ayr) {
-        qmqnaa.innerHTML = `
-          <div class="tracker-row"><strong>Category</strong><span>${s9goaha.label}</span></div>
-          <div class="tracker-row"><strong>Difficulty</strong><span style="text-transform:uppercase">${dyblulhy}</span></div>
-          <div class="tracker-row"><strong>Target level</strong><span>${s9goaha.target}</span></div>
-          <div class="tracker-row"><strong>Best time</strong><span>${fm2ayr.bestMs === null ? 'No clear' : this.pdya3k9(fm2ayr.bestMs)}</span></div>
-          <div class="tracker-row"><strong>Completions</strong><span>${fm2ayr.clears}</span></div>`;
+      if (zuhxa60 && n4h9qah4h && rawkh9) {
+        zuhxa60.innerHTML = `
+          <div class="tracker-row"><strong>Category</strong><span>${n4h9qah4h.label}</span></div>
+          <div class="tracker-row"><strong>Difficulty</strong><span style="text-transform:uppercase">${ikiijdhki}</span></div>
+          <div class="tracker-row"><strong>Target level</strong><span>${n4h9qah4h.target}</span></div>
+          <div class="tracker-row"><strong>Best time</strong><span>${rawkh9.bestMs === null ? 'No clear' : this.do_uuv0o(rawkh9.bestMs)}</span></div>
+          <div class="tracker-row"><strong>Completions</strong><span>${rawkh9.clears}</span></div>`;
       }
     }
 
-    lo2c_3_o2() {
-      const kpf1qj = this.#_j8g43oj.pmm22ozm();
-      const l3vqcw = document.getElementById('leaderboardBody');
-      const c73gat_7 = kpf1qj?.scores || [];
+    eyuphum() {
+      const to_nk8oo = this.#c9cvlih.wgiha8_gi();
+      const cjc85pxjc = document.getElementById('leaderboardBody');
+      const dv3w1_ = to_nk8oo?.scores || [];
 
-      if (l3vqcw) {
-        if (!c73gat_7.length) {
-          l3vqcw.innerHTML = '<tr><td colspan="3" class="muted">No high scores yet.</td></tr>';
+      if (cjc85pxjc) {
+        if (!dv3w1_.length) {
+          cjc85pxjc.innerHTML = '<tr><td colspan="3" class="muted">No high scores yet.</td></tr>';
         } else {
-          l3vqcw.innerHTML = c73gat_7.map((tffjbzh, fmhp1o) =>
-            `<tr><td>${fmhp1o + 1}</td><td>${tffjbzh.mode || 'Infinite'}: Level ${Number(tffjbzh.score) || 0}</td><td>${tffjbzh.date || ''}</td></tr>`
+          cjc85pxjc.innerHTML = dv3w1_.map((sxgp3l, bsv_ae2s) =>
+            `<tr><td>${bsv_ae2s + 1}</td><td>${sxgp3l.mode || 'Infinite'}: Level ${Number(sxgp3l.score) || 0}</td><td>${sxgp3l.date || ''}</td></tr>`
           ).join('');
         }
       }
 
-      const oap4ewq = kpf1qj?.speedrunRecords || {};
-      const od9ror7d = [];
-      for (const sxs5csmxs of o48h9e548) {
-        const uchhoajc = `speedrun_${sxs5csmxs}`;
-        for (const gvpoi1c of wnz71ls) {
-          const aghyz_ = oap4ewq[uchhoajc]?.[gvpoi1c];
-          if (aghyz_?.bestMs !== null && aghyz_?.bestMs !== undefined) {
-            od9ror7d.push(`<div class="tracker-row"><strong>${sxs5csmxs} · ${gvpoi1c.toUpperCase()}</strong><span>${this.pdya3k9(aghyz_.bestMs)} (${aghyz_.clears} clears)</span></div>`);
+      const _mfwjuf = to_nk8oo?.speedrunRecords || {};
+      const hr6phl = [];
+      for (const hmc__mp of ptw7p61tw) {
+        const eizusgziz = `speedrun_${hmc__mp}`;
+        for (const jqjnx06q of uc1iht) {
+          const ljqkn1qjq = _mfwjuf[eizusgziz]?.[jqjnx06q];
+          if (ljqkn1qjq?.bestMs !== null && ljqkn1qjq?.bestMs !== undefined) {
+            hr6phl.push(`<div class="tracker-row"><strong>${hmc__mp} · ${jqjnx06q.toUpperCase()}</strong><span>${this.do_uuv0o(ljqkn1qjq.bestMs)} (${ljqkn1qjq.clears} clears)</span></div>`);
           }
         }
       }
 
-      const ynsx_c4ns = document.getElementById('speedrunLeaderboard');
-      if (ynsx_c4ns) {
-        ynsx_c4ns.innerHTML = od9ror7d.length ? od9ror7d.join('') : '<p class="muted">No speedrun clears yet.</p>';
+      const s6ranm = document.getElementById('speedrunLeaderboard');
+      if (s6ranm) {
+        s6ranm.innerHTML = hr6phl.length ? hr6phl.join('') : '<p class="muted">No speedrun clears yet.</p>';
       }
 
-      const pl3ojnzl3 = kpf1qj?.stats || { ballsFired: 0, turnsSurvived: 0, gemsEarned: 0, coinsEarned: 0, damageDealt: 0, bricksBroken: 0, bricksByType: {} };
-      const wdztde = [
-        ['Balls fired', pl3ojnzl3.ballsFired],
-        ['Turns survived', pl3ojnzl3.turnsSurvived],
-        ['Gems earned', pl3ojnzl3.gemsEarned],
-        ['Coins earned', pl3ojnzl3.coinsEarned],
-        ['Damage dealt', Number(pl3ojnzl3.damageDealt).toFixed(1)],
-        ['Bricks broken', pl3ojnzl3.bricksBroken]
+      const t5krsv = to_nk8oo?.stats || { ballsFired: 0, turnsSurvived: 0, gemsEarned: 0, coinsEarned: 0, damageDealt: 0, bricksBroken: 0, bricksByType: {} };
+      const kcvulul = [
+        ['Balls fired', t5krsv.ballsFired],
+        ['Turns survived', t5krsv.turnsSurvived],
+        ['Gems earned', t5krsv.gemsEarned],
+        ['Coins earned', t5krsv.coinsEarned],
+        ['Damage dealt', Number(t5krsv.damageDealt).toFixed(1)],
+        ['Bricks broken', t5krsv.bricksBroken]
       ];
-      const wi3mfgzi3 = pi9wfq.map((hgzqu36gz) => [`${hgzqu36gz[0].toUpperCase()}${hgzqu36gz.slice(1)} bricks broken`, pl3ojnzl3.bricksByType?.[hgzqu36gz] || 0]);
+      const wcc5g3qc = o1b09041b.map((ap_9a66p_) => [`${ap_9a66p_[0].toUpperCase()}${ap_9a66p_.slice(1)} bricks broken`, t5krsv.bricksByType?.[ap_9a66p_] || 0]);
 
-      const pe9mwepe = document.getElementById('lifetimeStats');
-      if (pe9mwepe) {
-        pe9mwepe.innerHTML = [...wdztde, ...wi3mfgzi3].map(([p1lld0l1, aoss4jb]) => {
-          return `<div class="tracker-row"><strong>${p1lld0l1}</strong><span>${aoss4jb}</span></div>`;
+      const k30nh__ = document.getElementById('lifetimeStats');
+      if (k30nh__) {
+        k30nh__.innerHTML = [...kcvulul, ...wcc5g3qc].map(([nktq7p, kwy8wgw]) => {
+          return `<div class="tracker-row"><strong>${nktq7p}</strong><span>${kwy8wgw}</span></div>`;
         }).join('');
       }
 
-      const jb0i_u2b0 = kpf1qj?.achievements || [];
-      const vqbd2v6qb = document.getElementById('achievementsList');
-      if (vqbd2v6qb) {
-        vqbd2v6qb.innerHTML = b5ezawk5e.map((mdx1qogd) => {
-          const ydozw_gdo = jb0i_u2b0.includes(mdx1qogd.id);
+      const ezk9jb = to_nk8oo?.achievements || [];
+      const iz01rh5z0 = document.getElementById('achievementsList');
+      if (iz01rh5z0) {
+        iz01rh5z0.innerHTML = kenx513en.map((nrdgqk_r) => {
+          const ih3__ce = ezk9jb.includes(nrdgqk_r.id);
           return `
-            <div class="buff-card" style="${ydozw_gdo ? 'border-color:#38a169;' : 'opacity:0.7;'}">
+            <div class="buff-card" style="${ih3__ce ? 'border-color:#38a169;' : 'opacity:0.7;'}">
               <div class="buff-info">
-                <strong>${ydozw_gdo ? '✓ ' : ''}${mdx1qogd.name}</strong>
-                <span class="buff-desc">${mdx1qogd.desc}</span>
+                <strong>${ih3__ce ? '✓ ' : ''}${nrdgqk_r.name}</strong>
+                <span class="buff-desc">${nrdgqk_r.desc}</span>
               </div>
-              <span class="buff-status">+${mdx1qogd.rewardCoins}c / +${mdx1qogd.rewardGems}g</span>
+              <span class="buff-status">+${nrdgqk_r.rewardCoins}c / +${nrdgqk_r.rewardGems}g</span>
             </div>`;
         }).join('');
       }
     }
 
-    pz7s1_(x8d5vy3) {
-      const ojzmt_5j = {
+    pu5em3qu5(m1n7hk) {
+      const r_oiwqn_ = {
         scores: 'leaderboardScoresPage',
         speedruns: 'leaderboardSpeedrunsPage',
         stats: 'leaderboardStatsPage',
         badges: 'leaderboardBadgesPage'
       };
 
-      Object.entries(ojzmt_5j).forEach(([wvo6uauv, qvxkxe]) => {
-        const ub3kx2 = document.getElementById(qvxkxe);
-        if (ub3kx2) ub3kx2.hidden = wvo6uauv !== x8d5vy3;
+      Object.entries(r_oiwqn_).forEach(([m7h49k27, ll2q3w4l]) => {
+        const xscyjp = document.getElementById(ll2q3w4l);
+        if (xscyjp) xscyjp.hidden = m7h49k27 !== m1n7hk;
       });
 
-      document.querySelectorAll('.leaderboard-tabs button').forEach((rzwvv15zw) => {
-        const i2z912 = rzwvv15zw.textContent.toLowerCase();
-        const a6w_jul6w =
-          (x8d5vy3 === 'scores' && i2z912.includes('high scores')) ||
-          (x8d5vy3 === 'speedruns' && i2z912.includes('speedruns')) ||
-          (x8d5vy3 === 'stats' && i2z912.includes('lifetime')) ||
-          (x8d5vy3 === 'badges' && i2z912.includes('achievements'));
-        rzwvv15zw.classList.toggle('active', a6w_jul6w);
+      document.querySelectorAll('.leaderboard-tabs button').forEach((_1tg4f) => {
+        const fhtszs6h = _1tg4f.textContent.toLowerCase();
+        const ummuh1hmm =
+          (m1n7hk === 'scores' && fhtszs6h.includes('high scores')) ||
+          (m1n7hk === 'speedruns' && fhtszs6h.includes('speedruns')) ||
+          (m1n7hk === 'stats' && fhtszs6h.includes('lifetime')) ||
+          (m1n7hk === 'badges' && fhtszs6h.includes('achievements'));
+        _1tg4f.classList.toggle('active', ummuh1hmm);
       });
     }
 
-    po0fxh5() {
-      const dsygxz6 = this.#_j8g43oj.pmm22ozm();
-      const mh1yiw = dsygxz6?.meta || { coins: 0, gems: 0, permUpgrades: {} };
-      const m3i0c2 = this.#rydq0td;
-      const asfuuz8s = m3i0c2 && m3i0c2.runMode === 'hell' && this.#e6xy89h6x === 'game';
-      const qw1gqln = m3i0c2 ? m3i0c2.gems : mh1yiw.gems;
+    _trvavq() {
+      const m1g5lrq1g = this.#c9cvlih.wgiha8_gi();
+      const onvk0bhnv = m1g5lrq1g?.meta || { coins: 0, gems: 0, permUpgrades: {} };
+      const u2461nj2 = this.#b8xcy0;
+      const mrvqvsgrv = u2461nj2 && u2461nj2.runMode === 'hell' && this.#y01jcy === 'game';
+      const tujvau = u2461nj2 ? u2461nj2.gems : onvk0bhnv.gems;
 
-      const f0_90vj = document.getElementById('gemsCountModal');
-      if (f0_90vj) f0_90vj.textContent = qw1gqln;
+      const joi3dkx = document.getElementById('gemsCountModal');
+      if (joi3dkx) joi3dkx.textContent = tujvau;
 
-      const jvgkbg = [
+      const fingxv = [
         ['startAmmo', 10, 5, 'permAmmoStatus', 'btnBuyPermAmmo'],
         ['critChance', 10, 6, 'permCritStatus', 'btnBuyPermCrit'],
         ['ballSpeed', 5, 8, 'permSpeedStatus', 'btnBuyPermSpeed'],
@@ -3884,1327 +3884,1327 @@
         ['rebound', 10, 10, 'permReboundStatus', 'btnBuyPermRebound']
       ];
 
-      for (const [zqj10o, mat7jmvat, sq0ad3, uzcpid2zc, ih42fkfh4] of jvgkbg) {
-        const bdf5k72 = asfuuz8s ? 0 : (Number(mh1yiw.permUpgrades?.[zqj10o]) || 0);
-        const jcnvuekc = document.getElementById(uzcpid2zc);
-        const of1kj0 = document.getElementById(ih42fkfh4);
-        if (!jcnvuekc || !of1kj0) continue;
+      for (const [ck3bij6k, ag3h7qbg, sws98b, d253u0c, _trirs4] of fingxv) {
+        const pneupxune = mrvqvsgrv ? 0 : (Number(onvk0bhnv.permUpgrades?.[ck3bij6k]) || 0);
+        const z7np89 = document.getElementById(d253u0c);
+        const dp3moxhp3 = document.getElementById(_trirs4);
+        if (!z7np89 || !dp3moxhp3) continue;
 
-        if (asfuuz8s) {
-          jcnvuekc.textContent = 'NULLIFIED IN HELL';
-          of1kj0.textContent = 'LOCKED';
-          of1kj0.disabled = true;
-        } else if (bdf5k72 >= mat7jmvat) {
-          jcnvuekc.textContent = `MAXED (${mat7jmvat})`;
-          of1kj0.textContent = 'MAX';
-          of1kj0.disabled = true;
+        if (mrvqvsgrv) {
+          z7np89.textContent = 'NULLIFIED IN HELL';
+          dp3moxhp3.textContent = 'LOCKED';
+          dp3moxhp3.disabled = true;
+        } else if (pneupxune >= ag3h7qbg) {
+          z7np89.textContent = `MAXED (${ag3h7qbg})`;
+          dp3moxhp3.textContent = 'MAX';
+          dp3moxhp3.disabled = true;
         } else {
-          const y5y2g3w5 = Math.round(sq0ad3 * Math.pow(1.5, bdf5k72));
-          jcnvuekc.textContent = `Lvl ${bdf5k72}/${mat7jmvat} — ${y5y2g3w5} Gems`;
-          of1kj0.textContent = `Upgrade (${y5y2g3w5})`;
-          of1kj0.disabled = !dsygxz6 || qw1gqln < y5y2g3w5;
+          const ye08wat = Math.round(sws98b * Math.pow(1.5, pneupxune));
+          z7np89.textContent = `Lvl ${pneupxune}/${ag3h7qbg} — ${ye08wat} Gems`;
+          dp3moxhp3.textContent = `Upgrade (${ye08wat})`;
+          dp3moxhp3.disabled = !m1g5lrq1g || tujvau < ye08wat;
         }
       }
     }
 
-    skzwoc4kz() {
-      const iu9kuq0u = this.#_j8g43oj.pmm22ozm();
-      if (!iu9kuq0u) return;
-      const wp5r76 = this.#rydq0td;
-      const ad153p = wp5r76 ? wp5r76.coins : iu9kuq0u.meta.coins;
-      const wfeopeof = wp5r76 ? wp5r76.gems : iu9kuq0u.meta.gems;
+    xa81bkp() {
+      const a50s8gj50 = this.#c9cvlih.wgiha8_gi();
+      if (!a50s8gj50) return;
+      const bsq17kzsq = this.#b8xcy0;
+      const ls4dnkqs4 = bsq17kzsq ? bsq17kzsq.coins : a50s8gj50.meta.coins;
+      const yi3auyui = bsq17kzsq ? bsq17kzsq.gems : a50s8gj50.meta.gems;
 
-      document.getElementById('trackerCoins').textContent = ad153p;
-      document.getElementById('trackerGems').textContent = wfeopeof;
-      document.getElementById('coinsCountTempModal').textContent = ad153p;
-      this.po0fxh5();
+      document.getElementById('trackerCoins').textContent = ls4dnkqs4;
+      document.getElementById('trackerGems').textContent = yi3auyui;
+      document.getElementById('coinsCountTempModal').textContent = ls4dnkqs4;
+      this._trvavq();
 
-      if (!wp5r76) return;
+      if (!bsq17kzsq) return;
 
-      this.fn4g9qwn();
+      this.fcpznrxcp();
 
-      const f0ft6ld = (wp5r76.runMode === 'hell');
-      const gcslvypcs = (wp5r76.runMode === 'tartarus');
-      const ufjiqaf = ['hard', 'insane', 'asian'].includes(wp5r76.difficulty) || f0ft6ld;
+      const z6dn1h = (bsq17kzsq.runMode === 'hell');
+      const zyz4dje = (bsq17kzsq.runMode === 'tartarus');
+      const ak1rqmrk = ['hard', 'insane', 'asian'].includes(bsq17kzsq.difficulty) || z6dn1h;
 
-      document.getElementById('trackerActiveBuffs').textContent = f0ft6ld
+      document.getElementById('trackerActiveBuffs').textContent = z6dn1h
         ? 'Hell Nullification (No Upgrades)'
-        : ufjiqaf
+        : ak1rqmrk
           ? 'Disabled (Hard+ Difficulty)'
-          : wp5r76.buffs.doubleDamageTurns > 0
-            ? `1.5x Damage (${wp5r76.buffs.doubleDamageTurns} turns)`
+          : bsq17kzsq.buffs.doubleDamageTurns > 0
+            ? `1.5x Damage (${bsq17kzsq.buffs.doubleDamageTurns} turns)`
             : 'None';
 
-      document.getElementById('buff15xStatus').textContent = ufjiqaf
+      document.getElementById('buff15xStatus').textContent = ak1rqmrk
         ? 'Disabled'
-        : wp5r76.buffs.doubleDamageTurns > 0
-          ? `${wp5r76.buffs.doubleDamageTurns} turns left`
+        : bsq17kzsq.buffs.doubleDamageTurns > 0
+          ? `${bsq17kzsq.buffs.doubleDamageTurns} turns left`
           : 'Inactive';
 
-      const _ui_gi = document.getElementById('difficultySelect');
-      if (_ui_gi) {
-        _ui_gi.value = wp5r76.difficulty || 'medium';
-        _ui_gi.disabled = wp5r76.level > 1 || wp5r76.over || wp5r76.complete;
-        for (const th_uscl of _ui_gi.options) {
-          th_uscl.disabled = gcslvypcs && !tkixfh.includes(th_uscl.value);
+      const r9azpzi = document.getElementById('difficultySelect');
+      if (r9azpzi) {
+        r9azpzi.value = bsq17kzsq.difficulty || 'medium';
+        r9azpzi.disabled = bsq17kzsq.level > 1 || bsq17kzsq.over || bsq17kzsq.complete;
+        for (const jkcctv1kc of r9azpzi.options) {
+          jkcctv1kc.disabled = zyz4dje && !z9iwpol9i.includes(jkcctv1kc.value);
         }
       }
 
-      const n9r2rqe = this.gt7f0out7('doubleDamage');
-      const pfktxe = this.gt7f0out7('laserWipe');
+      const h56n9ct56 = this.a7oshau7('doubleDamage');
+      const nasfzo6 = this.a7oshau7('laserWipe');
 
-      const mdh3h2_dh = document.getElementById('btnBuy15x');
-      mdh3h2_dh.textContent = `Buy (${n9r2rqe} C)`;
-      mdh3h2_dh.disabled = ufjiqaf || wp5r76.coins < n9r2rqe || wp5r76.over || wp5r76.complete;
+      const o8x_3no = document.getElementById('btnBuy15x');
+      o8x_3no.textContent = `Buy (${h56n9ct56} C)`;
+      o8x_3no.disabled = ak1rqmrk || bsq17kzsq.coins < h56n9ct56 || bsq17kzsq.over || bsq17kzsq.complete;
 
-      const ht53pedt5 = document.getElementById('btnBuyLaser');
-      ht53pedt5.textContent = `Buy (${pfktxe} C)`;
-      ht53pedt5.disabled = ufjiqaf || wp5r76.coins < pfktxe || !wp5r76.bricks.length || wp5r76.over || wp5r76.complete;
+      const yy2k1xw = document.getElementById('btnBuyLaser');
+      yy2k1xw.textContent = `Buy (${nasfzo6} C)`;
+      yy2k1xw.disabled = ak1rqmrk || bsq17kzsq.coins < nasfzo6 || !bsq17kzsq.bricks.length || bsq17kzsq.over || bsq17kzsq.complete;
 
-      const fucow9ku = document.getElementById('overlordSpeech');
-      if (fucow9ku) {
-        fucow9ku.textContent = wp5r76.overlordDialogue || '"Mortal, your defiance amuses me..."';
+      const inb6btj = document.getElementById('overlordSpeech');
+      if (inb6btj) {
+        inb6btj.textContent = bsq17kzsq.overlordDialogue || '"Mortal, your defiance amuses me..."';
       }
 
-      document.getElementById('tasPanel').hidden = !wp5r76.runMode.startsWith('speedrun_');
-      this.lmdld6om();
-      this.pn1sv7hn1();
-      this.ac34wmmc3();
-      this.f05fi4k();
-      this.ble3sr();
-      this.l8vnw46();
+      document.getElementById('tasPanel').hidden = !bsq17kzsq.runMode.startsWith('speedrun_');
+      this.dt1uiv7t1();
+      this.tm0uz6();
+      this.umrt7wemr();
+      this.zeikjx();
+      this.s5kxw3g5();
+      this.s7iey9z7();
     }
 
-    ble3sr() {
-      if (!this.#rydq0td) return;
+    s5kxw3g5() {
+      if (!this.#b8xcy0) return;
 
-      const i6qwonp6q = document.getElementById('analysisAngleInput');
-      const x3a3v3t = document.activeElement === i6qwonp6q;
-      const uoceei2 = this.wubwwvvu();
-      const bc54teic5 = uoceei2 * 180 / Math.PI;
+      const ju8mb_ = document.getElementById('analysisAngleInput');
+      const chyn1jl = document.activeElement === ju8mb_;
+      const blvw8t4lv = this.huh1ve2u();
+      const asb3ass = blvw8t4lv * 180 / Math.PI;
 
-      if (!x3a3v3t) {
-        i6qwonp6q.value = bc54teic5.toFixed(1);
+      if (!chyn1jl) {
+        ju8mb_.value = asb3ass.toFixed(1);
       }
 
-      const sdme3med = Number.isFinite(Number(i6qwonp6q.value)) && x3a3v3t
-        ? Number(i6qwonp6q.value)
-        : bc54teic5;
+      const ri6wsf = Number.isFinite(Number(ju8mb_.value)) && chyn1jl
+        ? Number(ju8mb_.value)
+        : asb3ass;
 
-      const h80lwva = sdme3med * Math.PI / 180;
-      const zmygipw = Math.cos(h80lwva);
-      const l8a6sia = Math.sin(h80lwva);
-      const ax75dc = this.#rydq0td.runMode === 'hell'
+      const p1h8c3 = ri6wsf * Math.PI / 180;
+      const ttkzgx9 = Math.cos(p1h8c3);
+      const _3j8yt63 = Math.sin(p1h8c3);
+      const mwmzx4fwm = this.#b8xcy0.runMode === 'hell'
         ? 1
-        : 1 + (Number(this.#rydq0td.permUpgrades.ballSpeed) || 0) * 0.1;
-      const s4wmni44w = 11 * ax75dc;
-      const gvcjmv = Math.abs(l8a6sia) < 0.001 ? 0.001 : l8a6sia;
+        : 1 + (Number(this.#b8xcy0.permUpgrades.ballSpeed) || 0) * 0.1;
+      const jj6vwc = 11 * mwmzx4fwm;
+      const rc8b709c = Math.abs(_3j8yt63) < 0.001 ? 0.001 : _3j8yt63;
 
-      const hg0maf2 = zzy6hhaz - 20;
-      const kt7ub6 = Math.max(0, (ittcimttt - hg0maf2) / (gvcjmv * s4wmni44w));
-      const h4yqpca = zmygipw * s4wmni44w * kt7ub6;
+      const t1cm5x41 = l1n2a8j - 20;
+      const o4a_gzm4 = Math.max(0, (w0bbkvu0 - t1cm5x41) / (rc8b709c * jj6vwc));
+      const jw9tfr2 = ttkzgx9 * jj6vwc * o4a_gzm4;
 
-      document.getElementById('analysisAngle').textContent = `${sdme3med.toFixed(2)}°`;
+      document.getElementById('analysisAngle').textContent = `${ri6wsf.toFixed(2)}°`;
       document.getElementById('analysisDetails').innerHTML = `
-        <div>Mouse aim: <strong>${bc54teic5.toFixed(2)}°</strong></div>
-        <div>Selected angle: <strong>${sdme3med.toFixed(2)}°</strong></div>
-        <div>Direction vector: <strong>(${zmygipw.toFixed(4)}, ${l8a6sia.toFixed(4)})</strong></div>
-        <div>Velocity: <strong>(${(zmygipw * s4wmni44w).toFixed(2)}, ${(l8a6sia * s4wmni44w).toFixed(2)}) px/frame</strong></div>
-        <div>Speed magnitude: <strong>${s4wmni44w.toFixed(2)} px/frame</strong></div>
-        <div>Estimated time to top line: <strong>${Number.isFinite(kt7ub6) ? kt7ub6.toFixed(1) : '—'} frames</strong></div>
-        <div>Estimated horizontal travel: <strong>${Number.isFinite(h4yqpca) ? h4yqpca.toFixed(1) : '—'} px</strong></div>
-        <div>Firing origin: <strong>(${this.#rydq0td.anchorX.toFixed(1)}, ${hg0maf2})</strong></div>`;
+        <div>Mouse aim: <strong>${asb3ass.toFixed(2)}°</strong></div>
+        <div>Selected angle: <strong>${ri6wsf.toFixed(2)}°</strong></div>
+        <div>Direction vector: <strong>(${ttkzgx9.toFixed(4)}, ${_3j8yt63.toFixed(4)})</strong></div>
+        <div>Velocity: <strong>(${(ttkzgx9 * jj6vwc).toFixed(2)}, ${(_3j8yt63 * jj6vwc).toFixed(2)}) px/frame</strong></div>
+        <div>Speed magnitude: <strong>${jj6vwc.toFixed(2)} px/frame</strong></div>
+        <div>Estimated time to top line: <strong>${Number.isFinite(o4a_gzm4) ? o4a_gzm4.toFixed(1) : '—'} frames</strong></div>
+        <div>Estimated horizontal travel: <strong>${Number.isFinite(jw9tfr2) ? jw9tfr2.toFixed(1) : '—'} px</strong></div>
+        <div>Firing origin: <strong>(${this.#b8xcy0.anchorX.toFixed(1)}, ${t1cm5x41})</strong></div>`;
 
-      const zak_4zg = document.getElementById('analyticsSummary');
-      if (zak_4zg) {
-        const ekui_ulku = Math.max(0.05, this.#_j8g43oj.ycae4g() / 60000);
-        const lz63oz = Math.round((this.#rydq0td.runBricks || 0) / ekui_ulku);
-        const ljya5p7 = this.#rydq0td.runShots > 0 ? Math.round((this.#rydq0td.runDamage || 0) / this.#rydq0td.runShots) : 0;
-        const c_o0y_s_o = this.#rydq0td.runMode === 'hell' ? 0 : (Number(this.#rydq0td.permUpgrades.rebound) || 0) * 3;
-        zak_4zg.innerHTML = `
-          <div class="tracker-row"><strong>Bricks / Min</strong><span>${lz63oz}</span></div>
-          <div class="tracker-row"><strong>Run Bricks</strong><span>${this.#rydq0td.runBricks || 0}</span></div>
-          <div class="tracker-row"><strong>Avg Dmg / Shot</strong><span>${ljya5p7}</span></div>
-          <div class="tracker-row"><strong>Best Combo</strong><span>${this.#rydq0td.bestCombo || 0}x</span></div>
-          <div class="tracker-row"><strong>Floor Rebound</strong><span>${c_o0y_s_o}%</span></div>`;
+      const mhyaz1ahy = document.getElementById('analyticsSummary');
+      if (mhyaz1ahy) {
+        const pxwiod0 = Math.max(0.05, this.#c9cvlih.p83ks6() / 60000);
+        const xmg8_ek = Math.round((this.#b8xcy0.runBricks || 0) / pxwiod0);
+        const wyvt8k = this.#b8xcy0.runShots > 0 ? Math.round((this.#b8xcy0.runDamage || 0) / this.#b8xcy0.runShots) : 0;
+        const jfsxxjefs = this.#b8xcy0.runMode === 'hell' ? 0 : (Number(this.#b8xcy0.permUpgrades.rebound) || 0) * 3;
+        mhyaz1ahy.innerHTML = `
+          <div class="tracker-row"><strong>Bricks / Min</strong><span>${xmg8_ek}</span></div>
+          <div class="tracker-row"><strong>Run Bricks</strong><span>${this.#b8xcy0.runBricks || 0}</span></div>
+          <div class="tracker-row"><strong>Avg Dmg / Shot</strong><span>${wyvt8k}</span></div>
+          <div class="tracker-row"><strong>Best Combo</strong><span>${this.#b8xcy0.bestCombo || 0}x</span></div>
+          <div class="tracker-row"><strong>Floor Rebound</strong><span>${jfsxxjefs}%</span></div>`;
       }
     }
 
-    l8vnw46() {
-      const dal2r5sa = document.getElementById('tasPanel');
-      if (!dal2r5sa || !this.#rydq0td) return;
+    s7iey9z7() {
+      const gx4tdh = document.getElementById('tasPanel');
+      if (!gx4tdh || !this.#b8xcy0) return;
 
-      if (!this.#rydq0td.runMode.startsWith('speedrun_')) {
-        dal2r5sa.hidden = true;
+      if (!this.#b8xcy0.runMode.startsWith('speedrun_')) {
+        gx4tdh.hidden = true;
         return;
       }
 
-      dal2r5sa.hidden = false;
-      const kyf2li = this.#_j8g43oj.pmm22ozm();
-      const ognwhyg = `${this.#rydq0td.runMode}_${this.#rydq0td.difficulty}`;
-      const la7wbl3a = kyf2li?.tas?.[ognwhyg] || { bestSegments: [], splits: [] };
-      const nq67_jkq = this.#_j8g43oj.ycae4g();
-      const vn2de32 = Array.isArray(this.#rydq0td.tasRun?.splits) ? this.#rydq0td.tasRun.splits : [];
-      const wkg5ftj = Array.isArray(this.#rydq0td.tasRun?.deltas) ? this.#rydq0td.tasRun.deltas : [];
-      const jc01y1q = [];
-      let i9mvpej9m = 0;
+      gx4tdh.hidden = false;
+      const u2vohb12 = this.#c9cvlih.wgiha8_gi();
+      const edt_ft = `${this.#b8xcy0.runMode}_${this.#b8xcy0.difficulty}`;
+      const mk7th83 = u2vohb12?.tas?.[edt_ft] || { bestSegments: [], splits: [] };
+      const m_5tibf = this.#c9cvlih.p83ks6();
+      const o09r4k = Array.isArray(this.#b8xcy0.tasRun?.splits) ? this.#b8xcy0.tasRun.splits : [];
+      const dnd96t = Array.isArray(this.#b8xcy0.tasRun?.deltas) ? this.#b8xcy0.tasRun.deltas : [];
+      const vwpq0aqwp = [];
+      let hbchap = 0;
 
-      const qrphkv = Math.max(vn2de32.length, la7wbl3a.bestSegments.length);
-      for (let kjvq2wm = 0; kjvq2wm < qrphkv; kjvq2wm++) {
-        const h6m0jk = vn2de32[kjvq2wm];
-        const wqqlzb6qq = la7wbl3a.bestSegments[kjvq2wm];
-        if (Number.isFinite(wqqlzb6qq) && wqqlzb6qq > 0) i9mvpej9m += wqqlzb6qq;
-        if (!Number.isFinite(h6m0jk) && !Number.isFinite(wqqlzb6qq)) continue;
+      const egvuja = Math.max(o09r4k.length, mk7th83.bestSegments.length);
+      for (let l8jqqpw = 0; l8jqqpw < egvuja; l8jqqpw++) {
+        const mw9ty0dw9 = o09r4k[l8jqqpw];
+        const o46b37s4 = mk7th83.bestSegments[l8jqqpw];
+        if (Number.isFinite(o46b37s4) && o46b37s4 > 0) hbchap += o46b37s4;
+        if (!Number.isFinite(mw9ty0dw9) && !Number.isFinite(o46b37s4)) continue;
 
-        const y8s6sht8s = wkg5ftj[kjvq2wm];
-        let sle6wg = '<small class="muted">—</small>';
-        if (Number.isFinite(h6m0jk)) {
-          if (Number.isFinite(y8s6sht8s)) {
-            const zvv61o4v = y8s6sht8s <= 0 ? 'tas-delta-faster' : 'tas-delta-slower';
-            sle6wg = `<small class="${zvv61o4v}">${this.a5bc1y(y8s6sht8s)}</small>`;
+        const d7vr2f87 = dnd96t[l8jqqpw];
+        let ac5703_c5 = '<small class="muted">—</small>';
+        if (Number.isFinite(mw9ty0dw9)) {
+          if (Number.isFinite(d7vr2f87)) {
+            const oy3eg8q = d7vr2f87 <= 0 ? 'tas-delta-faster' : 'tas-delta-slower';
+            ac5703_c5 = `<small class="${oy3eg8q}">${this.kppbcqrp(d7vr2f87)}</small>`;
           } else {
-            sle6wg = '<small class="tas-delta-faster">NEW BEST</small>';
+            ac5703_c5 = '<small class="tas-delta-faster">NEW BEST</small>';
           }
         }
 
-        jc01y1q.push(`
+        vwpq0aqwp.push(`
           <div class="tracker-row">
             <div>
-              <strong>Turn ${kjvq2wm + 1}</strong>
-              <span class="tas-seg-sub">Best: ${Number.isFinite(wqqlzb6qq) ? this.pdya3k9(wqqlzb6qq) : '—'}</span>
+              <strong>Turn ${l8jqqpw + 1}</strong>
+              <span class="tas-seg-sub">Best: ${Number.isFinite(o46b37s4) ? this.do_uuv0o(o46b37s4) : '—'}</span>
             </div>
             <span>
-              ${Number.isFinite(h6m0jk) ? this.pdya3k9(h6m0jk) : '—'}<br>
-              ${sle6wg}
+              ${Number.isFinite(mw9ty0dw9) ? this.do_uuv0o(mw9ty0dw9) : '—'}<br>
+              ${ac5703_c5}
             </span>
           </div>
         `);
       }
 
       document.getElementById('tasSummary').innerHTML = `
-        <div class="tracker-row"><strong>Current total</strong><span>${this.pdya3k9(nq67_jkq)}</span></div>
-        <div class="tracker-row"><strong>Best segment total</strong><span>${i9mvpej9m ? this.pdya3k9(i9mvpej9m) : '—'}</span></div>
+        <div class="tracker-row"><strong>Current total</strong><span>${this.do_uuv0o(m_5tibf)}</span></div>
+        <div class="tracker-row"><strong>Best segment total</strong><span>${hbchap ? this.do_uuv0o(hbchap) : '—'}</span></div>
       `;
 
-      document.getElementById('tasSegments').innerHTML = jc01y1q.length
-        ? jc01y1q.join('')
+      document.getElementById('tasSegments').innerHTML = vwpq0aqwp.length
+        ? vwpq0aqwp.join('')
         : '<p class="muted">Turn splits will appear after your first turn.</p>';
     }
 
-    y16gizj(viizch = null) {
-      const _4gvgy44 = this.#rydq0td;
-      if (!this.#m18564p1 || this.#_j8g43oj.ccwgtj_() || this.#nhplrew) return;
-      if (!_4gvgy44 || this.#e6xy89h6x !== 'game' || _4gvgy44.paused || _4gvgy44.brickMoving || _4gvgy44.over || _4gvgy44.complete) return;
-      if (_4gvgy44.turnInProgress || _4gvgy44.balls.some((o9xeqxg9) => o9xeqxg9.moving)) return;
+    la1xew(mgiwgqvgi = null) {
+      const dbl7z_8 = this.#b8xcy0;
+      if (!this.#dfo44th || this.#c9cvlih.si5oiuq() || this.#axec6mg) return;
+      if (!dbl7z_8 || this.#y01jcy !== 'game' || dbl7z_8.paused || dbl7z_8.brickMoving || dbl7z_8.over || dbl7z_8.complete) return;
+      if (dbl7z_8.turnInProgress || dbl7z_8.balls.some((a8qf52r) => a8qf52r.moving)) return;
 
-      _4gvgy44.turnInProgress = true;
-      _4gvgy44.turnCombo = 0;
-      _4gvgy44.runShots = (_4gvgy44.runShots || 0) + 1;
-      this.#leic7c4e = false;
-      this.#lvoyq4bvo = this.#x28u11l2();
+      dbl7z_8.turnInProgress = true;
+      dbl7z_8.turnCombo = 0;
+      dbl7z_8.runShots = (dbl7z_8.runShots || 0) + 1;
+      this.#_lns25xln = false;
+      this.#s__gxdo = this.#zamo2e4am();
 
-      const iq75lrnq7 = this.ju261um(viizch);
-      const k5h45625 = iq75lrnq7.x;
-      const sl5tqh = iq75lrnq7.y;
-      const y5m8kpp5m = _4gvgy44.runMode === 'hell'
+      const wb4e8qu = this.vsml5rhs(mgiwgqvgi);
+      const o78grp = wb4e8qu.x;
+      const d8xuokl8x = wb4e8qu.y;
+      const me3h44ie = dbl7z_8.runMode === 'hell'
         ? 1
-        : (1 + (Number(_4gvgy44.permUpgrades.ballSpeed) || 0) * 0.1);
-      const zpghar = 11 * y5m8kpp5m;
+        : (1 + (Number(dbl7z_8.permUpgrades.ballSpeed) || 0) * 0.1);
+      const igk09ly = 11 * me3h44ie;
 
-      _4gvgy44.balls = _4gvgy44.balls.slice(0, Math.max(1, _4gvgy44.ballCount));
-      _4gvgy44.balls.forEach((ylxte8vlx, mmorm6nm) => {
-        ylxte8vlx.x = _4gvgy44.anchorX;
-        ylxte8vlx.y = zzy6hhaz - 20;
-        ylxte8vlx.vx = k5h45625 * zpghar;
-        ylxte8vlx.vy = sl5tqh * zpghar;
-        ylxte8vlx.moving = true;
-        ylxte8vlx.downing = false;
-        ylxte8vlx.shocking = false;
-        ylxte8vlx.reboundsLeft = 2;
-        ylxte8vlx.radius = 16;
-        ylxte8vlx.delay = mmorm6nm;
+      dbl7z_8.balls = dbl7z_8.balls.slice(0, Math.max(1, dbl7z_8.ballCount));
+      dbl7z_8.balls.forEach((t8qhqsa8q, cpwaq7e) => {
+        t8qhqsa8q.x = dbl7z_8.anchorX;
+        t8qhqsa8q.y = l1n2a8j - 20;
+        t8qhqsa8q.vx = o78grp * igk09ly;
+        t8qhqsa8q.vy = d8xuokl8x * igk09ly;
+        t8qhqsa8q.moving = true;
+        t8qhqsa8q.downing = false;
+        t8qhqsa8q.shocking = false;
+        t8qhqsa8q.reboundsLeft = 2;
+        t8qhqsa8q.radius = 16;
+        t8qhqsa8q.delay = cpwaq7e;
       });
 
-      const wnpsow_np = this.#_j8g43oj.pmm22ozm()?.activeSlot || 1;
-      this.#_j8g43oj.i3sg5i(ea_raeaa_(9), {
-        slot: wnpsow_np,
-        angleDeg: Math.atan2(sl5tqh, k5h45625) * 180 / Math.PI
+      const ddc7re = this.#c9cvlih.wgiha8_gi()?.activeSlot || 1;
+      this.#c9cvlih.kz5bv96z5(q5uvld3(9), {
+        slot: ddc7re,
+        angleDeg: Math.atan2(d8xuokl8x, o78grp) * 180 / Math.PI
       }).catch(() => {});
 
-      this.lmdld6om();
+      this.dt1uiv7t1();
     }
 
-    em3ux49() {
-      if (!this.#rydq0td || this.#rydq0td.paused || this.#rydq0td.over || this.#rydq0td.complete) return;
-      let ro8xg0x = false;
-      for (const yazo1cgaz of this.#rydq0td.balls) {
-        if (!yazo1cgaz.moving) continue;
-        if (yazo1cgaz.delay > 0) {
-          yazo1cgaz.moving = false;
-          yazo1cgaz.downing = false;
-          yazo1cgaz.shocking = false;
-          yazo1cgaz.vx = 0;
-          yazo1cgaz.vy = 0;
-          yazo1cgaz.delay = 0;
-          yazo1cgaz.x = this.#rydq0td.anchorX;
-          yazo1cgaz.y = zzy6hhaz - 20;
+    pf9b2pl() {
+      if (!this.#b8xcy0 || this.#b8xcy0.paused || this.#b8xcy0.over || this.#b8xcy0.complete) return;
+      let getv19 = false;
+      for (const wz2x6j1z2 of this.#b8xcy0.balls) {
+        if (!wz2x6j1z2.moving) continue;
+        if (wz2x6j1z2.delay > 0) {
+          wz2x6j1z2.moving = false;
+          wz2x6j1z2.downing = false;
+          wz2x6j1z2.shocking = false;
+          wz2x6j1z2.vx = 0;
+          wz2x6j1z2.vy = 0;
+          wz2x6j1z2.delay = 0;
+          wz2x6j1z2.x = this.#b8xcy0.anchorX;
+          wz2x6j1z2.y = l1n2a8j - 20;
           continue;
         }
-        yazo1cgaz.downing = true;
-        yazo1cgaz.vx = 0;
-        yazo1cgaz.vy = 12;
-        ro8xg0x = true;
+        wz2x6j1z2.downing = true;
+        wz2x6j1z2.vx = 0;
+        wz2x6j1z2.vy = 12;
+        getv19 = true;
       }
 
-      if (!ro8xg0x && this.#rydq0td.turnInProgress && this.#rydq0td.balls.every((fiiwvqp) => !fiiwvqp.moving)) {
-        this.vs37rmas3();
+      if (!getv19 && this.#b8xcy0.turnInProgress && this.#b8xcy0.balls.every((_hcry10hc) => !_hcry10hc.moving)) {
+        this.t1fw8in();
       }
     }
 
-    fxrwb1(ty53q1dy5) {
-      const axc1devx = this.#rydq0td;
-      let w4zk03f4z = false;
+    d5d0rdc5d(km5m0zg) {
+      const kpt6vx = this.#b8xcy0;
+      let zzjqvyyz = false;
 
-      for (const fmzp4b2 of axc1devx.bricks) {
-        if (fmzp4b2.y < fmzp4b2.targetY) {
-          fmzp4b2.y = Math.min(fmzp4b2.y + 10 * ty53q1dy5, fmzp4b2.targetY);
-        } else if (fmzp4b2.y > fmzp4b2.targetY) {
-          fmzp4b2.y = Math.max(fmzp4b2.y - 10 * ty53q1dy5, fmzp4b2.targetY);
+      for (const w3c53o6 of kpt6vx.bricks) {
+        if (w3c53o6.y < w3c53o6.targetY) {
+          w3c53o6.y = Math.min(w3c53o6.y + 10 * km5m0zg, w3c53o6.targetY);
+        } else if (w3c53o6.y > w3c53o6.targetY) {
+          w3c53o6.y = Math.max(w3c53o6.y - 10 * km5m0zg, w3c53o6.targetY);
         }
-        if (Math.abs(fmzp4b2.y - fmzp4b2.targetY) > 0.01) w4zk03f4z = true;
+        if (Math.abs(w3c53o6.y - w3c53o6.targetY) > 0.01) zzjqvyyz = true;
       }
 
-      if ((axc1devx.runMode === 'hell' || axc1devx.runMode === 'tartarus') && !axc1devx.turnInProgress && !axc1devx.brickMoving) {
-        for (const moikhbu of axc1devx.bricks) {
-          if (moikhbu.type !== 'crawler') continue;
-          const li100w4i = moikhbu.y + 0.25 * ty53q1dy5;
-          const x5qj2fk = axc1devx.bricks.some((l5m2biz5) => {
-            if (l5m2biz5 === moikhbu) return false;
-            const d14kzqy = moikhbu.x < l5m2biz5.x + l5m2biz5.w && moikhbu.x + moikhbu.w > l5m2biz5.x;
-            const qrdjm4ar = (li100w4i + moikhbu.h > l5m2biz5.y) && (moikhbu.y + moikhbu.h <= l5m2biz5.y + 5);
-            return d14kzqy && qrdjm4ar;
+      if ((kpt6vx.runMode === 'hell' || kpt6vx.runMode === 'tartarus') && !kpt6vx.turnInProgress && !kpt6vx.brickMoving) {
+        for (const xmj06sbm of kpt6vx.bricks) {
+          if (xmj06sbm.type !== 'crawler') continue;
+          const talyat = xmj06sbm.y + 0.25 * km5m0zg;
+          const okq_d9nkq = kpt6vx.bricks.some((q65g2l) => {
+            if (q65g2l === xmj06sbm) return false;
+            const irup6l = xmj06sbm.x < q65g2l.x + q65g2l.w && xmj06sbm.x + xmj06sbm.w > q65g2l.x;
+            const wlsg3svl = (talyat + xmj06sbm.h > q65g2l.y) && (xmj06sbm.y + xmj06sbm.h <= q65g2l.y + 5);
+            return irup6l && wlsg3svl;
           });
-          if (!x5qj2fk) {
-            moikhbu.y = li100w4i;
-            moikhbu.targetY = moikhbu.y;
+          if (!okq_d9nkq) {
+            xmj06sbm.y = talyat;
+            xmj06sbm.targetY = xmj06sbm.y;
           }
         }
       }
 
-      if (!axc1devx.brickMoving) {
-        for (const zkvivp of axc1devx.bricks) {
-          if (zkvivp.type !== 'slider') continue;
-          const gkiqw3s = 5;
-          const qwuwj7 = k_fy2o0_ - 5 - zkvivp.w;
-          const udzbtt = zkvivp.x + zkvivp.slideDir * zkvivp.slideSpeed * ty53q1dy5;
-          let l55rhla55 = null;
+      if (!kpt6vx.brickMoving) {
+        for (const thgyyn of kpt6vx.bricks) {
+          if (thgyyn.type !== 'slider') continue;
+          const fvq0jfvv = 5;
+          const uxxgcm9 = _8je1mu8j - 5 - thgyyn.w;
+          const c9z6ls = thgyyn.x + thgyyn.slideDir * thgyyn.slideSpeed * km5m0zg;
+          let deccmh = null;
 
-          if (udzbtt <= gkiqw3s) {
-            zkvivp.x = gkiqw3s;
-            zkvivp.slideDir = 1;
+          if (c9z6ls <= fvq0jfvv) {
+            thgyyn.x = fvq0jfvv;
+            thgyyn.slideDir = 1;
             continue;
           }
-          if (udzbtt >= qwuwj7) {
-            zkvivp.x = qwuwj7;
-            zkvivp.slideDir = -1;
+          if (c9z6ls >= uxxgcm9) {
+            thgyyn.x = uxxgcm9;
+            thgyyn.slideDir = -1;
             continue;
           }
 
-          for (const tsnvvats of axc1devx.bricks) {
-            if (tsnvvats === zkvivp) continue;
-            const cbqhw8 = zkvivp.y < tsnvvats.y + tsnvvats.h && zkvivp.y + zkvivp.h > tsnvvats.y;
-            const hvds_a4v = udzbtt < tsnvvats.x + tsnvvats.w && udzbtt + zkvivp.w > tsnvvats.x;
-            if (cbqhw8 && hvds_a4v) {
-              l55rhla55 = tsnvvats;
+          for (const j90r6i of kpt6vx.bricks) {
+            if (j90r6i === thgyyn) continue;
+            const etickzmti = thgyyn.y < j90r6i.y + j90r6i.h && thgyyn.y + thgyyn.h > j90r6i.y;
+            const lwbdvtswb = c9z6ls < j90r6i.x + j90r6i.w && c9z6ls + thgyyn.w > j90r6i.x;
+            if (etickzmti && lwbdvtswb) {
+              deccmh = j90r6i;
               break;
             }
           }
 
-          if (l55rhla55) {
-            if (zkvivp.slideDir > 0) {
-              zkvivp.x = Math.max(gkiqw3s, l55rhla55.x - zkvivp.w);
-              zkvivp.slideDir = -1;
+          if (deccmh) {
+            if (thgyyn.slideDir > 0) {
+              thgyyn.x = Math.max(fvq0jfvv, deccmh.x - thgyyn.w);
+              thgyyn.slideDir = -1;
             } else {
-              zkvivp.x = Math.min(qwuwj7, l55rhla55.x + l55rhla55.w);
-              zkvivp.slideDir = 1;
+              thgyyn.x = Math.min(uxxgcm9, deccmh.x + deccmh.w);
+              thgyyn.slideDir = 1;
             }
           } else {
-            zkvivp.x = udzbtt;
+            thgyyn.x = c9z6ls;
           }
         }
       }
 
-      if (axc1devx.brickMoving && !w4zk03f4z) {
-        axc1devx.brickMoving = false;
-        axc1devx.bonusBalls = axc1devx.bonusBalls.filter((zhdb5z5hd) => !zhdb5z5hd.hit);
-        this.ntyor6ct();
-        this.skzwoc4kz();
-        const tsx8ipb = this.#_j8g43oj.pmm22ozm()?.activeSlot || 1;
-        this.#_j8g43oj.i3sg5i(ea_raeaa_(11), {
-          slot: tsx8ipb,
-          bricks: axc1devx.bricks,
-          bonusBalls: axc1devx.bonusBalls,
-          anchorX: axc1devx.anchorX
+      if (kpt6vx.brickMoving && !zzjqvyyz) {
+        kpt6vx.brickMoving = false;
+        kpt6vx.bonusBalls = kpt6vx.bonusBalls.filter((yp3o45bp3) => !yp3o45bp3.hit);
+        this.dcv77zhc();
+        this.xa81bkp();
+        const ihxbhkbh = this.#c9cvlih.wgiha8_gi()?.activeSlot || 1;
+        this.#c9cvlih.kz5bv96z5(q5uvld3(11), {
+          slot: ihxbhkbh,
+          bricks: kpt6vx.bricks,
+          bonusBalls: kpt6vx.bonusBalls,
+          anchorX: kpt6vx.anchorX
         }).catch(() => {});
       }
     }
 
-    yukrw6nuk(y04pqj) {
-      for (const j299kv of this.#rydq0td.bonusBalls) {
-        if (!Number.isFinite(j299kv.targetY)) j299kv.targetY = j299kv.y;
-        if (j299kv.y < j299kv.targetY) {
-          j299kv.y = Math.min(j299kv.y + 10 * y04pqj, j299kv.targetY);
-        } else if (j299kv.y > j299kv.targetY) {
-          j299kv.y = Math.max(j299kv.y - 10 * y04pqj, j299kv.targetY);
+    c__eveh__(ml6s5s) {
+      for (const bknlqej of this.#b8xcy0.bonusBalls) {
+        if (!Number.isFinite(bknlqej.targetY)) bknlqej.targetY = bknlqej.y;
+        if (bknlqej.y < bknlqej.targetY) {
+          bknlqej.y = Math.min(bknlqej.y + 10 * ml6s5s, bknlqej.targetY);
+        } else if (bknlqej.y > bknlqej.targetY) {
+          bknlqej.y = Math.max(bknlqej.y - 10 * ml6s5s, bknlqej.targetY);
         }
       }
     }
 
-    vm5t9qm(q_ce6l1_) {
-      const nu7yqsbu7 = this.#rydq0td;
-      const e1cove = nu7yqsbu7.runMode === 'hell'
+    r6exxfb6e(bxpx0zy) {
+      const lemdyp = this.#b8xcy0;
+      const k0n1q0v0 = lemdyp.runMode === 'hell'
         ? 1
-        : (1 + (Number(nu7yqsbu7.permUpgrades.ballSpeed) || 0) * 0.1);
-      const skws40fk = 11 * e1cove;
-      const w8kmiax8 = Math.max(1, Math.ceil(skws40fk / 8));
-      const l1d_ks71d = nu7yqsbu7.bricks.filter((r73rwz) => r73rwz.type === 'magnet');
-      const luwckmduw = nu7yqsbu7.runMode === 'hell'
+        : (1 + (Number(lemdyp.permUpgrades.ballSpeed) || 0) * 0.1);
+      const xbcxw5 = 11 * k0n1q0v0;
+      const klspl1n = Math.max(1, Math.ceil(xbcxw5 / 8));
+      const c_uafez_u = lemdyp.bricks.filter((qkaje1uka) => qkaje1uka.type === 'magnet');
+      const m6vokvj6 = lemdyp.runMode === 'hell'
         ? 0
-        : (Number(nu7yqsbu7.permUpgrades.rebound) || 0) * 0.03;
+        : (Number(lemdyp.permUpgrades.rebound) || 0) * 0.03;
 
-      for (const iq4w8yqq4 of nu7yqsbu7.balls) {
-        if (!iq4w8yqq4.moving) continue;
-        if (iq4w8yqq4.delay > 0) {
-          iq4w8yqq4.delay -= q_ce6l1_;
+      for (const pq3eg41q3 of lemdyp.balls) {
+        if (!pq3eg41q3.moving) continue;
+        if (pq3eg41q3.delay > 0) {
+          pq3eg41q3.delay -= bxpx0zy;
           continue;
         }
 
-        const j83m3nj83 = q_ce6l1_ / w8kmiax8;
-        for (let xg3grrv = 0; xg3grrv < w8kmiax8; xg3grrv++) {
-          if (!iq4w8yqq4.moving) break;
+        const k8gdh6g8 = bxpx0zy / klspl1n;
+        for (let opmvdq3 = 0; opmvdq3 < klspl1n; opmvdq3++) {
+          if (!pq3eg41q3.moving) break;
 
-          for (const dep1q1 of l1d_ks71d) {
-            const crjyqq5 = dep1q1.x + dep1q1.w / 2;
-            const jv8pg4 = dep1q1.y + dep1q1.h / 2;
-            const rkqzjjmk = Math.hypot(crjyqq5 - iq4w8yqq4.x, jv8pg4 - iq4w8yqq4.y);
-            if (rkqzjjmk < 180 && rkqzjjmk > 2) {
-              const dkklljxk = 0.15 * j83m3nj83;
-              iq4w8yqq4.vx += (crjyqq5 - iq4w8yqq4.x) / rkqzjjmk * dkklljxk;
-              iq4w8yqq4.vy += (jv8pg4 - iq4w8yqq4.y) / rkqzjjmk * dkklljxk;
+          for (const mmcvp4 of c_uafez_u) {
+            const a7b6be07b = mmcvp4.x + mmcvp4.w / 2;
+            const jpwtbf2 = mmcvp4.y + mmcvp4.h / 2;
+            const cwhpus_ = Math.hypot(a7b6be07b - pq3eg41q3.x, jpwtbf2 - pq3eg41q3.y);
+            if (cwhpus_ < 180 && cwhpus_ > 2) {
+              const _uvdvegu = 0.15 * k8gdh6g8;
+              pq3eg41q3.vx += (a7b6be07b - pq3eg41q3.x) / cwhpus_ * _uvdvegu;
+              pq3eg41q3.vy += (jpwtbf2 - pq3eg41q3.y) / cwhpus_ * _uvdvegu;
             }
           }
 
-          iq4w8yqq4.x += iq4w8yqq4.vx * j83m3nj83;
-          iq4w8yqq4.y += iq4w8yqq4.vy * j83m3nj83;
+          pq3eg41q3.x += pq3eg41q3.vx * k8gdh6g8;
+          pq3eg41q3.y += pq3eg41q3.vy * k8gdh6g8;
 
-          if (iq4w8yqq4.x < iq4w8yqq4.radius) {
-            iq4w8yqq4.x = iq4w8yqq4.radius;
-            iq4w8yqq4.vx = Math.abs(iq4w8yqq4.vx);
-          } else if (iq4w8yqq4.x > k_fy2o0_ - iq4w8yqq4.radius) {
-            iq4w8yqq4.x = k_fy2o0_ - iq4w8yqq4.radius;
-            iq4w8yqq4.vx = -Math.abs(iq4w8yqq4.vx);
+          if (pq3eg41q3.x < pq3eg41q3.radius) {
+            pq3eg41q3.x = pq3eg41q3.radius;
+            pq3eg41q3.vx = Math.abs(pq3eg41q3.vx);
+          } else if (pq3eg41q3.x > _8je1mu8j - pq3eg41q3.radius) {
+            pq3eg41q3.x = _8je1mu8j - pq3eg41q3.radius;
+            pq3eg41q3.vx = -Math.abs(pq3eg41q3.vx);
           }
 
-          if (iq4w8yqq4.y < ittcimttt) {
-            iq4w8yqq4.y = ittcimttt;
-            iq4w8yqq4.vy = Math.abs(iq4w8yqq4.vy);
+          if (pq3eg41q3.y < w0bbkvu0) {
+            pq3eg41q3.y = w0bbkvu0;
+            pq3eg41q3.vy = Math.abs(pq3eg41q3.vy);
           }
 
-          if (iq4w8yqq4.shocking) {
-            iq4w8yqq4.vx = 0;
-            iq4w8yqq4.vy = 16;
-          } else if (!iq4w8yqq4.downing) {
-            this.gb7t32lb(iq4w8yqq4);
+          if (pq3eg41q3.shocking) {
+            pq3eg41q3.vx = 0;
+            pq3eg41q3.vy = 16;
+          } else if (!pq3eg41q3.downing) {
+            this.g4fp48(pq3eg41q3);
           }
 
-          for (const l1ve6ro of nu7yqsbu7.bonusBalls) {
-            if (!l1ve6ro.hit && Math.hypot(iq4w8yqq4.x - l1ve6ro.x, iq4w8yqq4.y - l1ve6ro.y) < iq4w8yqq4.radius + l1ve6ro.r) {
-              l1ve6ro.hit = true;
-              this.#h21pfiv2.qx92ejex();
+          for (const ysve3spsv of lemdyp.bonusBalls) {
+            if (!ysve3spsv.hit && Math.hypot(pq3eg41q3.x - ysve3spsv.x, pq3eg41q3.y - ysve3spsv.y) < pq3eg41q3.radius + ysve3spsv.r) {
+              ysve3spsv.hit = true;
+              this.#ajs9ht7j.np6uzx();
             }
           }
 
-          if (iq4w8yqq4.y >= zzy6hhaz - 20) {
-            if (!iq4w8yqq4.downing && !iq4w8yqq4.shocking && luwckmduw > 0 && (iq4w8yqq4.reboundsLeft || 0) > 0 && xwcrkm7wc() < luwckmduw) {
-              iq4w8yqq4.reboundsLeft -= 1;
-              iq4w8yqq4.y = zzy6hhaz - 22;
-              iq4w8yqq4.vy = -Math.max(4, Math.abs(iq4w8yqq4.vy));
-              if (Math.abs(iq4w8yqq4.vx) < 1) {
-                iq4w8yqq4.vx = (xwcrkm7wc() < 0.5 ? -1 : 1) * 2;
+          if (pq3eg41q3.y >= l1n2a8j - 20) {
+            if (!pq3eg41q3.downing && !pq3eg41q3.shocking && m6vokvj6 > 0 && (pq3eg41q3.reboundsLeft || 0) > 0 && oqhsvmz() < m6vokvj6) {
+              pq3eg41q3.reboundsLeft -= 1;
+              pq3eg41q3.y = l1n2a8j - 22;
+              pq3eg41q3.vy = -Math.max(4, Math.abs(pq3eg41q3.vy));
+              if (Math.abs(pq3eg41q3.vx) < 1) {
+                pq3eg41q3.vx = (oqhsvmz() < 0.5 ? -1 : 1) * 2;
               }
-              this.#h21pfiv2.vzprsk(2, nu7yqsbu7.runMode);
+              this.#ajs9ht7j._fhqw2l(2, lemdyp.runMode);
               continue;
             }
 
-            iq4w8yqq4.y = zzy6hhaz - 20;
-            iq4w8yqq4.moving = false;
-            iq4w8yqq4.downing = false;
-            iq4w8yqq4.shocking = false;
-            iq4w8yqq4.vx = 0;
-            iq4w8yqq4.vy = 0;
-            nu7yqsbu7.anchorX = w7vobzl(iq4w8yqq4.x, 20, k_fy2o0_ - 20);
+            pq3eg41q3.y = l1n2a8j - 20;
+            pq3eg41q3.moving = false;
+            pq3eg41q3.downing = false;
+            pq3eg41q3.shocking = false;
+            pq3eg41q3.vx = 0;
+            pq3eg41q3.vy = 0;
+            lemdyp.anchorX = lxaa1x5xa(pq3eg41q3.x, 20, _8je1mu8j - 20);
           }
         }
       }
 
-      if (nu7yqsbu7.turnInProgress && nu7yqsbu7.balls.length && nu7yqsbu7.balls.every((p66_cj) => !p66_cj.moving)) {
-        this.vs37rmas3();
+      if (lemdyp.turnInProgress && lemdyp.balls.length && lemdyp.balls.every((muj441h) => !muj441h.moving)) {
+        this.t1fw8in();
       }
     }
 
-    gb7t32lb(cs80bpls) {
-      const dp9k16h = this.#rydq0td.bricks.filter((n3otz9t3) => n3otz9t3.type === 'shield');
+    g4fp48(xsw2q9) {
+      const flcovm0 = this.#b8xcy0.bricks.filter((beze_xke) => beze_xke.type === 'shield');
 
-      for (const qep_rn of [...this.#rydq0td.bricks]) {
-        if (!this.#rydq0td.bricks.includes(qep_rn)) continue;
+      for (const _s3gjz3s3 of [...this.#b8xcy0.bricks]) {
+        if (!this.#b8xcy0.bricks.includes(_s3gjz3s3)) continue;
 
-        if (qep_rn.type === 'phase' && qep_rn.phase === 'liquid') {
-          const axhy713xh = w7vobzl(cs80bpls.x, qep_rn.x, qep_rn.x + qep_rn.w);
-          const tco7g5ec = w7vobzl(cs80bpls.y, qep_rn.y, qep_rn.y + qep_rn.h);
-          const l3z51w = cs80bpls.x - axhy713xh;
-          const htp3asl = cs80bpls.y - tco7g5ec;
-          if (l3z51w * l3z51w + htp3asl * htp3asl <= cs80bpls.radius * cs80bpls.radius) {
-            if (Math.abs(l3z51w) > Math.abs(htp3asl)) cs80bpls.vx *= -1;
-            else cs80bpls.vy *= -1;
+        if (_s3gjz3s3.type === 'phase' && _s3gjz3s3.phase === 'liquid') {
+          const bxsacd7 = lxaa1x5xa(xsw2q9.x, _s3gjz3s3.x, _s3gjz3s3.x + _s3gjz3s3.w);
+          const b6nulk06 = lxaa1x5xa(xsw2q9.y, _s3gjz3s3.y, _s3gjz3s3.y + _s3gjz3s3.h);
+          const swi3ir = xsw2q9.x - bxsacd7;
+          const dvg6i1i = xsw2q9.y - b6nulk06;
+          if (swi3ir * swi3ir + dvg6i1i * dvg6i1i <= xsw2q9.radius * xsw2q9.radius) {
+            if (Math.abs(swi3ir) > Math.abs(dvg6i1i)) xsw2q9.vx *= -1;
+            else xsw2q9.vy *= -1;
           }
           continue;
         }
 
-        const l3rs_zs3r = w7vobzl(cs80bpls.x, qep_rn.x, qep_rn.x + qep_rn.w);
-        const mkv6tebkv = w7vobzl(cs80bpls.y, qep_rn.y, qep_rn.y + qep_rn.h);
-        const r0swkxv0 = cs80bpls.x - l3rs_zs3r;
-        const hoylhzboy = cs80bpls.y - mkv6tebkv;
-        if (r0swkxv0 * r0swkxv0 + hoylhzboy * hoylhzboy > cs80bpls.radius * cs80bpls.radius) continue;
+        const c9a3mmk = lxaa1x5xa(xsw2q9.x, _s3gjz3s3.x, _s3gjz3s3.x + _s3gjz3s3.w);
+        const _mxp3l6mx = lxaa1x5xa(xsw2q9.y, _s3gjz3s3.y, _s3gjz3s3.y + _s3gjz3s3.h);
+        const lzrz1rez = xsw2q9.x - c9a3mmk;
+        const ufayxcm = xsw2q9.y - _mxp3l6mx;
+        if (lzrz1rez * lzrz1rez + ufayxcm * ufayxcm > xsw2q9.radius * xsw2q9.radius) continue;
 
-        if (qep_rn.type !== 'shield' && qep_rn.type !== 'titan') {
-          const br5iebb = dp9k16h.some((vjh0wgj) => {
-            const dwa0f9aw = vjh0wgj.x + vjh0wgj.w / 2;
-            const ob134cvb = vjh0wgj.y + vjh0wgj.h / 2;
-            const piea5pai = qep_rn.x + qep_rn.w / 2;
-            const vgsh2hag = qep_rn.y + qep_rn.h / 2;
-            return Math.hypot(dwa0f9aw - piea5pai, ob134cvb - vgsh2hag) <= 150;
+        if (_s3gjz3s3.type !== 'shield' && _s3gjz3s3.type !== 'titan') {
+          const n6zcrgo = flcovm0.some((rp6ppekp6) => {
+            const zekcp7x = rp6ppekp6.x + rp6ppekp6.w / 2;
+            const lrybrevry = rp6ppekp6.y + rp6ppekp6.h / 2;
+            const yrqxeo7rq = _s3gjz3s3.x + _s3gjz3s3.w / 2;
+            const s_tcb53_ = _s3gjz3s3.y + _s3gjz3s3.h / 2;
+            return Math.hypot(zekcp7x - yrqxeo7rq, lrybrevry - s_tcb53_) <= 150;
           });
-          if (br5iebb) {
-            if (Math.abs(r0swkxv0) > Math.abs(hoylhzboy)) cs80bpls.vx *= -1;
-            else cs80bpls.vy *= -1;
+          if (n6zcrgo) {
+            if (Math.abs(lzrz1rez) > Math.abs(ufayxcm)) xsw2q9.vx *= -1;
+            else xsw2q9.vy *= -1;
             continue;
           }
         }
 
-        if (qep_rn.type === 'directional' && qep_rn.allowedDirs) {
-          const gk3gtw7k = Math.abs(r0swkxv0) > Math.abs(hoylhzboy) ? (r0swkxv0 > 0 ? 'right' : 'left') : (hoylhzboy > 0 ? 'bottom' : 'top');
-          if (!qep_rn.allowedDirs.includes(gk3gtw7k)) {
-            if (Math.abs(r0swkxv0) > Math.abs(hoylhzboy)) cs80bpls.vx *= -1;
-            else cs80bpls.vy *= -1;
+        if (_s3gjz3s3.type === 'directional' && _s3gjz3s3.allowedDirs) {
+          const kdvbef = Math.abs(lzrz1rez) > Math.abs(ufayxcm) ? (lzrz1rez > 0 ? 'right' : 'left') : (ufayxcm > 0 ? 'bottom' : 'top');
+          if (!_s3gjz3s3.allowedDirs.includes(kdvbef)) {
+            if (Math.abs(lzrz1rez) > Math.abs(ufayxcm)) xsw2q9.vx *= -1;
+            else xsw2q9.vy *= -1;
             continue;
           }
         }
 
-        let zpjsag = 1;
-        if (this.#rydq0td.runMode !== 'hell' && !['hard', 'insane', 'asian'].includes(this.#rydq0td.difficulty) && this.#rydq0td.buffs.doubleDamageTurns > 0) {
-          zpjsag = 1.5;
+        let f321jcw32 = 1;
+        if (this.#b8xcy0.runMode !== 'hell' && !['hard', 'insane', 'asian'].includes(this.#b8xcy0.difficulty) && this.#b8xcy0.buffs.doubleDamageTurns > 0) {
+          f321jcw32 = 1.5;
         }
-        const kfssbtff = this.#rydq0td.runMode === 'hell' ? 0 : (Number(this.#rydq0td.permUpgrades.critChance) || 0);
-        if (kfssbtff && xwcrkm7wc() < kfssbtff * 0.05) zpjsag *= 3;
+        const pu1ndd3u = this.#b8xcy0.runMode === 'hell' ? 0 : (Number(this.#b8xcy0.permUpgrades.critChance) || 0);
+        if (pu1ndd3u && oqhsvmz() < pu1ndd3u * 0.05) f321jcw32 *= 3;
 
-        qep_rn.value = Math.max(0, qep_rn.value - zpjsag);
-        this.#rydq0td.runDamage = (this.#rydq0td.runDamage || 0) + zpjsag;
-        this.#rydq0td.turnCombo = (this.#rydq0td.turnCombo || 0) + 1;
-        this.#rydq0td.bestCombo = Math.max(this.#rydq0td.bestCombo || 0, this.#rydq0td.turnCombo);
-        this.#rydq0td.score = (this.#rydq0td.score || 0) + Math.round(zpjsag * 10);
+        _s3gjz3s3.value = Math.max(0, _s3gjz3s3.value - f321jcw32);
+        this.#b8xcy0.runDamage = (this.#b8xcy0.runDamage || 0) + f321jcw32;
+        this.#b8xcy0.turnCombo = (this.#b8xcy0.turnCombo || 0) + 1;
+        this.#b8xcy0.bestCombo = Math.max(this.#b8xcy0.bestCombo || 0, this.#b8xcy0.turnCombo);
+        this.#b8xcy0.score = (this.#b8xcy0.score || 0) + Math.round(f321jcw32 * 10);
 
-        if (this.#lvoyq4bvo) {
-          this.#lvoyq4bvo.damageDealt += zpjsag;
-          this.#lvoyq4bvo.turnHits += 1;
-          this.#lvoyq4bvo.bestCombo = Math.max(this.#lvoyq4bvo.bestCombo, this.#rydq0td.turnCombo);
+        if (this.#s__gxdo) {
+          this.#s__gxdo.damageDealt += f321jcw32;
+          this.#s__gxdo.turnHits += 1;
+          this.#s__gxdo.bestCombo = Math.max(this.#s__gxdo.bestCombo, this.#b8xcy0.turnCombo);
         }
 
-        if (qep_rn.type === 'shock') {
-          cs80bpls.shocking = true;
-          cs80bpls.vx = 0;
-          cs80bpls.vy = 16;
-          this.hdoagn(cs80bpls.x, cs80bpls.y);
-        } else if (qep_rn.type === 'portal') {
-          const mztuug = g6h8ko(40, k_fy2o0_ - 40);
-          const v9o93n = g6h8ko(zqqe33d + 120, zzy6hhaz - 120);
-          this.kweyll(cs80bpls.x, cs80bpls.y);
-          cs80bpls.x = mztuug;
-          cs80bpls.y = v9o93n;
-          this.kweyll(cs80bpls.x, cs80bpls.y);
+        if (_s3gjz3s3.type === 'shock') {
+          xsw2q9.shocking = true;
+          xsw2q9.vx = 0;
+          xsw2q9.vy = 16;
+          this.mwvo01i(xsw2q9.x, xsw2q9.y);
+        } else if (_s3gjz3s3.type === 'portal') {
+          const r11aseo1 = qu8k07lu8(40, _8je1mu8j - 40);
+          const enfrnn = qu8k07lu8(t6pnm0q6 + 120, l1n2a8j - 120);
+          this.khl2uu5h(xsw2q9.x, xsw2q9.y);
+          xsw2q9.x = r11aseo1;
+          xsw2q9.y = enfrnn;
+          this.khl2uu5h(xsw2q9.x, xsw2q9.y);
         } else {
-          if (Math.abs(r0swkxv0) > Math.abs(hoylhzboy)) cs80bpls.vx *= -1;
-          else cs80bpls.vy *= -1;
+          if (Math.abs(lzrz1rez) > Math.abs(ufayxcm)) xsw2q9.vx *= -1;
+          else xsw2q9.vy *= -1;
         }
 
-        this.kch03lj(1);
+        this.yj49kyaj4(1);
 
-        if (qep_rn.value <= 0) {
-          this.is7jii7s(qep_rn);
+        if (_s3gjz3s3.value <= 0) {
+          this.asopax1s(_s3gjz3s3);
         } else {
-          this.#h21pfiv2.vzprsk(this.#rydq0td.turnCombo, this.#rydq0td.runMode);
+          this.#ajs9ht7j._fhqw2l(this.#b8xcy0.turnCombo, this.#b8xcy0.runMode);
         }
         break;
       }
     }
 
-    is7jii7s(sfvob_efv) {
-      const dnpt65qnp = this.#rydq0td.bricks.indexOf(sfvob_efv);
-      if (dnpt65qnp === -1) return;
+    asopax1s(ubnigd_bn) {
+      const se5wsz2e5 = this.#b8xcy0.bricks.indexOf(ubnigd_bn);
+      if (se5wsz2e5 === -1) return;
 
-      this.#rydq0td.bricks.splice(dnpt65qnp, 1);
-      this.ks6ap9(sfvob_efv);
-      this.#h21pfiv2.rr8sgqmr8(sfvob_efv.type === 'tnt' || sfvob_efv.type === 'titan');
+      this.#b8xcy0.bricks.splice(se5wsz2e5, 1);
+      this.ppapwqbpa(ubnigd_bn);
+      this.#ajs9ht7j.l8rbqae8r(ubnigd_bn.type === 'tnt' || ubnigd_bn.type === 'titan');
 
-      this.#rydq0td.runBricks = (this.#rydq0td.runBricks || 0) + 1;
-      if (this.#lvoyq4bvo) {
-        this.#lvoyq4bvo.bricksBrokenCount += 1;
-        this.#lvoyq4bvo.brokenByType[sfvob_efv.type] = (this.#lvoyq4bvo.brokenByType[sfvob_efv.type] || 0) + 1;
-        if (sfvob_efv.type === 'titan') this.#lvoyq4bvo.titanKills += 1;
-        if (sfvob_efv.type === 'ammo') this.#lvoyq4bvo.ammoBroken += 1;
+      this.#b8xcy0.runBricks = (this.#b8xcy0.runBricks || 0) + 1;
+      if (this.#s__gxdo) {
+        this.#s__gxdo.bricksBrokenCount += 1;
+        this.#s__gxdo.brokenByType[ubnigd_bn.type] = (this.#s__gxdo.brokenByType[ubnigd_bn.type] || 0) + 1;
+        if (ubnigd_bn.type === 'titan') this.#s__gxdo.titanKills += 1;
+        if (ubnigd_bn.type === 'ammo') this.#s__gxdo.ammoBroken += 1;
       }
 
-      this.kch03lj(sfvob_efv.type === 'titan' ? 25 : 5);
+      this.yj49kyaj4(ubnigd_bn.type === 'titan' ? 25 : 5);
 
-      const fi6onm = this.#rydq0td.runMode === 'hell' ? 0 : (Number(this.#rydq0td.permUpgrades.gemLuck) || 0) * 0.03;
-      if (this.#rydq0td.runMode !== 'hell') {
-        if (sfvob_efv.type === 'titan') this.f1wlhs(3);
-        else if (xwcrkm7wc() < (0.25 + fi6onm)) this.f1wlhs(1);
+      const i9ax6h = this.#b8xcy0.runMode === 'hell' ? 0 : (Number(this.#b8xcy0.permUpgrades.gemLuck) || 0) * 0.03;
+      if (this.#b8xcy0.runMode !== 'hell') {
+        if (ubnigd_bn.type === 'titan') this.tfx8dx_f(3);
+        else if (oqhsvmz() < (0.25 + i9ax6h)) this.tfx8dx_f(1);
       }
 
-      if (sfvob_efv.type === 'ammo') this.#rydq0td.pendingAmmo++;
+      if (ubnigd_bn.type === 'ammo') this.#b8xcy0.pendingAmmo++;
 
-      if (sfvob_efv.type === 'parent') {
-        const dbt1jao = g6h8ko(1, 3);
-        const deqms94 = Math.max(1, Math.round(this.#rydq0td.level / 3));
-        for (let fayr_5oay = 0; fayr_5oay < dbt1jao; fayr_5oay++) {
-          const ywqunl3wq = g6h8ko(0, 5);
-          this.#rydq0td.bricks.push({
-            x: ywqunl3wq * 120 + 5,
-            y: sfvob_efv.y,
-            targetY: sfvob_efv.targetY,
+      if (ubnigd_bn.type === 'parent') {
+        const rx03xf7x0 = qu8k07lu8(1, 3);
+        const tec260x = Math.max(1, Math.round(this.#b8xcy0.level / 3));
+        for (let _qkksenq = 0; _qkksenq < rx03xf7x0; _qkksenq++) {
+          const e9iiael = qu8k07lu8(0, 5);
+          this.#b8xcy0.bricks.push({
+            x: e9iiael * 120 + 5,
+            y: ubnigd_bn.y,
+            targetY: ubnigd_bn.targetY,
             w: 110,
             h: 70,
-            value: deqms94,
+            value: tec260x,
             type: 'normal',
             slideDir: 1,
             slideSpeed: 1.5
           });
         }
-        this.ntyor6ct();
+        this.dcv77zhc();
       }
 
-      if (sfvob_efv.type === 'tnt') {
-        this.nw19tfuw1(sfvob_efv);
-        const _x_k01 = [...this.#rydq0td.bricks].filter((ofu8vni) =>
-          Math.hypot((ofu8vni.x + ofu8vni.w / 2) - (sfvob_efv.x + sfvob_efv.w / 2), (ofu8vni.y + ofu8vni.h / 2) - (sfvob_efv.y + sfvob_efv.h / 2)) <= 180
+      if (ubnigd_bn.type === 'tnt') {
+        this.l3kk7p(ubnigd_bn);
+        const dud8hps = [...this.#b8xcy0.bricks].filter((c8r7hn) =>
+          Math.hypot((c8r7hn.x + c8r7hn.w / 2) - (ubnigd_bn.x + ubnigd_bn.w / 2), (c8r7hn.y + c8r7hn.h / 2) - (ubnigd_bn.y + ubnigd_bn.h / 2)) <= 180
         );
-        for (const xnnigjjn of _x_k01) {
-          if (!this.#rydq0td.bricks.includes(xnnigjjn)) continue;
-          const gzswzwvz = Math.ceil(this.#rydq0td.level * 0.8);
-          xnnigjjn.value = Math.max(0, xnnigjjn.value - gzswzwvz);
-          if (this.#lvoyq4bvo) this.#lvoyq4bvo.damageDealt += gzswzwvz;
-          if (xnnigjjn.value <= 0) this.is7jii7s(xnnigjjn);
+        for (const gunpm3i of dud8hps) {
+          if (!this.#b8xcy0.bricks.includes(gunpm3i)) continue;
+          const lnl287fn = Math.ceil(this.#b8xcy0.level * 0.8);
+          gunpm3i.value = Math.max(0, gunpm3i.value - lnl287fn);
+          if (this.#s__gxdo) this.#s__gxdo.damageDealt += lnl287fn;
+          if (gunpm3i.value <= 0) this.asopax1s(gunpm3i);
         }
       }
 
-      this.skzwoc4kz();
+      this.xa81bkp();
     }
 
-    rkjrm79kj() {
-      const j0dug4 = this.#rydq0td.runMode === 'tartarus';
-      const f0qx9lx = j0dug4 ? 3.5 : 2.5;
-      const o0_kie = [
+    yeep64zee() {
+      const o5sn84 = this.#b8xcy0.runMode === 'tartarus';
+      const tf1xlu = o5sn84 ? 3.5 : 2.5;
+      const yu1fh8 = [
         {
           dialogue: '"Feel the scorching heat! Your bricks shall heal and harden!"',
           action: () => {
-            for (const muxnk2 of this.#rydq0td.bricks) muxnk2.value = Math.round(muxnk2.value * 1.2 + 2);
+            for (const zihlgrxih of this.#b8xcy0.bricks) zihlgrxih.value = Math.round(zihlgrxih.value * 1.2 + 2);
           }
         },
         {
           dialogue: '"Darkness multiplies! A Devil spawns from the abyss!"',
           action: () => {
-            const l7zww0 = g6h8ko(0, 5);
-            const l9049uc = Math.max(1, Math.round(this.#rydq0td.level * 0.8 * f0qx9lx));
-            this.#rydq0td.bricks.push({
-              x: l7zww0 * 120 + 5, y: zqqe33d, targetY: zqqe33d,
-              w: 110, h: 70, value: l9049uc, type: 'devil', slideDir: 1, slideSpeed: 1.5
+            const wsp_53 = qu8k07lu8(0, 5);
+            const he7otp = Math.max(1, Math.round(this.#b8xcy0.level * 0.8 * tf1xlu));
+            this.#b8xcy0.bricks.push({
+              x: wsp_53 * 120 + 5, y: t6pnm0q6, targetY: t6pnm0q6,
+              w: 110, h: 70, value: he7otp, type: 'devil', slideDir: 1, slideSpeed: 1.5
             });
-            this.ntyor6ct();
+            this.dcv77zhc();
           }
         },
         {
           dialogue: '"A crawler shall press upon your doom!"',
           action: () => {
-            const jkvjydr = g6h8ko(0, 5);
-            const xy_tsm = Math.max(1, Math.round(this.#rydq0td.level * 0.8 * f0qx9lx));
-            this.#rydq0td.bricks.push({
-              x: jkvjydr * 120 + 5, y: zqqe33d, targetY: zqqe33d,
-              w: 110, h: 70, value: xy_tsm, type: 'crawler', slideDir: 1, slideSpeed: 1.5
+            const u798ia0 = qu8k07lu8(0, 5);
+            const vpcqzckp = Math.max(1, Math.round(this.#b8xcy0.level * 0.8 * tf1xlu));
+            this.#b8xcy0.bricks.push({
+              x: u798ia0 * 120 + 5, y: t6pnm0q6, targetY: t6pnm0q6,
+              w: 110, h: 70, value: vpcqzckp, type: 'crawler', slideDir: 1, slideSpeed: 1.5
             });
-            this.ntyor6ct();
+            this.dcv77zhc();
           }
         },
         {
           dialogue: '"Perish in sulfur! Your balls shall falter and slow!"',
           action: () => {
-            for (const f2pexy of this.#rydq0td.balls) {
-              f2pexy.vx *= 0.8;
-              f2pexy.vy *= 0.8;
+            for (const l25ajdf of this.#b8xcy0.balls) {
+              l25ajdf.vx *= 0.8;
+              l25ajdf.vy *= 0.8;
             }
           }
         }
       ];
 
-      const mh3ubvhh = o0_kie[Math.floor(xwcrkm7wc() * o0_kie.length)];
-      this.#rydq0td.overlordDialogue = mh3ubvhh.dialogue;
-      mh3ubvhh.action();
+      const vha1fgfh = yu1fh8[Math.floor(oqhsvmz() * yu1fh8.length)];
+      this.#b8xcy0.overlordDialogue = vha1fgfh.dialogue;
+      vha1fgfh.action();
     }
 
-    ikj8oiskj(uabtbx) {
-      if (this.#rydq0td.bricks.filter((jmshzwkm) => jmshzwkm.type === 'tank').length >= 3) return;
-      const c61zmkq = 80;
-      const fyuduhc = Math.max(1, Math.floor((uabtbx.y - zqqe33d) / c61zmkq));
-      const hdlurxkd = g6h8ko(1, fyuduhc);
-      const kcsxvvv = uabtbx.y - hdlurxkd * c61zmkq;
-      if (kcsxvvv < zqqe33d) return;
+    ulc9lzx(i5cmzi) {
+      if (this.#b8xcy0.bricks.filter((l7dw39) => l7dw39.type === 'tank').length >= 3) return;
+      const i60rmb = 80;
+      const ws0bp_ws = Math.max(1, Math.floor((i5cmzi.y - t6pnm0q6) / i60rmb));
+      const u33gc6h33 = qu8k07lu8(1, ws0bp_ws);
+      const twsdq8j = i5cmzi.y - u33gc6h33 * i60rmb;
+      if (twsdq8j < t6pnm0q6) return;
 
-      const tdjb1r9dj = this.#rydq0td.runMode === 'tartarus' ? 3.5 : 2.5;
-      const fths1l = {
-        x: g6h8ko(0, 5) * 120 + 5, y: kcsxvvv, targetY: kcsxvvv,
-        w: 110, h: 70, value: Math.max(5, Math.round(this.#rydq0td.level * 5 * tdjb1r9dj)),
+      const dfm2holf = this.#b8xcy0.runMode === 'tartarus' ? 3.5 : 2.5;
+      const oo6cyeq = {
+        x: qu8k07lu8(0, 5) * 120 + 5, y: twsdq8j, targetY: twsdq8j,
+        w: 110, h: 70, value: Math.max(5, Math.round(this.#b8xcy0.level * 5 * dfm2holf)),
         type: 'tank', slideDir: 1, slideSpeed: 1.5
       };
 
-      if (!this.#rydq0td.bricks.some((mye_w7) => hxahoxr(fths1l, mye_w7))) {
-        this.#rydq0td.bricks.push(fths1l);
+      if (!this.#b8xcy0.bricks.some((a8b9zhx8) => bel9kw(oo6cyeq, a8b9zhx8))) {
+        this.#b8xcy0.bricks.push(oo6cyeq);
       }
     }
 
-    async vs37rmas3() {
-      const rwpdlbzwp = this.#rydq0td;
-      if (!rwpdlbzwp || !rwpdlbzwp.turnInProgress || rwpdlbzwp.paused || rwpdlbzwp.over || rwpdlbzwp.complete || this.#nhplrew) return;
+    async t1fw8in() {
+      const y3hb6ya3 = this.#b8xcy0;
+      if (!y3hb6ya3 || !y3hb6ya3.turnInProgress || y3hb6ya3.paused || y3hb6ya3.over || y3hb6ya3.complete || this.#axec6mg) return;
 
-      this.#nhplrew = true;
-      rwpdlbzwp.turnInProgress = false;
-      rwpdlbzwp.brickMoving = true;
-      this.#leic7c4e = false;
+      this.#axec6mg = true;
+      y3hb6ya3.turnInProgress = false;
+      y3hb6ya3.brickMoving = true;
+      this.#_lns25xln = false;
 
-      if (rwpdlbzwp.runMode === 'hell' || rwpdlbzwp.runMode === 'tartarus') {
-        rwpdlbzwp.overlordTimer++;
-        if (rwpdlbzwp.overlordTimer >= 2) {
-          rwpdlbzwp.overlordTimer = 0;
-          this.rkjrm79kj();
+      if (y3hb6ya3.runMode === 'hell' || y3hb6ya3.runMode === 'tartarus') {
+        y3hb6ya3.overlordTimer++;
+        if (y3hb6ya3.overlordTimer >= 2) {
+          y3hb6ya3.overlordTimer = 0;
+          this.yeep64zee();
         }
-        for (const fa02gz9 of rwpdlbzwp.bricks.filter((kw9mwc) => kw9mwc.type === 'devil')) {
-          this.ikj8oiskj(fa02gz9);
-        }
-      }
-
-      if (rwpdlbzwp.runMode !== 'hell' && !['hard', 'insane', 'asian'].includes(rwpdlbzwp.difficulty) && rwpdlbzwp.buffs.doubleDamageTurns > 0) {
-        rwpdlbzwp.buffs.doubleDamageTurns--;
-      }
-
-      const i62hnop = rwpdlbzwp.level + 1;
-      rwpdlbzwp.level = i62hnop;
-      rwpdlbzwp.secLevel.fs29nxi(i62hnop);
-      rwpdlbzwp.bestLevel = Math.max(Number(rwpdlbzwp.bestLevel) || 1, i62hnop);
-
-      this.kch03lj(10);
-
-      for (const ylmlne6l of rwpdlbzwp.bricks) {
-        ylmlne6l.targetY += 80;
-        if (ylmlne6l.type === 'phase') {
-          ylmlne6l.phase = ylmlne6l.phase === 'solid' ? 'liquid' : 'solid';
+        for (const gyqs9u9 of y3hb6ya3.bricks.filter((fs6ulqis6) => fs6ulqis6.type === 'devil')) {
+          this.ulc9lzx(gyqs9u9);
         }
       }
 
-      for (const r4mwpq94 of rwpdlbzwp.bricks.filter((jibljvwib) => jibljvwib.type === 'healer')) {
-        const nbgoes2 = r4mwpq94.x + r4mwpq94.w / 2;
-        const g5twabx = r4mwpq94.y + r4mwpq94.h / 2;
-        for (const z326c35 of rwpdlbzwp.bricks) {
-          if (z326c35 === r4mwpq94) continue;
-          if (Math.hypot(nbgoes2 - (z326c35.x + z326c35.w / 2), g5twabx - (z326c35.y + z326c35.h / 2)) <= 180) {
-            z326c35.value = Math.round(z326c35.value * 1.25);
+      if (y3hb6ya3.runMode !== 'hell' && !['hard', 'insane', 'asian'].includes(y3hb6ya3.difficulty) && y3hb6ya3.buffs.doubleDamageTurns > 0) {
+        y3hb6ya3.buffs.doubleDamageTurns--;
+      }
+
+      const d_thg9w_t = y3hb6ya3.level + 1;
+      y3hb6ya3.level = d_thg9w_t;
+      y3hb6ya3.secLevel.cv14z_4v1(d_thg9w_t);
+      y3hb6ya3.bestLevel = Math.max(Number(y3hb6ya3.bestLevel) || 1, d_thg9w_t);
+
+      this.yj49kyaj4(10);
+
+      for (const l5rvt5 of y3hb6ya3.bricks) {
+        l5rvt5.targetY += 80;
+        if (l5rvt5.type === 'phase') {
+          l5rvt5.phase = l5rvt5.phase === 'solid' ? 'liquid' : 'solid';
+        }
+      }
+
+      for (const qyggpu of y3hb6ya3.bricks.filter((v_qm3im_) => v_qm3im_.type === 'healer')) {
+        const eoyflfco = qyggpu.x + qyggpu.w / 2;
+        const wgq7hn = qyggpu.y + qyggpu.h / 2;
+        for (const q2_t8v92_ of y3hb6ya3.bricks) {
+          if (q2_t8v92_ === qyggpu) continue;
+          if (Math.hypot(eoyflfco - (q2_t8v92_.x + q2_t8v92_.w / 2), wgq7hn - (q2_t8v92_.y + q2_t8v92_.h / 2)) <= 180) {
+            q2_t8v92_.value = Math.round(q2_t8v92_.value * 1.25);
           }
         }
       }
 
-      for (const i36_tjy36 of rwpdlbzwp.bricks.filter((li7m492) => li7m492.type === 'angel')) {
-        i36_tjy36.value = 1;
-        const lpbpzvg = i36_tjy36.x + i36_tjy36.w / 2;
-        const rngnyu4 = i36_tjy36.y + i36_tjy36.h / 2;
-        for (const eq970h5 of rwpdlbzwp.bricks) {
-          if (eq970h5 === i36_tjy36) continue;
-          if (Math.hypot(lpbpzvg - (eq970h5.x + eq970h5.w / 2), rngnyu4 - (eq970h5.y + eq970h5.h / 2)) <= 180) {
-            const mvukei = Math.max(1, Math.round(eq970h5.value * 0.25));
-            eq970h5.value = Math.max(0, eq970h5.value - mvukei);
-            if (this.#lvoyq4bvo) this.#lvoyq4bvo.damageDealt += mvukei;
-            if (eq970h5.value <= 0) this.is7jii7s(eq970h5);
+      for (const bax9qqya of y3hb6ya3.bricks.filter((n16cej21) => n16cej21.type === 'angel')) {
+        bax9qqya.value = 1;
+        const mwtq301 = bax9qqya.x + bax9qqya.w / 2;
+        const mlwasx = bax9qqya.y + bax9qqya.h / 2;
+        for (const r4p4xde4p of y3hb6ya3.bricks) {
+          if (r4p4xde4p === bax9qqya) continue;
+          if (Math.hypot(mwtq301 - (r4p4xde4p.x + r4p4xde4p.w / 2), mlwasx - (r4p4xde4p.y + r4p4xde4p.h / 2)) <= 180) {
+            const du310p = Math.max(1, Math.round(r4p4xde4p.value * 0.25));
+            r4p4xde4p.value = Math.max(0, r4p4xde4p.value - du310p);
+            if (this.#s__gxdo) this.#s__gxdo.damageDealt += du310p;
+            if (r4p4xde4p.value <= 0) this.asopax1s(r4p4xde4p);
           }
         }
       }
 
-      for (const r0h_wlk0 of rwpdlbzwp.bricks.filter((mnmfkvgn) => mnmfkvgn.type === 'turret')) {
-        r0h_wlk0.value = 1;
-        const hp5twi = abhc0gcbh(rwpdlbzwp.bricks.filter((m_hcox) => m_hcox !== r0h_wlk0)).slice(0, 3);
-        for (const rs3s53ps3 of hp5twi) {
-          const dyn2008y = Math.max(1, Math.round(rs3s53ps3.value * 0.25));
-          rs3s53ps3.value = Math.max(0, rs3s53ps3.value - dyn2008y);
-          if (this.#lvoyq4bvo) this.#lvoyq4bvo.damageDealt += dyn2008y;
-          if (rs3s53ps3.value <= 0) this.is7jii7s(rs3s53ps3);
+      for (const jgwd1jb of y3hb6ya3.bricks.filter((gojd0e_) => gojd0e_.type === 'turret')) {
+        jgwd1jb.value = 1;
+        const ywu37qewu = pxaw3fnx(y3hb6ya3.bricks.filter((ygqi7t6g) => ygqi7t6g !== jgwd1jb)).slice(0, 3);
+        for (const __euti0_e of ywu37qewu) {
+          const fo0i1v = Math.max(1, Math.round(__euti0_e.value * 0.25));
+          __euti0_e.value = Math.max(0, __euti0_e.value - fo0i1v);
+          if (this.#s__gxdo) this.#s__gxdo.damageDealt += fo0i1v;
+          if (__euti0_e.value <= 0) this.asopax1s(__euti0_e);
         }
       }
 
-      for (const ow85mg of rwpdlbzwp.bricks.filter((u5rgpz) => u5rgpz.type === 'teleport')) {
-        const wt4pzmot4 = g6h8ko(0, 5);
-        ow85mg.x = wt4pzmot4 * 120 + 5;
-        this.kweyll(ow85mg.x + ow85mg.w / 2, ow85mg.targetY + ow85mg.h / 2);
+      for (const dolj4o2 of y3hb6ya3.bricks.filter((k7st12b) => k7st12b.type === 'teleport')) {
+        const _w8bli = qu8k07lu8(0, 5);
+        dolj4o2.x = _w8bli * 120 + 5;
+        this.khl2uu5h(dolj4o2.x + dolj4o2.w / 2, dolj4o2.targetY + dolj4o2.h / 2);
       }
 
-      for (const ibdckx8b of rwpdlbzwp.bonusBalls) {
-        if (ibdckx8b.hit) continue;
-        ibdckx8b.targetY = (Number.isFinite(ibdckx8b.targetY) ? ibdckx8b.targetY : ibdckx8b.y) + 80;
+      for (const a5oau1h5o of y3hb6ya3.bonusBalls) {
+        if (a5oau1h5o.hit) continue;
+        a5oau1h5o.targetY = (Number.isFinite(a5oau1h5o.targetY) ? a5oau1h5o.targetY : a5oau1h5o.y) + 80;
       }
 
-      const otimoiati = zzy6hhaz - 90;
-      const qglzf3mg = rwpdlbzwp.bricks.some((o4lo5md4) => o4lo5md4.targetY + o4lo5md4.h >= zzy6hhaz - 20 || o4lo5md4.y + o4lo5md4.h >= zzy6hhaz - 20 || o4lo5md4.targetY >= otimoiati);
+      const ct898yd = l1n2a8j - 90;
+      const eai7ngoa = y3hb6ya3.bricks.some((_ah9bq0ah) => _ah9bq0ah.targetY + _ah9bq0ah.h >= l1n2a8j - 20 || _ah9bq0ah.y + _ah9bq0ah.h >= l1n2a8j - 20 || _ah9bq0ah.targetY >= ct898yd);
 
-      const xgfp6u = rwpdlbzwp.bonusBalls.filter((seaca1vea) => seaca1vea.hit).length;
-      rwpdlbzwp.bonusBalls = rwpdlbzwp.bonusBalls.filter((muk_xt) => !muk_xt.hit);
+      const lvupnmzv = y3hb6ya3.bonusBalls.filter((z_usy2) => z_usy2.hit).length;
+      y3hb6ya3.bonusBalls = y3hb6ya3.bonusBalls.filter((uz2lnl) => !uz2lnl.hit);
 
-      const hikz87jik = xgfp6u + rwpdlbzwp.pendingAmmo;
-      rwpdlbzwp.pendingAmmo = 0;
+      const eflhft5fl = lvupnmzv + y3hb6ya3.pendingAmmo;
+      y3hb6ya3.pendingAmmo = 0;
 
-      if (hikz87jik > 0 && !qglzf3mg) {
-        const aji8s6lj = rwpdlbzwp.ballCount + hikz87jik;
-        rwpdlbzwp.ballCount = aji8s6lj;
-        rwpdlbzwp.secBallCount.fs29nxi(aji8s6lj);
+      if (eflhft5fl > 0 && !eai7ngoa) {
+        const myttmr7 = y3hb6ya3.ballCount + eflhft5fl;
+        y3hb6ya3.ballCount = myttmr7;
+        y3hb6ya3.secBallCount.cv14z_4v1(myttmr7);
       }
 
-      if (!qglzf3mg && (!rwpdlbzwp.target || rwpdlbzwp.level < rwpdlbzwp.target)) {
-        rwpdlbzwp.balls = p95v_o(rwpdlbzwp.anchorX, rwpdlbzwp.ballCount);
-        this.hrskdo3rs(true);
-        this.ntyor6ct();
+      if (!eai7ngoa && (!y3hb6ya3.target || y3hb6ya3.level < y3hb6ya3.target)) {
+        y3hb6ya3.balls = fjkqjvfj(y3hb6ya3.anchorX, y3hb6ya3.ballCount);
+        this.kbbpy3ubb(true);
+        this.dcv77zhc();
       }
 
-      const wci418zci = this.#lvoyq4bvo || this.#x28u11l2();
-      this.#lvoyq4bvo = this.#x28u11l2();
-      const xtas053 = this.#_j8g43oj.pmm22ozm()?.activeSlot || 1;
+      const xo7ehab = this.#s__gxdo || this.#zamo2e4am();
+      this.#s__gxdo = this.#zamo2e4am();
+      const owzy33ew = this.#c9cvlih.wgiha8_gi()?.activeSlot || 1;
 
       try {
-        const wt785u = await this.#_j8g43oj.i3sg5i(ea_raeaa_(10), {
-          slot: xtas053,
-          bricksBrokenCount: wci418zci.bricksBrokenCount,
-          damageDealt: wci418zci.damageDealt,
-          turnHits: wci418zci.turnHits,
-          coinsGained: wci418zci.coinsGained,
-          gemsGained: wci418zci.gemsGained,
-          titanKills: wci418zci.titanKills,
-          ammoBroken: wci418zci.ammoBroken,
-          bonusCaught: xgfp6u,
-          extraBalls: hikz87jik,
-          pendingAmmo: rwpdlbzwp.pendingAmmo,
-          bestCombo: wci418zci.bestCombo,
-          brokenByType: wci418zci.brokenByType,
-          anchorX: rwpdlbzwp.anchorX,
-          overlordTimer: rwpdlbzwp.overlordTimer,
-          overlordDialogue: rwpdlbzwp.overlordDialogue,
-          over: qglzf3mg,
-          nextBricks: rwpdlbzwp.bricks,
-          nextBonusBalls: rwpdlbzwp.bonusBalls
+        const dzwxfh = await this.#c9cvlih.kz5bv96z5(q5uvld3(10), {
+          slot: owzy33ew,
+          bricksBrokenCount: xo7ehab.bricksBrokenCount,
+          damageDealt: xo7ehab.damageDealt,
+          turnHits: xo7ehab.turnHits,
+          coinsGained: xo7ehab.coinsGained,
+          gemsGained: xo7ehab.gemsGained,
+          titanKills: xo7ehab.titanKills,
+          ammoBroken: xo7ehab.ammoBroken,
+          bonusCaught: lvupnmzv,
+          extraBalls: eflhft5fl,
+          pendingAmmo: y3hb6ya3.pendingAmmo,
+          bestCombo: xo7ehab.bestCombo,
+          brokenByType: xo7ehab.brokenByType,
+          anchorX: y3hb6ya3.anchorX,
+          overlordTimer: y3hb6ya3.overlordTimer,
+          overlordDialogue: y3hb6ya3.overlordDialogue,
+          over: eai7ngoa,
+          nextBricks: y3hb6ya3.bricks,
+          nextBonusBalls: y3hb6ya3.bonusBalls
         });
 
-        this.#ysxe1cd(wt785u);
-        if (qglzf3mg) {
-          rwpdlbzwp.over = true;
-          rwpdlbzwp.paused = true;
-          rwpdlbzwp.brickMoving = false;
-          this.#h21pfiv2._h73j21h7();
-        } else if (rwpdlbzwp.target && rwpdlbzwp.level >= rwpdlbzwp.target) {
-          rwpdlbzwp.complete = true;
-          rwpdlbzwp.paused = true;
-          rwpdlbzwp.brickMoving = false;
+        this.#b1pv_qj(dzwxfh);
+        if (eai7ngoa) {
+          y3hb6ya3.over = true;
+          y3hb6ya3.paused = true;
+          y3hb6ya3.brickMoving = false;
+          this.#ajs9ht7j.rqfcl3();
+        } else if (y3hb6ya3.target && y3hb6ya3.level >= y3hb6ya3.target) {
+          y3hb6ya3.complete = true;
+          y3hb6ya3.paused = true;
+          y3hb6ya3.brickMoving = false;
         }
       } catch {
-        rwpdlbzwp.paused = true;
+        y3hb6ya3.paused = true;
       } finally {
-        this.#nhplrew = false;
+        this.#axec6mg = false;
       }
 
-      this.skzwoc4kz();
-      this.lo2c_3_o2();
-      this.f05fi4k();
-      this.l8vnw46();
+      this.xa81bkp();
+      this.eyuphum();
+      this.zeikjx();
+      this.s7iey9z7();
     }
 
-    ks6ap9(vf0dysr) {
-      const w3fbjm = this.#_j8g43oj.pmm22ozm()?.settings;
-      if (w3fbjm && !w3fbjm.particles) return;
-      const [au71652u7] = m2gxnbv2(vf0dysr.type, vf0dysr.value, this.#rydq0td?.runMode);
-      for (let joreh5hor = 0; joreh5hor < 16; joreh5hor++) {
-        this.#l45t9zt4.push({
+    ppapwqbpa(gunix1) {
+      const u_12nla = this.#c9cvlih.wgiha8_gi()?.settings;
+      if (u_12nla && !u_12nla.particles) return;
+      const [u9oz8f99o] = byqsum(gunix1.type, gunix1.value, this.#b8xcy0?.runMode);
+      for (let pjolt1q = 0; pjolt1q < 16; pjolt1q++) {
+        this.#pcfzn_e.push({
           type: 'particle',
-          x: vf0dysr.x + xwcrkm7wc() * vf0dysr.w,
-          y: vf0dysr.y + xwcrkm7wc() * vf0dysr.h,
-          vx: (xwcrkm7wc() - 0.5) * 5,
-          vy: xwcrkm7wc() * -4 - 1,
-          life: 45 + xwcrkm7wc() * 20,
-          color: au71652u7,
-          size: 4 + xwcrkm7wc() * 5
+          x: gunix1.x + oqhsvmz() * gunix1.w,
+          y: gunix1.y + oqhsvmz() * gunix1.h,
+          vx: (oqhsvmz() - 0.5) * 5,
+          vy: oqhsvmz() * -4 - 1,
+          life: 45 + oqhsvmz() * 20,
+          color: u9oz8f99o,
+          size: 4 + oqhsvmz() * 5
         });
       }
     }
 
-    kweyll(gh6jjo_h6, mgbbj0jg) {
-      const yq3b426q3 = this.#_j8g43oj.pmm22ozm()?.settings;
-      if (yq3b426q3 && !yq3b426q3.particles) return;
-      for (let rrh2kl8 = 0; rrh2kl8 < 12; rrh2kl8++) {
-        this.#l45t9zt4.push({
+    khl2uu5h(lopcb0, nrhtcmhr) {
+      const fkre3fuk = this.#c9cvlih.wgiha8_gi()?.settings;
+      if (fkre3fuk && !fkre3fuk.particles) return;
+      for (let wbyaxal = 0; wbyaxal < 12; wbyaxal++) {
+        this.#pcfzn_e.push({
           type: 'particle',
-          x: gh6jjo_h6, y: mgbbj0jg,
-          vx: (xwcrkm7wc() - 0.5) * 6,
-          vy: (xwcrkm7wc() - 0.5) * 6,
-          life: 25 + xwcrkm7wc() * 15,
+          x: lopcb0, y: nrhtcmhr,
+          vx: (oqhsvmz() - 0.5) * 6,
+          vy: (oqhsvmz() - 0.5) * 6,
+          life: 25 + oqhsvmz() * 15,
           color: '#805ad5',
           size: 5
         });
       }
     }
 
-    hdoagn(dmqchmqm, skwuxh) {
-      const c45pvz = this.#_j8g43oj.pmm22ozm()?.settings;
-      if (c45pvz && !c45pvz.particles) return;
-      for (let qwqonnxwq = 0; qwqonnxwq < 12; qwqonnxwq++) {
-        this.#l45t9zt4.push({
+    mwvo01i(o3dbixb, x5ctgja5) {
+      const e5jg28 = this.#c9cvlih.wgiha8_gi()?.settings;
+      if (e5jg28 && !e5jg28.particles) return;
+      for (let t6z_sj = 0; t6z_sj < 12; t6z_sj++) {
+        this.#pcfzn_e.push({
           type: 'particle',
-          x: dmqchmqm, y: skwuxh,
-          vx: (xwcrkm7wc() - 0.5) * 8,
-          vy: xwcrkm7wc() * 4,
-          life: 20 + xwcrkm7wc() * 15,
+          x: o3dbixb, y: x5ctgja5,
+          vx: (oqhsvmz() - 0.5) * 8,
+          vy: oqhsvmz() * 4,
+          life: 20 + oqhsvmz() * 15,
           color: '#dd6b20',
           size: 6
         });
       }
     }
 
-    nw19tfuw1(l14jia) {
-      const ts734e = this.#_j8g43oj.pmm22ozm()?.settings;
-      if (ts734e && !ts734e.particles) return;
-      this.#l45t9zt4.push({
+    l3kk7p(_mb_6p) {
+      const zdelpy = this.#c9cvlih.wgiha8_gi()?.settings;
+      if (zdelpy && !zdelpy.particles) return;
+      this.#pcfzn_e.push({
         type: 'explosion',
-        x: l14jia.x + l14jia.w / 2,
-        y: l14jia.y + l14jia.h / 2,
+        x: _mb_6p.x + _mb_6p.w / 2,
+        y: _mb_6p.y + _mb_6p.h / 2,
         radius: 12,
         life: 18
       });
     }
 
-    zr04sg7r0(tnmnpfl) {
-      for (const i24w0ti2 of this.#l45t9zt4) {
-        i24w0ti2.life -= tnmnpfl;
-        if (i24w0ti2.type === 'particle') {
-          i24w0ti2.x += i24w0ti2.vx * tnmnpfl;
-          i24w0ti2.y += i24w0ti2.vy * tnmnpfl;
-          i24w0ti2.vy += 0.15 * tnmnpfl;
+    dc2baq(acmv5boc) {
+      for (const q8437mt of this.#pcfzn_e) {
+        q8437mt.life -= acmv5boc;
+        if (q8437mt.type === 'particle') {
+          q8437mt.x += q8437mt.vx * acmv5boc;
+          q8437mt.y += q8437mt.vy * acmv5boc;
+          q8437mt.vy += 0.15 * acmv5boc;
         } else {
-          i24w0ti2.radius += 7 * tnmnpfl;
+          q8437mt.radius += 7 * acmv5boc;
         }
       }
-      this.#l45t9zt4 = this.#l45t9zt4.filter((y819lv) => y819lv.life > 0);
+      this.#pcfzn_e = this.#pcfzn_e.filter((lj6uoetj6) => lj6uoetj6.life > 0);
     }
 
-    fncu9v() {
-      for (const x1xxmh of this.#l45t9zt4) {
-        _mvnz2.save();
-        if (x1xxmh.type === 'particle') {
-          _mvnz2.globalAlpha = Math.min(1, x1xxmh.life / 50);
-          _mvnz2.fillStyle = x1xxmh.color;
-          _mvnz2.fillRect(x1xxmh.x, x1xxmh.y, x1xxmh.size, x1xxmh.size);
+    el53q2p() {
+      for (const phpt1h_ of this.#pcfzn_e) {
+        eso5f0is.save();
+        if (phpt1h_.type === 'particle') {
+          eso5f0is.globalAlpha = Math.min(1, phpt1h_.life / 50);
+          eso5f0is.fillStyle = phpt1h_.color;
+          eso5f0is.fillRect(phpt1h_.x, phpt1h_.y, phpt1h_.size, phpt1h_.size);
         } else {
-          _mvnz2.globalAlpha = Math.min(1, x1xxmh.life / 18);
-          _mvnz2.beginPath();
-          _mvnz2.arc(x1xxmh.x, x1xxmh.y, x1xxmh.radius, 0, Math.PI * 2);
-          _mvnz2.fillStyle = 'rgba(255, 69, 0, .25)';
-          _mvnz2.strokeStyle = '#ffd700';
-          _mvnz2.lineWidth = 4;
-          _mvnz2.fill();
-          _mvnz2.stroke();
+          eso5f0is.globalAlpha = Math.min(1, phpt1h_.life / 18);
+          eso5f0is.beginPath();
+          eso5f0is.arc(phpt1h_.x, phpt1h_.y, phpt1h_.radius, 0, Math.PI * 2);
+          eso5f0is.fillStyle = 'rgba(255, 69, 0, .25)';
+          eso5f0is.strokeStyle = '#ffd700';
+          eso5f0is.lineWidth = 4;
+          eso5f0is.fill();
+          eso5f0is.stroke();
         }
-        _mvnz2.restore();
+        eso5f0is.restore();
       }
     }
 
-    async ehnijruhn(tgl13nx) {
-      const i3fr6hx3 = this.#rydq0td;
-      if (!i3fr6hx3 || i3fr6hx3.over || i3fr6hx3.complete) return;
-      i3fr6hx3.paused = true;
-      i3fr6hx3.turnInProgress = false;
-      i3fr6hx3.brickMoving = false;
-      this.#leic7c4e = false;
-      if (tgl13nx) i3fr6hx3.complete = true;
+    async bafl6d4af(ymkwlphmk) {
+      const vnklfnkn = this.#b8xcy0;
+      if (!vnklfnkn || vnklfnkn.over || vnklfnkn.complete) return;
+      vnklfnkn.paused = true;
+      vnklfnkn.turnInProgress = false;
+      vnklfnkn.brickMoving = false;
+      this.#_lns25xln = false;
+      if (ymkwlphmk) vnklfnkn.complete = true;
       else {
-        i3fr6hx3.over = true;
-        this.#h21pfiv2._h73j21h7();
+        vnklfnkn.over = true;
+        this.#ajs9ht7j.rqfcl3();
       }
 
-      const zr6cycnr6 = this.#_j8g43oj.pmm22ozm()?.activeSlot || 1;
-      await this.#_j8g43oj.i3sg5i(ea_raeaa_(19), { slot: zr6cycnr6, won: tgl13nx }).catch(() => {});
-      this.skzwoc4kz();
-      this.lo2c_3_o2();
-      this.f05fi4k();
-      this.l8vnw46();
+      const kl03owol = this.#c9cvlih.wgiha8_gi()?.activeSlot || 1;
+      await this.#c9cvlih.kz5bv96z5(q5uvld3(19), { slot: kl03owol, won: ymkwlphmk }).catch(() => {});
+      this.xa81bkp();
+      this.eyuphum();
+      this.zeikjx();
+      this.s7iey9z7();
     }
 
-    zr0_fwx() {
-      if (!this.#rydq0td || this.#nhplrew || this.#rydq0td.over || this.#rydq0td.complete) return;
-      if (this.#rydq0td.bricks.some((rf1_m97f1) => Math.max(rf1_m97f1.y, rf1_m97f1.targetY) + rf1_m97f1.h >= zzy6hhaz - 20)) {
-        this.ehnijruhn(false);
+    fwrlk_dwr() {
+      if (!this.#b8xcy0 || this.#axec6mg || this.#b8xcy0.over || this.#b8xcy0.complete) return;
+      if (this.#b8xcy0.bricks.some((ukgjka) => Math.max(ukgjka.y, ukgjka.targetY) + ukgjka.h >= l1n2a8j - 20)) {
+        this.bafl6d4af(false);
       }
     }
 
-    d7tway27t(fl2kb6pl) {
-      const y79ey3a7 = this.#m61z1ci ? (fl2kb6pl - this.#m61z1ci) / 16.67 : 1;
-      const lrv1k7z = Number.isFinite(y79ey3a7) ? Math.max(0, Math.min(y79ey3a7, 2)) : 1;
-      this.#m61z1ci = fl2kb6pl;
+    d8obvgq(zcc8mc) {
+      const y0u_d4 = this.#lav7hpca ? (zcc8mc - this.#lav7hpca) / 16.67 : 1;
+      const nl7taz = Number.isFinite(y0u_d4) ? Math.max(0, Math.min(y0u_d4, 2)) : 1;
+      this.#lav7hpca = zcc8mc;
 
       try {
-        if (this.#e6xy89h6x === 'game') {
-          this.t7ejv3s7();
-          if (this.#rydq0td && !this.#rydq0td.paused && !this.#rydq0td.over && !this.#rydq0td.complete) {
-            this.fn4g9qwn();
-            const ibumymh = this.#rydq0td.turnInProgress && this.#leic7c4e ? 3 : 1;
-            for (let qz68_2 = 0; qz68_2 < ibumymh; qz68_2++) {
-              if (this.#rydq0td.over || this.#rydq0td.complete) break;
-              this.fxrwb1(lrv1k7z);
-              this.yukrw6nuk(lrv1k7z);
-              this.vm5t9qm(lrv1k7z);
-              if (!this.#rydq0td.turnInProgress) this.zr0_fwx();
+        if (this.#y01jcy === 'game') {
+          this._j9uro0j();
+          if (this.#b8xcy0 && !this.#b8xcy0.paused && !this.#b8xcy0.over && !this.#b8xcy0.complete) {
+            this.fcpznrxcp();
+            const z6zgiba = this.#b8xcy0.turnInProgress && this.#_lns25xln ? 3 : 1;
+            for (let m7w414i7w = 0; m7w414i7w < z6zgiba; m7w414i7w++) {
+              if (this.#b8xcy0.over || this.#b8xcy0.complete) break;
+              this.d5d0rdc5d(nl7taz);
+              this.c__eveh__(nl7taz);
+              this.r6exxfb6e(nl7taz);
+              if (!this.#b8xcy0.turnInProgress) this.fwrlk_dwr();
             }
-            this.zr04sg7r0(lrv1k7z);
-            this.ac34wmmc3();
-            this.ble3sr();
-            this.l8vnw46();
+            this.dc2baq(nl7taz);
+            this.umrt7wemr();
+            this.s5kxw3g5();
+            this.s7iey9z7();
           } else {
-            this.zr04sg7r0(lrv1k7z);
+            this.dc2baq(nl7taz);
           }
         }
       } catch {} finally {
-        cc8lmow((hfrqu6) => this.d7tway27t(hfrqu6));
+        nwerfkywe((jxxuzx) => this.d8obvgq(jxxuzx));
       }
     }
 
-    t7ejv3s7() {
-      if (!_mvnz2) return;
-      _mvnz2.clearRect(0, 0, k_fy2o0_, p06ijpg);
-      const ekxniic = this.#rydq0td;
-      if (!ekxniic) return;
+    _j9uro0j() {
+      if (!eso5f0is) return;
+      eso5f0is.clearRect(0, 0, _8je1mu8j, g3muzdu);
+      const gp8b3zvp = this.#b8xcy0;
+      if (!gp8b3zvp) return;
 
-      const y7kgqq = (ekxniic.runMode === 'hell');
-      const rfhb8_7 = (ekxniic.runMode === 'tartarus');
-      const zbdq7n = y7kgqq || rfhb8_7;
+      const d1cxhms = (gp8b3zvp.runMode === 'hell');
+      const mkhecc4kh = (gp8b3zvp.runMode === 'tartarus');
+      const _8vmnel8v = d1cxhms || mkhecc4kh;
 
-      _mvnz2.strokeStyle = rfhb8_7 ? '#6b21a8' : y7kgqq ? '#741d1d' : '#222';
-      _mvnz2.lineWidth = 2;
-      _mvnz2.beginPath();
-      _mvnz2.moveTo(0, iapws9ea);
-      _mvnz2.lineTo(k_fy2o0_, iapws9ea);
-      _mvnz2.moveTo(0, zzy6hhaz);
-      _mvnz2.lineTo(k_fy2o0_, zzy6hhaz);
-      _mvnz2.stroke();
+      eso5f0is.strokeStyle = mkhecc4kh ? '#6b21a8' : d1cxhms ? '#741d1d' : '#222';
+      eso5f0is.lineWidth = 2;
+      eso5f0is.beginPath();
+      eso5f0is.moveTo(0, aj8ue9zj);
+      eso5f0is.lineTo(_8je1mu8j, aj8ue9zj);
+      eso5f0is.moveTo(0, l1n2a8j);
+      eso5f0is.lineTo(_8je1mu8j, l1n2a8j);
+      eso5f0is.stroke();
 
-      _mvnz2.fillStyle = rfhb8_7 ? '#e9d5ff' : y7kgqq ? '#feb2b2' : '#171717';
-      _mvnz2.font = '700 20px Poppins, sans-serif';
-      _mvnz2.textAlign = 'left';
-      _mvnz2.textBaseline = 'middle';
-      _mvnz2.fillText(`Level: ${ekxniic.level}`, 18, 40);
+      eso5f0is.fillStyle = mkhecc4kh ? '#e9d5ff' : d1cxhms ? '#feb2b2' : '#171717';
+      eso5f0is.font = '700 20px Poppins, sans-serif';
+      eso5f0is.textAlign = 'left';
+      eso5f0is.textBaseline = 'middle';
+      eso5f0is.fillText(`Level: ${gp8b3zvp.level}`, 18, 40);
 
-      _mvnz2.textAlign = 'center';
-      _mvnz2.fillStyle = rfhb8_7 ? '#c084fc' : y7kgqq ? '#fc8181' : '#2b6cb0';
-      _mvnz2.font = '700 16px Poppins, sans-serif';
-      _mvnz2.fillText(`${this.futpyaaut(ekxniic.runMode)} (${ekxniic.difficulty.toUpperCase()})`, k_fy2o0_ / 2, 40);
+      eso5f0is.textAlign = 'center';
+      eso5f0is.fillStyle = mkhecc4kh ? '#c084fc' : d1cxhms ? '#fc8181' : '#2b6cb0';
+      eso5f0is.font = '700 16px Poppins, sans-serif';
+      eso5f0is.fillText(`${this.i35f4k(gp8b3zvp.runMode)} (${gp8b3zvp.difficulty.toUpperCase()})`, _8je1mu8j / 2, 40);
 
-      _mvnz2.textAlign = 'right';
-      _mvnz2.fillStyle = zbdq7n ? '#f6e05e' : '#d69e2e';
-      _mvnz2.font = '700 20px Poppins, sans-serif';
-      _mvnz2.fillText(`Balls: ${ekxniic.ballCount}`, k_fy2o0_ - 18, 40);
+      eso5f0is.textAlign = 'right';
+      eso5f0is.fillStyle = _8vmnel8v ? '#f6e05e' : '#d69e2e';
+      eso5f0is.font = '700 20px Poppins, sans-serif';
+      eso5f0is.fillText(`Balls: ${gp8b3zvp.ballCount}`, _8je1mu8j - 18, 40);
 
-      const werraawe = ekxniic.bricks.filter((v8y812n) => v8y812n.type === 'shield');
-      for (const lribs7dri of werraawe) {
-        const s7ybi057 = lribs7dri.x + lribs7dri.w / 2;
-        const lzofjwqz = lribs7dri.y + lribs7dri.h / 2;
-        _mvnz2.save();
-        _mvnz2.beginPath();
-        _mvnz2.arc(s7ybi057, lzofjwqz, 150, 0, Math.PI * 2);
-        _mvnz2.fillStyle = rfhb8_7 ? 'rgba(147, 51, 234, 0.14)' : y7kgqq ? 'rgba(155, 44, 44, 0.15)' : 'rgba(49, 151, 149, 0.12)';
-        _mvnz2.fill();
-        _mvnz2.strokeStyle = rfhb8_7 ? 'rgba(192, 132, 252, 0.4)' : y7kgqq ? 'rgba(252, 129, 129, 0.4)' : 'rgba(49, 151, 149, 0.4)';
-        _mvnz2.setLineDash([4, 4]);
-        _mvnz2.stroke();
-        _mvnz2.restore();
+      const vaqjgc4a = gp8b3zvp.bricks.filter((ggy2hxtg) => ggy2hxtg.type === 'shield');
+      for (const fy16u5b of vaqjgc4a) {
+        const cxuewwkx = fy16u5b.x + fy16u5b.w / 2;
+        const pftensu = fy16u5b.y + fy16u5b.h / 2;
+        eso5f0is.save();
+        eso5f0is.beginPath();
+        eso5f0is.arc(cxuewwkx, pftensu, 150, 0, Math.PI * 2);
+        eso5f0is.fillStyle = mkhecc4kh ? 'rgba(147, 51, 234, 0.14)' : d1cxhms ? 'rgba(155, 44, 44, 0.15)' : 'rgba(49, 151, 149, 0.12)';
+        eso5f0is.fill();
+        eso5f0is.strokeStyle = mkhecc4kh ? 'rgba(192, 132, 252, 0.4)' : d1cxhms ? 'rgba(252, 129, 129, 0.4)' : 'rgba(49, 151, 149, 0.4)';
+        eso5f0is.setLineDash([4, 4]);
+        eso5f0is.stroke();
+        eso5f0is.restore();
       }
 
-      for (const hd3lxmxd of ekxniic.bricks) {
-        this.c0ekd_1(hd3lxmxd, werraawe);
+      for (const l3wao2 of gp8b3zvp.bricks) {
+        this.h5g5aa6(l3wao2, vaqjgc4a);
       }
 
-      for (const ilq2drnlq of ekxniic.bonusBalls) {
-        if (ilq2drnlq.hit) continue;
-        _mvnz2.beginPath();
-        _mvnz2.fillStyle = rfhb8_7 ? '#a855f7' : y7kgqq ? '#ff6b6b' : '#3dd462';
-        _mvnz2.arc(ilq2drnlq.x, ilq2drnlq.y, ilq2drnlq.r, 0, Math.PI * 2);
-        _mvnz2.fill();
-        _mvnz2.strokeStyle = '#fff';
-        _mvnz2.lineWidth = 2;
-        _mvnz2.stroke();
+      for (const vclwif of gp8b3zvp.bonusBalls) {
+        if (vclwif.hit) continue;
+        eso5f0is.beginPath();
+        eso5f0is.fillStyle = mkhecc4kh ? '#a855f7' : d1cxhms ? '#ff6b6b' : '#3dd462';
+        eso5f0is.arc(vclwif.x, vclwif.y, vclwif.r, 0, Math.PI * 2);
+        eso5f0is.fill();
+        eso5f0is.strokeStyle = '#fff';
+        eso5f0is.lineWidth = 2;
+        eso5f0is.stroke();
       }
 
-      for (const yb9fhgcb of ekxniic.balls) {
-        _mvnz2.beginPath();
-        _mvnz2.fillStyle = yb9fhgcb.shocking
+      for (const nfy348if of gp8b3zvp.balls) {
+        eso5f0is.beginPath();
+        eso5f0is.fillStyle = nfy348if.shocking
           ? '#dd6b20'
-          : rfhb8_7
+          : mkhecc4kh
             ? '#e879f9'
-            : y7kgqq
+            : d1cxhms
               ? '#fc8181'
-              : (ekxniic.buffs.doubleDamageTurns > 0 ? '#e53e3e' : '#5ba7f4');
-        _mvnz2.arc(yb9fhgcb.x, yb9fhgcb.y, yb9fhgcb.radius || 16, 0, Math.PI * 2);
-        _mvnz2.fill();
+              : (gp8b3zvp.buffs.doubleDamageTurns > 0 ? '#e53e3e' : '#5ba7f4');
+        eso5f0is.arc(nfy348if.x, nfy348if.y, nfy348if.radius || 16, 0, Math.PI * 2);
+        eso5f0is.fill();
       }
 
-      if (!ekxniic.turnInProgress && !ekxniic.brickMoving && !ekxniic.paused && !ekxniic.over && !ekxniic.complete) {
-        const q1q92_ = document.getElementById('analysisAngleInput');
-        const fnwr5o_ = document.activeElement === q1q92_ && Number.isFinite(Number(q1q92_.value));
-        const v3bkeh5 = fnwr5o_ ? Number(q1q92_.value) : null;
-        const ncoahz2 = this.zbqh243bq(v3bkeh5);
-        const se6tr_ = fnwr5o_ ? Number(q1q92_.value) : this.wubwwvvu() * 180 / Math.PI;
+      if (!gp8b3zvp.turnInProgress && !gp8b3zvp.brickMoving && !gp8b3zvp.paused && !gp8b3zvp.over && !gp8b3zvp.complete) {
+        const dobxm0io = document.getElementById('analysisAngleInput');
+        const va7sy7 = document.activeElement === dobxm0io && Number.isFinite(Number(dobxm0io.value));
+        const kzp11ebzp = va7sy7 ? Number(dobxm0io.value) : null;
+        const exw2qowxw = this.r2v9av(kzp11ebzp);
+        const jmb_cjim = va7sy7 ? Number(dobxm0io.value) : this.huh1ve2u() * 180 / Math.PI;
 
-        _mvnz2.save();
-        _mvnz2.strokeStyle = rfhb8_7 ? '#d8b4fe' : y7kgqq ? '#feb2b2' : '#777';
-        _mvnz2.lineWidth = 2;
-        _mvnz2.setLineDash([5, 8]);
-        _mvnz2.beginPath();
-        if (ncoahz2.length > 0) {
-          _mvnz2.moveTo(ncoahz2[0].x, ncoahz2[0].y);
-          for (let ifaragq = 1; ifaragq < ncoahz2.length; ifaragq++) _mvnz2.lineTo(ncoahz2[ifaragq].x, ncoahz2[ifaragq].y);
+        eso5f0is.save();
+        eso5f0is.strokeStyle = mkhecc4kh ? '#d8b4fe' : d1cxhms ? '#feb2b2' : '#777';
+        eso5f0is.lineWidth = 2;
+        eso5f0is.setLineDash([5, 8]);
+        eso5f0is.beginPath();
+        if (exw2qowxw.length > 0) {
+          eso5f0is.moveTo(exw2qowxw[0].x, exw2qowxw[0].y);
+          for (let e99qll49 = 1; e99qll49 < exw2qowxw.length; e99qll49++) eso5f0is.lineTo(exw2qowxw[e99qll49].x, exw2qowxw[e99qll49].y);
         }
-        _mvnz2.stroke();
+        eso5f0is.stroke();
 
-        _mvnz2.setLineDash([]);
-        _mvnz2.fillStyle = zbdq7n ? '#fff' : '#222';
-        _mvnz2.font = '700 14px Poppins, sans-serif';
-        _mvnz2.textAlign = 'left';
-        _mvnz2.textBaseline = 'middle';
-        _mvnz2.fillText(`Aim: ${se6tr_.toFixed(1)}°`, 18, zzy6hhaz + 35);
+        eso5f0is.setLineDash([]);
+        eso5f0is.fillStyle = _8vmnel8v ? '#fff' : '#222';
+        eso5f0is.font = '700 14px Poppins, sans-serif';
+        eso5f0is.textAlign = 'left';
+        eso5f0is.textBaseline = 'middle';
+        eso5f0is.fillText(`Aim: ${jmb_cjim.toFixed(1)}°`, 18, l1n2a8j + 35);
 
-        _mvnz2.font = '700 17px Poppins, sans-serif';
-        _mvnz2.textAlign = 'center';
-        _mvnz2.fillText(`x${ekxniic.ballCount}`, ekxniic.anchorX, p06ijpg - 25);
-        _mvnz2.restore();
+        eso5f0is.font = '700 17px Poppins, sans-serif';
+        eso5f0is.textAlign = 'center';
+        eso5f0is.fillText(`x${gp8b3zvp.ballCount}`, gp8b3zvp.anchorX, g3muzdu - 25);
+        eso5f0is.restore();
       }
 
-      if (ekxniic.paused && !ekxniic.over && !ekxniic.complete) {
-        _mvnz2.fillStyle = rfhb8_7 ? '#140724e6' : y7kgqq ? '#2d0a0ae6' : '#0005';
-        _mvnz2.fillRect(0, 0, k_fy2o0_, p06ijpg);
-        _mvnz2.fillStyle = '#fff';
-        _mvnz2.textAlign = 'center';
-        _mvnz2.font = '700 30px Poppins, sans-serif';
-        _mvnz2.fillText('PAUSED', k_fy2o0_ / 2, p06ijpg / 2);
+      if (gp8b3zvp.paused && !gp8b3zvp.over && !gp8b3zvp.complete) {
+        eso5f0is.fillStyle = mkhecc4kh ? '#140724e6' : d1cxhms ? '#2d0a0ae6' : '#0005';
+        eso5f0is.fillRect(0, 0, _8je1mu8j, g3muzdu);
+        eso5f0is.fillStyle = '#fff';
+        eso5f0is.textAlign = 'center';
+        eso5f0is.font = '700 30px Poppins, sans-serif';
+        eso5f0is.fillText('PAUSED', _8je1mu8j / 2, g3muzdu / 2);
       }
 
-      if (ekxniic.over || ekxniic.complete) {
-        _mvnz2.fillStyle = rfhb8_7 ? '#140724f2' : y7kgqq ? '#2d0a0af2' : '#0009';
-        _mvnz2.fillRect(0, p06ijpg / 2 - 100, k_fy2o0_, 200);
-        _mvnz2.fillStyle = '#fff';
-        _mvnz2.textAlign = 'center';
-        _mvnz2.textBaseline = 'middle';
-        _mvnz2.font = '700 36px Poppins, sans-serif';
-        _mvnz2.fillText(
-          ekxniic.complete
-            ? `SPEEDRUN ${ekxniic.target} CLEAR!`
-            : rfhb8_7
+      if (gp8b3zvp.over || gp8b3zvp.complete) {
+        eso5f0is.fillStyle = mkhecc4kh ? '#140724f2' : d1cxhms ? '#2d0a0af2' : '#0009';
+        eso5f0is.fillRect(0, g3muzdu / 2 - 100, _8je1mu8j, 200);
+        eso5f0is.fillStyle = '#fff';
+        eso5f0is.textAlign = 'center';
+        eso5f0is.textBaseline = 'middle';
+        eso5f0is.font = '700 36px Poppins, sans-serif';
+        eso5f0is.fillText(
+          gp8b3zvp.complete
+            ? `SPEEDRUN ${gp8b3zvp.target} CLEAR!`
+            : mkhecc4kh
               ? 'TARTARUS CLAIMED YOU'
-              : y7kgqq
+              : d1cxhms
                 ? 'HELL CONSUMED YOU'
                 : 'GAME OVER',
-          k_fy2o0_ / 2,
-          p06ijpg / 2 - 18
+          _8je1mu8j / 2,
+          g3muzdu / 2 - 18
         );
-        _mvnz2.font = '600 21px Poppins, sans-serif';
-        _mvnz2.fillText(
-          ekxniic.complete ? `${this.pdya3k9(this.#_j8g43oj.ycae4g())} [${ekxniic.difficulty.toUpperCase()}]` : `Level ${ekxniic.level}`,
-          k_fy2o0_ / 2,
-          p06ijpg / 2 + 32
+        eso5f0is.font = '600 21px Poppins, sans-serif';
+        eso5f0is.fillText(
+          gp8b3zvp.complete ? `${this.do_uuv0o(this.#c9cvlih.p83ks6())} [${gp8b3zvp.difficulty.toUpperCase()}]` : `Level ${gp8b3zvp.level}`,
+          _8je1mu8j / 2,
+          g3muzdu / 2 + 32
         );
       }
 
-      this.fncu9v();
+      this.el53q2p();
     }
 
-    c0ekd_1(i00wj24, q2mcgrv2m = []) {
-      _mvnz2.save();
-      const x6porho6 = (Math.sin(p9mkc339() / 120) + 1) / 2;
-      const xfly5r = (i00wj24.type !== 'shield' && i00wj24.type !== 'titan' && q2mcgrv2m.some((o7h5e7) => {
-        return Math.hypot((o7h5e7.x + o7h5e7.w / 2) - (i00wj24.x + i00wj24.w / 2), (o7h5e7.y + o7h5e7.h / 2) - (i00wj24.y + i00wj24.h / 2)) <= 150;
-      })) || (i00wj24.type === 'phase' && i00wj24.phase === 'liquid');
+    h5g5aa6(myfn1y8yf, a9u5t_e = []) {
+      eso5f0is.save();
+      const qyrar99 = (Math.sin(og4ajaag() / 120) + 1) / 2;
+      const jvvoa_cvv = (myfn1y8yf.type !== 'shield' && myfn1y8yf.type !== 'titan' && a9u5t_e.some((ki24z9p) => {
+        return Math.hypot((ki24z9p.x + ki24z9p.w / 2) - (myfn1y8yf.x + myfn1y8yf.w / 2), (ki24z9p.y + ki24z9p.h / 2) - (myfn1y8yf.y + myfn1y8yf.h / 2)) <= 150;
+      })) || (myfn1y8yf.type === 'phase' && myfn1y8yf.phase === 'liquid');
 
-      if (xfly5r) _mvnz2.globalAlpha = 0.45;
+      if (jvvoa_cvv) eso5f0is.globalAlpha = 0.45;
 
-      const [c4aloni4a, p88g0f] = m2gxnbv2(i00wj24.type, i00wj24.value, this.#rydq0td?.runMode);
-      const a_05w0l_ = _mvnz2.createLinearGradient(i00wj24.x, i00wj24.y, i00wj24.x, i00wj24.y + i00wj24.h);
-      a_05w0l_.addColorStop(0, c4aloni4a);
-      a_05w0l_.addColorStop(1, p88g0f);
+      const [ezso0ggz, qum0e6] = byqsum(myfn1y8yf.type, myfn1y8yf.value, this.#b8xcy0?.runMode);
+      const h3ep7ss = eso5f0is.createLinearGradient(myfn1y8yf.x, myfn1y8yf.y, myfn1y8yf.x, myfn1y8yf.y + myfn1y8yf.h);
+      h3ep7ss.addColorStop(0, ezso0ggz);
+      h3ep7ss.addColorStop(1, qum0e6);
 
-      _mvnz2.fillStyle = a_05w0l_;
-      _mvnz2.beginPath();
-      if (_mvnz2.roundRect) _mvnz2.roundRect(i00wj24.x, i00wj24.y, i00wj24.w, i00wj24.h, 10);
-      else _mvnz2.rect(i00wj24.x, i00wj24.y, i00wj24.w, i00wj24.h);
+      eso5f0is.fillStyle = h3ep7ss;
+      eso5f0is.beginPath();
+      if (eso5f0is.roundRect) eso5f0is.roundRect(myfn1y8yf.x, myfn1y8yf.y, myfn1y8yf.w, myfn1y8yf.h, 10);
+      else eso5f0is.rect(myfn1y8yf.x, myfn1y8yf.y, myfn1y8yf.w, myfn1y8yf.h);
 
-      _mvnz2.fill();
-      _mvnz2.lineWidth = 2;
-      _mvnz2.setLineDash([]);
+      eso5f0is.fill();
+      eso5f0is.lineWidth = 2;
+      eso5f0is.setLineDash([]);
 
-      if (i00wj24.type === 'tnt') {
-        _mvnz2.lineWidth = 3 + x6porho6 * 3;
-        _mvnz2.strokeStyle = `rgb(255, ${Math.floor(100 + x6porho6 * 155)}, 100)`;
-        _mvnz2.setLineDash([8, 6]);
-        _mvnz2.stroke();
-      } else if (i00wj24.type === 'ammo') {
-        _mvnz2.strokeStyle = '#fff';
-        _mvnz2.stroke();
-      } else if (i00wj24.type === 'portal') {
-        _mvnz2.strokeStyle = '#e9d8fd';
-        _mvnz2.lineWidth = 4;
-        _mvnz2.setLineDash([3, 5]);
-        _mvnz2.stroke();
-      } else if (i00wj24.type === 'teleport') {
-        _mvnz2.strokeStyle = '#90cdf4';
-        _mvnz2.lineWidth = 3;
-        _mvnz2.stroke();
-      } else if (i00wj24.type === 'slider') {
-        _mvnz2.strokeStyle = '#e0fbfc';
-        _mvnz2.lineWidth = 3;
-        _mvnz2.stroke();
-      } else if (i00wj24.type === 'shock') {
-        _mvnz2.strokeStyle = '#ffc078';
-        _mvnz2.lineWidth = 4;
-        _mvnz2.setLineDash([6, 4]);
-        _mvnz2.stroke();
-      } else if (i00wj24.type === 'shield') {
-        _mvnz2.strokeStyle = '#81e6d9';
-        _mvnz2.lineWidth = 4;
-        _mvnz2.stroke();
-      } else if (i00wj24.type === 'parent') {
-        _mvnz2.strokeStyle = '#f6ad55';
-        _mvnz2.lineWidth = 3;
-        _mvnz2.stroke();
-      } else if (i00wj24.type === 'healer') {
-        _mvnz2.strokeStyle = '#68d391';
-        _mvnz2.lineWidth = 3;
-        _mvnz2.stroke();
-      } else if (i00wj24.type === 'tank') {
-        _mvnz2.strokeStyle = '#1a202c';
-        _mvnz2.lineWidth = 4;
-        _mvnz2.stroke();
-      } else if (i00wj24.type === 'angel') {
-        _mvnz2.strokeStyle = '#fbb6ce';
-        _mvnz2.lineWidth = 3;
-        _mvnz2.setLineDash([2, 2]);
-        _mvnz2.stroke();
-      } else if (i00wj24.type === 'turret') {
-        _mvnz2.strokeStyle = '#cbd5e0';
-        _mvnz2.lineWidth = 3;
-        _mvnz2.stroke();
-      } else if (i00wj24.type === 'directional') {
-        const ocgz3uwc = i00wj24.allowedDirs || ['top', 'bottom'];
-        const v3b35ek3b = { top: '#ffd166', bottom: '#38bdf8', left: '#c084fc', right: '#f472b6' };
-        _mvnz2.save();
-        _mvnz2.strokeStyle = '#e2e8f0';
-        _mvnz2.lineWidth = 3;
-        _mvnz2.stroke();
-        for (const d6yz7w of ocgz3uwc) {
-          const __9_c5f_9 = 4;
-          _mvnz2.strokeStyle = v3b35ek3b[d6yz7w];
-          _mvnz2.beginPath();
-          if (d6yz7w === 'top') { _mvnz2.moveTo(i00wj24.x + __9_c5f_9, i00wj24.y + __9_c5f_9); _mvnz2.lineTo(i00wj24.x + i00wj24.w - __9_c5f_9, i00wj24.y + __9_c5f_9); }
-          else if (d6yz7w === 'bottom') { _mvnz2.moveTo(i00wj24.x + __9_c5f_9, i00wj24.y + i00wj24.h - __9_c5f_9); _mvnz2.lineTo(i00wj24.x + i00wj24.w - __9_c5f_9, i00wj24.y + i00wj24.h - __9_c5f_9); }
-          else if (d6yz7w === 'left') { _mvnz2.moveTo(i00wj24.x + __9_c5f_9, i00wj24.y + __9_c5f_9); _mvnz2.lineTo(i00wj24.x + __9_c5f_9, i00wj24.y + i00wj24.h - __9_c5f_9); }
-          else if (d6yz7w === 'right') { _mvnz2.moveTo(i00wj24.x + i00wj24.w - __9_c5f_9, i00wj24.y + __9_c5f_9); _mvnz2.lineTo(i00wj24.x + i00wj24.w - __9_c5f_9, i00wj24.y + i00wj24.h - __9_c5f_9); }
-          _mvnz2.stroke();
+      if (myfn1y8yf.type === 'tnt') {
+        eso5f0is.lineWidth = 3 + qyrar99 * 3;
+        eso5f0is.strokeStyle = `rgb(255, ${Math.floor(100 + qyrar99 * 155)}, 100)`;
+        eso5f0is.setLineDash([8, 6]);
+        eso5f0is.stroke();
+      } else if (myfn1y8yf.type === 'ammo') {
+        eso5f0is.strokeStyle = '#fff';
+        eso5f0is.stroke();
+      } else if (myfn1y8yf.type === 'portal') {
+        eso5f0is.strokeStyle = '#e9d8fd';
+        eso5f0is.lineWidth = 4;
+        eso5f0is.setLineDash([3, 5]);
+        eso5f0is.stroke();
+      } else if (myfn1y8yf.type === 'teleport') {
+        eso5f0is.strokeStyle = '#90cdf4';
+        eso5f0is.lineWidth = 3;
+        eso5f0is.stroke();
+      } else if (myfn1y8yf.type === 'slider') {
+        eso5f0is.strokeStyle = '#e0fbfc';
+        eso5f0is.lineWidth = 3;
+        eso5f0is.stroke();
+      } else if (myfn1y8yf.type === 'shock') {
+        eso5f0is.strokeStyle = '#ffc078';
+        eso5f0is.lineWidth = 4;
+        eso5f0is.setLineDash([6, 4]);
+        eso5f0is.stroke();
+      } else if (myfn1y8yf.type === 'shield') {
+        eso5f0is.strokeStyle = '#81e6d9';
+        eso5f0is.lineWidth = 4;
+        eso5f0is.stroke();
+      } else if (myfn1y8yf.type === 'parent') {
+        eso5f0is.strokeStyle = '#f6ad55';
+        eso5f0is.lineWidth = 3;
+        eso5f0is.stroke();
+      } else if (myfn1y8yf.type === 'healer') {
+        eso5f0is.strokeStyle = '#68d391';
+        eso5f0is.lineWidth = 3;
+        eso5f0is.stroke();
+      } else if (myfn1y8yf.type === 'tank') {
+        eso5f0is.strokeStyle = '#1a202c';
+        eso5f0is.lineWidth = 4;
+        eso5f0is.stroke();
+      } else if (myfn1y8yf.type === 'angel') {
+        eso5f0is.strokeStyle = '#fbb6ce';
+        eso5f0is.lineWidth = 3;
+        eso5f0is.setLineDash([2, 2]);
+        eso5f0is.stroke();
+      } else if (myfn1y8yf.type === 'turret') {
+        eso5f0is.strokeStyle = '#cbd5e0';
+        eso5f0is.lineWidth = 3;
+        eso5f0is.stroke();
+      } else if (myfn1y8yf.type === 'directional') {
+        const yt4jj3 = myfn1y8yf.allowedDirs || ['top', 'bottom'];
+        const _mb6umum = { top: '#ffd166', bottom: '#38bdf8', left: '#c084fc', right: '#f472b6' };
+        eso5f0is.save();
+        eso5f0is.strokeStyle = '#e2e8f0';
+        eso5f0is.lineWidth = 3;
+        eso5f0is.stroke();
+        for (const l0w0gbe of yt4jj3) {
+          const ln5m522 = 4;
+          eso5f0is.strokeStyle = _mb6umum[l0w0gbe];
+          eso5f0is.beginPath();
+          if (l0w0gbe === 'top') { eso5f0is.moveTo(myfn1y8yf.x + ln5m522, myfn1y8yf.y + ln5m522); eso5f0is.lineTo(myfn1y8yf.x + myfn1y8yf.w - ln5m522, myfn1y8yf.y + ln5m522); }
+          else if (l0w0gbe === 'bottom') { eso5f0is.moveTo(myfn1y8yf.x + ln5m522, myfn1y8yf.y + myfn1y8yf.h - ln5m522); eso5f0is.lineTo(myfn1y8yf.x + myfn1y8yf.w - ln5m522, myfn1y8yf.y + myfn1y8yf.h - ln5m522); }
+          else if (l0w0gbe === 'left') { eso5f0is.moveTo(myfn1y8yf.x + ln5m522, myfn1y8yf.y + ln5m522); eso5f0is.lineTo(myfn1y8yf.x + ln5m522, myfn1y8yf.y + myfn1y8yf.h - ln5m522); }
+          else if (l0w0gbe === 'right') { eso5f0is.moveTo(myfn1y8yf.x + myfn1y8yf.w - ln5m522, myfn1y8yf.y + ln5m522); eso5f0is.lineTo(myfn1y8yf.x + myfn1y8yf.w - ln5m522, myfn1y8yf.y + myfn1y8yf.h - ln5m522); }
+          eso5f0is.stroke();
         }
-        _mvnz2.restore();
-      } else if (i00wj24.type === 'phase') {
-        _mvnz2.strokeStyle = '#9edebe';
-        _mvnz2.lineWidth = 3;
-        _mvnz2.stroke();
-      } else if (i00wj24.type === 'magnet') {
-        _mvnz2.strokeStyle = '#e9d8fd';
-        _mvnz2.lineWidth = 3;
-        _mvnz2.setLineDash([4, 4]);
-        _mvnz2.stroke();
-      } else if (i00wj24.type === 'crawler') {
-        _mvnz2.strokeStyle = '#ff8533';
-        _mvnz2.lineWidth = 3 + x6porho6 * 2;
-        _mvnz2.setLineDash([4, 2]);
-        _mvnz2.stroke();
-      } else if (i00wj24.type === 'devil') {
-        _mvnz2.strokeStyle = '#ff4d4d';
-        _mvnz2.lineWidth = 4;
-        _mvnz2.stroke();
-      } else if (i00wj24.type === 'titan') {
-        _mvnz2.strokeStyle = '#e879f9';
-        _mvnz2.lineWidth = 4;
-        _mvnz2.stroke();
+        eso5f0is.restore();
+      } else if (myfn1y8yf.type === 'phase') {
+        eso5f0is.strokeStyle = '#9edebe';
+        eso5f0is.lineWidth = 3;
+        eso5f0is.stroke();
+      } else if (myfn1y8yf.type === 'magnet') {
+        eso5f0is.strokeStyle = '#e9d8fd';
+        eso5f0is.lineWidth = 3;
+        eso5f0is.setLineDash([4, 4]);
+        eso5f0is.stroke();
+      } else if (myfn1y8yf.type === 'crawler') {
+        eso5f0is.strokeStyle = '#ff8533';
+        eso5f0is.lineWidth = 3 + qyrar99 * 2;
+        eso5f0is.setLineDash([4, 2]);
+        eso5f0is.stroke();
+      } else if (myfn1y8yf.type === 'devil') {
+        eso5f0is.strokeStyle = '#ff4d4d';
+        eso5f0is.lineWidth = 4;
+        eso5f0is.stroke();
+      } else if (myfn1y8yf.type === 'titan') {
+        eso5f0is.strokeStyle = '#e879f9';
+        eso5f0is.lineWidth = 4;
+        eso5f0is.stroke();
       } else {
-        _mvnz2.strokeStyle = '#111';
-        _mvnz2.lineWidth = 2;
-        _mvnz2.stroke();
+        eso5f0is.strokeStyle = '#111';
+        eso5f0is.lineWidth = 2;
+        eso5f0is.stroke();
       }
 
-      _mvnz2.setLineDash([]);
-      _mvnz2.fillStyle = '#fff';
-      _mvnz2.font = i00wj24.type === 'titan' ? '700 30px Poppins, sans-serif' : '700 22px Poppins, sans-serif';
-      _mvnz2.textAlign = 'center';
-      _mvnz2.textBaseline = 'middle';
-      _mvnz2.fillText(String(Math.ceil(i00wj24.value)), i00wj24.x + i00wj24.w / 2, i00wj24.y + i00wj24.h / 2);
+      eso5f0is.setLineDash([]);
+      eso5f0is.fillStyle = '#fff';
+      eso5f0is.font = myfn1y8yf.type === 'titan' ? '700 30px Poppins, sans-serif' : '700 22px Poppins, sans-serif';
+      eso5f0is.textAlign = 'center';
+      eso5f0is.textBaseline = 'middle';
+      eso5f0is.fillText(String(Math.ceil(myfn1y8yf.value)), myfn1y8yf.x + myfn1y8yf.w / 2, myfn1y8yf.y + myfn1y8yf.h / 2);
 
-      const uy9h8z3 = t2r7meq2r[i00wj24.type];
-      if (uy9h8z3) {
-        const ezq73mi = i00wj24.x + 19;
-        const b2d9sz = i00wj24.y + 18;
-        _mvnz2.globalAlpha = xfly5r ? 0.65 : 1;
-        _mvnz2.beginPath();
-        _mvnz2.arc(ezq73mi, b2d9sz, 12, 0, Math.PI * 2);
-        _mvnz2.fillStyle = 'rgba(0, 0, 0, 0.48)';
-        _mvnz2.fill();
-        _mvnz2.fillStyle = '#fff';
-        _mvnz2.textAlign = 'center';
-        _mvnz2.textBaseline = 'middle';
-        const mv6gwze = f0f2pvs0();
-        if (mv6gwze) {
-          _mvnz2.font = '900 14px "Font Awesome 6 Free"';
-          _mvnz2.fillText(String.fromCodePoint(parseInt(uy9h8z3, 16)), ezq73mi, b2d9sz + 0.5);
+      const syf4k78yf = cle3dl7le[myfn1y8yf.type];
+      if (syf4k78yf) {
+        const luh77u6uh = myfn1y8yf.x + 19;
+        const b8ubbql8 = myfn1y8yf.y + 18;
+        eso5f0is.globalAlpha = jvvoa_cvv ? 0.65 : 1;
+        eso5f0is.beginPath();
+        eso5f0is.arc(luh77u6uh, b8ubbql8, 12, 0, Math.PI * 2);
+        eso5f0is.fillStyle = 'rgba(0, 0, 0, 0.48)';
+        eso5f0is.fill();
+        eso5f0is.fillStyle = '#fff';
+        eso5f0is.textAlign = 'center';
+        eso5f0is.textBaseline = 'middle';
+        const fcfadj = eu1q2au();
+        if (fcfadj) {
+          eso5f0is.font = '900 14px "Font Awesome 6 Free"';
+          eso5f0is.fillText(String.fromCodePoint(parseInt(syf4k78yf, 16)), luh77u6uh, b8ubbql8 + 0.5);
         } else {
-          _mvnz2.font = '700 13px system-ui, sans-serif';
-          _mvnz2.fillText(r15fjbu15[i00wj24.type] || '■', ezq73mi, b2d9sz + 0.5);
+          eso5f0is.font = '700 13px system-ui, sans-serif';
+          eso5f0is.fillText(c1iox_[myfn1y8yf.type] || '■', luh77u6uh, b8ubbql8 + 0.5);
         }
       }
 
-      if (xfly5r) {
-        _mvnz2.strokeStyle = '#319795';
-        _mvnz2.lineWidth = 3;
-        _mvnz2.setLineDash([4, 4]);
-        _mvnz2.strokeRect(i00wj24.x - 2, i00wj24.y - 2, i00wj24.w + 4, i00wj24.h + 4);
+      if (jvvoa_cvv) {
+        eso5f0is.strokeStyle = '#319795';
+        eso5f0is.lineWidth = 3;
+        eso5f0is.setLineDash([4, 4]);
+        eso5f0is.strokeRect(myfn1y8yf.x - 2, myfn1y8yf.y - 2, myfn1y8yf.w + 4, myfn1y8yf.h + 4);
       }
-      _mvnz2.restore();
+      eso5f0is.restore();
     }
   }
 
-  function f0f2pvs0() {
+  function eu1q2au() {
     try {
-      const b33bnn933 = document.fonts;
-      if (!b33bnn933 || typeof b33bnn933[Symbol.iterator] !== 'function') return false;
-      for (const s3hsmr93h of b33bnn933) {
-        if (String(s3hsmr93h.family || '').toLowerCase().includes('font awesome') && s3hsmr93h.status === 'loaded') {
+      const vpxmy2 = document.fonts;
+      if (!vpxmy2 || typeof vpxmy2[Symbol.iterator] !== 'function') return false;
+      for (const n2_76mm2_ of vpxmy2) {
+        if (String(n2_76mm2_.family || '').toLowerCase().includes('font awesome') && n2_76mm2_.status === 'loaded') {
           return true;
         }
       }
@@ -5214,16 +5214,29 @@
     }
   }
 
-  function p95v_o(xsylkcg, sm_kng) {
-    return Array.from({ length: hf80m5(sm_kng, 1, 500, 1) }, () => j5mopo(xsylkcg, zzy6hhaz - 20));
+  function fjkqjvfj(y68fiv, n_az_2_) {
+    return Array.from({ length: wj6jnw(n_az_2_, 1, 500, 1) }, () => xua3zgcu(y68fiv, l1n2a8j - 20));
   }
 
-  Object.freeze(df2vaud.prototype);
-  Object.freeze(ydfdnzdd.prototype);
-  Object.freeze(teqdvkfeq.prototype);
-  Object.freeze(dtdxnkgt.prototype);
-  Object.freeze(wgl0p7.prototype);
+  Object.freeze(g8rko2.prototype);
+  Object.freeze(y40ab2.prototype);
+  Object.freeze(zscpzuos.prototype);
+  Object.freeze(x2ybyy.prototype);
+  Object.freeze(ybejk8ob.prototype);
 
-  const _8cob3 = new wgl0p7();
-  void _8cob3;
+  let ay8s4lzy = false;
+  function pplf3zhpl() {
+    if (ay8s4lzy) return;
+    ay8s4lzy = true;
+    nns8g29ns = document.getElementById('canvas');
+    eso5f0is = nns8g29ns ? nns8g29ns.getContext('2d') : null;
+    const mnjsmmtn = new ybejk8ob();
+    void mnjsmmtn;
+  }
+
+  if (document.readyState === 'loading') {
+    ve7bk0j.call(document, 'DOMContentLoaded', pplf3zhpl, { once: true });
+  } else {
+    pplf3zhpl();
+  }
 })();
